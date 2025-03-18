@@ -1,2 +1,15 @@
 # Unity-RL-Playground
-This project is developed based on the Unity ML-Agents Toolkit, aiming to provide researchers and developers with an efficient and user-friendly environment for Reinforcement Learning (RL) development.
+Unity RL Playground (also named [Gewu]) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment.
+
+## Platform Features‌
+
+- Extensive Robot Support‌: Compatible with hundreds of mobile robots, including humanoid robots, quadruped robots, wheeled robots, and more.
+- One-Click Import & Training‌: Allowing users to effortlessly import robot models and initiate training without complex configurations.
+- Lowered RL Development Barrier‌: Simplifies workflows and provides toolkits to make RL technology accessible and approachable for everyone.
+
+## Open-Source & Community Support‌
+
+- Open-Source Project‌: Unity RL Playground is fully open-source, with code and resources publicly available on GitHub for developers to freely access and contribute.
+- Community-Driven Growth‌: We welcome global developers to join our community, collaborate on advancing the platform, and share technical expertise.
+
+Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
