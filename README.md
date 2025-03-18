@@ -18,6 +18,7 @@ Unity RL Playground is committed to becoming an open platform for embodied intel
 1. Install Unity
 
 Download and install the latest version of the Unity Editor. It is recommended to choose the LTS (Long-Term Support) version to ensure stability.
+
 2. Configure ML-Agents
 
 2.1 Create a Virtual Environment
