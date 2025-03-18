@@ -30,3 +30,4 @@ Open the Anaconda Prompt and run the following command to create a virtual envir
 
 Activate the virtual environment:
 
+`    conda activate Unity`
