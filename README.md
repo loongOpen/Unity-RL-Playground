@@ -16,17 +16,29 @@ Unity RL Playground is committed to becoming an open platform for embodied intel
 
 # Installation of Unity and ML-Agents
 1. Install Unity
+
 Download and install the latest version of the Unity Editor. It is recommended to choose the LTS (Long-Term Support) version to ensure stability.
 2. Configure ML-Agents
+
 2.1 Create a Virtual Environment
+
 Install Anaconda
+
 If Anaconda is not already installed, visit the Anaconda official website to download and install it.
+
 Create a Virtual Environment
+
 Open the Anaconda Prompt and run the following command to create a virtual environment named "RL-Playground" with Python 3.10: `conda create -n RL-Playground python=3.10`
+
 Activate the virtual environment: `conda activate RL-Playground`
+
 2.2 Install ML-Agents
+
 Download ML-Agents
+
 Download the latest version of the ML-Agents toolkit from the ML-Agents GitHub page.
+
 Note: The download path must not contain Chinese characters, as this may cause training failures.
 Install ML-Agents Packages
+
 After extracting the downloaded files, navigate to the ml-agents and ml-agents-envs directories, and execute the following commands in each directory to install them:
