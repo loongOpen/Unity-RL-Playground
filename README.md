@@ -15,16 +15,12 @@ Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics s
 Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
 
 # Installation of Unity and ML-Agents
-1. Install Unity
-
+## Install Unity
 Download and install the latest version of the Unity Editor. It is recommended to choose the LTS (Long-Term Support) version to ensure stability.
-
-2. Configure ML-Agents
-
-2.1 Create a Virtual Environment
+## Configure ML-Agents
+**Create a Virtual Environment**
 
 Install Anaconda
-
 If Anaconda is not already installed, visit the Anaconda official website to download and install it.
 
 Create a Virtual Environment
