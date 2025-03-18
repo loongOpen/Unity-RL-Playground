@@ -27,6 +27,7 @@ Open the Anaconda Prompt and run the following command to create a virtual envir
 `
     conda create -n RL-Playground python=3.10
 `
+
     &lt;html>
       &lt;head>
       &lt;/head>
