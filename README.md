@@ -25,6 +25,7 @@ Create a Virtual Environment
 Open the Anaconda Prompt and run the following command to create a virtual environment named "RL-Playground" with Python 3.10:
 
 ` `
+
     conda create -n RL-Playground python=3.10
 
 
