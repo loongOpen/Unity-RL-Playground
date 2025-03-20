@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="leg_ros2_control_interface" params="leg_name">
+
+        <xacro:if value="${(leg_name == 'L')}">
+            <joint name="abad_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-0.38397</param>
+                    <param name="max">1.39626</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="hip_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-1.012291</param>
+                    <param name="max">1.396263</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="knee_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-0.872665</param>
+                    <param name="max">1.361357</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="wheel_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-10000000000</param>
+                    <param name="max">10000000000</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-40</param>
+                    <param name="max">40</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-40</param>
+                    <param name="max">40</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+        </xacro:if> 
+
+        <xacro:if value="${(leg_name == 'R')}">
+            <joint name="abad_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-1.39626</param>
+                    <param name="max">0.38397</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="hip_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-1.396263</param>
+                    <param name="max">1.012291</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="knee_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-1.361357</param>
+                    <param name="max">0.872665</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-20</param>
+                    <param name="max">20</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-80</param>
+                    <param name="max">80</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="wheel_${leg_name}_joint">
+                <command_interface name="position">
+                    <param name="min">-10000000000</param>
+                    <param name="max">10000000000</param>
+                </command_interface> 
+                <command_interface name="velocity">
+                    <param name="min">-40</param>
+                    <param name="max">40</param>
+                </command_interface>
+                <command_interface name="effort">
+                    <param name="min">-40</param>
+                    <param name="max">40</param>
+                </command_interface>
+                <command_interface name="Kp">
+                    <param name="min">0</param>
+                </command_interface>
+                <command_interface name="Kd">
+                    <param name="min">0</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+        </xacro:if>
+    </xacro:macro>
+</robot>
