@@ -116,15 +116,15 @@ Max Step: Set to 1000, representing the maximum number of steps per training epi
 
 Test Feedforward Actions：If Fixed Body is selected, click the Unity Play button to observe whether the feedforward actions applied to the robot are correct.
 
-### In the RobotRLAgent script, configure the following:
-
 Robot Type: Select the type of robot (e.g., Biped, Quadruped, Legwheeled).
 
 Target Motion: Select the target motion to be trained.
 
 Accelerate: Set Time.timeScale to 20 to accelerate the training process.
 
-## 3. Initiate Training
+# Start Training
+
+## 1. Initiate Training
 
 Disable Controller Scripts: Uncheck the imported robot controller scripts.
 
@@ -140,16 +140,16 @@ After training begins, the terminal will output prompt messages prefixed with [I
 
 Verify Training Status: Open Unity and start the game. If the terminal prints out the contents of the configuration file, it indicates that the training has started normally.
 
-## 4. Monitoring the Training Process
+## 2. Monitoring the Training Process
 
 During the training process, reward data will be output based on the number of steps set in the configuration file (for example, reward data may be output every 20,000 steps). If you need to manually interrupt the training, you can press the shortcut Ctrl+C in the Anaconda Prompt.
 
-## 5. Analyzing Training Results:Viewing Training Statistics Using TensorBoard
+## 3. Analyzing Training Results:Viewing Training Statistics Using TensorBoard
 
 In the Anaconda Prompt, while in the same directory, enter the following command: `tensorboard --logdir results/g1_jump`
 
 The terminal will output a TensorBoard URL (e.g., http://localhost:6006/). Open this URL to view the training statistics graphs.
 
-## 6. Running the Trained Model
+## 4. Running the Trained Model
 
 After training is complete, the terminal will indicate the location of the trained model file (in .onnx format). Drag the model file into the corresponding field in the RobotRLAgent script. Launch the Unity game to observe the training results.
