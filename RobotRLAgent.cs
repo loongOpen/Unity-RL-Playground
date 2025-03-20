@@ -226,12 +226,13 @@ public class RobotRLAgent : Agent
         string name = this.name;//this.name;
         int[] idx = new int[6] { 2, 3, 4, 7, 8, 9 };
         float[] ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
-        d0 = 20;
+        d0 = 0;
         if (name.Contains("Tinker"))
         {
             idx = new int[6] { 2, 3, 4, 7, 8, 9 };
             ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
             ko = 01f;
+            d0 = 20;
         }
         if (name.Contains("TaiTan"))
         {
