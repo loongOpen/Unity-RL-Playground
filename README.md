@@ -50,19 +50,15 @@ After installation, run the following command to verify that the installation wa
 
 Create a Unity Project
 
-Open the Unity Editor and create a new 3D project.
-
-Import the ML-Agents Package
-
-In the Unity Editor, click on Window > Package Manager. Click the + icon in the top-left corner and select Add package from disk. Select the package.json files from the com.unity.ml-agents and com.unity.ml-agents.extensions directories to complete the package import.
-
-Verify Installation
-
-After installation, you should see ML-Agents and ML-Agents Extensions in the Packages folder.
+Open the Unity Editor, click the Open button, and select the ML-Agents project you downloaded: ml-agents-release_20—ml-agents-release_20——Project
 
 # Installing and Using the URDF Importer
 
-## 1. Add the URDF Package
+## 1. Download the URDF Importer
+
+Download the URDF Importer: https://github.com/Unity-Technologies/URDF-Importer
+
+## 2. Add the URDF Package
 
 Open the Unity Package Manager
 
@@ -70,19 +66,9 @@ Open the Package Manager from the Unity menu: Click Window > Package Manager.
 
 Add the URDF Package
 
-In the top-left corner of the Package Manager window, click the + button and select Add Package from Git URL.
+In the top-left corner of the Package Manager window, click the + button and select Add Package from Git disk.
 
-Enter the URDF Importer Git URL
-
-In the text box, enter the following Git URL for the URDF Importer with the latest version tag (currently v0.5.2):
-
-https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2
-
-Press Enter to complete the addition.
-
-Import the URDF Package
-
-The Package Manager will automatically download and install the URDF Importer package.
+Locate the `package.json` file in the `URDF-Importer-main\com.unity.robotics.urdf-importer` directory and proceed with the installation.
 
 ## 2. Create a Robot Using a URDF File
 
@@ -108,37 +94,25 @@ Click the Import URDF button to complete the robot import.
 
 # Importing and Configuring Unity RL Playground
 
-After setting up the environment, the agent needs to be configured to ensure it can interact correctly with the environment and perform learning tasks. Below are the detailed steps:
+Drag the downloaded Unity-RL-Playground-main into ml-agents-release_20/ml-agents-release_20/Project/Assets. After importing the environment, the following operations need to be performed:
 
-## 1. Agent Configuration
+## 1. Initial Environment Configuration
+ 
+Click on Layers in the upper right corner of the interface, select Edit Layers, and add robot at the end of the Layers list.
 
-### 1.1 Attach Scripts
+Click on Edit -> Project Settings -> Physics, uncheck the robot in the Layer Collision Matrix, and change the Fixed Timestep under Time to 0.01.
 
-Attach the following scripts to the imported agent object (Agent):
+Drag the RobotRLAgent.cs script into the missing Script slot under each robot.
 
-RobotRLAgent: Defines the agent's behavior and training objectives.
+Drag the policy network under nnmodel into the None (NN Model) slot under the corresponding robot, and click play to run the several robot gaits in the example.
 
-Decision Requester: Controls the decision frequency of the agent.
-
-Behavior Name: Modify this to match the name in the training configuration file (config.yaml).
+## 2. Agent Configuration
 
 Max Step: Set to 1000, representing the maximum number of steps per training episode.
 
-Decision Frequency: Set to trigger a decision every 1 time step.
+Test Feedforward Actions：If Fixed Body is selected, click the Unity Play button to observe whether the feedforward actions applied to the robot are correct.
 
-### 1.2 Test Feedforward Actions
-
-If Fixed Body is selected, click the Unity Play button to observe whether the feedforward actions applied to the robot are correct.
-
-## 2. Start Training
-   
-### 2.1 Configure Training Parameters
-
-Modify the following settings:
-
-Edit > Project Settings > Time > Fixed Timestep = 0.01s
-
-In the RobotRLAgent script, configure the following:
+### In the RobotRLAgent script, configure the following:
 
 Robot Type: Select the type of robot (e.g., Biped, Quadruped, Legwheeled).
 
@@ -146,7 +120,7 @@ Target Motion: Select the target motion to be trained.
 
 Accelerate: Set Time.timeScale to 20 to accelerate the training process.
 
-### 2.2 Initiate Training
+## 3. Initiate Training
 
 Disable Controller Scripts: Uncheck the imported robot controller scripts.
 
@@ -162,24 +136,16 @@ After training begins, the terminal will output prompt messages prefixed with [I
 
 Verify Training Status: Open Unity and start the game. If the terminal prints out the contents of the configuration file, it indicates that the training has started normally.
 
-### 2.3 Monitoring the Training Process
+## 4. Monitoring the Training Process
 
 During the training process, reward data will be output based on the number of steps set in the configuration file (for example, reward data may be output every 20,000 steps). If you need to manually interrupt the training, you can press the shortcut Ctrl+C in the Anaconda Prompt.
 
-# 3. Analyzing Training Results
-
-## 3.1 Viewing Training Statistics Using TensorBoard
+## 5. Analyzing Training Results:Viewing Training Statistics Using TensorBoard
 
 In the Anaconda Prompt, while in the same directory, enter the following command: `tensorboard --logdir results/g1_jump`
 
 The terminal will output a TensorBoard URL (e.g., http://localhost:6006/). Open this URL to view the training statistics graphs.
 
-# 4. Running the Trained Model
+## 6. Running the Trained Model
 
-## 4.1 Importing the Model
-
-After training is complete, the terminal will indicate the location of the trained model file (in .onnx format). Drag the model file into the corresponding field in the RobotRLAgent script.
-
-## 4.2 Enabling the Model
-
-Launch the Unity game to observe the training results.
+After training is complete, the terminal will indicate the location of the trained model file (in .onnx format). Drag the model file into the corresponding field in the RobotRLAgent script. Launch the Unity game to observe the training results.
