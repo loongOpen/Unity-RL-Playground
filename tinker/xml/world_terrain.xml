@@ -1,0 +1,68 @@
+<mujoco>
+	<include file="scene.xml"/>
+	<include file="dependencies.xml"/>
+
+	<worldbody>
+		<include file="tinker.xml" />
+	</worldbody>
+ 	<actuator>      
+		<motor name="joint_l_yaw"   joint="joint_l_yaw"   gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_l_roll"  joint="joint_l_roll"  gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_l_pitch" joint="joint_l_pitch" gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_l_knee"  joint="joint_l_knee"  gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_l_ankle" joint="joint_l_ankle" gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		
+		<motor name="joint_r_yaw"   joint="joint_r_yaw"   gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_r_roll"  joint="joint_r_roll"  gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_r_pitch" joint="joint_r_pitch" gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_r_knee"  joint="joint_r_knee"  gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+		<motor name="joint_r_ankle" joint="joint_r_ankle" gear="1" ctrllimited="true" ctrlrange="-12 12"/>
+    </actuator>
+    <sensor>
+    		<!--pos-->
+		<actuatorpos name='joint_l_yaw_p'   actuator='joint_l_yaw'  user='13'/>
+		<actuatorpos name='joint_l_roll_p'  actuator='joint_l_roll' user='13'/>
+		<actuatorpos name='joint_l_pitch_p' actuator='joint_l_pitch'user='13'/>
+		<actuatorpos name='joint_l_knee_p'  actuator='joint_l_knee' user='13'/>
+		<actuatorpos name='joint_l_ankle_p' actuator='joint_l_ankle'user='13'/>
+		
+		<actuatorpos name='joint_r_yaw_p'   actuator='joint_r_yaw'  user='13'/>
+		<actuatorpos name='joint_r_roll_p'  actuator='joint_r_roll' user='13'/>
+		<actuatorpos name='joint_r_pitch_p' actuator='joint_r_pitch'user='13'/>
+		<actuatorpos name='joint_r_knee_p'  actuator='joint_r_knee' user='13'/>
+		<actuatorpos name='joint_r_ankle_p' actuator='joint_r_ankle'user='13'/>
+		<!--vel-->
+		<actuatorvel name='joint_l_yaw_v'   actuator='joint_l_yaw'  user='13'/>
+		<actuatorvel name='joint_l_roll_v'  actuator='joint_l_roll' user='13'/>
+		<actuatorvel name='joint_l_pitch_v' actuator='joint_l_pitch'user='13'/>
+		<actuatorvel name='joint_l_knee_v'  actuator='joint_l_knee' user='13'/>
+		<actuatorvel name='joint_l_ankle_v' actuator='joint_l_ankle'user='13'/>
+		
+		<actuatorvel name='joint_r_yaw_v'   actuator='joint_r_yaw'  user='13'/>
+		<actuatorvel name='joint_r_roll_v'  actuator='joint_r_roll' user='13'/>
+		<actuatorvel name='joint_r_pitch_v' actuator='joint_r_pitch'user='13'/>
+		<actuatorvel name='joint_r_knee_v'  actuator='joint_r_knee' user='13'/>
+		<actuatorvel name='joint_r_ankle_v' actuator='joint_r_ankle'user='13'/>
+		<!--frc-->
+		<actuatorfrc name='joint_l_yaw_f'   actuator='joint_l_yaw'  user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_l_roll_f'  actuator='joint_l_roll' user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_l_pitch_f' actuator='joint_l_pitch'user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_l_knee_f'  actuator='joint_l_knee' user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_l_ankle_f' actuator='joint_l_ankle'user='13' noise='1e-3'/>
+		
+		<actuatorfrc name='joint_r_yaw_f'   actuator='joint_r_yaw'  user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_r_roll_f'  actuator='joint_r_roll' user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_r_pitch_f' actuator='joint_r_pitch'user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_r_knee_f'  actuator='joint_r_knee' user='13' noise='1e-3'/>
+		<actuatorfrc name='joint_r_ankle_f' actuator='joint_r_ankle'user='13' noise='1e-3'/>
+
+        <framequat     name='orientation' objtype='site' noise='0.001' objname='imu'/>
+        <framepos      name='position' objtype='site' noise='0.001' objname='imu'/>
+        <gyro          name='angular-velocity'    site='imu' noise='0.005' cutoff='34.9'/>
+        <velocimeter   name='linear-velocity'     site='imu' noise='0.001' cutoff='30'/>
+        <accelerometer name='linear-acceleration' site='imu' noise='0.005' cutoff='157'/>
+        <magnetometer  name='magnetometer'        site='imu'/>
+    </sensor>
+	
+
+</mujoco>
