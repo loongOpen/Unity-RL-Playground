@@ -12,9 +12,9 @@
 
 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
-7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压
+7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
 
-8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground，在弹出窗口点击import
+8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
 9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
 
