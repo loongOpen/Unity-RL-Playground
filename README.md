@@ -1,3 +1,96 @@
+# “格物”具身智能仿真平台
+
+**点击下图观看视频**
+
+[![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
+
+## 一、仿真环境安装
+
+1.搜索安装Unity Hub
+
+2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
+
+3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
+
+4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
+
+5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
+
+6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
+
+7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
+
+8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
+
+9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
+
+10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如对应的预训练模型非空）
+
+## 二、训练环境安装
+
+1.安装Anaconda：https://www.anaconda.com/download
+
+2.打开anacconda窗口
+
+3.运行conda create -n ml-agents python=3.7
+
+4.运行activate ml-agents
+
+5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
+
+6.运行python -m pip install mlagents==0.28.0
+
+7.运行pip install importlib-metadata==4.4
+
+8.运行pip install six
+
+9.运行mlagents-learn --help已检查是否安装成功
+
+## 三、训练机器人
+
+1.在unity打开Playground.unity，选中一个要训练的机器人（如tinker），在右侧inspector中勾选train
+
+2.将其他机器人隐藏（在inspector窗口将最上面一个方框的勾取消即可）
+
+3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行D: 再运行 cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main （根据自己的实际目录调整））
+
+4.运行mlagents-learn trainer_config.yaml --run-id=tinker --force开始训练（注：id号名称可自己任取）
+
+5.当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
+
+6.训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
+
+7.终止训练后再unity界面下方找到刚刚训的神经网络，在results->tinker（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
+
+8.点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如B walk policy）
+
+9.在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
+
+## 四、导入和训练新的机器人
+
+1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
+
+2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。
+
+3.在unity下方点击选中机器人xx.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
+
+4.看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
+
+5.将示例程序中其他机器人隐去
+
+6.右键create empty，将gameobject名称改为自己机器人名字
+
+7.拖动导入的机器人到上一步gameobject的子节点中
+
+8.选中gameobject，在inspector窗口点击add component，搜索添加RobotRLAgent代码，再次点击add component，搜索添加decision requester
+
+9.在Behaviour Parameters设置observation和action维数，可参考其他机器人
+
+10.配置完毕，即可依照“三”中步骤进行训练，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
+
+## (注：以上面中文为准，英文版不全，待更新)
+## (The Engilish version is to be updated)
+
 # Unity-RL-Playground
 Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment.
 
