@@ -4,9 +4,11 @@
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
+论文
+
 ## 一、仿真环境安装
 
-1.搜索安装Unity Hub
+1.搜索安装Unity Hub，注册登录后使用Personal Licenses可免费激活
 
 2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
 
@@ -18,7 +20,7 @@
 
 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
-7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
+7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
 
 8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
