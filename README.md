@@ -1,16 +1,16 @@
 # 一、仿真环境安装
 
-## 1.搜索安装Unity Hub
+1.搜索安装Unity Hub
 
-## 2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
+2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
 
-## 3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
+3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
 
-## 4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
+4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
 
-## 5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
+5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
 
-## 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
+6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
 7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压
 
@@ -18,7 +18,7 @@
 
 9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
 
-二、训练环境安装
+## 二、训练环境安装
 
 1.安装Anaconda：https://www.anaconda.com/download
 
@@ -38,7 +38,7 @@
 
 9.运行mlagents-learn --help已检查是否安装成功
 
-三、训练机器人
+## 三、训练机器人
 
 1.在unity打开Playground.unity，选中一个要训练的机器人（如tinker），在右侧inspector中勾选train
 
@@ -58,7 +58,7 @@
 
 9.在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
 
-四、导入和训练新的机器人
+## 四、导入和训练新的机器人
 
 1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
