@@ -1,4 +1,8 @@
-# 一、仿真环境安装
+# “格物”具身智能仿真平台
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV167RbYxEuG&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="640" height="480"> </iframe>
+
+## 一、仿真环境安装
 
 1.搜索安装Unity Hub
 
