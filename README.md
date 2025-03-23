@@ -18,6 +18,8 @@
 
 9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
 
+10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如对应的预训练模型非空）
+
 ## 二、训练环境安装
 
 1.安装Anaconda：https://www.anaconda.com/download
