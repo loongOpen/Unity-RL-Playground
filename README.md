@@ -1,5 +1,7 @@
 # “格物”具身智能仿真平台
 
+[点击下图观看视频]
+
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
 ## 一、仿真环境安装
