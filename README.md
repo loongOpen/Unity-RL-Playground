@@ -1,6 +1,7 @@
 # “格物”具身智能仿真平台
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV167RbYxEuG&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="640" height="480"> </iframe>
+<iframe src="https://www.bilibili.com/video/BV167RbYxEuG/" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 
 ## 一、仿真环境安装
 
