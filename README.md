@@ -4,7 +4,10 @@
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
-论文
+论文：
+[1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025).
+[2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).
+
 
 ## 一、仿真环境安装
 
@@ -12,7 +15,7 @@
 
 2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
 
-3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
+3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在Releases列表中选择Release 20版本下载并解压
 
 4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
 
