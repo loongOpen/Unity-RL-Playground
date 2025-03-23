@@ -17,19 +17,19 @@
 
 3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在Releases列表中选择Release 20版本下载并解压
 
-4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
+4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer ，解压，可放至ml-agents-release_20主目录中
 
 5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
 
 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
-7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
+7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
 
 8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
-9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
+9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
 
-10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如对应的预训练模型非空）
+10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）
 
 ## 二、训练环境安装
 
@@ -49,7 +49,7 @@
 
 8.运行pip install six
 
-9.运行mlagents-learn --help已检查是否安装成功
+9.运行mlagents-learn --help检查是否安装成功
 
 ## 三、训练机器人
 
@@ -75,7 +75,7 @@
 
 1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
-2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。
+2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
 
 3.在unity下方点击选中机器人xx.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
 
@@ -91,7 +91,9 @@
 
 9.在Behaviour Parameters设置observation和action维数，可参考其他机器人
 
-10.配置完毕，即可依照“三”中步骤进行训练，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
+10.训练前测试，可选中Fixbody复选框，运行unity查看前馈动作是否正确，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
+
+11.配置完毕，即可依照“三”中步骤进行训练
 
 ## (注：以上面中文为准，英文版不全，待更新)
 ## (The Engilish version is to be updated)
