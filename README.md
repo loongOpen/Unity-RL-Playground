@@ -4,27 +4,51 @@
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
+“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且用户友好的强化学习开发环境，适用于各类机器人。
+
+## 相关论文
+
+**更多技术细节，或使用本平台进行研究请参考和引用以下论文：**
+
+[1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
+
+[2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
+
+## 平台特性
+- **广泛的机器人支持**：兼容数百种移动机器人，包括人形机器人、四足机器人、轮式机器人等。
+  
+- **一键导入与训练**：允许用户轻松导入机器人模型并启动训练，无需复杂的配置。
+  
+- **降低强化学习开发门槛**：简化工作流程并提供工具包，使强化学习技术人人皆可接触和使用。
+  
+## 开源与社区支持
+- **开源项目**：Unity RL Playground是完全开源的，代码和资源在GitHub上公开可用，供开发者自由访问和贡献。
+  
+- **社区驱动发展**：我们欢迎全球开发者加入我们的社区，共同推动平台的发展，并分享技术专长。
+
+“格物”致力于成为具身智能的开放平台，加速机器人技术的创新。无论您是学术研究人员、开发者还是爱好者，都能在这里找到量身定制的工具和资源，助力您的工作。
+
 ## 一、仿真环境安装
 
-1.搜索安装Unity Hub
+1.搜索安装Unity Hub，注册登录后使用Personal Licenses可免费激活
 
 2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
 
-3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
+3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在Releases列表中选择Release 20版本下载并解压
 
-4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
+4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer ，解压，可放至ml-agents-release_20主目录中
 
 5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
 
 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
-7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
+7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
 
 8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
-9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击Playground.unity打开，点击上面的三角形运行即可看到机器人预训练好的运动效果！
+9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
 
-10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如对应的预训练模型非空）
+10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）
 
 ## 二、训练环境安装
 
@@ -44,7 +68,7 @@
 
 8.运行pip install six
 
-9.运行mlagents-learn --help已检查是否安装成功
+9.运行mlagents-learn --help检查是否安装成功
 
 ## 三、训练机器人
 
@@ -54,7 +78,7 @@
 
 3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行D: 再运行 cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main （根据自己的实际目录调整））
 
-4.运行mlagents-learn trainer_config.yaml --run-id=tinker --force开始训练（注：id号名称可自己任取）
+4.运行mlagents-learn trainer_config.yaml --run-id=tinker --force开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
 
 5.当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
 
@@ -70,7 +94,7 @@
 
 1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
-2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。
+2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
 
 3.在unity下方点击选中机器人xx.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
 
@@ -86,17 +110,20 @@
 
 9.在Behaviour Parameters设置observation和action维数，可参考其他机器人
 
-10.配置完毕，即可依照“三”中步骤进行训练，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
+10.训练前测试，可选中Fixbody复选框，运行unity查看前馈动作是否正确，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
 
-## (注：以上面中文为准，英文版不全，待更新)
-## (The Engilish version is to be updated)
+11.配置完毕，即可依照“三”中步骤进行训练
 
-# Unity-RL-Playground
-Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment.
+# Unity RL Playground
+
+Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment for various robots.
 
 ## Related Publication
-For more details about the framework, please refer to our publication:
-Linqi Ye, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). https://arxiv.org/abs/2503.05146
+F‌or more details, please read and cite the following papers when conducting research using this platform‌:
+
+Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
+
+Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023). [PDF](https://arxiv.org/abs/2309.09167) 
 
 ## Platform Features‌
 
@@ -111,138 +138,86 @@ Linqi Ye, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, Bin Liang. "Un
 
 Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
 
-# Installation of Unity and ML-Agents
-## 1 Install Unity
+## I. Simulation Environment Installation
+Search for and install Unity Hub. Register and log in to activate using Personal Licenses for free.
 
-Download and install the latest version of the Unity Editor. It is recommended to choose the LTS (Long-Term Support) version to ensure stability.
+Open Unity Hub, select the Unity Editor 2021 LTS version in the Installs menu, and install it.
 
-## 2 Configure ML-Agents
+Download Unity ML-Agents from https://github.com/Unity-Technologies/ml-agents. Select Release 20 from the Releases list, download, and unzip it.
 
-### 2.1 Create a Virtual Environment
+Download URDF-Importer from https://github.com/Unity-Technologies/URDF-Importer, unzip it, and place it in the main directory of ml-agents-release_20.
 
-Install Anaconda
+In Unity Hub's Projects menu, click Open and select the ml-agents-release_20\Project directory to open it.
 
-If Anaconda is not already installed, visit the Anaconda official website to download and install it.
+In Unity's Window->Package Manager, click "+", then click Add package from disk. Select the URDF-Importer-main\com.unity.robotics.urdf-importer\package file to complete the URDF importer import.
 
-Create a Virtual Environment
+Download Unity RL Playground from https://github.com/loongOpen/Unity-RL-Playground. Select both "Unity-RL-Playground.part1.rar" and "Unity-RL-Playground.part2.rar" to unzip them simultaneously, resulting in the Unity-RL-Playground.unitypackage file.
 
-Open the Anaconda Prompt and run the following command to create a virtual environment named "RL-Playground" with Python 3.10: `conda create -n RL-Playground python=3.10`
+In Unity's menu bar, go to Assets->Import Package, select Unity-RL-Playground.unitypackage, and click import in the pop-up window.
 
-Activate the virtual environment: `conda activate RL-Playground`
+You will now see Unity-RL-Playground-main under the Assets directory in the small window at the bottom of Unity. Click to enter this directory, double-click Playground.unity to open it, and click the triangle on top of unity to run and see the pre-trained movement effects of the robots!
 
-### 2.2 Install ML-Agents
+Select a robot, and in the inspector window on the right, you can switch motion modes in the corresponding target motion dropdown menu (if the corresponding pre-trained model is not empty).
 
-Download ML-Agents
+## II. Training Environment Installation
+Install Anaconda from https://www.anaconda.com/download.
 
-Download the latest version of the ML-Agents toolkit from the ML-Agents GitHub page.
+Open the Anaconda window.
 
-Note: The download path must not contain Chinese characters, as this may cause training failures.
-Install ML-Agents Packages
+Run conda create -n ml-agents python=3.7.
 
-After extracting the downloaded files, navigate to the ml-agents and ml-agents-envs directories, and execute the following commands in each directory to install them: `pip install .`
+Run activate ml-agents.
 
-After installation, run the following command to verify that the installation was successful: `mlagents-learn --help`
+Run pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html.
 
-### 2.3 Configure Unity
+Run python -m pip install mlagents==0.28.0.
 
-Create a Unity Project
+Run pip install importlib-metadata==4.4.
 
-Open the Unity Editor, click the Open button, and select the ML-Agents project you downloaded: ml-agents-release_20—ml-agents-release_20——Project
+Run pip install six.
 
-# Installing and Using the URDF Importer
+Run mlagents-learn --help to check if the installation is successful.
 
-## 1. Download the URDF Importer
+## III. Training Robots
+Open Playground.unity in Unity, select a robot to train (e.g., tinker), and check the train box in the inspector on the right.
 
-Download the URDF Importer: https://github.com/Unity-Technologies/URDF-Importer
+Hide other robots (uncheck the top box in the inspector window).
 
-## 2. Add the URDF Package
+Go back to the Anaconda interface and enter the Unity-RL-Playground main directory (e.g., first run D:, then cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main - adjust according to your actual directory).
 
-Open the Unity Package Manager
+Run mlagents-learn trainer_config.yaml --run-id=tinker --force to start training (note: the id name can be customized, --force starts training from scratch, use --resume to continue from a checkpoint).
 
-Open the Package Manager from the Unity menu: Click Window > Package Manager.
+When [INFO] Listening on ... appears in the window, go back to the Unity interface, click the triangle button to start training.
 
-Add the URDF Package
+Observe the training progress in the Anaconda window. Normally, the reward will gradually increase. Training for 2,000,000 steps is typical, and you can terminate training by pressing ctrl+c.
 
-In the top-left corner of the Package Manager window, click the + button and select Add Package from Git disk.
+After terminating training, find the trained neural network in the results directory in Unity (e.g., results->tinker, where the name matches the run-id). You will see a gewu.onnx file, which is the trained neural network.
 
-Locate the `package.json` file in the `URDF-Importer-main\com.unity.robotics.urdf-importer` directory and proceed with the installation.
+Select the robot, and in the inspector window on the right, you will see multiple policy boxes. Drag the trained neural network into the corresponding box (e.g., B walk policy).
 
-## 2. Create a Robot Using a URDF File
+Uncheck train in the inspector on the right, run Unity, and you will see the robot's movement effect.
 
-Prepare the URDF File and Related Resources
+## IV. Importing and Training New Robots
+Place the new robot's urdf folder (including meshes) into Unity-RL-Playground-main\urdf.
 
-Copy the URDF file and its related files (such as mesh files) into the Assets folder of your Unity project. Ensure that the paths to the mesh files are correct.
+The robot's urdf folder is generally named xx_description, containing xx.urdf and a meshes folder. The path format in xx.urdf is package://meshes/xxx.STL. Joints other than the robot's legs should be locked. (Note: If there are unlocked joints other than the legs, you can open the robot's structure tree after importing, select the corresponding ArticulationBody, and change Articulation Joint Type from Revolute to Fix.)
 
-Import the Robot
+In Unity, click on the selected robot xx.urdf at the bottom, go to Assets->Import Robot from Selected URDF in the menu bar. In the pop-up window, select unity for mesh decomposer and click import URDF.
 
-In the Project window, right-click on your URDF file and select Import Robot from Selected URDF file.
+After seeing the imported robot model, select the robot and adjust its height (y-axis) in the inspector on the right to make its feet touch the ground, slightly higher if necessary.
 
-Configure Import Settings
+Hide other robots in the example program.
 
-A window will appear with import settings for the robot:
+Right-click to create an empty gameobject and rename it after your robot.
 
-Mesh File Orientation: Set the orientation of the mesh files.
+Drag the imported robot into this gameobject as a child node.
 
-Collision Mesh Decomposition Algorithm: Choose the algorithm for collision mesh decomposition.
+Select the gameobject, click add component in the inspector window, search and add the RobotRLAgent script, then click add component again, search and add the decision requester.
 
-Complete the Import
+Set the observation and action dimensions in Behaviour Parameters, referring to other robots for reference.
 
-Click the Import URDF button to complete the robot import.
+Before training, you can test by checking the Fixbody box and running Unity to see if the feedforward actions are correct. If there are mismatch errors, you can add parameters suitable for this robot in the RobotRLAgent code within the if (name.Contains("robot name")) statement, referring to other robots for specifics.
 
-# Importing and Configuring Unity RL Playground
+After configuration, proceed with training following the steps in section III.
 
-Drag the downloaded Unity-RL-Playground-main into ml-agents-release_20/ml-agents-release_20/Project/Assets. After importing the environment, the following operations need to be performed:
 
-## 1. Initial Environment Configuration
- 
-Click on Layers in the upper right corner of the interface, select Edit Layers, and add robot at the end of the Layers list.
-
-Click on Edit -> Project Settings -> Physics, uncheck the robot in the Layer Collision Matrix, and change the Fixed Timestep under Time to 0.01.
-
-Drag the RobotRLAgent.cs script into the missing Script slot under each robot.
-
-Drag the policy network under nnmodel into the None (NN Model) slot under the corresponding robot, and click play to run the several robot gaits in the example.
-
-## 2. Agent Configuration
-
-Max Step: Set to 1000, representing the maximum number of steps per training episode.
-
-Test Feedforward Actions：If Fixed Body is selected, click the Unity Play button to observe whether the feedforward actions applied to the robot are correct.
-
-Robot Type: Select the type of robot (e.g., Biped, Quadruped, Legwheeled).
-
-Target Motion: Select the target motion to be trained.
-
-Accelerate: Set Time.timeScale to 20 to accelerate the training process.
-
-# Start Training
-
-## 1. Initiate Training
-
-Disable Controller Scripts: Uncheck the imported robot controller scripts.
-
-Enable Training Options: Check Train and Accelerate (if accelerated training is desired).
-
-Start Training Command: Open the Anaconda Prompt and navigate to the directory containing the configuration file: `cd /path/to/your/config/file`
-
-Enter the following command to start training: `mlagents-learn configuration.yaml --run-id=g1_jump --force`
-
-If you need to resume the previous training, use the following command: `mlagents-learn configuration.yaml --run-id=g1_jump --resume`
-
-After training begins, the terminal will output prompt messages prefixed with [INFO].
-
-Verify Training Status: Open Unity and start the game. If the terminal prints out the contents of the configuration file, it indicates that the training has started normally.
-
-## 2. Monitoring the Training Process
-
-During the training process, reward data will be output based on the number of steps set in the configuration file (for example, reward data may be output every 20,000 steps). If you need to manually interrupt the training, you can press the shortcut Ctrl+C in the Anaconda Prompt.
-
-## 3. Analyzing Training Results:Viewing Training Statistics Using TensorBoard
-
-In the Anaconda Prompt, while in the same directory, enter the following command: `tensorboard --logdir results/g1_jump`
-
-The terminal will output a TensorBoard URL (e.g., http://localhost:6006/). Open this URL to view the training statistics graphs.
-
-## 4. Running the Trained Model
-
-After training is complete, the terminal will indicate the location of the trained model file (in .onnx format). Drag the model file into the corresponding field in the RobotRLAgent script. Launch the Unity game to observe the training results.
