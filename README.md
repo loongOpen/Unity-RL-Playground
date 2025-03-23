@@ -1,16 +1,16 @@
-一、仿真环境安装
+# 一、仿真环境安装
 
-1.搜索安装Unity Hub
+## 1.搜索安装Unity Hub
 
-2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
+## 2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
 
-3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
+## 3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents，在Releases列表中选择Release 20版本下载并解压
 
-4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
+## 4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer，解压，可放至ml-agents-release_20主目录中
 
-5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
+## 5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录打开
 
-6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
+## 6.在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
 7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part1.rar”两个压缩包同时选中解压
 
