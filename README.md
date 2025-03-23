@@ -10,6 +10,19 @@
 
 [2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
 
+## 平台特性
+  广泛的机器人支持：兼容数百种移动机器人，包括人形机器人、四足机器人、轮式机器人等。
+  
+  一键导入与训练：允许用户轻松导入机器人模型并启动训练，无需复杂的配置。
+  
+  降低强化学习开发门槛：简化工作流程并提供工具包，使强化学习技术人人皆可接触和使用。
+  
+## 开源与社区支持
+  开源项目：Unity RL Playground是完全开源的，代码和资源在GitHub上公开可用，供开发者自由访问和贡献。
+  
+  社区驱动发展：我们欢迎全球开发者加入我们的社区，共同推动平台的发展，并分享技术专长。
+
+“格物”致力于成为具身智能的开放平台，加速机器人技术的创新。无论您是学术研究人员、开发者还是爱好者，都能在这里找到量身定制的工具和资源，助力您的工作。
 
 ## 一、仿真环境安装
 
@@ -99,11 +112,27 @@
 
 # Unity RL Playground
 
+Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment for various robots.
+
+## Related Publication
 ‌Please cite the following papers when conducting research using this platform‌:
 
 Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
 
 Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023). [PDF](https://arxiv.org/abs/2309.09167) 
+
+## Platform Features‌
+
+- **Extensive Robot Support‌**: Compatible with hundreds of mobile robots, including humanoid robots, quadruped robots, wheeled robots, and more.
+- **One-Click Import & Training‌**: Allowing users to effortlessly import robot models and initiate training without complex configurations.
+- **Lowered RL Development Barrier‌**: Simplifies workflows and provides toolkits to make RL technology accessible and approachable for everyone.
+
+## Open-Source & Community Support‌
+
+- **Open-Source Project‌**: Unity RL Playground is fully open-source, with code and resources publicly available on GitHub for developers to freely access and contribute.
+- **Community-Driven Growth‌**: We welcome global developers to join our community, collaborate on advancing the platform, and share technical expertise.
+
+Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
 
 ## I. Simulation Environment Installation
 Search for and install Unity Hub. Register and log in to activate using Personal Licenses for free.
