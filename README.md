@@ -80,8 +80,8 @@
 
 10.配置完毕，即可依照“三”中步骤进行训练，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
 
-(注：以上面中文为准，英文版不全，待更新)
-(The Engilish version is to be updated)
+## (注：以上面中文为准，英文版不全，待更新)
+## (The Engilish version is to be updated)
 
 # Unity-RL-Playground
 Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment.
