@@ -36,7 +36,7 @@
 
 2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2021 LTS版本安装（6个多G，安装需一定时间，耐心等待）
 
-3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在Releases列表中选择Release 20版本下载并解压
+3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在右侧的Releases列表中选择Release 20版本下载并解压
 
 4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer ，解压，可放至ml-agents-release_20主目录中
 
