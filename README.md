@@ -80,19 +80,19 @@
 
 ## 三、训练机器人
 
-1.在unity打开Playground.unity，选中一个要训练的机器人（如tinker），在右侧inspector中勾选train
+1.在unity打开Playground.unity，选中一个要训练的机器人（建议先用Go2测试），在右侧inspector中勾选train
 
 2.选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
 3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行D: 再运行 cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main （根据自己的实际目录调整））
 
-4.运行mlagents-learn trainer_config.yaml --run-id=tinker --force开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
+4.运行mlagents-learn trainer_config.yaml --run-id=go2trot --force开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
 
 5.当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
 
 6.训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
 
-7.终止训练后在unity界面下方找到刚刚训的神经网络，在results->tinker（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
+7.终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
 
 8.点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如B walk policy）
 
