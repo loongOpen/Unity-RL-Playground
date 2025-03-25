@@ -32,9 +32,9 @@
 
 ## 一、仿真环境安装
 
-1.搜索安装Unity Hub，注册登录后使用Personal Licenses可免费激活
+1.搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
 
-2.打开Unity Hub，在Installs菜单选择Unity Editor 2021 LTS版本安装
+2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2021 LTS版本安装
 
 3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在Releases列表中选择Release 20版本下载并解压
 
