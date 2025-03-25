@@ -64,7 +64,7 @@
 
 5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
-（确保网络畅通，耗时较长，耐心等待）
+（确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
 6.运行python -m pip install mlagents==0.28.0
 
