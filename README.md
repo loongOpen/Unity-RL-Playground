@@ -64,6 +64,8 @@
 
 5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
+（确保网络畅通，耗时较长，耐心等待）
+
 6.运行python -m pip install mlagents==0.28.0
 
 7.运行pip install importlib-metadata==4.4
