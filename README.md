@@ -42,7 +42,7 @@
 
 5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录导入，在导入的项目点击黄色叹号前的版本号，点击Open with 2021.3.45f1c1，再点击Change version，点击Continue，等待项目打开（第一次打开耗时较长，耐心等待）
 
-6.打开项目后，在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
+6.打开项目后，在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择第4步下载的插件URDF-Importer-main\com.unity.robotics.urdf-importer\package文件打开，完成URDF importer的导入
 
 7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个压缩包同时选中解压，得到Unity-RL-Playground.unitypackage
 
