@@ -48,9 +48,9 @@
 
 8.在Unity的菜单栏Assets->Import Package，选择Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
-9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
+9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！(建议显示界面切换到Display 2，分辨率选择Full HD)
 
-10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）
+10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。录制视频可添加和使用Unity Recorder插件
 
 ## 二、训练环境安装
 
@@ -86,7 +86,7 @@
 
 6.训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
 
-7.终止训练后再unity界面下方找到刚刚训的神经网络，在results->tinker（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
+7.终止训练后在unity界面下方找到刚刚训的神经网络，在results->tinker（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
 
 8.点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如B walk policy）
 
