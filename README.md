@@ -60,7 +60,7 @@
 
 3.运行conda create -n ml-agents python=3.7
 
-4.运行activate ml-agents
+4.运行conda activate ml-agents
 
 5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
