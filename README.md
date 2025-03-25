@@ -48,7 +48,7 @@
 
 8.在Unity的菜单栏Assets->Import Package->custom package，选择上一步得到的Unity-RL-Playground.unitypackage，在弹出窗口点击import
 
-9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！(建议显示界面切换到Display 2，分辨率选择Full HD)
+9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！(建议在Game窗口将显示界面切换到Display 2，分辨率选择Full HD)
 
 10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。录制视频可添加和使用Unity Recorder插件
 
