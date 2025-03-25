@@ -64,9 +64,13 @@
 
 5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
+（ubuntu运行pip3 install torch==1.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html）
+
 （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
 6.运行python -m pip install mlagents==0.28.0
+
+（耐心等待）
 
 7.运行pip install importlib-metadata==4.4
 
@@ -78,7 +82,7 @@
 
 1.在unity打开Playground.unity，选中一个要训练的机器人（如tinker），在右侧inspector中勾选train
 
-2.将其他机器人隐藏（在inspector窗口将最上面一个方框的勾取消即可）
+2.选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
 3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行D: 再运行 cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main （根据自己的实际目录调整））
 
