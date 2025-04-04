@@ -70,9 +70,9 @@
 
 1.安装Anaconda：https://www.anaconda.com/download
 
-2.打开anacconda窗口
+2.在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
 
-3.运行conda create -n gewu python=3.10.12
+3.运行conda create -n gewu python=3.10.12 -y
 
 4.运行conda activate gewu
 
