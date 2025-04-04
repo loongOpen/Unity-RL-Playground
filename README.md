@@ -10,11 +10,11 @@
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
-**点击下图观看视频（[Tinker足球赛](https://www.bilibili.com/video/BV1MBo8YUESp/)）**
+**点击观看视频（[Tinker足球赛](https://www.bilibili.com/video/BV1MBo8YUESp/)）**
 
 [![视频封面图片](soccer.png)](https://www.bilibili.com/video/BV1MBo8YUESp/)
 
-**点击下图观看视频（[青龙功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/)）**
+**点击观看视频（[青龙功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/)）**
 
 [![视频封面图片](kungfusoccer.png)](https://www.bilibili.com/video/BV1NuZBYeEq8/)
 
