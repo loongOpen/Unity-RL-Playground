@@ -1,8 +1,9 @@
 # “格物”具身智能仿真平台
 - **格物1.0上线啦！**
 - **机器人运动会、Tinker足球赛、青龙功夫足球全部上线**
-- **更新至最新版Unity2023**
-- **不再打包，下载即用，push代码更加方便**
+- **采用最新版Unity2023**
+- **不再打包，push代码更加方便**
+- **内置依赖包，下载即用**
 - **极致优化简洁的代码，开发更方便**
 
 **点击下图观看视频（机器人运动会）**
@@ -49,23 +50,19 @@
 
 1.搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
 
-2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2021 LTS版本安装（6个多G，安装需一定时间，耐心等待）
+2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2023版本安装（7个多G，安装需一定时间，耐心等待）
 
-3.下载Unity ML-Agents：https://github.com/Unity-Technologies/ml-agents ，在右侧的Releases列表中选择Release 20版本下载并解压
+3.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
 
-4.下载URDF-Importer：https://github.com/Unity-Technologies/URDF-Importer ，解压，可放至ml-agents-release_20主目录中
+4.在Unity Hub的Projects菜单中点击Open，选择Unity-RL-Playground\gewu\Project目录导入，导入后点击该Project，等待项目打开（第一次打开耗时较长，耐心等待）
 
-5.在Unity Hub的Projects菜单中点击Open，选择ml-agents-release_20\Project目录导入，在导入的项目点击黄色叹号前的版本号，点击Open with 2021.3.45f1c1，再点击Change version，点击Continue，等待项目打开（第一次打开耗时较长，耐心等待）
+5.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
 
-6.打开项目后，在Unity的Window->Package Manager中点击“+”，点击Add package from disk，选择第4步下载的插件URDF-Importer-main\com.unity.robotics.urdf-importer\package.jason文件打开，完成URDF importer的导入
+6.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。录制视频可添加和使用Unity Recorder插件
 
-7.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，将“Unity-RL-Playground.part1.rar”和“Unity-RL-Playground.part2.rar”两个分卷压缩包一起解压（ubuntu可使用unrar实现），得到Unity-RL-Playground.unitypackage
+7.双击Tinker.unity打开即为Tinker足球赛，双击GedouPlay.unity打开即为青龙功夫足球
 
-8.在Unity的菜单栏Assets->Import Package->custom package，选择上一步得到的Unity-RL-Playground.unitypackage，在弹出窗口点击import
-
-9.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！(建议在Game窗口将显示界面切换到Display 2，分辨率选择Full HD)
-
-10.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。录制视频可添加和使用Unity Recorder插件
+8.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
 ## 二、训练环境安装
 
