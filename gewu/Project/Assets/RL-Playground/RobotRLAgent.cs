@@ -1,7 +1,6 @@
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
-//using Unity.MLAgentsExamples;
 using Unity.MLAgents.Sensors;
 using Random = UnityEngine.Random;
 using System.Collections.Generic;
@@ -15,7 +14,6 @@ public class RobotRLAgent : Agent
     int tp = 0;
     int tq = 0;
     int tt = 0;
-    //public Transform foot;
     public bool fixbody = false;
     public bool train;
     public bool accelerate;
@@ -114,12 +112,7 @@ public class RobotRLAgent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        /////////////////////////////////////////////////////
-        robot = this.GetComponent<GameObject>();
-        int LayerRobot = LayerMask.NameToLayer("robot");
-        //robot.layer = LayerRobot;
         accelerate = train;
-       
     }
 
 
@@ -135,8 +128,6 @@ public class RobotRLAgent : Agent
         layer.stringValue = "robot";
         tagManager.ApplyModifiedProperties();
         Physics.IgnoreLayerCollision(15, 15, true);
-
-        // 改变当前GameObject及其所有子节点的Layer
         ChangeLayerRecursively(gameObject, 15);
 
         if (train && !_isClone) 
@@ -152,14 +143,8 @@ public class RobotRLAgent : Agent
     }
     void ChangeLayerRecursively(GameObject obj, int targetLayer)
     {
-        // 改变当前GameObject的Layer
         obj.layer = targetLayer;
-
-        // 遍历所有子节点并改变它们的Layer
-        foreach (Transform child in obj.transform)
-        {
-            ChangeLayerRecursively(child.gameObject, targetLayer);
-        }
+        foreach (Transform child in obj.transform)ChangeLayerRecursively(child.gameObject, targetLayer);
     }
 
     public override void OnEpisodeBegin()
@@ -170,8 +155,7 @@ public class RobotRLAgent : Agent
         for (int i = 0; i< 12; i++) u[i] = 0;
         for (int i = 0; i < 12; i++) ut[i] = 0;
         for (int i = 0; i < 12; i++) utt[i] = 0;
-        //write_init();
-        //art0.immovable = true;
+
         ObservationNum = 9 + 2 * ActionNum;
         if (fixbody) arts[0].immovable = true;
         if (!fixbody)
@@ -182,7 +166,6 @@ public class RobotRLAgent : Agent
             arts[0].SetJointPositions(P0);
             arts[0].SetJointVelocities(W0);
         }
-        //for (int i = 0; i < AJidx.Length; i++) print(AJidx[i]);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -246,11 +229,9 @@ public class RobotRLAgent : Agent
         {
             if (BipedTargetMotion == StyleB.walk)
             {
-                //float[] ktemp = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
                 for (int i = 0; i < 12; i++) kb[i] = ktemp1[i];
                 T1 = 30;
-                dh = 20;//20
-                //d0 = 20;//0
+                dh = 20;
                 utotal[Mathf.Abs(idx[0])] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
                 utotal[Mathf.Abs(idx[1])] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
                 utotal[Mathf.Abs(idx[2])] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
@@ -365,11 +346,8 @@ public class RobotRLAgent : Agent
         {
             if (BipedTargetMotion == StyleB.walk)
             {
-                //float[] ktemp = new float[12] { 10, 10, 45, 20, 40, 10,   10, 10, 40, 20, 45, 10 };
                 for (int i = 0; i < 12; i++) kb[i] = ktemp1[i];
                 T1 = 40;
-                //dh = 10;//10
-                //d0 = 0;
                 utotal[Mathf.Abs(idx[0]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
                 utotal[Mathf.Abs(idx[1]) - 1] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
                 utotal[Mathf.Abs(idx[2]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
@@ -519,8 +497,6 @@ public class RobotRLAgent : Agent
         for (int i = 0; i < ActionNum; i++) SetJointTargetDeg(acts[i], utotal[i]);
 
         
-        //LegwheelTargetMotion
-        //LegwheelTargetMotion
         if (BipedTargetMotion != LastBmotion || QuadrupedTargetMotion != LastQmotion || LegwheelTargetMotion != LastLmotion) EndEpisode();
         LastBmotion = BipedTargetMotion;
         LastQmotion = QuadrupedTargetMotion;
@@ -548,19 +524,14 @@ public class RobotRLAgent : Agent
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        var continuousActionsOut = actionsOut.ContinuousActions;
-        //continuousActionsOut[0] = Input.GetAxis("Horizontal");
-        continuousActionsOut[0] = 0;//all between-1 and 1
+        
     }
 
     void FixedUpdate()
     {
         if (accelerate) Time.timeScale = 20;
         if (!accelerate) Time.timeScale = 1;
-        Vector3 Fd = Vector3.zero;
-        Fd.x = Random.Range(-1f, 1f);
-        Fd.z = Random.Range(-1f, 1f);
-        //if (Random.Range(0, 100) == 1) art0.AddForce(5*Fd, ForceMode.Impulse);
+
         tp++;
         tq++;
         tt++;
@@ -598,38 +569,5 @@ public class RobotRLAgent : Agent
             //print(stage);
         }
     }
-    void write_init()
-    {
-        string _txtPath = "E:\\angles.txt";
-        FileInfo file = new FileInfo(_txtPath);
-        if (file.Exists)
-        {
-            file.Delete();
-            file.Refresh();
-        }
-    }
-    void write(int time, float[] ang, float[] angr, float[] ub)
-    {
 
-        StreamWriter writer;
-        string _txtPath = "E:\\angles.txt";
-        FileInfo file = new FileInfo(_txtPath);
-        if (!file.Exists)
-        {
-            writer = file.CreateText();
-        }
-        else
-        {
-            writer = file.AppendText();
-        }
-
-        writer.WriteLine(time + " " + ang[0] + " " + ang[1] + " " + ang[2] + " " + ang[3] + " " + ang[4] + " " + ang[5] + " " + ang[6] + " " + ang[7] + " " + ang[8] + " " + ang[9] + " " + ang[10] + " " + ang[11]
-                     + " " + angr[0] + " " + angr[1] + " " + angr[2] + " " + angr[3] + " " + angr[4] + " " + angr[5] + " " + angr[6] + " " + angr[7] + " " + angr[8] + " " + angr[9] + " " + angr[10] + " " + angr[11]
-                    + " " + ub[0] + " " + ub[1] + " " + ub[2] + " " + ub[3] + " " + ub[4] + " " + ub[5] + " " + ub[6] + " " + ub[7] + " " + ub[8] + " " + ub[9] + " " + ub[10] + " " + ub[11]
-        );
-
-        writer.Flush();
-        writer.Dispose();
-        writer.Close();
-    }
 }
