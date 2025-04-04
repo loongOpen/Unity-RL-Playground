@@ -1,5 +1,5 @@
 # “格物”具身智能仿真平台
-- **格物1.0上线啦，全面升级**
+- **4月4日，格物1.0上线，全面升级**
 - **机器人运动会、Tinker足球赛、青龙功夫足球全部上线**
 - **采用最新版Unity2023**
 - **不再打包，push代码更加方便**
@@ -50,7 +50,7 @@
 
 1.搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
 
-2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2023版本（2023.2.20f1c1）安装（7个多G，耐心等待）
+2.在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2023版本（2023.2.20f1c1）安装（7个多G，耐心等待，若之前安装了2021版本可将其卸载以腾出空间）
 
 3.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
 
@@ -72,7 +72,9 @@
 
 2.在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
 
-3.运行conda create -n gewu python=3.10.12 -y
+3.运行conda create -n gewu python=3.10.12 -y 
+
+（注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
 
 4.运行conda activate gewu
 
