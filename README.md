@@ -54,15 +54,17 @@
 
 3.下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
 
-4.在Unity Hub的Projects菜单中点击Open，选择Unity-RL-Playground\gewu\Project目录导入，导入后点击该Project，等待项目打开（第一次打开耗时较长，耐心等待）
+4.在Unity Hub的Projects菜单中点击Open，选择上一步解压的Unity-RL-Playground\gewu\Project目录，点击Open，等待项目打开（第一次打开耗时较长，耐心等待）
 
-5.此时在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
+5.项目打开后，在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
 
-6.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。录制视频可添加和使用Unity Recorder插件
+6.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。
 
-7.双击Tinker.unity打开即为Tinker足球赛，双击GedouPlay.unity打开即为青龙功夫足球
+7.双击Tinker.unity打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
 
-8.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
+8.双击GedouPlay.unity打开即为青龙功夫足球，预设为自动对战模式，不需键盘控制
+
+9.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
 ## 二、训练环境安装
 
