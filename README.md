@@ -70,25 +70,19 @@
 
 2.打开anacconda窗口
 
-3.运行conda create -n ml-agents python=3.7
+3.运行conda create -n gewu python=3.10.12
 
-4.运行conda activate ml-agents
+4.运行conda activate gewu
 
-5.运行pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
-
-注：ubuntu运行pip3 install torch==1.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+5.运行pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
 
 （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
-6.运行python -m pip install mlagents==0.28.0
+6.运行python -m pip install mlagents==1.1.0
 
 （耐心等待）
 
-7.运行pip install importlib-metadata==4.4
-
-8.运行pip install six
-
-9.运行mlagents-learn --help检查是否安装成功
+7.运行mlagents-learn --help检查是否安装成功
 
 ## 三、训练机器人
 
