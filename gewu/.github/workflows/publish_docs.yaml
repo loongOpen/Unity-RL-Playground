@@ -1,0 +1,24 @@
+name: Publish HTML Docs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish Docs to GH Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PUBLIC_GH_TOKEN }}
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.10
+      - name: Publish docs
+        run: |
+          pip install mkdocs
+          git remote add public git@github.com:Unity-Technologies/ml-agents.git
+          mkdocs gh-deploy --clean -r public
+

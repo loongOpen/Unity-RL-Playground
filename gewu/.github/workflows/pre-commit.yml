@@ -1,0 +1,62 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches:
+     - main
+     - develop
+     - 'release/**'
+  workflow_dispatch:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: 3.10.x
+    - uses: ruby/setup-ruby@v1
+      env:
+        ImageOS: ubuntu20
+      with:
+        ruby-version: '2.7'
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.202'
+    - name: Install manual dependencies
+      run: |
+        python -m pip install pre-commit
+        pre-commit install
+    - name: Run pre-commit
+      run: |
+        pre-commit run --all-files
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: 3.10.x
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '12'
+    - name: Install manual dependencies
+    # pin markdown-link-check version to support multi-level reference link
+      run: |
+        sudo npm install -g markdown-link-check@3.8.7
+        python -m pip install pre-commit
+        pre-commit install
+    - name: Run markdown checker
+      run: |
+        pre-commit run --hook-stage manual markdown-link-check --all-files
+  validate-meta-files:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: 3.10.x
+    - run: python utils/validate_meta_files.py
