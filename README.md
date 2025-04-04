@@ -44,8 +44,6 @@
 
 **“格物”平台适用于Windows、Linux、macOS等操作系统**
 
-**注：最新上传的功夫足球例程KungfuSoccer.unitypackage需安装unity 2023和mlagents 22使用**
-
 ## 一、仿真环境安装
 
 1.搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
