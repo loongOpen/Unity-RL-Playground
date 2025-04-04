@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<robot>
+    <!-- Show the trajectory of trunk center. -->
+    <!-- <gazebo>
+        <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
+            <frequency>10</frequency>
+            <plot>
+                <link>base_Link</link>
+                <pose>0 0 0 0 0 0</pose>
+                <material>Gazebo/Yellow</material>
+            </plot>
+        </plugin>
+    </gazebo> -->
+
+    <!-- Show the trajectory of foot. You can add another trajectory about another foot. -->
+    <!-- <gazebo>
+        <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
+            <frequency>100</frequency>
+            <plot>
+                <link>contact_L_Link</link>
+                <pose>0 0 0 0 0 0</pose>
+                <material>Gazebo/Green</material>
+            </plot>
+        </plugin>
+    </gazebo> -->
+
+    <!-- <gazebo>
+        <plugin filename="libgazebo_ros2_p3d.so" name="p3d_base_controller">
+            <alwaysOn>true</alwaysOn>
+            <updateRate>1000.0</updateRate>
+            <bodyName>base_Link</bodyName>
+            <topicName>ground_truth/state</topicName>
+            <gaussianNoise>0</gaussianNoise>
+            <frameName>world</frameName>
+            <xyzOffsets>0 0 0</xyzOffsets>
+            <rpyOffsets>0 0 0</rpyOffsets>
+        </plugin>
+    </gazebo> -->
+    <gazebo reference="imu_Link">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>1000</update_rate>
+            <visualize>true</visualize>
+            <topic>__default_topic__</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>trunk_imu</topicName>
+                <bodyName>imu_Link</bodyName>
+                <updateRateHZ>400.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu_Link</frameName>
+                <initial_orientation_as_reference>false</initial_orientation_as_reference>
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+    <gazebo reference="stick_link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="imu_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <!-- Left leg -->
+    <gazebo reference="abad_L_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+    <gazebo reference="hip_L_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+    <gazebo reference="knee_L_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>0</self_collide>
+        <material>Gazebo/DarkGrey</material>
+        <kp value="1000000.0"/>
+        <kd value="100.0"/>
+    </gazebo>
+    <gazebo reference="wheel_L_Link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <self_collide>1</self_collide>
+        <material>Gazebo/DarkGrey</material>
+        <kp value="1000000.0"/>
+        <kd value="100.0"/>
+    </gazebo>
+
+    <!-- Right leg -->
+    <gazebo reference="abad_R_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+    <gazebo reference="hip_R_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+    <gazebo reference="knee_R_Link">
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <self_collide>0</self_collide>
+        <material>Gazebo/DarkGrey</material>
+        <kp value="1000000.0"/>
+        <kd value="100.0"/>
+    </gazebo>
+    <gazebo reference="wheel_R_Link">
+        <mu1>2.0</mu1>
+        <mu2>2.0</mu2>
+        <self_collide>1</self_collide>
+        <material>Gazebo/DarkGrey</material>
+        <kp value="1000000.0"/>
+        <kd value="100.0"/>
+    </gazebo>
+
+</robot>

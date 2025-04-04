@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/transmission.xacro"/>
+
+    <xacro:macro name="leg" params="name mirror mirror_STL *origin">
+
+        <joint name="abad_${name}_joint" type="revolute">
+            <origin
+                xyz="${abad_offset_x} ${abad_offset_y*mirror} ${abad_offset_z}"
+                rpy="0 0 0"/>
+            <parent link="base_Link"/>
+            <child link="abad_${name}_Link"/>
+            <axis xyz="1 0 0"/>
+            <dynamics damping="${damping}" friction="${friction}"/>
+            <xacro:if value="${(mirror_STL == True)}">
+                <limit effort="${abad_torque_max}" velocity="${abad_velocity_max}" lower="${abad_min*PI/180.0}" upper="${abad_max*PI/180.0}"/>
+            </xacro:if>
+            <xacro:if value="${(mirror_STL == False)}">
+                <limit effort="${abad_torque_max}" velocity="${abad_velocity_max}" lower="${-abad_max*PI/180.0}" upper="${-abad_min*PI/180.0}"/>
+            </xacro:if>            
+        </joint>
+
+        <link name="abad_${name}_Link">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <mesh filename="$(find robot_description)/pointfoot/WF_TRON1A/meshes/abad_${name}_Link.STL" scale="1 1 1"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0" xyz="${abad_com_x} ${abad_com_y*mirror} ${abad_com_z}"/>
+                <mass value="${abad_mass}"/>
+                <inertia
+                    ixx="${abad_ixx}" ixy="${abad_ixy*mirror}" ixz="${abad_ixz}"
+                    iyy="${abad_iyy}" iyz="${abad_iyz*mirror}"
+                    izz="${abad_izz}"/>       
+            </inertial>
+        </link>
+
+
+        <joint name="hip_${name}_joint" type="revolute">
+            <origin
+                xyz="${hip_offset_x} ${hip_offset_y*mirror} ${hip_offset_z}"
+                rpy="0 0 0"/>
+            <parent link="abad_${name}_Link"/>
+            <child link="hip_${name}_Link"/>
+            <axis xyz="0 ${mirror} 0"/>
+            <dynamics damping="${damping}" friction="${friction}"/>
+            <xacro:if value="${(mirror_STL == True)}">
+                <limit effort="${hip_torque_max}" velocity="${hip_velocity_max}" lower="${hip_min*PI/180.0}" upper="${hip_max*PI/180.0}"/>
+            </xacro:if>
+            <xacro:if value="${(mirror_STL == False)}">
+                <limit effort="${hip_torque_max}" velocity="${hip_velocity_max}" lower="${-hip_max*PI/180.0}" upper="${-hip_min*PI/180.0}"/>
+            </xacro:if>            
+        </joint>
+
+        <link name="hip_${name}_Link">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <mesh filename="$(find robot_description)/pointfoot/WF_TRON1A/meshes/hip_${name}_Link.STL" scale="1 1 1"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <inertial>
+                <origin rpy="0 0 0" xyz="${hip_com_x} ${hip_com_y*mirror} ${hip_com_z}"/>
+                <mass value="${hip_mass}"/>
+                <inertia
+                    ixx="${hip_ixx}" ixy="${hip_ixy*mirror}" ixz="${hip_ixz}"
+                    iyy="${hip_iyy}" iyz="${hip_iyz*mirror}"
+                    izz="${hip_izz}"/>       
+            </inertial>
+        </link>
+
+
+        <joint name="knee_${name}_joint" type="revolute">
+            <origin
+                xyz="${knee_offset_x} ${knee_offset_y*mirror} ${knee_offset_z}"
+                rpy="0 0 0"/>
+            <parent link="hip_${name}_Link"/>
+            <child link="knee_${name}_Link"/>
+            <axis xyz="0 ${-mirror} 0"/>
+            <dynamics damping="${damping}" friction="${friction}"/>
+            <xacro:if value="${(mirror_STL == True)}">
+                <limit effort="${knee_torque_max}" velocity="${knee_velocity_max}" lower="${knee_min*PI/180.0}" upper="${knee_max*PI/180.0}"/>
+            </xacro:if>
+            <xacro:if value="${(mirror_STL == False)}">
+                <limit effort="${knee_torque_max}" velocity="${knee_velocity_max}" lower="${-knee_max*PI/180.0}" upper="${-knee_min*PI/180.0}"/>
+            </xacro:if>            
+        </joint>
+
+        <link name="knee_${name}_Link">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <mesh filename="$(find robot_description)/pointfoot/WF_TRON1A/meshes/knee_${name}_Link.STL" scale="1 1 1"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <origin rpy="0 0 0" xyz="0 0 0.0"/>
+                <geometry>
+                    <sphere radius="${calf_radius}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin rpy="0 0 0" xyz="${knee_com_x} ${knee_com_y*mirror} ${knee_com_z}"/>
+                <mass value="${knee_mass}"/>
+                <inertia
+                    ixx="${knee_ixx}" ixy="${knee_ixy*mirror}" ixz="${knee_ixz}"
+                    iyy="${knee_iyy}" iyz="${knee_iyz*mirror}"
+                    izz="${knee_izz}"/>       
+            </inertial>
+        </link>
+
+
+        <joint name="wheel_${name}_joint" type="revolute">
+            <origin
+                xyz="${wheel_offset_x} ${wheel_offset_y*mirror} ${wheel_offset_z}"
+                rpy="0 0 0"/>
+            <parent link="knee_${name}_Link"/>
+            <child link="wheel_${name}_Link"/>
+            <axis xyz="0 1 0"/>
+            <dynamics damping="${damping}" friction="${friction}"/>
+            <limit effort="${wheel_torque_max}" velocity="${wheel_velocity_max}" lower="${wheel_min*PI/180.0}" upper="${wheel_max*PI/180.0}"/>
+        </joint>
+
+        <link name="wheel_${name}_Link">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <mesh filename="$(find robot_description)/pointfoot/WF_TRON1A/meshes/wheel_${name}_Link.STL" scale="1 1 1"/>
+                </geometry>
+                <material name="grey"/>
+            </visual>
+            <collision>
+                <origin rpy="1.570796327 0 0" xyz="0 ${0.008*mirror} 0.0"/>
+                <geometry>
+                    <cylinder length="${wheel_length}" radius="${wheel_radius}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin rpy="0 0 0" xyz="${wheel_com_x} ${wheel_com_y*mirror} ${wheel_com_z}"/>
+                <mass value="${wheel_mass}"/>
+                <inertia
+                    ixx="${wheel_ixx}" ixy="${wheel_ixy*mirror}" ixz="${wheel_ixz}"
+                    iyy="${wheel_iyy}" iyz="${wheel_iyz*mirror}"
+                    izz="${wheel_izz}"/>       
+            </inertial>
+        </link>
+
+        <xacro:leg_transmission name="${name}"/>
+    </xacro:macro> 
+</robot>
