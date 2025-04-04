@@ -58,9 +58,9 @@
 
 6.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。
 
-7.双击Tinker.unity打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
+7.双击TinkerPlay.unity打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
 
-8.双击GedouPlay.unity打开即为青龙功夫足球，预设为自动对战模式，不需键盘控制
+8.双击LoongPlay.unity打开即为青龙功夫足球，预设为自动对战模式，只当足球卡在角落时可按空格键复位
 
 9.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
