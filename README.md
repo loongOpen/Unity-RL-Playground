@@ -6,15 +6,15 @@
 - **依赖包已预置，下载即用**
 - **极致优化简洁的代码，开发更方便**
 
-**点击下图观看视频（机器人运动会）**
+**点击观看视频（[机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/)）**
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
-**点击下图观看视频（Tinker足球赛）**
+**点击下图观看视频（[Tinker足球赛](https://www.bilibili.com/video/BV1MBo8YUESp/)）**
 
 [![视频封面图片](soccer.png)](https://www.bilibili.com/video/BV1MBo8YUESp/)
 
-**点击下图观看视频（青龙功夫足球）**
+**点击下图观看视频（[青龙功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/)）**
 
 [![视频封面图片](kungfusoccer.png)](https://www.bilibili.com/video/BV1NuZBYeEq8/)
 
