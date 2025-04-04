@@ -1,0 +1,33 @@
+pytest_gpu:
+  name: Pytest GPU
+  agent:
+    type: Unity::VM::GPU
+    image: ml-agents/ubuntu-ci:v1.0.0
+    flavor: b1.large
+  commands:
+    - |
+      eval "$($HOME/anaconda/bin/conda shell.bash hook)"
+      conda activate python3.10
+      python3 -m pip install pyyaml --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple
+      python3 -u -m ml-agents.tests.yamato.setup_venv
+      python3 -m pip install --progress-bar=off -r test_requirements.txt --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple
+      python3 -m pip install torch==2.2.1+cu118 --index-url https://download.pytorch.org/whl/cu118
+      if python -c "exec('import torch \nif not torch.cuda.is_available(): raise')" &> /dev/null; then
+        echo 'all good'
+      else
+        echo 'cuda device not available!'
+        exit 1
+      fi
+      python3 -m pytest -m "not slow" --junitxml=junit/test-results.xml -p no:warnings
+  triggers:
+    cancel_old_ci: true
+    expression: |
+      (push.branch eq "main" OR
+      push.branch eq "develop" OR
+      push.branch match "release.+") AND
+      push.changes.any match "ml-agents/**" AND
+      NOT push.changes.all match "**/*.md"
+  artifacts:
+    logs:
+      paths:
+        - "artifacts/standalone_build.txt"

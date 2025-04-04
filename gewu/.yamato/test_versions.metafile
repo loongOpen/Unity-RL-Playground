@@ -1,0 +1,11 @@
+# List of editor versions for standalone-build-test and its dependencies.
+# We always run training-int-tests for all versions of the editor
+# For each "other" test, we only run it against a single version of the
+# editor to reduce the number of yamato jobs
+test_editors:
+  - version: 2023.2
+    extra_test: gym
+  - version: 2023.2
+    extra_test: sensor
+  - version: trunk
+    extra_test: llapi
