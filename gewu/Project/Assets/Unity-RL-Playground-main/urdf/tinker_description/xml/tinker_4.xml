@@ -1,0 +1,68 @@
+<mujocoinclude>
+    <body name="tinymal" pos="0 0 -0.14" quat="1 0 0 0">
+        <joint name="float_base" type="free"/>
+        <inertial pos="0.01 0.000283 0.070881" quat="1 0 0 0" mass="2.5" diaginertia="0.01079522 0.01240703 0.00996364"/>  
+        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="base_link" />
+        <geom type="mesh" rgba="1 1 1 1" mesh="base_link" />
+        <site name='imu' size='0.01' pos='0.0 0 0.0'/>
+
+        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="base_link" />
+        <geom type="mesh" rgba="1 1 1 1" mesh="base_link" />
+        <body name="link_l_yaw" pos="0.0025357 0.053301 0.056145">
+            <inertial pos="0.0031721 3.773e-05 -0.050777" quat="0.999618 -0.00349618 0.0274106 -0.000616623" mass="0.4033" diaginertia="0.000383417 0.000238822 0.000201201" />
+            <joint name="joint_l_yaw" pos="0 0 0" axis="0 0 1" limited="true" range="-0.66 0.66" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="link_l_yaw" />
+            <body name="link_l_roll" pos="-0.010958 0 -0.054965">
+                <inertial pos="0.0090994 0.06545 -0.013394" quat="0.10126 0.439014 0.726345 0.519073" mass="0.46748" diaginertia="0.000419009 0.000376378 0.000322143" />
+                <joint name="joint_l_roll" pos="0 0 0" axis="1 0 0" limited="true" range="-0.57 0.57" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="link_l_roll" />
+                <body name="link_l_pitch" pos="0.010958 0.071699 -0.014313">
+                    <inertial pos="-0.0013138 0.0056716 -0.12051" quat="0.710837 -0.0349039 0.0167031 0.702291" mass="0.56676" diaginertia="0.00166183 0.00142159 0.000327424" />
+                    <joint name="joint_l_pitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.57 1.57" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="link_l_pitch" />
+                    <geom type="mesh" rgba="1 1 1 1" mesh="link_l_pitch" />
+                    <body name="link_l_knee" pos="0 0 -0.14738">
+                        <inertial pos="-2.3595e-06 -0.0058981 -0.11387" quat="0.706202 0.0340951 -0.0341471 0.706364" mass="0.35345" diaginertia="0.000854899 0.00078577 0.000117831" />
+                        <joint name="joint_l_knee" pos="0 0 0" axis="0 1 0" limited="true" range="-2.57 0.05" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="link_l_knee" />
+                        <geom type="mesh" rgba="1 1 1 1" mesh="link_l_knee" />
+                        <body name="link_l_ankle" pos="0 0 -0.14049">
+                            <inertial pos="0.020853 0.0048146 -0.030186" quat="0.598198 0.414527 0.587571 0.353677" mass="0.17624" diaginertia="0.000298604 0.00026519 7.66563e-05" />
+                            <joint name="joint_l_ankle" pos="0 0 0" axis="0 1 0" limited="true" range="-0.57 1.57" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 0.90588 0.91765 1" mesh="link_l_ankle" />
+                            <geom type="mesh" rgba="1 0.90588 0.91765 1" mesh="link_l_ankle" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="link_r_yaw" pos="0.0025357 -0.053425 0.056145">
+            <inertial pos="0.0031721 3.773e-05 -0.050777" quat="0.999618 -0.00349618 0.0274106 -0.000616623" mass="0.4033" diaginertia="0.000383417 0.000238822 0.000201201" />
+            <joint name="joint_r_yaw" pos="0 0 0" axis="0 0 1" limited="true" range="-0.66 0.66" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="link_r_yaw" />
+            <body name="link_r_roll" pos="-0.010958 0 -0.054965">
+                <inertial pos="0.0090994 -0.06469 -0.013394" quat="0.510119 0.72481 0.450148 0.108613" mass="0.46748" diaginertia="0.000415786 0.000370653 0.000319551" />
+                <joint name="joint_r_roll" pos="0 0 0" axis="1 0 0" limited="true" range="-0.57 0.57" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="link_r_roll" />
+                <body name="link_r_pitch" pos="0.010958 -0.071575 -0.014313">
+                    <inertial pos="-0.0013138 -0.0047951 -0.11962" quat="0.703677 0.0110046 -0.037368 0.709451" mass="0.56676" diaginertia="0.00170803 0.00146934 0.000327208" />
+                    <joint name="joint_r_pitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.57 1.57" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="link_r_pitch" />
+                    <geom type="mesh" rgba="1 1 1 1" mesh="link_r_pitch" />
+                    <body name="link_r_knee" pos="0 0 -0.14738">
+                        <inertial pos="7.3527e-06 0.0067747 -0.11375" quat="0.706248 -0.0338418 0.0339636 0.706339" mass="0.35345" diaginertia="0.000858181 0.00078911 0.000117889" />
+                        <joint name="joint_r_knee" pos="0 0 0" axis="0 1 0" limited="true" range="-2.57 0.05" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="link_r_knee" />
+                        <geom type="mesh" rgba="1 1 1 1" mesh="link_r_knee" />
+                        <body name="link_r_ankle" pos="0 0 -0.14049">
+                            <inertial pos="0.014562 -0.0039946 -0.031306" quat="0.341262 0.618982 0.375042 0.599787" mass="0.175" diaginertia="0.000330043 0.000296308 7.40094e-05" />
+                            <joint name="joint_r_ankle" pos="0 0 0" axis="0 1 0" limited="true" range="-0.57 1.57" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="link_r_ankle" />
+                            <geom type="mesh" rgba="1 1 1 1" mesh="link_r_ankle" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujocoinclude>
