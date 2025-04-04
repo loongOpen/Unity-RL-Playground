@@ -1,14 +1,17 @@
 # “格物”具身智能仿真平台
-
+- 格物1.0上线啦！
+- 机器人运动会、Tinker足球赛、青龙功夫足球全部上线
+- 更新至最新版Unity2023
+- 不再打包，下载即用，贡献代码更加方便
 **点击下图观看视频（机器人运动会）**
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
-**点击下图观看视频（机器人足球赛）**
+**点击下图观看视频（Tinker足球赛）**
 
 [![视频封面图片](soccer.png)](https://www.bilibili.com/video/BV1MBo8YUESp/)
 
-**点击下图观看视频（功夫足球赛）**
+**点击下图观看视频（青龙功夫足球）**
 
 [![视频封面图片](kungfusoccer.png)](https://www.bilibili.com/video/BV1NuZBYeEq8/)
 
