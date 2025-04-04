@@ -54,7 +54,7 @@
 
 4.在Unity Hub的Projects菜单中点击Open，选择上一步解压的Unity-RL-Playground\gewu\Project目录，点击Open，等待项目打开（第一次打开耗时较长，耐心等待）
 
-5.项目打开后，在Unity下方的小窗口可看到Assets目录下的Unity-RL-Playground-main，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
+5.项目打开后，在Unity下方的小窗口可看到Assets目录下的RL-Playground，点击进入该目录下，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果！
 
 6.选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）。
 
