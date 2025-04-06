@@ -49,6 +49,8 @@ public class LoongAgent : Agent
     float dh = 25;
     float d0 = 15;
     float ko = 0.4f;
+    float kw = 1f;
+    float khaa = 5f;
     public float vr = 0;
     public float wr = 0;
     public bool wasd = false;
@@ -196,6 +198,8 @@ public class LoongAgent : Agent
         utotal[Mathf.Abs(idx[4]) - 1] -= 2 * (dh * uf2 + d0) * Mathf.Sign(idx[4]);
         utotal[Mathf.Abs(idx[5]) - 1] += (dh * uf2 + d0) * Mathf.Sign(idx[5]);
 
+        utotal[0] = Mathf.Clamp(utotal[0], -1f*khaa, 200f);
+        utotal[6] = Mathf.Clamp(utotal[6], -1f*khaa, 200f);
         for (int i = 0; i < ActionNum; i++) SetJointTargetDeg(acts[i], utotal[i]);
     }
     void SetJointTargetDeg(ArticulationBody joint, float x)
@@ -328,6 +332,8 @@ public class LoongAgent : Agent
         if (tt > 900 && ko < 0.5f)
         {
             ko = 1f;
+            kw = 4f;
+            khaa = 1f;
             print(222222222222222);
         }
         var vel = body.InverseTransformDirection(arts[0].velocity);
@@ -337,7 +343,7 @@ public class LoongAgent : Agent
         var ori_reward2 = -0.1f * Mathf.Min(Mathf.Abs(body.eulerAngles[2]), Mathf.Abs(body.eulerAngles[2] - 360f));
         var wel_reward = - Mathf.Abs(wel[1] - wr);
         var vel_reward = vel[2] - Mathf.Abs(vel[0]);
-        var reward = live_reward + (ori_reward1 + ori_reward2) * ko +  wel_reward + vel_reward;
+        var reward = live_reward + (ori_reward1 + ori_reward2) * ko +  wel_reward * kw + vel_reward;
         AddReward(reward);
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 20f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 20f || tt>=1000)
         {
