@@ -10,7 +10,9 @@ using Unity.Sentis;
 public class TinkerAgent : Agent
 {
     int tp = 0;
+    int tt = 0;
     int tp0 = 0;
+    float kv = 0.4f;
     float uf1 = 0;
     float uf2 = 0;
     float[] u = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -89,10 +91,10 @@ public class TinkerAgent : Agent
 
         if (train && !_isClone) 
         {
-            for (int i = 1; i < 14; i++)
+            for (int i = 1; i < 24; i++)
             {
                 GameObject clone = Instantiate(gameObject); 
-                clone.transform.position = transform.position + new Vector3(i * 2f, 0, 0);
+                //clone.transform.position = transform.position + new Vector3(i * 2f, 0, 0);
                 clone.name = $"{name}_Clone_{i}"; 
                 clone.GetComponent<TinkerAgent>()._isClone = true; 
             }
@@ -107,6 +109,7 @@ public class TinkerAgent : Agent
     public override void OnEpisodeBegin()
     {
         tp = 0;
+        tt = 0;
         for (int i = 0; i< 12; i++) u[i] = 0;
         ObservationNum = 9 + 2 * ActionNum;
         if (fixbody) arts[0].immovable = true;
@@ -118,8 +121,10 @@ public class TinkerAgent : Agent
             arts[0].SetJointPositions(P0);
             arts[0].SetJointVelocities(W0);
         }
-        vr= Random.Range(0f,0.4f);
-        wr= Random.Range(-1.0f,1.0f);
+        vr = 0;
+        wr = 0;
+        if(Random.Range(0,2)==1)vr = Random.Range(0f,0.6f);
+        else wr = Random.Range(-1f,1f);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -147,7 +152,7 @@ public class TinkerAgent : Agent
         for (int i = 0; i < 12; i++) utotal[i] = 0;
         var continuousActions = actionBuffers.ContinuousActions;
         var kk = 0.9f;
-        float[] kb = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
+        float[] kb = new float[12] { 10, 10, 30, 50, 30,     10, 10, 30, 50, 30, 0, 0 };
         for (int i = 0; i < ActionNum; i++)
         {
             u[i] = u[i] * kk + (1 - kk) * continuousActions[i];
@@ -157,7 +162,7 @@ public class TinkerAgent : Agent
 
         int[] idx = new int[6] { -2, -3, 4, 7, 8, -9 };
         float d0 = 30;
-        float dh = 15;
+        float dh = 20;
         utotal[Mathf.Abs(idx[0])] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
         utotal[Mathf.Abs(idx[1])] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
         utotal[Mathf.Abs(idx[2])] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
@@ -199,11 +204,11 @@ public class TinkerAgent : Agent
             }
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                currentVr = Mathf.MoveTowards(currentVr, 0.4f, 0.4f * Time.deltaTime);
+                currentVr = Mathf.MoveTowards(currentVr, 0.6f, 0.6f * Time.deltaTime);
             }
             else
             {
-                currentVr = Mathf.MoveTowards(currentVr, 0f, 0.4f * Time.deltaTime);
+                currentVr = Mathf.MoveTowards(currentVr, 0f, 0.6f * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.RightControl))EndEpisode();
         }
@@ -211,24 +216,24 @@ public class TinkerAgent : Agent
         {
             if (Input.GetKey(KeyCode.A)) 
             {
-                currentWr = Mathf.MoveTowards(currentWr, -1f, 1f * Time.deltaTime);
+                currentWr = Mathf.MoveTowards(currentWr, -01f, 01f * Time.deltaTime);
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                currentWr = Mathf.MoveTowards(currentWr, 1f, 1f * Time.deltaTime);
+                currentWr = Mathf.MoveTowards(currentWr, 01f, 01f * Time.deltaTime);
             }
             else
             {
-                currentWr = Mathf.MoveTowards(currentWr, 0f, 1f * Time.deltaTime);
+                currentWr = Mathf.MoveTowards(currentWr, 0f, 01f * Time.deltaTime);
             }
 
             if (Input.GetKey(KeyCode.W))
             {
-                currentVr = Mathf.MoveTowards(currentVr, 0.4f, 0.4f * Time.deltaTime);
+                currentVr = Mathf.MoveTowards(currentVr, 0.6f, 0.6f * Time.deltaTime);
             }
             else
             {
-                currentVr = Mathf.MoveTowards(currentVr, 0f, 0.4f * Time.deltaTime);
+                currentVr = Mathf.MoveTowards(currentVr, 0f, 0.6f * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.LeftControl))EndEpisode();
 	    }
@@ -238,7 +243,6 @@ public class TinkerAgent : Agent
         {
             vr = currentVr;
             wr = currentWr;
-            //Debug.LogFormat("VR: {0:F2}, WR: {1:F2}", vr, wr);
         }
         
         if (accelerate) Time.timeScale = 20;
@@ -258,15 +262,22 @@ public class TinkerAgent : Agent
             uf2 = (-Mathf.Cos(3.14f * 2 * tp0 / T1) + 1f) / 2f;
         }
         if (tp >= 2 * T1) tp = 0;
-
+        ko = 0.1f;
+        
+        tt++;
+        if (tt > 900 && kv < 0.5f)
+        {
+            kv = 0.7f;
+            print(222222222222222);
+        }
         var vel = body.InverseTransformDirection(arts[0].velocity);
         var wel = body.InverseTransformDirection(arts[0].angularVelocity);
         var live_reward = 1f;
         var ori_reward1 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[0]));
-        var ori_reward2 = -2f * Mathf.Abs(wel[1] - wr);
-        var ori_reward3 = -0.1f * Mathf.Min(Mathf.Abs(body.eulerAngles[2]), Mathf.Abs(body.eulerAngles[2] - 360f));
-        var vel_reward2 = 1 - Mathf.Abs(vel[2]-vr) - Mathf.Abs(vel[0]);
-        var reward = live_reward + (ori_reward1 + ori_reward2 + ori_reward3) * ko + vel_reward2;
+        var ori_reward2 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[2]));
+        var wel_reward  = -5f * kv * Mathf.Abs(wel[1] - wr);
+        var vel_reward =  1 - 10 * kv * Mathf.Abs(vel[2]-vr) - 01f*Mathf.Abs(vel[0]);
+        var reward = live_reward + (ori_reward1 + ori_reward2 ) * 1* ko + wel_reward + vel_reward;
         AddReward(reward);
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 20f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 20f)
         {
