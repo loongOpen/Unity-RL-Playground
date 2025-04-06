@@ -106,6 +106,8 @@
 
 9.在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
 
+10.类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
+
 ## 四、导入和训练新的机器人
 
 1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
