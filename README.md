@@ -74,17 +74,17 @@
 
 3. 运行`conda create -n gewu python=3.10.12 -y`
 
-（注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
+    （注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
 
 4. 运行`conda activate gewu`
 
 5. 运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
 
-（确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
+    （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
 6. 运行`python -m pip install mlagents==1.1.0`
 
-（耐心等待）
+    （耐心等待）
 
 7. 运行`mlagents-learn --help`检查是否安装成功（无报错即可）
 
@@ -116,7 +116,7 @@
 
 1. 将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
-2. 机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
+2. 机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。        （注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
 
 3. 在unity中打开预制的空场景MyRobot.Unity
 
@@ -134,7 +134,7 @@
 
 10. 如前馈不匹配，可在GewuAgent代码中搜索“change here”,找到对应代码修改适合本机器人的参数（本例中在285行的idx六个数全加上负号即可），看到机器人正常上下踏步即可
 
-（注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
+    （注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
 
 11. 配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
 
