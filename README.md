@@ -62,7 +62,9 @@
 
 8.双击LoongPlay.unity打开即为青龙功夫足球，预设为自动对战模式，只当足球卡在角落时可按空格键复位
 
-9.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
+9.双击Go2.unity打开为四足机器人全向行走例程，通过WASD和左右箭头按键控制行走方向，空格键复位
+
+10.录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
 ## 二、训练环境安装
 
@@ -116,23 +118,25 @@
 
 2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
 
-3.在unity下方点击选中机器人xx.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
+3.在unity中打开预制的空场景MyRobot.Unity
 
-4.看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
+4.以众擎机器人为例，在urdf文件夹中进入zq_humanoid，单击选中zq_sa01.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
 
-5.将示例程序中其他机器人隐去
+5.看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
 
-6.右键create empty，将gameobject名称改为自己机器人名字
+6.选中导入的机器人，在inspector窗口将Urdf Robot (script)和Controller (script) 都删除
 
-7.拖动导入的机器人到上一步gameobject的子节点中
+7.拖动导入的机器人到MyRobot的子节点中
 
-8.选中gameobject，在inspector窗口点击add component，搜索添加RobotRLAgent代码，再次点击add component，搜索添加decision requester
+8.选中MyRobot，在inspector窗口选择对应的RobotType（众擎机器人保持默认Biped即可）和Target Motion（此例在Biped下面保持默认的Walk即可），在Behaviour Parameters设置observation和action维数（此例保持默认即可），可参考其他机器人
 
-9.在Behaviour Parameters设置observation和action维数，可参考其他机器人
+9.训练前测试，选中Fixbody复选框，运行unity查看前馈动作是否正确，双足walk步态下机器人应上下踏步
 
-10.训练前测试，可选中Fixbody复选框，运行unity查看前馈动作是否正确，如报错不匹配，可在RobotRLAgent代码中的if (name.Contains("机器人名称"))添加适合本机器人的参数即可，具体参考其他机器人
+10.如前馈不匹配，可在GewuAgent代码中搜索“change here”,找到对应代码修改适合本机器人的参数（本例中在285行的idx六个数全加上负号即可），看到机器人正常上下踏步即可
 
-11.配置完毕，即可依照“三”中步骤进行训练
+（注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
+
+11.配置完毕，即可通过mlagents-learn …… 语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
 
 # Unity RL Playground
 
@@ -159,85 +163,95 @@ Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From know
 Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
 
 ## I. Simulation Environment Installation
-Search for and install Unity Hub. Register and log in to activate using Personal Licenses for free.
 
-Open Unity Hub, select the Unity Editor 2021 LTS version in the Installs menu, and install it.
+1. Search for and install Unity Hub, register and log in. When the "Install Unity Editor" window pops up, click "skip", then click "Agree and get personal edition license" to activate it for free.
 
-Download Unity ML-Agents from https://github.com/Unity-Technologies/ml-agents. Select Release 20 from the Releases list, download, and unzip it.
+2. In the opened Unity Hub interface, click "Install Editor" under the "Installs" menu, and select the Unity Editor 2023 version (2023.2.20f1c1) for installation (over 7GB, please be patient. If the 2021 version was previously installed, it can be uninstalled to free up space).
 
-Download URDF-Importer from https://github.com/Unity-Technologies/URDF-Importer, unzip it, and place it in the main directory of ml-agents-release_20.
+3. Download Unity RL Playground: [https://github.com/loongOpen/Unity-RL-Playground](https://github.com/loongOpen/Unity-RL-Playground), and unzip it to a local directory.
 
-In Unity Hub's Projects menu, click Open and select the ml-agents-release_20\Project directory to open it.
+4. In the "Projects" menu of Unity Hub, click "Open", select the Unity-RL-Playground\gewu\Project directory from the previous step, click "Open", and wait for the project to open (the first time may take longer, please be patient).
 
-In Unity's Window->Package Manager, click "+", then click Add package from disk. Select the URDF-Importer-main\com.unity.robotics.urdf-importer\package file to complete the URDF importer import.
+5. After the project opens, in the small window at the bottom of Unity, you can see the RL-Playground directory under the Assets directory. Click to enter this directory, double-click Playground.unity to open it, and click the triangle at the top of Unity to run it to see the pre-trained movement effects of the robot!
 
-Download Unity RL Playground from https://github.com/loongOpen/Unity-RL-Playground. Select both "Unity-RL-Playground.part1.rar" and "Unity-RL-Playground.part2.rar" to unzip them simultaneously, resulting in the Unity-RL-Playground.unitypackage file.
+6. Select a robot, and in the inspector window on the right, you can switch the movement mode in the corresponding target motion dropdown box (if the corresponding pre-trained model is not empty).
 
-In Unity's menu bar, go to Assets->Import Package, select Unity-RL-Playground.unitypackage, and click import in the pop-up window.
+7. Double-click TinkerPlay.unity to open the Tinker soccer game, which is preset to a two-player battle mode. One player controls the walking direction with the WASD keys on the keyboard and resets the robot with the left Ctrl key, while the other player controls the walking direction with the arrow keys and resets the robot with the right Ctrl key. Press the spacebar to reset the soccer ball.
 
-You will now see Unity-RL-Playground-main under the Assets directory in the small window at the bottom of Unity. Click to enter this directory, double-click Playground.unity to open it, and click the triangle on top of unity to run and see the pre-trained movement effects of the robots!
+8. Double-click LoongPlay.unity to open the Loong Kung Fu Soccer, which is preset to an automatic battle mode. Press the spacebar to reset the soccer ball only when it gets stuck in a corner.
 
-Select a robot, and in the inspector window on the right, you can switch motion modes in the corresponding target motion dropdown menu (if the corresponding pre-trained model is not empty).
+9. Double-click Go2.unity to open the quadrupedal robot omnidirectional walking routine. Control the walking direction with the WASD and arrow keys, and press the spacebar to reset.
+
+10. To record a video, go to the menu bar Window->General->Recorder->Recorder Window, click Add Recorder->Movie, click the red triangle to start recording, and find the save path under Path.
 
 ## II. Training Environment Installation
-Install Anaconda from https://www.anaconda.com/download.
 
-Open the Anaconda window.
+1. Install Anaconda: [https://www.anaconda.com/download](https://www.anaconda.com/download)
 
-Run conda create -n ml-agents python=3.7.
+2. Search for Anaconda in the computer search box, and click to open the Anaconda Prompt command line window.
 
-Run activate ml-agents.
+3. Run `conda create -n gewu python=3.10.12 -y`
 
-Run pip3 install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html.
+    (Note: If an older version was previously installed, it can be removed with the command `conda remove -n ml-agents`)
 
-Run python -m pip install mlagents==0.28.0.
+4. Run `conda activate gewu`
 
-Run pip install importlib-metadata==4.4.
+5. Run `pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
 
-Run pip install six.
+    (Ensure a stable network connection, as this may take a while. If the installation fails, try a different network.)
 
-Run mlagents-learn --help to check if the installation is successful.
+6. Run `python -m pip install mlagents==1.1.0`
 
-## III. Training Robots
-Open Playground.unity in Unity, select a robot to train (e.g., tinker), and check the train box in the inspector on the right.
+    (Be patient.)
 
-Hide other robots (uncheck the top box in the inspector window).
+7. Run `mlagents-learn --help` to check if the installation was successful (no errors means success).
 
-Go back to the Anaconda interface and enter the Unity-RL-Playground main directory (e.g., first run D:, then cd D:\ml-agents-release_20\Project\Assets\Unity-RL-Playground-main - adjust according to your actual directory).
+## III. Training the Robot
 
-Run mlagents-learn trainer_config.yaml --run-id=tinker --force to start training (note: the id name can be customized, --force starts training from scratch, use --resume to continue from a checkpoint).
+1. Open Playground.unity in Unity, select a robot to train (it is recommended to start with Go2 for testing), and check the "train" box in the inspector on the right.
 
-When [INFO] Listening on ... appears in the window, go back to the Unity interface, click the triangle button to start training.
+2. Hide the other robots (uncheck the top box in the inspector window).
 
-Observe the training progress in the Anaconda window. Normally, the reward will gradually increase. Training for 2,000,000 steps is typical, and you can terminate training by pressing ctrl+c.
+3. Return to the Anaconda interface and navigate to the main directory of Unity-RL-Playground (for example, first run `D:` and then `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` (adjust according to your actual directory)).
 
-After terminating training, find the trained neural network in the results directory in Unity (e.g., results->tinker, where the name matches the run-id). You will see a gewu.onnx file, which is the trained neural network.
+4. Run `mlagents-learn trainer_config.yaml --run-id=go2trot --force` to start training (Note: the run-id can be named as desired, `--force` starts training from scratch, while `--resume` continues training from a checkpoint).
 
-Select the robot, and in the inspector window on the right, you will see multiple policy boxes. Drag the trained neural network into the corresponding box (e.g., B walk policy).
+5. When "[INFO] Listening on ..." appears in the window, return to the Unity interface, click the triangle button at the top to start training.
 
-Uncheck train in the inspector on the right, run Unity, and you will see the robot's movement effect.
+6. During training, you can observe the training progress in the Anaconda window. Normally, the reward will gradually increase. Generally, train for 2,000,000 steps, and press Ctrl+C to terminate the training.
 
-## IV. Importing and Training New Robots
-Place the new robot's urdf folder (including meshes) into Unity-RL-Playground-main\urdf.
+7. After terminating the training, find the newly trained neural network in the results->go2trot (the name matches the run-id) directory, where you can see a gewu.onnx file, which is the trained neural network.
 
-The robot's urdf folder is generally named xx_description, containing xx.urdf and a meshes folder. The path format in xx.urdf is package://meshes/xxx.STL. Joints other than the robot's legs should be locked. (Note: If there are unlocked joints other than the legs, you can open the robot's structure tree after importing, select the corresponding ArticulationBody, and change Articulation Joint Type from Revolute to Fix.)
+8. Click to select the robot, and in the inspector window on the right, you can see many policy boxes. Drag the trained neural network into the corresponding box (e.g., Q trot policy).
 
-In Unity, click on the selected robot xx.urdf at the bottom, go to Assets->Import Robot from Selected URDF in the menu bar. In the pop-up window, select unity for mesh decomposer and click import URDF.
+9. Uncheck the "train" box in the inspector on the right, and run Unity to see the robot's movement effects.
 
-After seeing the imported robot model, select the robot and adjust its height (y-axis) in the inspector on the right to make its feet touch the ground, slightly higher if necessary.
+10. Similarly, you can train TinkerTrain.unity and LoongTrain.unity, and the trained neural networks can be used in TinkerPlay.unity and LoongPlay.unity.
 
-Hide other robots in the example program.
+## IV. Importing and Training a New Robot
 
-Right-click to create an empty gameobject and rename it after your robot.
+**The following repository collects numerous robot URDF models: [https://github.com/linqi-ye/robot-universe](https://github.com/linqi-ye/robot-universe)**
 
-Drag the imported robot into this gameobject as a child node.
+1. Place the new robot's URDF folder (including meshes) into the Unity-RL-Playground-main\urdf folder.
 
-Select the gameobject, click add component in the inspector window, search and add the RobotRLAgent script, then click add component again, search and add the decision requester.
+2. The robot's URDF folder is generally named xx_description, which contains xx.urdf and a meshes folder. The path format in xx.urdf is package://meshes/xxx.STL. It is best if the joints other than the robot's legs are already locked. (Note: If there are unlocked joints other than the legs, you can open the robot's structure tree after importing, select the corresponding ArticulationBody, and change the Articulation Joint Type from Revolute to Fix.)
 
-Set the observation and action dimensions in Behaviour Parameters, referring to other robots for reference.
+3. Open the prefabricated empty scene MyRobot.Unity in Unity.
 
-Before training, you can test by checking the Fixbody box and running Unity to see if the feedforward actions are correct. If there are mismatch errors, you can add parameters suitable for this robot in the RobotRLAgent code within the if (name.Contains("robot name")) statement, referring to other robots for specifics.
+4. Taking the Zhongqing robot as an example, navigate to zq_humanoid in the urdf folder, click to select zq_sa01.urdf, click Assets->Import Robot from Selected URDF in the menu bar, in the pop-up window, select unity for mesh decomposer, and click import URDF.
 
-After configuration, proceed with training following the steps in section III.
+5. After seeing the imported robot model, select the robot and adjust its height (y-axis) in the inspector on the right to make its feet touch the ground (it can be slightly higher).
 
+6. Select the imported robot, and in the inspector window, delete both the Urdf Robot (script) and Controller (script).
 
+7. Drag the imported robot into the child node of MyRobot.
+
+8. Select MyRobot, and in the inspector window, choose the corresponding RobotType (keep the default Biped for the Zhongqing robot) and Target Motion (in this case, keep the default Walk under Biped), and set the observation and action dimensions in Behaviour Parameters (keep the default in this case, you can refer to other robots).
+
+9. Before training, test by checking the Fixbody checkbox, run Unity to see if the feedforward action is correct. The robot should take up-and-down steps in the bipedal walk gait.
+
+10. If the feedforward does not match, you can search for "change here" in the GewuAgent code, find the corresponding code to modify the parameters suitable for this robot (in this case, add a negative sign to all six numbers on line 285), and ensure the robot takes normal up-and-down steps.
+
+    (Note: idx represents the joints to be fed forward. For bipeds, these are the three pitch joints of the hip, knee, and ankle. Generally, the default values can be used (modify only if the configuration is inconsistent), and the positive/negative signs are related to the joint direction, so adjust according to the situation.)
+
+11. After configuration, you can train using the `mlagents-learn ...` statement (refer to the steps in "III"). In this case, only 400,000 steps (2-5 minutes) are needed to see the effect.
