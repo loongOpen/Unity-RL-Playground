@@ -68,75 +68,75 @@
 
 ## 二、训练环境安装
 
-1.安装Anaconda：https://www.anaconda.com/download
+1. 安装Anaconda：https://www.anaconda.com/download
 
-2.在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
+2. 在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
 
-3.运行`conda create -n gewu python=3.10.12 -y`
+3. 运行`conda create -n gewu python=3.10.12 -y`
 
 （注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
 
-4.运行`conda activate gewu`
+4. 运行`conda activate gewu`
 
-5.运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
+5. 运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
 
 （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
-6.运行`python -m pip install mlagents==1.1.0`
+6. 运行`python -m pip install mlagents==1.1.0`
 
 （耐心等待）
 
-7.运行`mlagents-learn --help`检查是否安装成功（无报错即可）
+7. 运行`mlagents-learn --help`检查是否安装成功（无报错即可）
 
 ## 三、训练机器人
 
-1.在unity打开Playground.unity，选中一个要训练的机器人（建议先用Go2测试），在右侧inspector中勾选train
+1. 在unity打开Playground.unity，选中一个要训练的机器人（建议先用Go2测试），在右侧inspector中勾选train
 
-2.选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
+2. 选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
-3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` （根据自己的实际目录调整））
+3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` （根据自己的实际目录调整））
 
-4.运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
+4. 运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
 
-5.当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
+5. 当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
 
-6.训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
+6. 训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
 
-7.终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
+7. 终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
 
-8.点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如Q trot policy）
+8. 点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如Q trot policy）
 
-9.在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
+9. 在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
 
-10.类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
+10. 类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
 
 ## 四、导入和训练新的机器人
 
 **以下仓库集齐了众多机器人URDF模型：https://github.com/linqi-ye/robot-universe**
 
-1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
+1. 将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
-2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
+2. 机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
 
-3.在unity中打开预制的空场景MyRobot.Unity
+3. 在unity中打开预制的空场景MyRobot.Unity
 
-4.以众擎机器人为例，在urdf文件夹中进入zq_humanoid，单击选中zq_sa01.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
+4. 以众擎机器人为例，在urdf文件夹中进入zq_humanoid，单击选中zq_sa01.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
 
-5.看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
+5. 看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
 
-6.选中导入的机器人，在inspector窗口将Urdf Robot (script)和Controller (script) 都删除
+6. 选中导入的机器人，在inspector窗口将Urdf Robot (script)和Controller (script) 都删除
 
-7.拖动导入的机器人到MyRobot的子节点中
+7. 拖动导入的机器人到MyRobot的子节点中
 
-8.选中MyRobot，在inspector窗口选择对应的RobotType（众擎机器人保持默认Biped即可）和Target Motion（此例在Biped下面保持默认的Walk即可），在Behaviour Parameters设置observation和action维数（此例保持默认即可），可参考其他机器人
+8. 选中MyRobot，在inspector窗口选择对应的RobotType（众擎机器人保持默认Biped即可）和Target Motion（此例在Biped下面保持默认的Walk即可），在Behaviour Parameters设置observation和action维数（此例保持默认即可），可参考其他机器人
 
-9.训练前测试，选中Fixbody复选框，运行unity查看前馈动作是否正确，双足walk步态下机器人应上下踏步
+9. 训练前测试，选中Fixbody复选框，运行unity查看前馈动作是否正确，双足walk步态下机器人应上下踏步
 
-10.如前馈不匹配，可在GewuAgent代码中搜索“change here”,找到对应代码修改适合本机器人的参数（本例中在285行的idx六个数全加上负号即可），看到机器人正常上下踏步即可
+10. 如前馈不匹配，可在GewuAgent代码中搜索“change here”,找到对应代码修改适合本机器人的参数（本例中在285行的idx六个数全加上负号即可），看到机器人正常上下踏步即可
 
 （注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
 
-11.配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
+11. 配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
 
 # Unity RL Playground
 
