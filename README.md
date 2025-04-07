@@ -96,19 +96,21 @@
 
 3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` （根据自己的实际目录调整））
 
-4. 运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
+4. 运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练
 
-5. 当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
+    （注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
+   
+6. 当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
 
-6. 训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
+7. 训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
 
-7. 终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
+8. 终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络
 
-8. 点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如Q trot policy）
+9. 点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如Q trot policy）
 
-9. 在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
+10. 在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
 
-10. 类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
+11. 类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
 
 ## 四、导入和训练新的机器人
 
