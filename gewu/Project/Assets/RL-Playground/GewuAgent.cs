@@ -9,7 +9,7 @@ using UnityEditor;
 using Unity.Sentis;
 
 
-public class RobotRLAgent : Agent
+public class GewuAgent : Agent
 {
     int tp = 0;
     int tq = 0;
@@ -91,7 +91,7 @@ public class RobotRLAgent : Agent
     float[] kb2 = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float dh = 25;
     float d0 = 15;
-    float ko = 2;
+    float ko = 0.5f;
     float kh = 0;
 
     public override void Initialize()
@@ -137,7 +137,7 @@ public class RobotRLAgent : Agent
                 GameObject clone = Instantiate(gameObject); 
                 clone.transform.position = transform.position + new Vector3(i * 2f, 0, 0);
                 clone.name = $"{name}_Clone_{i}"; 
-                clone.GetComponent<RobotRLAgent>()._isClone = true; 
+                clone.GetComponent<GewuAgent>()._isClone = true; 
             }
         }
     }
@@ -203,35 +203,23 @@ public class RobotRLAgent : Agent
 
         string name = this.name;
         int[] idx = new int[6] { 2, 3, 4, 7, 8, 9 };
-        float[] ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
-        d0 = 0;
-        if (name.Contains("Tinker"))
+        //***********************************************************************************************************************************
+        if (name.Contains("MyRobot"))
         {
-            idx = new int[6] { 2, 3, 4, 7, 8, 9 };
-            ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
-            ko = 01f;
-            d0 = 20;
+            idx = new int[6] { 2, 3, 4, 7, 8, 9 };//biped with 5 joints in each leg, change here if the feedforward is incorrect 
         }
-        if (name.Contains("TaiTan"))
-        {
-            idx = new int[6] { 2, 3, 4, -7, -8, 9 };
-            ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
-            ko = 1f;
-        }
-        if (name.Contains("Birdy"))
-        {
-            idx = new int[6] { 2, 3, 4, 7, 8, 9 };
-            ktemp1 = new float[12] { 5, 5, 30, 60, 30, 5, 5, 30, 60, 30, 0, 0 };
-            ko = 01f;
-            d0 = 40;
-        }
+        //***********************************************************************************************************************************
         if (Robot == StyleR.biped && ActionNum == 10)
         {
             if (BipedTargetMotion == StyleB.walk)
             {
-                for (int i = 0; i < 12; i++) kb[i] = ktemp1[i];
-                T1 = 30;
-                dh = 20;
+                //biped walk with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 30;//gait period
+                dh = 20;//foot stepping height
+                d0 = 0;//knee bend angle
+                float[] ktemp = new float[12] { 10, 10, 30, 50, 30, 10, 10, 30, 50, 30, 0, 0 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
+                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
                 utotal[Mathf.Abs(idx[0])] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
                 utotal[Mathf.Abs(idx[1])] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
                 utotal[Mathf.Abs(idx[2])] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
@@ -242,11 +230,13 @@ public class RobotRLAgent : Agent
             }
             if (BipedTargetMotion == StyleB.run)
             {
-                float[] ktemp = new float[12] { 5, 9, 40, 60, 40, 5, 9, 40, 60, 40, 0, 0 };
+                //biped run with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 20;//gait period
+                dh = 20;//foot stepping height
+                d0 = 15;//knee bend angle
+                float[] ktemp = new float[12] { 10, 10, 40, 60, 40, 10, 10, 40, 60, 40, 0, 0 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                T1 = 20;
-                dh = 20;
-                d0 = 15;
                 utotal[2] += (dh * uf1 + d0);
                 utotal[3] -= 2 * (dh * uf1 + d0);
                 utotal[4] += (dh * uf1 + d0);
@@ -263,11 +253,13 @@ public class RobotRLAgent : Agent
             }
             if (BipedTargetMotion == StyleB.jump)
             {
-                float[] ktemp = new float[12] { 5, 5, 40, 60, 40, 5, 5, 40, 60, 40, 0, 0 };
+                //biped jump with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 30;//gait period
+                dh = 40;//foot stepping height
+                d0 = 5;//knee bend angle
+                float[] ktemp = new float[12] { 5, 5, 40, 60, 40, 5, 5, 40, 60, 40, 0, 0 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                T1 = 30;
-                dh = 40;
-                d0 = 5;
                 utotal[2] += dh * uff + d0;
                 utotal[3] -= (dh * uff + d0) * 2;
                 utotal[4] += dh * uff + d0;
@@ -287,67 +279,24 @@ public class RobotRLAgent : Agent
         }
 
         idx = new int[6] { 3, 4, 5, 9, 10, 11 };
-        ktemp1 = new float[12]{ 10, 10, 45, 20, 40, 10,   10, 10, 40, 20, 45, 10 };
-        dh = 10;
-        d0 = 0;
-        if (name.Contains("H1"))
+        //***********************************************************************************************************************************
+        if (name.Contains("MyRobot"))
         {
-            idx = new int[6] { -2, -4, -5, -8, -10, -11 };
-            ktemp1 = new float[12] { 10, 30, 10, 30, 30, 10,    10, 30, 10, 30, 30, 10 };
-            ko = 01f;
-            d0 = 10;
-            dh = 10;
+            idx = new int[6] { 3, 4, 5, 9, 10, 11 };//biped with 6 joints in each leg, change here if the feedforward is incorrect 
         }
-        if (name.Contains("G1"))
-        {
-            idx = new int[6] { -1, -4, -5, -7, -10, -11 };
-            ktemp1 = new float[12] { 40, 10, 10, 20, 40, 10, 40, 10, 10, 20, 40, 10 };
-            ko = 01f;
-            d0 = 10;
-            dh = 30;
-        }
-        if (name.Contains("Mlg"))
-        {
-            idx = new int[6] { 3, 4, 5, -9, -10, -11 };
-            ktemp1 = new float[12] { 40, 10, 10, 20, 40, 10, 40, 10, 10, 20, 40, 10 };
-            dh = 30;
-        }
-        if (name.Contains("MiniLoong"))
-        {
-            idx = new int[6] { -1, 4, -5, 7, -10, -11 };
-            ktemp1 = new float[12] { 40, 30, 30, 30, 40, 30, 40, 30, 30, 30, 40, 30 };
-            ko = 01f;
-            dh = 30;
-        }
-        if (name.Contains("V2.5"))
-        {
-            idx = new int[6] { -3, -4, -5, -9, -10, -11 };
-            ktemp1 = new float[12] { 40, 10, 10, 20, 40, 10, 40, 10, 10, 20, 40, 10 };
-            ko = 0.1f;
-            dh = 30;
-        }
-        if (name.Contains("T1"))
-        {
-            idx = new int[6] { -1, -4, -5, -7, -10, -11 };
-            ktemp1 = new float[12] { 40, 10, 10, 20, 40, 10, 40, 10, 10, 20, 40, 10 };
-            ko = 01f;
-            d0 = 5;
-            dh = 30;
-        }
-        if (name.Contains("zqsa01"))
-        {
-            idx = new int[6] { -3, -4, -5, -9, -10, -11 };
-            ktemp1 = new float[12] { 40, 10, 10, 20, 40, 10, 40, 10, 10, 20, 40, 10 };
-            ko = 01f;
-            d0 = 0;
-            dh = 40;
-        }
+        //***********************************************************************************************************************************
+        
         if (Robot == StyleR.biped && ActionNum == 12)
         {
             if (BipedTargetMotion == StyleB.walk)
             {
-                for (int i = 0; i < 12; i++) kb[i] = ktemp1[i];
-                T1 = 40;
+                //biped walk with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 40;//gait period
+                dh = 20;//foot stepping height
+                d0 = 0;//knee bend angle
+                float[] ktemp = new float[12]{ 10, 10, 30, 50, 30, 10,   10, 10, 30, 50, 30, 10 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
+                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
                 utotal[Mathf.Abs(idx[0]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
                 utotal[Mathf.Abs(idx[1]) - 1] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
                 utotal[Mathf.Abs(idx[2]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
@@ -358,11 +307,13 @@ public class RobotRLAgent : Agent
             }
             if (BipedTargetMotion == StyleB.run)
             {
-                float[] ktemp = new float[12] { 10, 10, 60, 30, 60, 10,    10, 10, 60, 30, 60, 10 };
+                //biped run with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 25;//gait period
+                dh = 40;//foot stepping height
+                d0 = 20;//knee bend angle
+                float[] ktemp = new float[12] { 10, 10, 60, 30, 60, 10,    10, 10, 60, 30, 60, 10 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                T1 = 25;
-                dh = 40;
-                d0 = 20;
                 utotal[2] += (dh * uf1 + d0);
                 utotal[3] -= 2 * (dh * uf1 + d0);
                 utotal[4] += (dh * uf1 + d0);
@@ -379,11 +330,13 @@ public class RobotRLAgent : Agent
             }
             if (BipedTargetMotion == StyleB.jump)
             {
-                float[] ktemp = new float[12] { 10, 10, 40, 50, 40, 10,   10, 10, 40, 50, 40, 10 };
+                //biped jump with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                T1 = 30;//gait period
+                dh = 50;//foot stepping height
+                d0 = 5;//knee bend angle
+                float[] ktemp = new float[12] { 10, 10, 40, 50, 40, 10,   10, 10, 40, 50, 40, 10 };//feedback ratio, represents the action space
+                //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                T1 = 30;
-                dh = 50;
-                d0 = 5;
                 utotal[2] += dh * uff + d0;
                 utotal[3] -= (dh * uff + d0) * 2;
                 utotal[4] += dh * uff + d0;
@@ -401,14 +354,20 @@ public class RobotRLAgent : Agent
                 }
             }
         }
+        
         if (Robot == StyleR.quadruped)
         {
-            d0 = 30;
-            dh = 15;
-            ko = 1;
-            T1 = 30;
+            //quadruped robot, modify the following parameters to optimize the gait if needed********************************************
+            T1 = 30;//gait period
+            dh = 15;//foot stepping height
+            d0 = 30;//knee bend angle
+            //***************************************************************************************************************************
             if (QuadrupedTargetMotion == StyleQ.trot)
             {
+                ko = 1;
+                float[] ktemp = new float[12] { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };//feedback ratio, represents the action space
+                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
+                //quadruped trot, change here "+=" to "-=" if the feedforward is incorrect****************************************************
                 utotal[1] += dh * uf1 + d0;
                 utotal[2] += (dh * uf1 + d0) * -2;
                 utotal[4] += dh * uf2 + d0;
@@ -421,6 +380,10 @@ public class RobotRLAgent : Agent
             }
             if (QuadrupedTargetMotion == StyleQ.bound)
             {
+                ko = 1;
+                float[] ktemp = new float[12] { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };//feedback ratio, represents the action space
+                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
+                //quadruped bound, change here "+=" to "-=" if the feedforward is incorrect****************************************************
                 utotal[1] += dh * uf1 + d0;
                 utotal[2] += (dh * uf1 + d0) * -2;
                 utotal[4] += dh * uf1 + d0;
@@ -433,13 +396,14 @@ public class RobotRLAgent : Agent
             }
             if (QuadrupedTargetMotion == StyleQ.pronk)
             {
-                float[] ktemp = new float[12] { 5, 30, 60, 5, 30, 60, 5, 30, 60, 5, 30, 60 };
+                float[] ktemp = new float[12] { 5, 30, 60, 5, 30, 60, 5, 30, 60, 5, 30, 60 };//feedback ratio, represents the action space
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                T2 = 30;
-                dh = 40;
-                d0 = 30;
+                T2 = 30;//gait period
+                dh = 40;//foot stepping height
+                d0 = 30;//knee bend angle
                 ko = 2;
                 kh = 1;
+                //quadruped pronk, change here "+=" to "-=" if the feedforward is incorrect****************************************************
                 utotal[1] += dh * uff + d0;
                 utotal[2] += (dh * uff + d0) * -2;
                 utotal[4] += dh * uff + d0;
@@ -453,15 +417,15 @@ public class RobotRLAgent : Agent
         }
         if (Robot == StyleR.legwheeled)
         {
-            
             if (LegwheelTargetMotion == StyleL.walk)
             {
-                float[] ktemp = new float[12] { 10, 30, 30, 0, 10, 30, 30, 0, 0, 0, 0, 0 };
+                T1 = 30;//gait period
+                dh = 20;//foot stepping height
+                ko = 1;
+                float[] ktemp = new float[12] { 10, 30, 30, 0, 10, 30, 30, 0, 0, 0, 0, 0 };//feedback ratio, represents the action space
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
                 for (int i = 0; i < 12; i++) kb2[i] = 0;
-                dh = 20;
-                T1 = 30;
-                ko = 1;
+                //legwheeled walk, change here "+=" to "-=" or "-=" to "+=" if the feedforward is incorrect***********************************
                 utotal[1] -= dh * uf1;
                 utotal[2] += dh * uf1 * -2;
                 utotal[5] += dh * uf2;
@@ -471,11 +435,12 @@ public class RobotRLAgent : Agent
             
             if (LegwheelTargetMotion == StyleL.jump)
             {
-                float[] ktemp = new float[12] { 10, 30, 30, 0, 10, 30, 30, 0, 0, 0, 0, 0 };
+                T2 = 40;//gait period
+                kh = 5;//foot stepping height
+                float[] ktemp = new float[12] { 10, 30, 30, 0, 10, 30, 30, 0, 0, 0, 0, 0 };//feedback ratio, represents the action space
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
                 for (int i = 0; i < 12; i++) kb2[i] = 0;
-                T2 = 40;
-                kh = 5;
+                //legwheeled jump, change here "+=" to "-=" or "-=" to "+=" if the feedforward is incorrect***********************************
                 utotal[1] -= 40 * uff;
                 utotal[2] -= 80 * uff;
                 utotal[5] += 40 * uff;
@@ -484,12 +449,12 @@ public class RobotRLAgent : Agent
             }
             if (LegwheelTargetMotion == StyleL.drive)
             {
-                for (int i = 0; i < 12; i++) kb[i] = 0;
-                for (int i = 0; i < 12; i++) kb2[i] = 0;
-                kb2[3] = 0.2f;
-                kb2[7] = 0.2f;
+                kb2[3] = 0.2f;//feedback ratio, represents the action space
+                kb2[7] = 0.2f;//feedback ratio, represents the action space
                 //kb1[3] = 1f;
                 //kb1[7] = 1f;
+                for (int i = 0; i < 12; i++) kb[i] = 0;//feedback ratio, represents the action space
+                for (int i = 0; i < 12; i++) kb2[i] = 0;//feedback ratio, represents the action space
                 if (!train) SetModel("Quadruped", LDrivePolicy);
             }
         }
@@ -554,19 +519,16 @@ public class RobotRLAgent : Agent
         var vel = body.InverseTransformDirection(arts[0].velocity);
         var wel = body.InverseTransformDirection(arts[0].angularVelocity);
         var live_reward = 1f;
-        var ori_reward1 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[0]));//-0.5f * Mathf.Min(Mathf.Abs(body.eulerAngles[0]), Mathf.Abs(body.eulerAngles[0] - 360f));
+        var ori_reward1 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[0]));
         var ori_reward2 = -2f * Mathf.Abs(wel[1]);
-        var ori_reward3 = -0.1f * Mathf.Min(Mathf.Abs(body.eulerAngles[2]), Mathf.Abs(body.eulerAngles[2] - 360f));
+        var ori_reward3 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[2]));
         var vel_reward1 = vel[2] - Mathf.Abs(vel[0]);
         var vel_reward2 = vel[2] - Mathf.Abs(vel[0]) + kh * Mathf.Abs(vel[1]);
-        var reward = live_reward + (ori_reward1 + ori_reward2 + ori_reward3) * ko + vel_reward2;// + 5*foot.position.y;
-        //if (BipedTargetMotion == StyleB.walk) reward += vel_reward1;
-        //if (BipedTargetMotion == StyleB.run || BipedTargetMotion == StyleB.jump) reward += vel_reward2;
+        var reward = live_reward + (ori_reward1 + ori_reward2 + ori_reward3) * ko + vel_reward2;
         AddReward(reward);
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 20f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 20f || tt>=1000)
         {
             if(train)EndEpisode();
-            //print(stage);
         }
     }
 
