@@ -72,21 +72,21 @@
 
 2.在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
 
-3.运行conda create -n gewu python=3.10.12 -y 
+3.运行`conda create -n gewu python=3.10.12 -y`
 
 （注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
 
-4.运行conda activate gewu
+4.运行`conda activate gewu`
 
-5.运行pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
+5.运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
 
 （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
 
-6.运行python -m pip install mlagents==1.1.0
+6.运行`python -m pip install mlagents==1.1.0`
 
 （耐心等待）
 
-7.运行mlagents-learn --help检查是否安装成功（无报错即可）
+7.运行`mlagents-learn --help`检查是否安装成功（无报错即可）
 
 ## 三、训练机器人
 
@@ -94,9 +94,9 @@
 
 2.选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
-3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行D: 再运行 cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main （根据自己的实际目录调整））
+3.回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` （根据自己的实际目录调整））
 
-4.运行mlagents-learn trainer_config.yaml --run-id=go2trot --force开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
+4.运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练（注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
 
 5.当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
 
@@ -136,7 +136,7 @@
 
 （注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
 
-11.配置完毕，即可通过mlagents-learn …… 语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
+11.配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
 
 # Unity RL Playground
 
