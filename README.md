@@ -110,6 +110,8 @@
 
 ## 四、导入和训练新的机器人
 
+**以下仓库集齐了众多机器人URDF模型：https://github.com/linqi-ye/robot-universe**
+
 1.将新的机器人urdf文件夹（包括meshes）放入Unity-RL-Playground-main\urdf文件夹
 
 2.机器人urdf文件夹一般命名为xx_description，里面包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。（注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
