@@ -94,7 +94,7 @@
 
 2. 选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
-3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` （根据自己的实际目录调整））
+3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground\gewu\Project\Assets\RL-Playground` （根据自己的实际目录调整））
 
 4. 运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练
 
