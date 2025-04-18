@@ -20,10 +20,10 @@ public class RobotRLAgent : Agent
     float uff = 0;
     float uf1 = 0;
     float uf2 = 0;
-    float[] u = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    float[] ut = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    float[] utt = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    float[] utotal = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] u = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] ut = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] utt = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] utotal = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int T1 = 50;
     int T2 = 30;
     int tp0 = 0;
@@ -62,7 +62,7 @@ public class RobotRLAgent : Agent
     public ModelAsset BWalkPolicy;
     public ModelAsset BRunPolicy;
     public ModelAsset BJumpPolicy; 
-    [Header("Quadruped")]
+    [Header("gewu")]
     public StyleQ QuadrupedTargetMotion;
     public ModelAsset QTrotPolicy;
     public ModelAsset QBoundPolicy;
@@ -83,12 +83,12 @@ public class RobotRLAgent : Agent
     Vector3 pos0;
     Quaternion rot0;
     ArticulationBody[] arts = new ArticulationBody[40];
-    ArticulationBody[] acts = new ArticulationBody[12];
+    ArticulationBody[] acts = new ArticulationBody[16];
     GameObject robot;
 
-    float[] kb = new float[12] { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
-    float[] kb1 = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    float[] kb2 = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] kb = new float[16] { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
+    float[] kb1 = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    float[] kb2 = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float dh = 25;
     float d0 = 15;
     float ko = 2;
@@ -152,9 +152,9 @@ public class RobotRLAgent : Agent
         tp = 0;
         tq = 0;
         tt = 0;
-        for (int i = 0; i< 12; i++) u[i] = 0;
-        for (int i = 0; i < 12; i++) ut[i] = 0;
-        for (int i = 0; i < 12; i++) utt[i] = 0;
+        for (int i = 0; i< 16; i++) u[i] = 0;
+        for (int i = 0; i < 16; i++) ut[i] = 0;
+        for (int i = 0; i < 16; i++) utt[i] = 0;
 
         ObservationNum = 9 + 2 * ActionNum;
         if (fixbody) arts[0].immovable = true;
@@ -188,7 +188,7 @@ public class RobotRLAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        for (int i = 0; i < 12; i++) utotal[i] = 0;
+        for (int i = 0; i < 16; i++) utotal[i] = 0;
         var continuousActions = actionBuffers.ContinuousActions;
         var kk = 0.9f;
         
@@ -238,7 +238,7 @@ public class RobotRLAgent : Agent
                 utotal[Mathf.Abs(idx[3])] += (dh * uf2 + d0) * Mathf.Sign(idx[3]);
                 utotal[Mathf.Abs(idx[4])] -= 2 * (dh * uf2 + d0) * Mathf.Sign(idx[4]);
                 utotal[Mathf.Abs(idx[5])] += (dh * uf2 + d0) * Mathf.Sign(idx[5]);
-                if (!train) SetModel("Quadruped", BWalkPolicy);
+                if (!train) SetModel("gewu", BWalkPolicy);
             }
             if (BipedTargetMotion == StyleB.run)
             {
@@ -253,7 +253,7 @@ public class RobotRLAgent : Agent
                 utotal[7] += (dh * uf2 + d0);
                 utotal[8] -= 2 * (dh * uf2 + d0);
                 utotal[9] += (dh * uf2 + d0);
-                if (!train) SetModel("Quadruped", BRunPolicy);
+                if (!train) SetModel("gewu", BRunPolicy);
                 if (tt > 900 && kh == 0)
                 {
                     kh = 2;
@@ -277,7 +277,7 @@ public class RobotRLAgent : Agent
                 //utotal[7] += dh * uff + d0;
                 //utotal[8] -= (dh * uff + d0) * 2;
                 //utotal[9] += dh * uff + d0;
-                if (!train) SetModel("Quadruped", BJumpPolicy);
+                if (!train) SetModel("gewu", BJumpPolicy);
                 if (tt > 900 && kh == 0)
                 {
                     kh = 2;
@@ -354,7 +354,7 @@ public class RobotRLAgent : Agent
                 utotal[Mathf.Abs(idx[3]) - 1] += (dh * uf2 + d0) * Mathf.Sign(idx[3]);
                 utotal[Mathf.Abs(idx[4]) - 1] -= 2 * (dh * uf2 + d0) * Mathf.Sign(idx[4]);
                 utotal[Mathf.Abs(idx[5]) - 1] += (dh * uf2 + d0) * Mathf.Sign(idx[5]);
-                if (!train) SetModel("Quadruped", BWalkPolicy);
+                if (!train) SetModel("gewu", BWalkPolicy);
             }
             if (BipedTargetMotion == StyleB.run)
             {
@@ -369,7 +369,7 @@ public class RobotRLAgent : Agent
                 utotal[8] += (dh * uf2 + d0);
                 utotal[9] -= 2 * (dh * uf2 + d0);
                 utotal[10] += (dh * uf2 + d0);
-                if (!train) SetModel("Quadruped", BRunPolicy);
+                if (!train) SetModel("gewu", BRunPolicy);
                 if (tt > 900 && kh == 0)
                 {
                     kh = 2;
@@ -393,7 +393,7 @@ public class RobotRLAgent : Agent
                 utotal[8] += dh * uff + d0;
                 utotal[9] -= (dh * uff + d0) * 2;
                 utotal[10] += dh * uff + d0;
-                if (!train) SetModel("Quadruped", BJumpPolicy);
+                if (!train) SetModel("gewu", BJumpPolicy);
                 if (tt > 900 && kh == 0)
                 {
                     kh = 4;
@@ -417,7 +417,7 @@ public class RobotRLAgent : Agent
                 utotal[8] += (dh * uf2 + d0) * -2;
                 utotal[10] += dh * uf1 + d0;
                 utotal[11] += (dh * uf1 + d0) * -2;
-                if (!train) SetModel("Quadruped", QTrotPolicy);
+                if (!train) SetModel("gewu", QTrotPolicy);
             }
             if (QuadrupedTargetMotion == StyleQ.bound)
             {
@@ -429,7 +429,7 @@ public class RobotRLAgent : Agent
                 utotal[8] += (dh * uf2 + d0) * -2;
                 utotal[10] += dh * uf2 + d0;
                 utotal[11] += (dh * uf2 + d0) * -2;
-                if (!train) SetModel("Quadruped", QBoundPolicy);
+                if (!train) SetModel("gewu", QBoundPolicy);
             }
             if (QuadrupedTargetMotion == StyleQ.pronk)
             {
@@ -448,10 +448,10 @@ public class RobotRLAgent : Agent
                 utotal[8] += (dh * uff + d0) * -2;
                 utotal[10] += dh * uff + d0;
                 utotal[11] += (dh * uff + d0) * -2;
-                if (!train) SetModel("Quadruped", QPronkPolicy);
+                if (!train) SetModel("gewu", QPronkPolicy);
             }
         }
-        if (Robot == StyleR.legwheeled)
+        if (Robot == StyleR.legwheeled  && ActionNum == 8)
         {
             
             if (LegwheelTargetMotion == StyleL.walk)
@@ -466,7 +466,7 @@ public class RobotRLAgent : Agent
                 utotal[2] += dh * uf1 * -2;
                 utotal[5] += dh * uf2;
                 utotal[6] -= dh * uf2 * -2;
-                if (!train) SetModel("Quadruped", LWalkPolicy);
+                if (!train) SetModel("gewu", LWalkPolicy);
             }
             
             if (LegwheelTargetMotion == StyleL.jump)
@@ -480,7 +480,7 @@ public class RobotRLAgent : Agent
                 utotal[2] -= 80 * uff;
                 utotal[5] += 40 * uff;
                 utotal[6] += 80 * uff;
-                if (!train) SetModel("Quadruped", LJumpPolicy);
+                if (!train) SetModel("gewu", LJumpPolicy);
             }
             if (LegwheelTargetMotion == StyleL.drive)
             {
@@ -490,10 +490,73 @@ public class RobotRLAgent : Agent
                 kb2[7] = 0.2f;
                 //kb1[3] = 1f;
                 //kb1[7] = 1f;
-                if (!train) SetModel("Quadruped", LDrivePolicy);
+                if (!train) SetModel("gewu", LDrivePolicy);
             }
         }
 
+        if (Robot == StyleR.legwheeled && ActionNum == 16)
+        {
+            if (LegwheelTargetMotion == StyleL.walk)
+            {
+                T1 = 30;
+                dh = 20;
+                d0 = 30;
+                ko = 1;
+                float[] ktemp = new float[16] { 10, 30, 30, 0, 10, 30, 30, 0, 10, 30, 30, 0, 10, 30, 30, 0 };
+                for (int i = 0; i < 16; i++) kb[i] = ktemp[i];
+                for (int i = 0; i < 16; i++) kb2[i] = 0;
+                utotal[1] += dh * uf1 + d0;
+                utotal[2] += (dh * uf1 + d0) * -2;
+                utotal[5] += dh * uf2 + d0;
+                utotal[6] += (dh * uf2 + d0) * -2;
+                utotal[9] += dh * uf2 + d0;
+                utotal[10] += (dh * uf2 + d0) * -2;
+                utotal[13] += dh * uf1 + d0;
+                utotal[14] += (dh * uf1 + d0) * -2;
+                if (!train) SetModel("gewu", LWalkPolicy);
+            }
+            
+            if (LegwheelTargetMotion == StyleL.jump)
+            {
+                T2 = 30;
+                dh = 30;
+                d0 = 30;
+                kh = 2;
+                float[] ktemp = new float[16] { 10, 30, 50, 0, 10, 30, 50, 0, 10, 30, 50, 0, 10, 30, 50, 0 };
+                for (int i = 0; i < 16; i++) kb[i] = ktemp[i];
+                for (int i = 0; i < 16; i++) kb2[i] = 0;
+                utotal[1] += dh * uff + d0;
+                utotal[2] += (dh * uff + d0) * -2;
+                utotal[5] += dh * uff + d0;
+                utotal[6] += (dh * uff + d0) * -2;
+                utotal[9] += dh * uff + d0;
+                utotal[10] += (dh * uff + d0) * -2;
+                utotal[13] += dh * uff + d0;
+                utotal[14] += (dh * uff + d0) * -2;
+                if (!train) SetModel("gewu", LJumpPolicy);
+            }
+            if (LegwheelTargetMotion == StyleL.drive)
+            {
+                d0 = 30;
+                utotal[1] += d0;
+                utotal[2] += d0 * -2;
+                utotal[5] += d0;
+                utotal[6] += d0 * -2;
+                utotal[9] += d0;
+                utotal[10] += d0 * -2;
+                utotal[13] += d0;
+                utotal[14] += d0 * -2;
+                //kb1[3] = 1f;
+                //kb1[7] = 1f;
+                for (int i = 0; i < 16; i++) kb[i] = 0;
+                for (int i = 0; i < 16; i++) kb2[i] = 0;
+                kb2[3] = 01f;
+                kb2[7] = 01f;
+                kb2[11] = 01f;
+                kb2[15] = 01f;
+                if (!train) SetModel("gewu", LDrivePolicy);
+            }
+        }
         for (int i = 0; i < ActionNum; i++) SetJointTargetDeg(acts[i], utotal[i]);
 
         
