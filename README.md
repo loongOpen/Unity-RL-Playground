@@ -1,4 +1,6 @@
 # “格物”具身智能仿真平台
+格物平台图文版安装使用教程：
+https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink
 - **4月19日，添加动作重映射例程、添加四轮足例程**
 - **4月4日，格物1.0上线，全面升级**
 - **机器人运动会、Tinker足球赛、青龙功夫足球全部上线**
