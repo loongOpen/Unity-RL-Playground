@@ -8,7 +8,6 @@ using System.IO;
 using UnityEditor;
 using Unity.Sentis;
 
-
 public class GewuAgent : Agent
 {
     int tp = 0;
@@ -62,7 +61,7 @@ public class GewuAgent : Agent
     public ModelAsset BWalkPolicy;
     public ModelAsset BRunPolicy;
     public ModelAsset BJumpPolicy; 
-    [Header("gewu")]
+    [Header("Quadruped")]
     public StyleQ QuadrupedTargetMotion;
     public ModelAsset QTrotPolicy;
     public ModelAsset QBoundPolicy;
@@ -116,7 +115,6 @@ public class GewuAgent : Agent
         arts[0].GetJointVelocities(W0);
         accelerate = train;
     }
-
 
     private bool _isClone = false; 
     void Start()
