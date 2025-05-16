@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by
-Stephen Brawner (brawner@gmail.com) 
+Stephen Brawner (brawner@gmail.com)
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="zqsa01">
-
-  <mujoco>
-    <compiler meshdir="package://meshes/" />
-  </mujoco>
 
   <link
     name="base_link">
@@ -44,10 +40,6 @@ Stephen Brawner (brawner@gmail.com)
       <origin
         xyz="0 0 0.03"
         rpy="0 0 0" />
-      <!-- <geometry>
-        <mesh
-          filename="package://meshes/Base_link.STL" />
-      </geometry> -->
       <geometry>
         <box size="0.2 0.2 0.3" />
       </geometry>
@@ -84,15 +76,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/LeftLeg_Link_01.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -145,15 +129,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/LeftLeg_Link_02.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -333,15 +309,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/LeftLeg_Link_05.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -404,15 +372,15 @@ Stephen Brawner (brawner@gmail.com)
     </visual>
     <collision>
       <origin
-        xyz="0.0 0 -0.0"
+        xyz="0.054 0 -0.038"
         rpy="0 0 0" />
-      <!-- <geometry>
-        <box size="0.24 0.08 0.03" />
-      </geometry> -->
       <geometry>
+        <box size="0.24 0.08 0.03" />
+      </geometry>
+      <!--<geometry>
         <mesh
           filename="package://meshes/LeftLeg_Link_06.STL" />
-      </geometry>
+      </geometry>-->
     </collision>
   </link>
 
@@ -466,15 +434,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/RightLeg_Link_01.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -527,15 +487,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/RightLeg_Link_02.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -715,15 +667,7 @@ Stephen Brawner (brawner@gmail.com)
           rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://meshes/RightLeg_Link_05.STL" />
-      </geometry>
-    </collision> -->
+
   </link>
 
   <joint
@@ -786,15 +730,15 @@ Stephen Brawner (brawner@gmail.com)
     </visual>
     <collision>
       <origin
-        xyz="0.0 0 -0.0"
+        xyz="0.054 0 -0.038"
         rpy="0 0 0" />
-      <!-- <geometry>
-        <box size="0.24 0.08 0.03" />
-      </geometry> -->
       <geometry>
+        <box size="0.24 0.08 0.03" />
+      </geometry>
+      <!--<geometry>
         <mesh
           filename="package://meshes/RightLeg_Link_06.STL" />
-      </geometry>
+      </geometry> -->
     </collision>
   </link>
 
