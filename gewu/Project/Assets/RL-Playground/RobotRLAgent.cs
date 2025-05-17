@@ -62,7 +62,7 @@ public class RobotRLAgent : Agent
     public ModelAsset BWalkPolicy;
     public ModelAsset BRunPolicy;
     public ModelAsset BJumpPolicy; 
-    [Header("gewu")]
+    [Header("Quadruped")]
     public StyleQ QuadrupedTargetMotion;
     public ModelAsset QTrotPolicy;
     public ModelAsset QBoundPolicy;
