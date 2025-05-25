@@ -19,7 +19,7 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 
 ---
 
-“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且用户友好的强化学习开发环境，适用于各类机器人。
+“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且友好的强化学习开发环境，适用于各类机器人。
 
 ## 相关论文
 
@@ -28,20 +28,6 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 [1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
 
 [2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
-
-## 平台特性
-- **广泛的机器人支持**：兼容数百种移动机器人，包括人形机器人、四足机器人、轮式机器人等。
-  
-- **一键导入与训练**：允许用户轻松导入机器人模型并启动训练，无需复杂的配置。
-  
-- **降低强化学习开发门槛**：简化工作流程并提供工具包，使强化学习技术人人皆可接触和使用。
-  
-## 开源与社区支持
-- **开源项目**：Unity RL Playground是完全开源的，代码和资源在GitHub上公开可用，供开发者自由访问和贡献。
-  
-- **社区驱动发展**：我们欢迎全球开发者加入我们的社区，共同推动平台的发展，并分享技术专长。
-
-“格物”致力于成为具身智能的开放平台，加速机器人技术的创新。无论您是学术研究人员、开发者还是爱好者，都能在这里找到量身定制的工具和资源，助力您的工作。
 
 **“格物”平台适用于Windows、Linux、macOS等操作系统**
 
