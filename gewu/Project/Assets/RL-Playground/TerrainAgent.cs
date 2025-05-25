@@ -100,8 +100,8 @@ public class TerrainAgent : Agent
         
 
         //if (train && !_isClone) 
-        int numrob=15;
-        if(train)numrob=80;
+        int numrob=8;
+        if(train)numrob=32;
         if (!_isClone) 
         {
             for (int i = 1; i < numrob; i++)
