@@ -10,13 +10,6 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
   采用Unity2021，打包为UnityPackage
 
 
-<div align="center">
-  <h1 align="center">Unitree RL GYM</h1>
-  <p align="center">
-    <span> 🌎English </span> | <a href="README_zh.md"> 🇨🇳中文 </a>
-  </p>
-</div>
-
 <p align="center">
   <strong>This is a repository for reinforcement learning implementation based on Unitree robots, supporting Unitree Go2, H1, H1_2, and G1.</strong> 
 </p>
