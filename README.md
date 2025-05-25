@@ -11,9 +11,9 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 
 <div align="center">
 
-| <div align="center"> [机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> |
-| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | --- | --- |
-| <img src="gewu/sport-meeting.gif" width="240px"> | <img src="gewu/terrain.gif" width="240px"> | <img src="gewu/loong-kungfu.gif" width="240px"> |
+| <div align="center"> [机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> [动作重映射]([https://www.bilibili.com/video/BV1NuZBYeEq8/](https://www.bilibili.com/video/BV1vpdYYaEXe/)) </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
+| ---  | --- | --- | --- |
+| <img src="gewu/sport-meeting.gif" width="240px"> | <img src="gewu/terrain.gif" width="240px"> | <img src="gewu/retarget.gif" width="240px"> | <img src="gewu/G1perform.gif" width="240px"> |
 
 </div>
 
