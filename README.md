@@ -11,7 +11,7 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
   
 **点击观看视频（[机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/)）**
 
-[![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
+[![视频封面图片](gewu/logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
 
 **点击观看视频（[Tinker足球赛](https://www.bilibili.com/video/BV1MBo8YUESp/)）**
 
