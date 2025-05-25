@@ -1,14 +1,14 @@
 # “格物”具身智能仿真平台
 **格物平台图文版安装使用教程：**
 https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink
-- **4月19日，添加动作重映射例程、添加四轮足例程**
-- **4月4日，格物1.0上线，全面升级**
-- **机器人运动会、Tinker足球赛、青龙功夫足球全部上线**
-- **采用最新版Unity2023**
-- **不再打包，push代码更加方便**
-- **依赖包已预置，下载即用**
-- **极致优化简洁的代码，开发更方便**
-
+- **2025.5.25，添加复杂地形例程**
+- **2025.4.19，添加动作重映射例程、添加四轮足例程**
+- **2025.4.4，格物1.0上线，全面升级**
+  机器人运动会、Tinker足球赛、青龙功夫足球全上线
+  升级至Unity2023，依赖包预置，下载即用，代码优化，开发更方便
+- **2025.3.20，格物0.1代码发布**
+  采用Unity2021，打包为UnityPackage
+  
 **点击观看视频（[机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/)）**
 
 [![视频封面图片](logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
@@ -74,6 +74,14 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 在Assets/Retarget目录下，H1.unity运行后会依次播放feedforward文件夹下存入的预设动作
 
 可参考H2O github代码生成新的重映射动作
+
+## 复杂地形例程Terrain.unity
+
+长30cm高15cm台阶，预训练青龙、宇树G1、加速进化T1、众擎SA01
+
+注意训练时要单独每个机器人，其他机器人隐藏
+
+采用课程学习，训练时逐渐增大楼梯高度（调整Stairs的Scale的y值）
 
 ## 二、训练环境安装
 
