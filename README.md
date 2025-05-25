@@ -29,7 +29,7 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 
 [2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
 
-**“格物”平台适用于Windows、Linux、macOS等操作系统**
+## 使用说明（适用于Windows、Linux、macOS等操作系统）
 
 ## 一、仿真环境安装
 
