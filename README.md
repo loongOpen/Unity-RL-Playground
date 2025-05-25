@@ -19,19 +19,6 @@ https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylin
 
 ---
 
-  
-**点击观看视频（[机器人运动会](https://www.bilibili.com/video/BV167RbYxEuG/)）**
-
-[![视频封面图片](gewu/logo.jpg)](https://www.bilibili.com/video/BV167RbYxEuG/)
-
-**点击观看视频（[Tinker足球赛](https://www.bilibili.com/video/BV1MBo8YUESp/)）**
-
-[![视频封面图片](soccer.png)](https://www.bilibili.com/video/BV1MBo8YUESp/)
-
-**点击观看视频（[青龙功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/)）**
-
-[![视频封面图片](kungfusoccer.png)](https://www.bilibili.com/video/BV1NuZBYeEq8/)
-
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且用户友好的强化学习开发环境，适用于各类机器人。
 
 ## 相关论文
