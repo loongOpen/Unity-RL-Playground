@@ -1,6 +1,8 @@
 # “格物”具身智能仿真平台
-**格物平台图文版安装使用教程：**
-https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink
+**[格物免安装体验版（解压后运行Gewu.exe）](https://gvtdwawnc78.feishu.cn/wiki/Zy1EwQSg0ibU9hkNdTTc5uwtnye?from=from_copylink)**
+
+**[格物平台图文版安装使用教程](https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink)**
+
 - **2025.5.25，添加复杂地形例程**
 - **2025.4.19，添加动作重映射例程、添加四轮足例程**
 - **2025.4.4，格物1.0上线，全面升级**
