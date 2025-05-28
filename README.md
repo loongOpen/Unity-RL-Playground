@@ -1,5 +1,6 @@
 # “格物”具身智能仿真平台
 **格物免安装体验版下载：[飞书](https://gvtdwawnc78.feishu.cn/wiki/Zy1EwQSg0ibU9hkNdTTc5uwtnye?from=from_copylink)  [百度网盘](https://pan.baidu.com/s/1IQ7_aVZ44f1xgd4Qnthi7w?pwd=bngw)  （解压后运行Gewu.exe）**
+**格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1_THo-q9kptYeZJU4xdDpGQ?pwd=69d4)**
 
 **[格物平台图文版安装使用教程](https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink)**
 
