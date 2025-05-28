@@ -1,6 +1,6 @@
 # “格物”具身智能仿真平台
 
-- **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1j4aKwp7ucmTL1EBYhCiO8Q?pwd=xn33)（解压后运行GewuMuseum.exe）**
+- **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1j4aKwp7ucmTL1EBYhCiO8Q?pwd=xn33)（解压后运行GewuMuseum.exe，使用WASD和QE移动视角）**
 
 - **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1_THo-q9kptYeZJU4xdDpGQ?pwd=69d4)（解压后运行GewuHetu.exe）**
 
