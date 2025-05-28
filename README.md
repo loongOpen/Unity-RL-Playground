@@ -4,8 +4,6 @@
 
 - **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1_THo-q9kptYeZJU4xdDpGQ?pwd=69d4)（解压后运行GewuHetu.exe）**
 
-**[格物平台图文版安装使用教程](https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink)**
-
 - **2025.5.25，添加复杂地形例程**
 - **2025.4.19，添加动作重映射例程、添加四轮足例程**
 - **2025.4.4，格物1.0上线，全面升级**
@@ -35,6 +33,8 @@
 [2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
 
 ## 使用说明（适用于Windows、Linux、macOS等操作系统）
+
+**[格物平台图文版安装使用教程](https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink)**
 
 ## 一、仿真环境安装
 
