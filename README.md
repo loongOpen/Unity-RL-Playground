@@ -8,7 +8,7 @@
 - **2025.4.19，添加动作重映射例程、添加四轮足例程**
 - **2025.4.4，格物1.0上线，全面升级**
   机器人运动会、Tinker足球赛、青龙功夫足球全上线
-  升级至Unity2023，依赖包预置，下载即用，代码优化，开发更方便
+  升级至Unity2023，依赖包预置，代码优化
 - **2025.3.20，格物0.1代码发布**
   采用Unity2021，打包为UnityPackage
 
@@ -16,7 +16,7 @@
 
 | <div align="center"> [机器人乐园](https://www.bilibili.com/video/BV1p1jqzNEcW/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
-| <img src="gewu/leyuan.gif" width="360px"> | <img src="gewu/hetu.gif" width="360px"> |
+| <img src="gewu/leyuan.gif" width="400px"> | <img src="gewu/hetu.gif" width="400px"> |
 
 </div>
 
