@@ -16,7 +16,7 @@
 
 | <div align="center"> [机器人乐园](https://www.bilibili.com/video/BV1p1jqzNEcW/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
-| <img src="gewu/leyuan.gif" width="180px"> | <img src="gewu/hetu.gif" width="180px"> |
+| <img src="gewu/leyuan.gif" width="360px"> | <img src="gewu/hetu.gif" width="360px"> |
 
 </div>
 
