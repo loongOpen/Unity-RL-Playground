@@ -14,6 +14,14 @@
 
 <div align="center">
 
+| <div align="center"> [机器人乐园](https://www.bilibili.com/video/BV1p1jqzNEcW/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
+| ---  | --- |
+| <img src="gewu/leyuan.gif" width="180px"> | <img src="gewu/hetu.gif" width="180px"> |
+
+</div>
+
+<div align="center">
+  
 | <div align="center"> [机器人总动员](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> [动作重映射](https://www.bilibili.com/video/BV1vpdYYaEXe/) </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
 | ---  | --- | --- | --- |
 | <img src="gewu/sport-meeting.gif" width="180px"> | <img src="gewu/terrain.gif" width="180px"> | <img src="gewu/retarget.gif" width="180px"> | <img src="gewu/G1perform.gif" width="180px"> |
