@@ -68,12 +68,18 @@
 
 ## 动作重映射与模仿学习例程，用于复杂动作的模仿学习
 
-在Assets/Retarget目录下
-H1mimic.unity直接运行，可看到预训练好的吉他、高尔夫、小提琴、挥手动作（共用一个神经网络）
-G1mimic.unity直接运行，可看到预训练好的查尔斯顿舞蹈动作
+在Assets/Retarget目录下，包含宇树H1和G1两个例程
+
+H1mimic.unity运行，可看到预训练好的吉他、高尔夫、小提琴、挥手动作（共用一个神经网络）
+
+G1mimic.unity运行，可看到预训练好的查尔斯顿舞蹈动作
+
 动作均存放在dataset目录下（H1动作来源于Humanoid2Humanoid方法从AMASS数据库生成，G1动作来源于LEFAN1数据集）
+
 模仿学习训练：只勾选Train进行训练（参考后面步骤）
+
 重映射动作播放：只勾选Replay可播放动作
+
 Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名称
 
 ## 复杂地形例程Terrain.unity
