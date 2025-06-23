@@ -30,9 +30,9 @@
 
 <div align="center">
   
-| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |  |   |
-| ---  | --- | --- | --- |
-| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |  |  |
+| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |
+| ---  | --- |
+| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |
 
 </div>
 
