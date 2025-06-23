@@ -3,7 +3,7 @@
 - **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
 
 - **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1c7hEDSOLEbi1pS6mNVpSbQ?pwd=e48c)（解压后运行GewuHetuNew.exe，使用WASD和QE按键移动视角）**
-
+- **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
 - **2025.5.28，上线机器人乐园和清明上河图**
 - **2025.5.25，添加复杂地形例程**
 - **2025.4.19，添加动作重映射例程、添加四轮足例程**
