@@ -1,17 +1,5 @@
 # “格物”具身智能仿真平台
 
-- **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
-
-- **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1c7hEDSOLEbi1pS6mNVpSbQ?pwd=e48c)（解压后运行GewuHetuNew.exe，使用WASD和QE按键移动视角）**
-- **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
-- **2025.5.28，上线机器人乐园和清明上河图**
-- **2025.5.25，添加复杂地形例程**
-- **2025.4.19，添加动作重映射例程、添加四轮足例程**
-- **2025.4.4，格物1.0上线，全面升级**
-  升级至Unity2023，依赖包预置，代码优化，新增足球赛例程
-- **2025.3.20，格物0.1代码发布**
-  采用Unity2021，打包为UnityPackage，机器人总动员例程
-
 <div align="center">
 
 | <div align="center"> [机器人乐园](https://www.bilibili.com/video/BV1p1jqzNEcW/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
@@ -39,6 +27,17 @@
 ---
 
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且友好的强化学习开发环境，适用于各类机器人。
+
+- **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
+- **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1c7hEDSOLEbi1pS6mNVpSbQ?pwd=e48c)（解压后运行GewuHetuNew.exe，使用WASD和QE按键移动视角）**
+- **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
+- **2025.5.28，上线机器人乐园和清明上河图**
+- **2025.5.25，添加复杂地形例程**
+- **2025.4.19，添加动作重映射例程、添加四轮足例程**
+- **2025.4.4，格物1.0上线，全面升级**
+  升级至Unity2023，依赖包预置，代码优化，新增足球赛例程
+- **2025.3.20，格物0.1代码发布**
+  采用Unity2021，打包为UnityPackage，机器人总动员例程
 
 ## 相关论文
 
