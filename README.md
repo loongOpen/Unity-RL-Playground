@@ -66,11 +66,15 @@
 
 10. 录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
-## 动作重映射例程，用于复杂动作的模仿学习
+## 动作重映射与模仿学习例程，用于复杂动作的模仿学习
 
-在Assets/Retarget目录下，H1.unity运行后会依次播放feedforward文件夹下存入的预设动作
-
-可参考H2O github代码生成新的重映射动作
+在Assets/Retarget目录下
+H1mimic.unity直接运行，可看到预训练好的吉他、高尔夫、小提琴、挥手动作（共用一个神经网络）
+G1mimic.unity直接运行，可看到预训练好的查尔斯顿舞蹈动作
+动作均存放在dataset目录下（H1动作来源于Humanoid2Humanoid方法从AMASS数据库生成，G1动作来源于LEFAN1数据集）
+模仿学习训练：只勾选Train进行训练（参考后面步骤）
+重映射动作播放：只勾选Replay可播放动作
+Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名称
 
 ## 复杂地形例程Terrain.unity
 
@@ -110,7 +114,7 @@
 
 3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\RL-Playground` （根据自己的实际目录调整））
 
-4. 运行`mlagents-learn trainer_config.yaml --run-id=go2trot --force`开始训练
+4. 运行`mlagents-learn config.yaml --run-id=go2trot --force`开始训练
 
     （注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
    
@@ -230,7 +234,7 @@ Unity RL Playground is committed to becoming an open platform for embodied intel
 
 3. Return to the Anaconda interface and navigate to the main directory of Unity-RL-Playground (for example, first run `D:` and then `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` (adjust according to your actual directory)).
 
-4. Run `mlagents-learn trainer_config.yaml --run-id=go2trot --force` to start training (Note: the run-id can be named as desired, `--force` starts training from scratch, while `--resume` continues training from a checkpoint).
+4. Run `mlagents-learn config.yaml --run-id=go2trot --force` to start training (Note: the run-id can be named as desired, `--force` starts training from scratch, while `--resume` continues training from a checkpoint).
 
 5. When "[INFO] Listening on ..." appears in the window, return to the Unity interface, click the triangle button at the top to start training.
 
