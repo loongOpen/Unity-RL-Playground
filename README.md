@@ -28,6 +28,14 @@
 
 </div>
 
+<div align="center">
+  
+| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |  |   |
+| ---  | --- | --- | --- |
+| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |  |  |
+
+</div>
+
 ---
 
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且友好的强化学习开发环境，适用于各类机器人。
