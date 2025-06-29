@@ -18,7 +18,7 @@
 
 <div align="center">
   
-| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real] </div> | <div align="center">  [移动操作] </div> |
+| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real] </div> | <div align="center">  [移动操作](https://b23.tv/8htcqZ7) </div> |
 | ---  | --- | ---  | --- |
 | <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |<img src="gewu/s2r.gif" width="180px"> | <img src="gewu/teleop.gif" width="180px"> |
 
