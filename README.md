@@ -18,9 +18,9 @@
 
 <div align="center">
   
-| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |
-| ---  | --- |
-| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |
+| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real] </div> | <div align="center">  [移动操作] </div> |
+| ---  | --- | ---  | --- |
+| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |<img src="gewu/s2r.gif" width="180px"> | <img src="gewu/teleop.gif" width="180px"> |
 
 </div>
 
@@ -28,8 +28,10 @@
 
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和开发者提供一个高效且友好的强化学习开发环境，适用于各类机器人。
 
+- **格物机器人移动操作免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1-C8Zh2PpJIqHLu3QeKr2TA?pwd=ybii)（解压后运行GewuTele.exe）**
 - **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
 - **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1c7hEDSOLEbi1pS6mNVpSbQ?pwd=e48c)（解压后运行GewuHetuNew.exe，使用WASD和QE按键移动视角）**
+- **2025.6.29，上线人形机器人通用移动操作**
 - **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
 - **2025.5.28，上线机器人乐园和清明上河图**
 - **2025.5.25，添加复杂地形例程**
@@ -105,8 +107,6 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 3. 运行`conda create -n gewu python=3.10.12 -y`
 
-    （注：若安装了之前的老版本，可通过conda remove -n ml-agents命令将其删除）
-
 4. 运行`conda activate gewu`
 
 5. 运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
@@ -121,7 +121,7 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 ## 三、训练机器人
 
-1. 在unity打开Playground.unity，选中一个要训练的机器人（建议先用Go2测试），在右侧inspector中勾选train
+1. 在unity打开Playground.unity，在左侧面板选中一个要训练的机器人（例如Go2测试），然后在右侧inspector中勾选train
 
 2. 选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
 
