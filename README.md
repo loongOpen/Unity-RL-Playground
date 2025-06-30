@@ -57,7 +57,7 @@
 
 1. 搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
 
-2. 在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2023版本（2023.2.20f1c1）安装（7个多G，耐心等待，若之前安装了2021版本可将其卸载以腾出空间）
+2. 在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2023版本（2023.2.20f1c1）安装（7个多G，耐心等待）
 
 3. 下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
 
@@ -93,11 +93,19 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 ## 复杂地形例程Terrain.unity
 
+在Assets/RL-Playground目录下
+
 长30cm高15cm台阶，预训练青龙、宇树G1、加速进化T1、众擎SA01
 
 注意训练时要单独每个机器人，其他机器人隐藏
 
 采用课程学习，训练时逐渐增大楼梯高度（调整Stairs的Scale的y值）
+
+## 移动操作例程G1OP.unity
+
+在Assets/Manipulation目录下
+
+采用键盘控制机器人进行行走和操作，详见使用说明.txt
 
 ## 二、训练环境安装
 
