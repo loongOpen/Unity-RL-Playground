@@ -76,7 +76,7 @@
 
 10. 录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
-## 动作重映射与模仿学习例程，用于复杂动作的模仿学习
+## 动作重映射与模仿学习例程
 
 在Assets/Retarget目录下，包含宇树H1和G1两个例程
 
