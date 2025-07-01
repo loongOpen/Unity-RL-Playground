@@ -107,6 +107,16 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 采用键盘控制机器人进行行走和操作，详见使用说明.txt
 
+## 机器人动画例程dance.unity
+
+先下载动画例程的unitypackage[百度网盘](https://pan.baidu.com/s/1lBsyYqKPKsAxTdYUp9nwng?pwd=sr6t)
+
+然后在unity上方菜单栏点击Assets->Import Package->Custom Package，选中上一步下载的Animation.unitypackage，点击Import导入
+
+导入后在Assets/Animation目录下，双击打开dance.unity，运行即可看到G1机器人舞蹈、弹琴、演唱的动画效果
+
+更多动画效果可在Assets/Animation/Animations目录下找到
+
 ## 二、训练环境安装
 
 1. 安装Anaconda：https://www.anaconda.com/download
