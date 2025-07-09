@@ -26,7 +26,7 @@
 
 ---
 
-“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和普通大众提供一个高效且友好的强化学习开发环境，适用于各类机器人。[<a href="gewu/gewu-wechat.png">微信交流群</a>]
+“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和普通大众提供一个高效且友好的强化学习开发环境，适用于各类机器人。[<a href="gewu/gewu-wechat.png">格物平台微信交流群</a>]
 
 - **格物机器人移动操作免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1-C8Zh2PpJIqHLu3QeKr2TA?pwd=ybii)（解压后运行GewuTele.exe）**
 - **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
