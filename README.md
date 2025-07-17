@@ -31,6 +31,7 @@
 - **格物机器人移动操作免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1-C8Zh2PpJIqHLu3QeKr2TA?pwd=ybii)（解压后运行GewuTele.exe）**
 - **格物机器人乐园免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1EiRJsoDVCb6tF1YypvsF9A?pwd=w8j8)（解压后运行GewuMuseum.exe）**
 - **格物清明上河图免安装体验版下载：[百度网盘](https://pan.baidu.com/s/1c7hEDSOLEbi1pS6mNVpSbQ?pwd=e48c)（解压后运行GewuHetuNew.exe，使用WASD和QE按键移动视角）**
+- **2025.7.17，添加ROS2插件及Sim2Real例程(Go2)**
 - **2025.7.01，添加机器人动画例程**
 - **2025.6.29，添加人形机器人通用移动操作例程**
 - **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
@@ -117,6 +118,18 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 导入后在Assets/Animation目录下，双击打开dance.unity，运行即可看到G1机器人舞蹈、弹琴、演唱的动画效果
 
 更多动画效果可在Assets/Animation/Animations目录下找到
+
+## SIm2Real例程Go2Deploy.unity
+
+在Assets/Ros2ForUnity/Go2文件夹下
+
+使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2
+
+机器狗开机后让其趴在地上，用网线连接机器狗与电脑，先运行RosTest.unity测试ROS通信，运行不报错且输出IMU值说明通信成功
+
+Go2Deploy.unity为真机部署例程，运行前确保机器狗趴在地上,运行开始机器狗会稍微站起，手轻轻提住机器狗，按键盘向上箭头，直到机器狗完全站起。然后在Unity左侧选中Go2Deploy，在右侧Inspector窗口勾选FF_enable（前馈使能），机器狗开始踏步，再勾选NN_enable（神经网络使能），机器开狗始向前行走
+
+Go2Train.unity用于真机的训练
 
 ## 二、训练环境安装
 
