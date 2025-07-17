@@ -123,7 +123,7 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 在Assets/Ros2ForUnity/Go2文件夹下
 
-使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装Unitree_ROS2（参考https://support.unitree.com/home/zh/developer/ROS2_service）
+使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
 
 机器狗开机后让其趴在地上，用网线连接机器狗与电脑，先运行RosTest.unity测试ROS通信，运行不报错且输出IMU值说明通信成功
 
