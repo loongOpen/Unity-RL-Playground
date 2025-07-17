@@ -4,7 +4,7 @@
 
 | <div align="center"> [机器人乐园](https://www.bilibili.com/video/BV1p1jqzNEcW/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
-| <img src="gewu/leyuan.gif" width="400px"> | <img src="gewu/hetu.gif" width="400px"> |
+| <img src="gewu/image/leyuan.gif" width="400px"> | <img src="gewu/image/hetu.gif" width="400px"> |
 
 </div>
 
@@ -12,7 +12,7 @@
   
 | <div align="center"> [机器人总动员](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> [动作重映射](https://www.bilibili.com/video/BV1vpdYYaEXe/) </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
 | ---  | --- | --- | --- |
-| <img src="gewu/sport-meeting.gif" width="180px"> | <img src="gewu/terrain.gif" width="180px"> | <img src="gewu/retarget.gif" width="180px"> | <img src="gewu/G1perform.gif" width="180px"> |
+| <img src="gewu/image/sport-meeting.gif" width="180px"> | <img src="gewu/image/terrain.gif" width="180px"> | <img src="gewu/image/retarget.gif" width="180px"> | <img src="gewu/image/G1perform.gif" width="180px"> |
 
 </div>
 
@@ -20,7 +20,7 @@
   
 | <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real](https://b23.tv/y8wXu2N) </div> | <div align="center">  [移动操作](https://b23.tv/8htcqZ7) </div> |
 | ---  | --- | ---  | --- |
-| <img src="gewu/loong-kungfu.gif" width="180px"> | <img src="gewu/g1mimic.gif" width="180px"> |<img src="gewu/s2r.gif" width="180px"> | <img src="gewu/teleop.gif" width="180px"> |
+| <img src="gewu/image/loong-kungfu.gif" width="180px"> | <img src="gewu/image/g1mimic.gif" width="180px"> |<img src="gewu/image/s2r.gif" width="180px"> | <img src="gewu/image/teleop.gif" width="180px"> |
 
 </div>
 
