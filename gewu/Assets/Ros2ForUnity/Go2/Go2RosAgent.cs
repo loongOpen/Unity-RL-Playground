@@ -50,6 +50,7 @@ public class Go2RosAgent : Agent
     private bool subscriptionInitialized = false;
 
     public float kh;
+    public bool is_ROS2_installed;
     public bool FF_enable;
     public bool NN_enable;
     public float stepheight;
@@ -79,6 +80,10 @@ public class Go2RosAgent : Agent
     {
         base.Awake();
         if (!IsUbuntu() && Go2Real != null)
+        {
+            Go2Real.SetActive(false); // 在Awake中禁用，比Start更早
+        }
+        if (!is_ROS2_installed && Go2Real != null)
         {
             Go2Real.SetActive(false); // 在Awake中禁用，比Start更早
         }
