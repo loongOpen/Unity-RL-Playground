@@ -21,6 +21,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.IO;
 using Unity.Sentis;
+using UnityEngine.UI;
 
 namespace ROS2
 {
@@ -30,7 +31,7 @@ namespace ROS2
 /// </summary>
 public class Go2RosAgent : Agent
 {
-    /*private int interval_ms = 1;
+    private int interval_ms = 1;//////////////////////////////////thread period
     private ROS2UnityComponent ros2Unity;
     private ROS2Node ros2Node;
     private ROS2Node ros2Node2;
@@ -43,6 +44,7 @@ public class Go2RosAgent : Agent
     float VelStopF = 16000.0f;
     float[] qmid = new float[12]{0f,1.2f,-2f, 0f,1.2f,-2f, 0f,1.2f,-2f, 0f,1.2f,-2f};
     float[] qsit = new float[12]{0f,1.4f,-2.3f, 0f,1.4f,-2.3f, 0f,1.4f,-2.3f, 0f,1.4f,-2.3f};
+    //float[] qsit = new float[12]{0f,1.4f,-2.2f, 0f,1.4f,-2.2f, 0f,1.4f,-2.2f, 0f,1.4f,-2.2f};
     float[] qdes = new float[12];
     private bool initialized = false;
     private bool subscriptionInitialized = false;
@@ -56,11 +58,52 @@ public class Go2RosAgent : Agent
     float[] utotal = new float[12];
     float[] u = new float[12];
     float tp;
-    bool start=false;
 
+    public float v1 = 0;
+    public float v2 = 0;
+    public float wr = 0;
+    float currentv1 = 0;
+    float currentv2 = 0;
+    float currentwr = 0;
+
+    public Toggle Toggle1;
+    public Toggle Toggle2;
+    public Button Button1;
+    public Button Button2;
+    bool stand=false;
+    bool lie=false;
+
+    public GameObject Go2Real;
+ 
+    protected override void Awake()
+    {
+        base.Awake();
+        if (!IsUbuntu() && Go2Real != null)
+        {
+            Go2Real.SetActive(false); // 在Awake中禁用，比Start更早
+        }
+    }
+    // 判断是否是 Ubuntu 系统
+    private bool IsUbuntu()
+    {
+        string os = SystemInfo.operatingSystem;
+        return os.Contains("Ubuntu") || os.Contains("ubuntu");
+    }
     void Start()
     {
         Time.fixedDeltaTime = 0.01f;
+        if (Button1 != null)
+        {
+            // 添加点击事件监听
+            Button1.onClick.AddListener(OnButton1Clicked);
+        }
+        if (Button2 != null)
+        {
+            // 添加点击事件监听
+            Button2.onClick.AddListener(OnButton2Clicked);
+        }
+        
+
         ros2Unity = GetComponent<ROS2UnityComponent>();
         for (int i = 0; i < 12; i++)
         {
@@ -80,25 +123,48 @@ public class Go2RosAgent : Agent
             cmd_msg.Motor_cmd[i].Kd = 0;
             cmd_msg.Motor_cmd[i].Tau = 0;
         }
-        kh=1f;
+        kh=1;//0.8f;
         FF_enable=false;
         NN_enable=false;
-        stepheight=0.5f;
-        T=0.3f;//单腿上下
+        stepheight=0.4f;
+        T=0.32f;//单腿上下
     }
-
+    private void OnButton1Clicked()
+    {
+        stand=true;
+        
+    }
+    private void OnButton2Clicked()
+    {
+        lie=true;
+    }
+    void OnDestroy()
+    {
+        // 移除监听（避免内存泄漏）
+        if (Button1 != null)
+        {
+            Button1.onClick.RemoveListener(OnButton1Clicked);
+        }
+        if (Button2 != null)
+        {
+            Button2.onClick.RemoveListener(OnButton2Clicked);
+        }
+    }
     public override void CollectObservations(VectorSensor sensor)
     {
-        //sensor.AddObservation(imu.Rpy[1]);//pitch rad 
-        //sensor.AddObservation(imu.Rpy[0]);//roll rad 
+        sensor.AddObservation(imu.Rpy[1]);//pitch rad 
+        sensor.AddObservation(-imu.Rpy[0]);//roll rad 
         sensor.AddObservation(imu.Gyroscope[1]);//pitch rad 
-        sensor.AddObservation(-imu.Gyroscope[2]);//roll rad 
+        sensor.AddObservation(-imu.Gyroscope[2]);//yaw rad 
         sensor.AddObservation(-imu.Gyroscope[0]);//roll rad
         for (int i = 0; i < 12; i++)
         {
             sensor.AddObservation(motor[i].Q);
             sensor.AddObservation(motor[i].Dq);
         }
+        sensor.AddObservation(v1);
+        sensor.AddObservation(v2);
+        sensor.AddObservation(wr);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -112,9 +178,11 @@ public class Go2RosAgent : Agent
         else uf2=0;
         
         uff = new float[12]{0,uf1,-2*uf1,  0,uf2,-2*uf2,  0,uf2,-2*uf2,  0,uf1,-2*uf1,};        
-        float kb = 0.6f;
+        float kb = 0.4f;
         float kn =0;
         float kf =0;
+        FF_enable=Toggle1.isOn;
+        NN_enable=Toggle2.isOn;
         if(NN_enable)kn=1;
         if(FF_enable)kf=1;
         for (int i = 0; i < 12; i++)
@@ -160,11 +228,21 @@ public class Go2RosAgent : Agent
                 }
                 for(int i=0;i<12;i++)SetTargetRad(i, qdes[i]);
                 if(tp<0.5f)for(int i=0;i<12;i++)SetDampingMode(i);
+                
+                if(Mathf.Abs(imu.Rpy[0])>0.33f || Mathf.Abs(imu.Rpy[1])>0.33f)
+                {
+                    //for(int i=0;i<12;i++)SetDampingMode(i);
+                    for(int i=0;i<12;i++)SetTargetRad(i, qsit[i]);
+                }
+
+                //for(int i=0;i<12;i++)SetTargetRad(i, qsit[i]);
+                //for(int i=0;i<12;i++)SetDampingMode(i);
                 GetCRC(ref cmd_msg);
 
                 //var msgWithHeader = cmd_msg as MessageWithHeader;
                 //ros2Node.clock.UpdateROSTimestamp(ref msgWithHeader);
-                if(tp>0.5f && go2_pub!=null)go2_pub.Publish(cmd_msg);
+                if(go2_pub!=null)go2_pub.Publish(cmd_msg);
+                //if(go2_pub!=null)go2_pub.Publish(cmd_msg);
                 if (interval_ms > 0)
                 {
                     Thread.Sleep(interval_ms);
@@ -212,19 +290,15 @@ public class Go2RosAgent : Agent
             
         }
     }
-    public void startcontrol()
-    {
-        start=true;
-    }
     void FixedUpdate()
     {
-        if (!initialized && start)
+        if (!initialized)
         {
             Thread publishThread = new Thread(() => Publish());
             publishThread.Start();
             initialized = true;
         }
-        if (!subscriptionInitialized  && start)
+        if (!subscriptionInitialized)
         {
             Thread subscribeThread = new Thread(() => Subscribe());
             subscribeThread.Start();
@@ -240,15 +314,54 @@ public class Go2RosAgent : Agent
             kh = Mathf.Min(kh, 1f); // 限制最大值
         }
 
-        // 按键 UpArrow 减小 kh（最小 0.66）
+        // 按键 UpArrow 减小 kh（最小 0.5）
         if (Input.GetKey(KeyCode.UpArrow))
         {
             kh -= incrementStep;
             kh = Mathf.Max(kh, 0.5f); // 限制最小值
         }
-        if (Input.GetKeyDown(KeyCode.Space))FF_enable = !FF_enable; // 翻转布尔值
-
+        //if (Input.GetKeyDown(KeyCode.Space))FF_enable = !FF_enable; // 翻转布尔值
+        if(stand)
+        {
+            kh=Mathf.MoveTowards(kh, 0.5f, 0.01f);
+            if(kh<=0.5f)stand=false;
+        }
+        if(lie)
+        {
+            kh=Mathf.MoveTowards(kh, 1f, 0.01f);
+            if(kh>=1f)lie=false;
+        }
         tp+=0.01f;
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (Input.GetKey(KeyCode.W))
+        {
+            currentv1 = Mathf.MoveTowards(currentv1, 2f, 2f * 0.01f);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            currentv1 = Mathf.MoveTowards(currentv1, 0f, 2f * 0.01f);
+        }
+        else
+        {
+            currentv1 = Mathf.MoveTowards(currentv1, 0f, 2f * 0.01f);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            currentwr = Mathf.MoveTowards(currentwr, -1f, 1f * 0.01f);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            currentwr = Mathf.MoveTowards(currentwr, 1f, 1f * 0.01f);
+        }
+        else
+        {
+            currentwr = Mathf.MoveTowards(currentwr, 0f, 1f * 0.01f);
+        }
+        v1 = currentv1;
+        v2 = currentv2;
+        wr = currentwr;
+
     }
 
     void SetTargetRad(int idx, float pos)//20+0.5,30+1standing
@@ -264,7 +377,7 @@ public class Go2RosAgent : Agent
         cmd_msg.Motor_cmd[idx].Q = 0f;   // Taregt angular(rad)
         cmd_msg.Motor_cmd[idx].Kp = 0f; // Poinstion(rad) control kp gain20+0.5, 50+5.5+1
         cmd_msg.Motor_cmd[idx].Dq = 0f;  // Taregt angular velocity(rad/ss)
-        cmd_msg.Motor_cmd[idx].Kd = 2.0f;  // Poinstion(rad) control kd gain
+        cmd_msg.Motor_cmd[idx].Kd = 0.2f;  // Poinstion(rad) control kd gain
         cmd_msg.Motor_cmd[idx].Tau = 0f; // Feedforward toque 1N.m
     }
     void GetCRC(ref unitree_go.msg.LowCmd cmd)
@@ -364,7 +477,11 @@ public class Go2RosAgent : Agent
             //Debug.Log("CRC: " + cmd.Crc);
             //print(cmd.Crc);
         }
-    }*/
+    }
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        
+    }
 }
 
 }  // namespace ROS2

@@ -7,9 +7,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using Unity.Sentis;
+using UnityEngine.UI;
 
 
-public class Go2TrainAgent : Agent
+public class Go2Train1Agent : Agent
 {
     int tp = 0;
     int tt = 0;
@@ -37,7 +38,7 @@ public class Go2TrainAgent : Agent
     GameObject robot;
 
     float[] kb = new float[12] { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
-    float[] qsit = new float[12]{0f,1.4f,-2.1f, 0f,1.4f,-2.1f, 0f,1.4f,-2.1f, 0f,1.4f,-2.1f};
+    float[] qsit = new float[12]{0f,1.4f,-2.3f, 0f,1.4f,-2.3f, 0f,1.4f,-2.3f, 0f,1.4f,-2.3f};
     //float[] qsit = new float[12]{0f,1.4f,-2.1f, 0f,1.4f,-2.1f, 0f,1.4f,-2.1f, 0f,1.4f,-2.1f};
     
     float dh = 25;
@@ -49,6 +50,7 @@ public class Go2TrainAgent : Agent
     float currentv1 = 0;
     float currentv2 = 0;
     float currentwr = 0;
+    int gait;
 
     public override void Initialize()
     {
@@ -77,14 +79,14 @@ public class Go2TrainAgent : Agent
     {
         Time.fixedDeltaTime = 0.01f;
 
-        /*SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
+        SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
         SerializedProperty layers = tagManager.FindProperty("layers");
         SerializedProperty layer = layers.GetArrayElementAtIndex(15);
         int targetLayer = LayerMask.NameToLayer("robot");
         layer.stringValue = "robot";
         tagManager.ApplyModifiedProperties();
         Physics.IgnoreLayerCollision(15, 15, true);
-        ChangeLayerRecursively(gameObject, 15);*/
+        ChangeLayerRecursively(gameObject, 15);
 
         if (train && !_isClone) 
         {
@@ -92,7 +94,7 @@ public class Go2TrainAgent : Agent
             {
                 GameObject clone = Instantiate(gameObject); 
                 clone.name = $"{name}_Clone_{i}"; 
-                clone.GetComponent<Go2TrainAgent>()._isClone = true; 
+                clone.GetComponent<Go2Train1Agent>()._isClone = true; 
             }
         }
     }
@@ -123,22 +125,26 @@ public class Go2TrainAgent : Agent
             v1 = 0;
             v2 = 0;
             wr = 0;
-            int a = Random.Range(0, 3);
+            int a = Random.Range(0, 2);
             //if(a==0)v1 = Random.Range(-3f,3f);
             //if(a==1)v2 = Random.Range(-1f,1f);
             //if(a==2)wr = Random.Range(-1f,1f);
 
-            if(a==0)v1 = Random.Range(-3,4);
-            if(a==1)v2 = Random.Range(-1,2);
-            if(a==2)wr = Random.Range(-1,2);
+            //if(a==0)v1 = Random.Range(-2f,2f);
+            //if(a==1)wr = Random.Range(-1f,1f);
+            //if(a==2)v2 = 0*Random.Range(-1f,1f);
+
+            //if(a==0)v1 = Random.Range(0,2)*2;
+            //if(a==1)wr = Random.Range(-1,2);
+            v1 = 2;
         }
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         //sensor.AddObservation(body.InverseTransformDirection(Vector3.down));
-        //sensor.AddObservation(EulerTrans(0*body.eulerAngles[0])*3.14f/180f);//pitch rad 
-        //sensor.AddObservation(EulerTrans(0*body.eulerAngles[2])*3.14f/180f);//roll rad 
+        sensor.AddObservation(EulerTrans(body.eulerAngles[0])*3.14f/180f);//pitch rad 
+        sensor.AddObservation(EulerTrans(body.eulerAngles[2])*3.14f/180f);//roll rad 
         
         sensor.AddObservation(body.InverseTransformDirection(arts[0].angularVelocity));
         //sensor.AddObservation(body.InverseTransformDirection(arts[0].velocity));
@@ -147,9 +153,9 @@ public class Go2TrainAgent : Agent
             sensor.AddObservation(acts[i].jointPosition[0]);
             sensor.AddObservation(acts[i].jointVelocity[0]);
         }
-        //sensor.AddObservation(v1);
-        //sensor.AddObservation(v2);
-        //sensor.AddObservation(wr);
+        sensor.AddObservation(v1);
+        sensor.AddObservation(v2);
+        sensor.AddObservation(wr);
     }
     float EulerTrans(float eulerAngle)
     {
@@ -175,16 +181,29 @@ public class Go2TrainAgent : Agent
 
         //d0 = 30;
         dh = 0.4f*180f/3.14f;
-        T1 = 25;
+        T1 = 32;
         
-        utotal[1] += dh * uf1  + qsit[1]*90f/3.14f;
-        utotal[2] += (dh * uf1) * -2  + qsit[2]*90f/3.14f;
-        utotal[4] += dh * uf2  + qsit[4]*90f/3.14f;
-        utotal[5] += (dh * uf2) * -2  + qsit[5]*90f/3.14f;
-        utotal[7] += dh * uf2  + qsit[7]*90f/3.14f;
-        utotal[8] += (dh * uf2) * -2  + qsit[8]*90f/3.14f;
-        utotal[10] += dh * uf1  + qsit[10]*90f/3.14f;
-        utotal[11] += (dh * uf1) * -2  + qsit[11]*90f/3.14f;
+        gait=0;
+        float[] uff = new float[12];
+        if(gait==0)
+        {
+            uff=new float[12]{0, dh * uf1,(dh * uf1) * -2, 0,  dh * uf2, (dh * uf2) * -2,0,  dh * uf2,(dh * uf2) * -2,0,  dh * uf1,(dh * uf1) * -2};
+        }
+        if(gait==1)
+        {
+            uff=new float[12]{0, dh * uf1,(dh * uf1) * -2,0,  dh * uf1,(dh * uf1) * -2, 0,  dh * uf2,(dh * uf2) * -2, 0,  dh * uf2, (dh * uf2) * -2};
+        }
+        float k0=0.5f;
+        for (int i = 0; i < 12; i++) utotal[i] +=  uff[i] + k0*qsit[i]*180f/3.14f;
+        
+        /*utotal[1] +=   + k0*qsit[1]*180f/3.14f;
+        utotal[2] +=   + k0*qsit[2]*180f/3.14f;
+        utotal[4] +=   + k0*qsit[4]*180f/3.14f;
+        utotal[5] +=   + k0*qsit[5]*180f/3.14f;
+        utotal[7] +=   + k0*qsit[7]*180f/3.14f;
+        utotal[8] +=   + k0*qsit[8]*180f/3.14f;
+        utotal[10] +=   + k0*qsit[10]*180f/3.14f;
+        utotal[11] +=   + k0*qsit[11]*180f/3.14f;*/
 
 
         for (int i = 0; i < ActionNum; i++) SetJointTargetDeg(acts[i], utotal[i]);
@@ -210,23 +229,23 @@ public class Go2TrainAgent : Agent
         if (accelerate) Time.timeScale = 20;
         if (!accelerate) Time.timeScale = 1;
         Vector3 randomForce=new Vector3(Random.Range(-1f, 1f),0,Random.Range(-1f, 1f));
-        if(Random.Range(0, 100)==1)arts[0].AddForce(20*randomForce, ForceMode.Impulse);
+        if(Random.Range(0, 100)==1)arts[0].AddForce(10*randomForce, ForceMode.Impulse);
 
         
         if (Input.GetKey(KeyCode.W))
         {
-            currentv1 = Mathf.MoveTowards(currentv1, 3f, 3f * 0.01f);
+            currentv1 = Mathf.MoveTowards(currentv1, 2f, 2f * 0.01f);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            currentv1 = Mathf.MoveTowards(currentv1, -3f, 3f * 0.01f);
+            currentv1 = Mathf.MoveTowards(currentv1, -2f, 2f * 0.01f);
         }
         else
         {
-            currentv1 = Mathf.MoveTowards(currentv1, 0f, 3f * 0.01f);
+            currentv1 = Mathf.MoveTowards(currentv1, 0f, 2f * 0.01f);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        /*if (Input.GetKey(KeyCode.LeftArrow))
         {
             currentv2 = Mathf.MoveTowards(currentv2, -1f, 1f * 0.01f);
         }
@@ -237,7 +256,7 @@ public class Go2TrainAgent : Agent
         else
         {
             currentv2 = Mathf.MoveTowards(currentv2, 0f, 1f * 0.01f);
-        }
+        }*/
 
         if (Input.GetKey(KeyCode.A))
         {
@@ -277,15 +296,18 @@ public class Go2TrainAgent : Agent
         if (tp >= 2 * T1) tp = 0;
         ko = 2f;
         float kv = 1f;
-        wr=0;
+        //wr=0;
         var vel = body.InverseTransformDirection(arts[0].velocity);
         var wel = body.InverseTransformDirection(arts[0].angularVelocity);
         var live_reward = 1f;
         var ori_reward1 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[0]));//-0.5f * Mathf.Min(Mathf.Abs(body.eulerAngles[0]), Mathf.Abs(body.eulerAngles[0] - 360f));
-        var ori_reward2 = -0.1f * Mathf.Min(EulerTrans(body.eulerAngles[2]));
-        var wel_reward = - Mathf.Abs(wel[1] - wr);
-        //var vel_reward = - 0.4f * Mathf.Abs(vel[2] - v1) - Mathf.Abs(vel[0] - v2);
-        var vel_reward = vel[2] - Mathf.Abs(vel[0]);
+        var ori_reward2 = -0.1f * Mathf.Abs(EulerTrans(body.eulerAngles[2]));
+        //var wel_reward = 1f - Mathf.Abs(wel[1] - wr);
+        var wel_reward = Mathf.Clamp(wel[1],-0.5f,0.5f)*wr;
+        if(wr==0)wel_reward = - Mathf.Abs(wel[1]);
+        //var vel_reward = 0f - Mathf.Abs(vel[2] - v1) - Mathf.Abs(vel[0] - v2);
+        var vel_reward = Mathf.Clamp(vel[2],-2f,2f)*v1 - Mathf.Abs(vel[0])- 2*Mathf.Abs(vel[1]);
+        if(v1==0)vel_reward = - Mathf.Abs(vel[2]) - Mathf.Abs(vel[0])- 2*Mathf.Abs(vel[1]);
         var reward = live_reward + (ori_reward1 + ori_reward2) * ko + (wel_reward + vel_reward) * kv;
         AddReward(reward);
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 20f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 20f || tt>=1000)

@@ -21,7 +21,7 @@ using System.Diagnostics;
 
 namespace ROS2
 {
-/*
+
 /// <summary>
 /// An example class provided for testing of basic ROS2 communication
 /// </summary>
@@ -53,9 +53,10 @@ public class Go2Send : MonoBehaviour
         cmd_msg.Head[1] = 0xEF;
         cmd_msg.Level_flag = 0xFF;
         cmd_msg.Gpio = 0;
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 20; i++)cmd_msg.Motor_cmd[i] = new unitree_go.msg.MotorCmd();
+        for (int i = 0; i < 12; i++)
         {
-            cmd_msg.Motor_cmd[i] = new unitree_go.msg.MotorCmd();
+            //cmd_msg.Motor_cmd[i] = new unitree_go.msg.MotorCmd();
             cmd_msg.Motor_cmd[i].Mode = 0x01; //Set toque mode, 0x00 is passive mode
             cmd_msg.Motor_cmd[i].Q = PosStopF;
             cmd_msg.Motor_cmd[i].Kp = 0;
@@ -69,8 +70,8 @@ public class Go2Send : MonoBehaviour
     {
         if (ros2Unity.Ok())
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+            //Stopwatch stopwatch = new Stopwatch();
+            //stopwatch.Start();
             
             if (ros2Node == null)
             {
@@ -81,14 +82,16 @@ public class Go2Send : MonoBehaviour
             i++;
             //print(i);
             for(int i=0;i<12;i++)SetTargetRad(i, qsit[i]);
-            GetCRC(ref cmd_msg);
+            cmd_msg.Crc=1018175354;//164956485;
+            //GetCRC(ref cmd_msg);
+
             chatter_pub.Publish(cmd_msg);
 
-            // 停止计时并输出耗时
+            /*// 停止计时并输出耗时
             stopwatch.Stop();
             //UnityEngine.Debug.Log($"Execution Time: {stopwatch.Elapsed.TotalMicroseconds} μs");
             long microseconds = stopwatch.Elapsed.Ticks / 10; // 1 Tick = 100 ns → 10 Ticks = 1 μs
-            UnityEngine.Debug.Log($"Execution Time: {microseconds} μs");
+            UnityEngine.Debug.Log($"Execution Time: {microseconds} μs");*/
         }
     }
 
@@ -195,9 +198,9 @@ public class Go2Send : MonoBehaviour
             }
             cmd.Crc = CRC32.Calculate(arr);
             //Debug.Log("CRC: " + cmd.Crc);
-            //print(cmd.Crc);
+            print(cmd.Crc);
         }
     }
 }
-*/
+
 }  // namespace ROS2

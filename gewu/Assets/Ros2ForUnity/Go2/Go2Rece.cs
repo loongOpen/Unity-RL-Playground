@@ -19,7 +19,7 @@ using System.Text;
 
 namespace ROS2
 {
-/*
+
 /// <summary>
 /// An example class provided for testing of basic ROS2 communication
 /// </summary>
@@ -33,7 +33,6 @@ public class Go2Rece : MonoBehaviour
 
     string fileName = "IMU_Gyro_Data.csv";
     private StringBuilder csvData = new StringBuilder();
-    bool start=false;
 
     void Start()
     {
@@ -42,14 +41,9 @@ public class Go2Rece : MonoBehaviour
         csvData.AppendLine("Time,GyroX,GyroY,GyroZ");
     }
 
-    public void starttest()
-    {
-        start=true;
-    }
-
     void FixedUpdate()
     {
-        if (ros2Node == null && ros2Unity.Ok() && start)
+        if (ros2Node == null && ros2Unity.Ok())
         {
             ros2Node = ros2Unity.CreateNode("ros2_unity_go2_receive_node");
             chatter_sub = ros2Node.CreateSubscription<unitree_go.msg.LowState>(
@@ -59,10 +53,10 @@ public class Go2Rece : MonoBehaviour
                             // 1. 读取 IMU 数据
                             imu = msg.Imu_state;
                             Debug.Log($"IMU - Roll: {imu.Rpy[0]}, Pitch: {imu.Rpy[1]}");
-                            Debug.Log(string.Format(
+                            /*Debug.Log(string.Format(
                                 "GyRo0: {0:F2}, GyRo1: {1:F2}, GyRo2: {2:F2}",
                                 imu.Gyroscope[0], imu.Gyroscope[1], imu.Gyroscope[2]
-                                    ));
+                                    ));*/
                             // 2. 读取 Motor 数据
                             for (int i = 0; i < 12; i++)
                             {
@@ -111,6 +105,6 @@ public class Go2Rece : MonoBehaviour
             Debug.LogError($"保存 CSV 失败: {e.Message}");
         }
     }
-}*/
+}
 
 }  // namespace ROS2

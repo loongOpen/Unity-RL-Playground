@@ -88,16 +88,24 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.ml-agents": {
-      "version": "https://github.com/Unity-Technologies/ml-agents.git?path=com.unity.ml-agents#release_22",
+      "version": "file:../com.unity.ml-agents",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.sentis": "2.1.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.physics": "1.0.0"
-      },
-      "hash": "200fe54e14b649d6eac66a7f0779c1086c506919"
+      }
+    },
+    "com.unity.ml-agents.extensions": {
+      "version": "file:../com.unity.ml-agents.extensions",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ml-agents": "3.0.0",
+        "com.unity.modules.physics": "1.0.0"
+      }
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
@@ -123,13 +131,12 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.robotics.urdf-importer": {
-      "version": "https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2",
+      "version": "file:../com.unity.robotics.urdf-importer",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
-      },
-      "hash": "90f353e4352aae4df52fa2c05e49b804631d2a63"
+      }
     },
     "com.unity.sentis": {
       "version": "2.1.0",
