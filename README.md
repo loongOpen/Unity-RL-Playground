@@ -1,6 +1,6 @@
 # “格物”具身智能仿真平台
 
-# <img src="gewu/Image/gwlogo2.jpg" height="150" /> 
+# <img src="gewu/Image/gwlogo3.jpg" height="150" /> 
 
 <div align="center">
 
