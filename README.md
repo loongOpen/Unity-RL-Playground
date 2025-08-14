@@ -59,7 +59,7 @@
 
 ## 使用说明
 
-适用于Windows、Linux、MacOS等操作系统，[图文版补充说明](https://gvtdwawnc78.feishu.cn/wiki/BdQywjXQ0iHPrGkICsUct4Nenqg?from=from_copylink)，[Mac-Silicon补充说明](macos-setup-Silicon.md)，[Mac-Intelcore补充说明](macos-setup-Intelcore.md)
+适用于Windows、Linux、MacOS等操作系统，[Mac-Silicon补充说明](macos-setup-Silicon.md)，[Mac-Intelcore补充说明](macos-setup-Intelcore.md)
 
 ## 一、仿真环境安装
 
