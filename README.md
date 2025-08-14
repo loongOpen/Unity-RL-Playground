@@ -4,7 +4,7 @@
 
 <div align="center">
 
-| <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [清明上河图](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
+| <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [具身智能小镇](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
 | <img src="gewu/Image/Gewu2.0.gif" width="400px"> | <img src="gewu/Image/hetu.gif" width="400px"> |
 
