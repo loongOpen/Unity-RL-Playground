@@ -18,7 +18,6 @@ public class G1opAgent : Agent
     public bool fixbody = false;
     public bool train;
     public bool accelerate;
-    public bool keyboard=false;
     public float vx=0;
     public float vz=0;
     public float wr=0;
@@ -93,7 +92,7 @@ public class G1opAgent : Agent
     void Start()
     {
         Time.fixedDeltaTime = 0.01f;
-        Screen.SetResolution(1920, 1080, true);
+        /*Screen.SetResolution(1920, 1080, true);
         SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
         SerializedProperty layers = tagManager.FindProperty("layers");
         SerializedProperty layer = layers.GetArrayElementAtIndex(15);
@@ -101,7 +100,7 @@ public class G1opAgent : Agent
         layer.stringValue = "robot";
         tagManager.ApplyModifiedProperties();
         Physics.IgnoreLayerCollision(15, 15, true);
-        ChangeLayerRecursively(gameObject, 15);
+        ChangeLayerRecursively(gameObject, 15);*/
 
         if (train && !_isClone) 
         {
@@ -141,20 +140,11 @@ public class G1opAgent : Agent
             arts[0].SetJointVelocities(W0);
         }
 
-        //if(train)
-        {
-            wr=0;
-            vx=0;
-            vz=0;
-            //vz=(Random.Range(0,2)-0.5f)*3;
-            //vx=(Random.Range(0,2)-0.5f)*1;
-            //wr=(Random.Range(0,2)-0.5f)*2;
-            ran = Random.Range(0,2);
-            //if(ran==0)wr=(Random.Range(0,2)-0.5f)*2;
-            //if(ran==1 || ran==0)vz=(Random.Range(0,2)-0.5f)*2;
-            //if(ran==1)vx=(Random.Range(0,2)-0.5f)*1;
-        }
-        
+        wr=0;
+        vx=0;
+        vz=0;
+        if(train)ran = Random.Range(0,2);
+       
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -237,7 +227,7 @@ public class G1opAgent : Agent
         for (int i = 0; i <12; i++)SetJDeg(hand[i], hp[i], 2000f, 200f);
 
                 
-        if(keyboard)
+        if(!train)
         {
             float v=0.01f;
             if(Input.GetKey(KeyCode.W))vz=Mathf.MoveTowards(vz, 1.5f, v);
@@ -333,7 +323,6 @@ public class G1opAgent : Agent
         ko=1;
         var reward = live_reward + (ori_reward1 + ori_reward2 + ori_reward3) * ko + vel_reward2;
         AddReward(reward);
-        //(foot1.position-foot2.position).magnitude<0.1f || 
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 30f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 30f)
         {
             //if(train)
