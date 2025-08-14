@@ -1,4 +1,6 @@
-# <img src="gewu/Image/gwlogo1.jpg" height="50" /> “格物”具身智能仿真平台
+# “格物”具身智能仿真平台
+
+# <img src="gewu/Image/gwlogo1.jpg" height="150" /> 
 
 <div align="center">
 
