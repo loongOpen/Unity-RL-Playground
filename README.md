@@ -32,7 +32,7 @@
 
 - **2025.8.14，格物2.0（Gewu2.0）代码发布**
 
-  采用Unity2022，集成主界面UI，行走、导航、操作全覆盖，提供[免安装版](https://pan.baidu.com/s/1HFQvqdZcPr0HI1gCn6BGFg?pwd=adnq)体验
+  采用Unity2022（兼容团结引擎），集成主界面UI，行走、导航、操作全覆盖，提供[免安装版](https://pan.baidu.com/s/1HFQvqdZcPr0HI1gCn6BGFg?pwd=adnq)体验
 
 - **2025.7.17，添加ROS2插件及Sim2Real例程(Go2)**
 - **2025.7.01，添加机器人动画例程**
@@ -69,7 +69,7 @@
 
 3. 下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
 
-4. 在Unity Hub的Projects菜单中点击Open，选择上一步解压的Unity-RL-Playground\gewu目录，点击Open，等待项目打开（第一次打开耗时较长，耐心等待）
+4. 在Unity Hub的Projects菜单中点击Open，选择上一步解压的Unity-RL-Playground\gewu目录，点击Open，等待项目打开（第一次打开耗时较长，耐心等待），若弹窗选择ignore或continue即可
 
 5. 项目打开后，在Unity下方的小窗口可看到Assets目录下的GewuMenu.unity，双击打开，即显示格物主界面，点击unity上面的三角形运行，可依次点击进入8个功能模块
 
@@ -130,6 +130,8 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 在Assets/Ros2ForUnity/Go2文件夹下，Go2Deploy.unity，仅限Ubuntu20、22使用
 
 使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
+
+Go2Deploy.unity打开后，在左侧窗口选中Go2Real，在右侧inspector勾选is_ros2_installed
 
 用网线连接机器狗与电脑，机器狗开机后通过手机app连接，让其趴在地上，在app进入设备-服务状态，点击mcf将主运控服务关闭（点击一次后稍等一会）
 
