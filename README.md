@@ -129,11 +129,11 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 在Assets/Ros2ForUnity/Go2文件夹下，Go2Deploy.unity，仅限Ubuntu20、22使用
 
-使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
+使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装ROS2 [Ubuntu 20](https://docs.ros.org/en/foxy/Installation/Alternatives/Ubuntu-Development-Setup.html) [Ubuntu 22](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)，以及[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
 
 Go2Deploy.unity打开后，在左侧窗口选中Go2Real，在右侧inspector勾选is_ros2_installed
 
-用网线连接机器狗与电脑，机器狗开机后通过手机app连接，让其趴在地上，在app进入设备-服务状态，点击mcf将主运控服务关闭（点击一次后稍等一会）
+用网线连接机器狗与电脑，机器狗开机后通过手机app连接，点击卧倒让其趴在地上，然后在app进入设备-服务状态，点击mcf将主运控服务关闭（点击一次后稍等一会）
 
 Go2Deploy.unity为真机部署例程，运行前确保机器狗趴在地上且mcf关闭，运行开始机器狗会稍微站起，点击stand up，直到机器狗完全站起。然后勾选FF_enable（前馈使能），机器狗开始踏步，再勾选NN_enable（神经网络使能），此时便可通过键盘WASD控制机器狗行走和转弯，结束时先取消FF_enable和NN_enable，点击lie down即可
 
