@@ -132,7 +132,9 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装ROS2（[Ubuntu20参考](https://docs.ros.org/en/foxy/Installation/Alternatives/Ubuntu-Development-Setup.html) [Ubuntu22参考](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)），以及[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
 
 注意在~/.bashrc中加入以下两条语句（根据你的unitree_ros2和gewu实际路径修改）：
+
 source ~/ylq/unitree_ros2/setup.sh
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ylq/ylq/Unity-RL-Playground/gewu/Assets/Ros2ForUnity/Plugins/Linux/x86_64
 
 Go2Deploy.unity打开后，在左侧窗口选中Go2Real，在右侧inspector勾选is_ros2_installed
