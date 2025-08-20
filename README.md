@@ -45,7 +45,7 @@
 
   升级至Unity2023，依赖包预置，代码优化，新增足球赛例程
 
-- **2025.3.20，格物0.1(Unity RL Playground)代码发布**
+- **2025.3.20，格物0.1（Unity RL Playground）代码发布**
 
   采用Unity2021，打包为UnityPackage，机器人总动员例程
 
