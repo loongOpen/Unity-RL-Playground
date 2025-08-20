@@ -17,7 +17,6 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System.Xml;
 
 namespace ROS2
 {
@@ -29,16 +28,14 @@ internal class ROS2ForUnity
 {
     private static bool isInitialized = false;
     private static string ros2ForUnityAssetFolderName = "Ros2ForUnity";
-    private XmlDocument ros2csMetadata = new XmlDocument();
-    private XmlDocument ros2ForUnityMetadata = new XmlDocument();
 
-    public enum Platform
+    enum Platform
     {
         Windows,
         Linux
     }
     
-    public static Platform GetOS()
+    private Platform GetOS()
     {
         if (Application.platform == RuntimePlatform.LinuxEditor || Application.platform == RuntimePlatform.LinuxPlayer)
         {
@@ -51,11 +48,11 @@ internal class ROS2ForUnity
         throw new System.NotSupportedException("Only Linux and Windows are supported");
     }
 
-    private static bool InEditor() {
+    private bool InEditor() {
         return Application.isEditor;
     }
     
-    private static string GetOSName()
+    private string GetOSName()
     {
         switch (GetOS())
         {
@@ -83,7 +80,7 @@ internal class ROS2ForUnity
         return Environment.GetEnvironmentVariable(GetEnvPathVariableName());
     }
 
-    public static string GetRos2ForUnityPath()
+    private string GetPluginPath()
     {
         char separator = Path.DirectorySeparatorChar;
         string appDataPath = Application.dataPath;
@@ -92,14 +89,6 @@ internal class ROS2ForUnity
         if (InEditor()) {
             pluginPath += separator + ros2ForUnityAssetFolderName;
         }
-        return pluginPath; 
-    }
-
-    public static string GetPluginPath()
-    {
-        char separator = Path.DirectorySeparatorChar;
-        string ros2ForUnityPath = GetRos2ForUnityPath();
-        string pluginPath = ros2ForUnityPath;
         
         pluginPath += separator + "Plugins";
         
@@ -127,7 +116,7 @@ internal class ROS2ForUnity
     /// Note that on Linux, LD_LIBRARY_PATH as used for dlopen() is determined on process start and this change won't
     /// affect it. Ros2 looks for rmw implementation based on this variable (independently) and the change
     /// is effective for this process, however rmw implementation's dependencies itself are loaded by dynamic linker 
-    /// anyway so setting it for Linux is pointless.
+    /// anyway so setting  it for Linux is pointless.
     /// </description>
     private void SetEnvPathVariable()
     {
@@ -143,69 +132,16 @@ internal class ROS2ForUnity
         Environment.SetEnvironmentVariable(GetEnvPathVariableName(), pluginPath + envPathSep + currentPath);
     }
 
-    public bool IsStandalone() {
-        return Convert.ToBoolean(Convert.ToInt16(GetMetadataValue(ros2csMetadata, "/ros2cs/standalone")));
-    }
-
-    public string GetROSVersion()
-    {
-        string ros2SourcedCodename = GetROSVersionSourced();
-        string ros2FromRos4UMetadata = GetMetadataValue(ros2ForUnityMetadata, "/ros2_for_unity/ros2");
-
-        //  Sourced ROS2 libs takes priority
-        if (string.IsNullOrEmpty(ros2SourcedCodename)) {
-            return ros2FromRos4UMetadata;
-        }
-        
-        return ros2SourcedCodename;
-    }
-
-    /// <summary>
-    /// Checks if both ros2cs and ros2-for-unity were build for the same ros version as well as
-    /// the current sourced ros version matches ros2cs binaries.
-    /// </summary>
-    public void CheckIntegrity()
-    {
-        string ros2SourcedCodename = GetROSVersionSourced();
-        string ros2FromRos2csMetadata = GetMetadataValue(ros2csMetadata, "/ros2cs/ros2");
-        string ros2FromRos4UMetadata = GetMetadataValue(ros2ForUnityMetadata, "/ros2_for_unity/ros2");
-
-        if (ros2FromRos4UMetadata != ros2FromRos2csMetadata) {
-            Debug.LogError(
-                "ROS2 versions in 'ros2cs' and 'ros2-for-unity' metadata files are not the same. " +
-                "This is caused by mixing versions/builds. Plugin might not work correctly."
-            );
-        }
-
-        if(!IsStandalone() && ros2SourcedCodename != ros2FromRos2csMetadata) {
-            Debug.LogError(
-                "ROS2 version in 'ros2cs' metadata doesn't match currently sourced version. " +
-                "This is caused by mixing versions/builds. Plugin might not work correctly."
-            );
-        }
-
-        if (IsStandalone() && !string.IsNullOrEmpty(ros2SourcedCodename)) {
-            Debug.LogError(
-                "You should not source ROS2 in 'ros2-for-unity' standalone build. " +
-                "Plugin might not work correctly."
-            );
-        }
-    }
-
-    public string GetROSVersionSourced()
-    {
-        return Environment.GetEnvironmentVariable("ROS_DISTRO");
-    }
-
     /// <summary>
     /// Check if the ros version is supported, only applicable to non-standalone plugin versions
     /// (i. e. without ros2 libraries included in the plugin).
     /// </summary>
-    private void CheckROSSupport(string ros2Codename)
+    private string CheckROSVersionSourced()
     {
-        List<string> supportedVersions = new List<string>() { "foxy", "galactic", "humble", "rolling" };
+        string currentVersion = Environment.GetEnvironmentVariable("ROS_DISTRO");
+        List<string> supportedVersions = new List<string>() { "foxy", "galactic" };
         var supportedVersionsString = String.Join(", ", supportedVersions);
-        if (string.IsNullOrEmpty(ros2Codename))
+        if (string.IsNullOrEmpty(currentVersion))
         {
             string errMessage = "No ROS environment sourced. You need to source your ROS2 " + supportedVersionsString
               + " environment before launching Unity (ROS_DISTRO env variable not found)";
@@ -219,9 +155,9 @@ internal class ROS2ForUnity
 #endif
         }
 
-        if (!supportedVersions.Contains(ros2Codename))
+        if (!supportedVersions.Contains(currentVersion))
         {
-            string errMessage = "Currently sourced ROS version differs from supported one. Sourced: " + ros2Codename
+            string errMessage = "Currently sourced ROS version differs from supported one. Sourced: " + currentVersion
               + ", supported: " + supportedVersionsString + ".";
             Debug.LogError(errMessage);
 #if UNITY_EDITOR
@@ -231,9 +167,9 @@ internal class ROS2ForUnity
             const int ROS_BAD_VERSION_CODE = 34;
             Application.Quit(ROS_BAD_VERSION_CODE);
 #endif
-        } else if (ros2Codename.Equals("rolling") ) {
-            Debug.LogWarning("You are using ROS2 rolling version. Bleeding edge version might not work correctly.");
         }
+        Debug.Log("Running with a supported ROS 2 version: " + currentVersion);
+        return currentVersion;
     }
 
     private void RegisterCtrlCHandler()
@@ -256,64 +192,27 @@ internal class ROS2ForUnity
         Ros2csLogger.LogLevel = LogLevel.WARNING;
     }
 
-    private string GetMetadataValue(XmlDocument doc, string valuePath)
-    {
-        return doc.DocumentElement.SelectSingleNode(valuePath).InnerText;
-    }
-
-    private void LoadMetadata() 
-    {
-        char separator = Path.DirectorySeparatorChar;
-        try
-        {
-            ros2csMetadata.Load(GetPluginPath() + separator + "metadata_ros2cs.xml");
-            ros2ForUnityMetadata.Load(GetRos2ForUnityPath() + separator + "metadata_ros2_for_unity.xml");
-        }
-        catch (System.IO.FileNotFoundException)
-        {
-#if UNITY_EDITOR
-            var errMessage = "Could not find metadata files.";
-            EditorApplication.isPlaying = false;
-            throw new System.IO.FileNotFoundException(errMessage);
-#else
-            const int NO_METADATA = 1;
-            Application.Quit(NO_METADATA);
-#endif
-        }
-    }
-
     internal ROS2ForUnity()
     {
-        // Load metadata
-        LoadMetadata();
-        string currentRos2Version = GetROSVersion();
-        string standalone = IsStandalone() ? "standalone" : "non-standalone";
-
-        // Self checks
-        CheckROSSupport(currentRos2Version);
-        CheckIntegrity();
-
-        // Library loading
+        // TODO: Find a way to determine whether we run standalone build
         if (GetOS() == Platform.Windows) {
             // Windows version can run standalone, modifies PATH to ensure all plugins visibility
             SetEnvPathVariable();
         } else {
-            // For foxy, it is necessary to use modified version of librcpputils to resolve custom msgs packages.
+            // Linux version needs to have ros2 sourced, which is checked here. It also loads plugins by absolute path
+            // since LD_LIBRARY_PATH cannot be set dynamically within the process for dlopen() which is used under the hood.
+            // Since libraries are built with -rpath=".", dependencies will be correcly located within plugins directory.
+            // For foxy, it is also necessary to use modified version of librcpputils to resolve custom msgs packages.
+            string currentRosVersion = CheckROSVersionSourced();
             ROS2.GlobalVariables.absolutePath = GetPluginPath() + "/";
-            if (currentRos2Version == "foxy") {
+            if (currentRosVersion == "foxy") {
                 ROS2.GlobalVariables.preloadLibrary = true;
                 ROS2.GlobalVariables.preloadLibraryName = "librcpputils.so";
             }
         }
-
-        // Initialize
         ConnectLoggers();
         Ros2cs.Init();
         RegisterCtrlCHandler();
-
-        string rmwImpl = Ros2cs.GetRMWImplementation();
-
-        Debug.Log("ROS2 version: " + currentRos2Version + ". Build type: " + standalone + ". RMW: " + rmwImpl);
 
 #if UNITY_EDITOR
         EditorApplication.playModeStateChanged += this.EditorPlayStateChanged;
