@@ -21,6 +21,7 @@ public class IKGauto : MonoBehaviour
     ArticulationBody[] acts = new ArticulationBody[40];
     float[] hr=new float[12];
     int ActionNum;
+    float t0;
     void Start()
     {
         arts = this.GetComponentsInChildren<ArticulationBody>();
@@ -40,6 +41,7 @@ public class IKGauto : MonoBehaviour
         for (int k = 0; k < 14; k++)SetJointTargetDeg(acts[k],0);
 
         handspeed = 0.0008f;
+        t0 = Time.time;
     }
     void FixedUpdate()
     {
@@ -108,28 +110,28 @@ public class IKGauto : MonoBehaviour
 
         
         /////////////////////////////////////////////////////////////////////
-        if(Time.time<3f)
+        if(Time.time<3f+t0)
         {
             pos21.x+=Mathf.Clamp(-0.1f*((tarhand.position - tarbang.position).x+dx),-handspeed,handspeed);
             pos21.z+=Mathf.Clamp(-0.1f*((tarhand.position - tarbang.position).z+dz),-handspeed,handspeed);
         }
-        if(Time.time>3f && Time.time<4.2f)pos21.y-=handspeed;
-        if(Time.time>5f && Time.time<6.2f)pos21.y+=handspeed;
-        if(Time.time>13.5f && Time.time<14f)pos21.y-=handspeed;
-        if(Time.time>15f && Time.time<17f)
+        if(Time.time>3f+t0 && Time.time<4.2f+t0)pos21.y-=handspeed;
+        if(Time.time>5f+t0 && Time.time<6.2f+t0)pos21.y+=handspeed;
+        if(Time.time>13.5f+t0 && Time.time<14f+t0)pos21.y-=handspeed;
+        if(Time.time>15f+t0 && Time.time<17f+t0)
         {
             pos21.x-=handspeed;
             pos21.z-=handspeed;
         }
-        if(Time.time>17f && Time.time<19f)
+        if(Time.time>17f+t0 && Time.time<19f+t0)
         {
             pos21.x+=handspeed;
         }
-        if(Time.time>19f && Time.time<21f)
+        if(Time.time>19f+t0 && Time.time<21f+t0)
         {
             pos21.z+=handspeed;
         }
-        if(Time.time>6.2f && Time.time<7.2f)
+        if(Time.time>6.2f+t0 && Time.time<7.2f+t0)
         {
             pos11.x=Mathf.MoveTowards(pos11.x,0,0.001f);
             pos11.y=Mathf.MoveTowards(pos11.y,0,0.001f);
