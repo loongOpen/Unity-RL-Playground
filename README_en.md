@@ -4,7 +4,7 @@
 
 <div align="center">
 
-| <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [具身智能小镇](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
+| <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [Embodied AI Town](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
 | <img src="gewu/Image/Gewu2.0.gif" width="400px"> | <img src="gewu/Image/hetu.gif" width="400px"> |
 
@@ -12,7 +12,7 @@
 
 <div align="center">
   
-| <div align="center"> [机器人总动员](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> 自主导航 </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
+| <div align="center"> [Robot Rally](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [Rough-Terrain Locomotion](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> Autonomous Navigation </div> |  <div align="center"> [Robot Animation](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
 | ---  | --- | --- | --- |
 | <img src="gewu/Assets/Menu/image/1.gif" width="180px"> | <img src="gewu/Image/terrain.gif" width="180px"> | <img src="gewu/Assets/Menu/7/7.gif" width="180px"> | <img src="gewu/Image/G1perform.gif" width="180px"> |
 
@@ -20,7 +20,7 @@
 
 <div align="center">
   
-| <div align="center"> [功夫足球](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [模仿学习](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real](https://b23.tv/y8wXu2N) </div> | <div align="center">  [移动操作](https://b23.tv/8htcqZ7) </div> |
+| <div align="center"> [Kung Fu Football](https://www.bilibili.com/video/BV1NuZBYeEq8/) </div> | <div align="center">  [Imitation Learning](https://www.bilibili.com/video/BV1RmKhzVEbS/) </div> |<div align="center"> [Sim2Real](https://b23.tv/y8wXu2N) </div> | <div align="center">  [Mobile Manipulation](https://b23.tv/8htcqZ7) </div> |
 | ---  | --- | ---  | --- |
 | <img src="gewu/Image/loong-kungfu.gif" width="180px"> | <img src="gewu/Image/g1mimic.gif" width="180px"> |<img src="gewu/Image/s2r.gif" width="180px"> | <img src="gewu/Image/teleop.gif" width="180px"> |
 
@@ -28,317 +28,146 @@
 
 ---
 
-“格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和普通大众提供一个高效且友好的强化学习开发环境，适用于各类机器人。[<a href="gewu/Image/gewu-wechat.png">格物平台微信交流群</a>]
+"Gewu" is an embodied AI simulation training platform jointly launched by the National Local Co-constructed Humanoid Robot Innovation Center, Shanghai University, and Tsinghua University. Built on the Unity ML-Agents toolkit, this project aims to provide researchers and the general public with an efficient and user-friendly reinforcement learning development environment suitable for various types of robots. [Gewu Platform WeChat Discussion Group]
 
-- **2025.8.14，格物2.0（Gewu Playground 2.0）代码发布**
+August 14, 2025: Gewu 2.0 (Gewu Playground 2.0) Code Release
+Utilizes Unity 2022 (compatible with the Unity China Engine), integrates a main interface UI, covers locomotion, navigation, and manipulation tasks, and offers an install-free version for trial.
 
-  采用Unity2022（兼容团结引擎），集成主界面UI，行走、导航、操作全覆盖，提供[免安装版](https://pan.baidu.com/s/1HFQvqdZcPr0HI1gCn6BGFg?pwd=adnq)体验
+July 17, 2025: Added ROS2 Plugin and Sim2Real Example (Go2)
+July 1, 2025: Added Robot Animation Example
+June 29, 2025: Added General Humanoid Robot Mobile Manipulation Example
+June 23, 2025: Added Imitation Learning Example, enabling robots to learn dancing
+May 28, 2025: Launched Robot Amusement Park and "Along the River During the Qingming Festival" scenario
+May 25, 2025: Added Complex Terrain Example
+April 19, 2025: Added Motion Remapping Example and Quadrupedal Example
+April 4, 2025: Gewu 1.0 (Gewu Playground 1.0) Released, Comprehensive Upgrade
+Upgraded to Unity 2023, pre-installed dependencies, optimized code, and added a football match example.
 
-- **2025.7.17，添加ROS2插件及Sim2Real例程(Go2)**
-- **2025.7.01，添加机器人动画例程**
-- **2025.6.29，添加人形机器人通用移动操作例程**
-- **2025.6.23，添加模仿学习例程，让机器人学会跳舞**
-- **2025.5.28，上线机器人乐园和清明上河图**
-- **2025.5.25，添加复杂地形例程**
-- **2025.4.19，添加动作重映射例程、添加四轮足例程**
-- **2025.4.04，格物1.0（Gewu Playground 1.0）上线，全面升级**
+March 20, 2025: Gewu 0.1 (Unity RL Playground) Code Release
+Built with Unity 2021, packaged as a UnityPackage, featuring the "Robot Rally" example.
 
-  升级至Unity2023，依赖包预置，代码优化，新增足球赛例程
+Related Papers
+For more technical details or to cite this platform in your research, please refer to the following papers:
 
-- **2025.3.20，格物0.1（Unity RL Playground）代码发布**
+[1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). PDF
 
-  采用Unity2021，打包为UnityPackage，机器人总动员例程
+[2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).PDF
 
-## 相关论文
+Usage Instructions
+Compatible with Windows, Linux, macOS, and other operating systems. Mac-Silicon Supplementary Instructions, Mac-Intel Core Supplementary Instructions
 
-**更多技术细节，或使用本平台进行研究请参考和引用以下论文：**
+I. Simulation Environment Installation
+Search for and install Unity Hub, register and log in. When the "Install Unity Editor" window appears, click "skip," then click "Agree and get personal edition license" for free activation.
+In the opened Unity Hub interface, click "Install Editor" in the "Installs" menu. Select Unity Editor version 2022 (2022.3) for installation (over 7GB, be patient).
+Download Unity RL Playground: https://github.com/loongOpen/Unity-RL-Playground, and unzip it to a local directory.
+In the "Projects" menu of Unity Hub, click "Open," select the "Unity-RL-Playground\gewu" directory unzipped in the previous step, click "Open," and wait for the project to open (the first opening may take a long time, be patient). If a pop-up window appears, choose "ignore" or "continue."
+After the project opens, you can see the "GewuMenu.unity" file under the "Assets" directory in the small window at the bottom of Unity. Double-click to open it, and the main interface of Gewu will be displayed. Click the triangle above Unity to run it, and you can sequentially enter the eight functional modules.
+To record videos, go to the menu bar: Window -> General -> Recorder -> Recorder Window, click "Add Recorder" -> "Movie," and click the red triangle to start recording. The saved path can be found under "Path" below.
+You can also open each example without going through the main interface:
 
-[1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
+Robot Rally Example
+In the "Assets/Playground" directory, click to enter it, double-click "Playground.unity" to open it, and click the triangle above Unity to run it. You will see the pre-trained motion effects of the robots.
 
-[2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
+Select a robot, and in the right "inspector" window, you can switch the motion mode in the corresponding "target motion" drop-down box (if the corresponding pre-trained model is not empty).
 
-## 使用说明
+Complex Terrain Example
+In the "Assets/Playground" directory, "Terrain.unity"
 
-适用于Windows、Linux、MacOS等操作系统，[Mac-Silicon补充说明](macos-setup-Silicon.md)，[Mac-Intelcore补充说明](macos-setup-Intelcore.md)
+Features a 30cm long and 15cm high step, pre-trained for Qinglong, Unitree G1, Acceleration Evolution T1, and Zhongqing SA01.
 
-## 一、仿真环境安装
+Note: Train each robot separately and hide the others during training.
 
-1. 搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
+Use curriculum learning: gradually increase the stair height during training (adjust the "y" value of the "Scale" of the "Stairs").
 
-2. 在打开的Unity Hub界面，在Installs菜单点击Install Editor，选择Unity Editor 2022版本（2022.3）安装（7个多G，耐心等待）
+Robot Football Match Example
+In the "Assets/Playground" directory, double-click "TinkerPlay.unity" to open it for the Tinker football match, which is set to a two-player mode by default. One player controls the robot's walking direction using the WASD keys on the keyboard and resets the robot with the left Ctrl key. The other player controls the walking direction using the arrow keys on the keyboard and resets the robot with the right Ctrl key. The spacebar resets the football.
 
-3. 下载Unity RL Playground：https://github.com/loongOpen/Unity-RL-Playground ，解压到本地
+Double-click "LoongPlay.unity" to open it for the Qinglong Kung Fu Football match, which is set to an automatic match mode by default. Only press the spacebar to reset the football when it gets stuck in a corner.
 
-4. 在Unity Hub的Projects菜单中点击Open，选择上一步解压的Unity-RL-Playground\gewu目录，点击Open，等待项目打开（第一次打开耗时较长，耐心等待），若弹窗选择ignore或continue即可
+Motion Remapping and Imitation Learning Example
+In the "Assets/Imitation" directory, "G1.unity," which includes Unitree H1 and G1 robots.
 
-5. 项目打开后，在Unity下方的小窗口可看到Assets目录下的GewuMenu.unity，双击打开，即显示格物主界面，点击unity上面的三角形运行，可依次点击进入8个功能模块
+When running, you can see the pre-trained guitar, golf, violin, and waving actions of H1 (sharing a single neural network), as well as the pre-trained Charleston dance action of G1.
 
-6. 录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
+The actions are stored in the "dataset" directory (H1 actions are generated from the Humanoid2Humanoid method using the AMASS database, and G1 actions are from the LEFAN1 dataset).
 
-也可以不通过主界面打开每个例程：
+Imitation learning training: Only check "Train" for training (refer to the following steps).
 
-## 机器人总动员例程
+Remapped motion playback: Only check "Replay" to play the actions.
 
-在Assets/Playground目录下，点击进入该目录，双击Playground.unity打开，点击unity上面的三角形运行即可看到机器人预训练好的运动效果
+"Motion_id" is the action sequence number and can be modified. During runtime, you can see the action name in "Motion_name."
 
-选中某个机器人，在右边inspector窗口可在对应的target motion下拉框切换运动模式（如果对应的预训练模型非空）
+Mobile Manipulation Example
+In the "Assets/Manipulation" directory, "G1OP.unity"
 
-## 复杂地形例程
+Use the keyboard to control the robot for walking and manipulation.
 
-在Assets/Playground目录下，Terrain.unity
+Robot Animation Example
+In the "Assets/Animation" directory, double-click to open "dance.unity," and run it to see the animation effects of the G1 robot dancing, playing the piano, and singing.
 
-长30cm高15cm台阶，预训练青龙、宇树G1、加速进化T1、众擎SA01
+More animation effects can be found in the "Assets/Animation/Animations" directory.
 
-注意训练时要单独每个机器人，其他机器人隐藏
+Sim2Real Example
+In the "Assets/Ros2ForUnity/Go2" folder, "Go2Deploy.unity," which is only available for Ubuntu 20 and 22 (the "main" branch is for Ubuntu 22, and the "foxy" branch is for Ubuntu 20).
 
-采用课程学习，训练时逐渐增大楼梯高度（调整Stairs的Scale的y值）
+Use ROS2 to implement communication with the robot and strategy deployment, currently supporting Unitree Go2. You need to install ROS2 (Ubuntu 20 reference Ubuntu 22 reference), as well as Unitree_ROS2.
 
-## 机器人足球赛例程
-
-在Assets/Playground目录下，双击TinkerPlay.unity打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
-
-双击LoongPlay.unity打开即为青龙功夫足球，预设为自动对战模式，只当足球卡在角落时可按空格键复位
-
-## 动作重映射与模仿学习例程
-
-在Assets/Imitation目录下，G1.unity，包含宇树H1、G1两个机器人
-
-运行可看到H1预训练好的吉他、高尔夫、小提琴、挥手动作（共用一个神经网络）,以及预训练好的G1查尔斯顿舞蹈动作
-
-动作均存放在dataset目录下（H1动作来源于Humanoid2Humanoid方法从AMASS数据库生成，G1动作来源于LEFAN1数据集）
-
-模仿学习训练：只勾选Train进行训练（参考后面步骤）
-
-重映射动作播放：只勾选Replay可播放动作
-
-Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名称
-
-## 移动操作例程
-
-在Assets/Manipulation目录下，G1OP.unity
-
-采用键盘控制机器人进行行走和操作
-
-## 机器人动画例程
-
-在Assets/Animation目录下，双击打开dance.unity，运行即可看到G1机器人舞蹈、弹琴、演唱的动画效果
-
-更多动画效果可在Assets/Animation/Animations目录下找到
-
-## SIm2Real例程
-
-在Assets/Ros2ForUnity/Go2文件夹下，Go2Deploy.unity，仅限Ubuntu20、22使用（main分支适用于ubuntu22，foxy分支适用于ubuntu20）
-
-使用ROS2实现与机器人的通信和策略部署，目前支持宇树Go2，需要安装ROS2（[Ubuntu20参考](https://docs.ros.org/en/foxy/Installation/Alternatives/Ubuntu-Development-Setup.html) [Ubuntu22参考](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)），以及[Unitree_ROS2](https://support.unitree.com/home/zh/developer/ROS2_service)
-
-注意在~/.bashrc中加入以下两条语句（根据你的unitree_ros2和gewu实际路径修改）：
+Note: Add the following two statements in "~/.bashrc" (modify according to your actual paths of "unitree_ros2" and "gewu"):
 
 source ~/ylq/unitree_ros2/setup.sh
-
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ylq/ylq/Unity-RL-Playground/gewu/Assets/Ros2ForUnity/Plugins/Linux/x86_64
-
-Go2Deploy.unity打开后，在左侧窗口选中Go2Real，在右侧inspector勾选is_ros2_installed
-
-用网线连接机器狗与电脑，机器狗开机后通过手机app连接，点击卧倒让其趴在地上，然后在app进入设备-服务状态，点击mcf将主运控服务关闭（点击一次后稍等一会）
-
-Go2Deploy.unity为真机部署例程，运行前确保机器狗趴在地上且mcf关闭，运行开始机器狗会稍微站起，点击stand up，直到机器狗完全站起。然后勾选FF_enable（前馈使能），机器狗开始踏步，再勾选NN_enable（神经网络使能），此时便可通过键盘WASD控制机器狗行走和转弯，结束时先取消FF_enable和NN_enable，点击lie down即可
-
-Go2Train.unity用于策略的训练
-
-## 自主导航例程
-
-在Assets/Navigation/Scene目录下，打开Go2Navi.unity，在屏幕点击任意目标点
-
-该例程使用Unity的AI Navigation插件，自主规划路线，并调用预训练好的Go2全向行走模型进行控制
-
-## 二、训练环境安装
-
-1. 安装Anaconda：https://www.anaconda.com/download
-
-2. 在电脑搜索框搜索anaconda，点击打开anacconda prompt命令行窗口
-
-3. 运行`conda create -n gewu python=3.10.12 -y`
-
-4. 运行`conda activate gewu`
-
-5. 运行`pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
-
-    （确保网络畅通，耗时较长，耐心等待，若安装失败可换个网络试试）
-
-6. 运行`python -m pip install mlagents==1.1.0`
-
-    （耐心等待）
-
-7. 运行`mlagents-learn --help`检查是否安装成功（无报错即可）
-
-## 三、训练机器人
-
-以机器人总动员例程为例进行说明：
-
-1. 在Assets/Playground打开Playground.unity，在左侧面板选中一个要训练的机器人（例如Go2），然后在右侧inspector中勾选train
-
-2. 选中其他机器人将他们都隐藏（在inspector窗口将最上面一个方框的勾取消即可）
-
-3. 回到anaconda界面，进入Unity-RL-Playground主目录（例如，先运行`D:` 再运行 `cd D:\Unity-RL-Playground-main\gewu\Assets\Playground` （根据自己的实际目录调整））
-
-4. 运行`mlagents-learn config.yaml --run-id=go2trot --force`开始训练
-
-    （注：id号名称可自己任取，--force为从零训练，若使用--resume则为断点继续训练）
-   
-6. 当窗口中出现[INFO] Listening on ...时回到unity界面，点击上面的三角形按钮运行即可开始训练
-
-7. 训练时可在anaconda窗口观察训练进度，正常来说奖励会逐渐升高，一般训练2000000个step即可，按ctrl+c终止训练
-
-8. 终止训练后在unity界面下方找到刚刚训的神经网络，在results->go2trot（名称与run-id一致）目录中，可看到一个gewu.onnx的文件，即为训练好的神经网络。如要查看训练的奖励曲线等，可在anaconda窗口运行tensorboard --logdir results --port 6006，然后在浏览器输入http://localhost:6006/ 进入即可
-
-9. 点击选中机器人，在右侧inspector窗口可看到很多policy的方框，将训练好的神经网络拖动到对应方框中（如Q trot policy）
-
-10. 在右侧inspector中取消勾选train，运行unity，即可看到机器人的运动效果
-
-11. 类似地，可对TinkerTrain.unity和LoongTrain.unity进行训练，训练所得的神经网络可用于TinkerPlay.unity和LoongPlay.unity
-
-## 四、导入和训练新的机器人
-
-1. 机器人urdf文件位于Assets\urdf目录
-
-2. 机器人urdf文件夹中一般包含xx.urdf以及meshes文件夹，xx.urdf里面的路径格式为package://meshes/xxx.STL，机器人腿部以外的关节最好已经锁定。        （注：如果腿部以外有关节未锁定，可在导入后打开机器人结构树，选中对应的ArticulationBody将Articulation Joint Type由Revolute改为Fix）
-
-3. 在unity中打开预制的空场景MyRobot.Unity
-
-4. 以众擎机器人为例，在urdf文件夹中进入zq_humanoid，单击选中zq_sa01.urdf，点击菜单栏Assets->Import Robot from Selected URDF，弹出窗口，将mesh decomposer选择unity，点击import URDF
-
-5. 看到机器人模型导入后，选中机器人在右侧inspector调整高度(y轴)使其脚着地，可稍高一点点
-
-6. 选中导入的机器人，在inspector窗口将Urdf Robot (script)和Controller (script) 都删除
-
-7. 拖动导入的机器人到MyRobot的子节点中
-
-8. 选中MyRobot，在inspector窗口选择对应的RobotType（众擎机器人保持默认Biped即可）和Target Motion（此例在Biped下面保持默认的Walk即可），在Behaviour Parameters设置observation和action维数（此例保持默认即可），可参考其他机器人
-
-9. 训练前测试，选中Fixbody复选框，运行unity查看前馈动作是否正确，双足walk步态下机器人应上下踏步
-
-10. 如前馈不匹配，可在GewuAgent代码中搜索“change here”,找到对应代码修改适合本机器人的参数（本例中在285行的idx六个数全加上负号即可），看到机器人正常上下踏步即可
-
-    （注：idx代表要给前馈的关节，对于双足是髋、膝、踝的三个pitch关节，一般来说数值用默认即可（少数构型不一致的需修改），正负号和关节转向有关，根据情况修改）
-
-11. 配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
-
-**更多机器人URDF模型，见以下仓库：https://github.com/linqi-ye/robot-universe, 集齐了众多机器人URDF模型**
-
-# Unity RL Playground
-
-Unity RL Playground (also named **Gewu**) is an embodied intelligence robotics simulation platform jointly launched by the National and Local Co-Built Humanoid Robotics Innovation Center, Shanghai University, and Tsinghua University. Built on top of the Unity ML-Agents Toolkit, this project aims to provide researchers and developers with an efficient and user-friendly reinforcement learning (RL) development environment for various robots.
-
-## Related Publication
-F‌or more details, please read and cite the following papers when conducting research using this platform‌:
-
-Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
-
-Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023). [PDF](https://arxiv.org/abs/2309.09167) 
-
-## Platform Features‌
-
-- **Extensive Robot Support‌**: Compatible with hundreds of mobile robots, including humanoid robots, quadruped robots, wheeled robots, and more.
-- **One-Click Import & Training‌**: Allowing users to effortlessly import robot models and initiate training without complex configurations.
-- **Lowered RL Development Barrier‌**: Simplifies workflows and provides toolkits to make RL technology accessible and approachable for everyone.
-
-## Open-Source & Community Support‌
-
-- **Open-Source Project‌**: Unity RL Playground is fully open-source, with code and resources publicly available on GitHub for developers to freely access and contribute.
-- **Community-Driven Growth‌**: We welcome global developers to join our community, collaborate on advancing the platform, and share technical expertise.
-
-Unity RL Playground is committed to becoming an open platform for embodied intelligence, accelerating innovation in robotics technology. Whether you are an academic researcher, developer, or enthusiast, you will find tailored tools and resources here to empower your work.
-
-## I. Simulation Environment Installation
-
-1. Search for and install Unity Hub, register and log in. When the "Install Unity Editor" window pops up, click "skip", then click "Agree and get personal edition license" to activate it for free.
-
-2. In the opened Unity Hub interface, click "Install Editor" under the "Installs" menu, and select the Unity Editor 2023 version (2023.2.20f1c1) for installation (over 7GB, please be patient. If the 2021 version was previously installed, it can be uninstalled to free up space).
-
-3. Download Unity RL Playground: [https://github.com/loongOpen/Unity-RL-Playground](https://github.com/loongOpen/Unity-RL-Playground), and unzip it to a local directory.
-
-4. In the "Projects" menu of Unity Hub, click "Open", select the Unity-RL-Playground\gewu\Project directory from the previous step, click "Open", and wait for the project to open (the first time may take longer, please be patient).
-
-5. After the project opens, in the small window at the bottom of Unity, you can see the RL-Playground directory under the Assets directory. Click to enter this directory, double-click Playground.unity to open it, and click the triangle at the top of Unity to run it to see the pre-trained movement effects of the robot!
-
-6. Select a robot, and in the inspector window on the right, you can switch the movement mode in the corresponding target motion dropdown box (if the corresponding pre-trained model is not empty).
-
-7. Double-click TinkerPlay.unity to open the Tinker soccer game, which is preset to a two-player battle mode. One player controls the walking direction with the WASD keys on the keyboard and resets the robot with the left Ctrl key, while the other player controls the walking direction with the arrow keys and resets the robot with the right Ctrl key. Press the spacebar to reset the soccer ball.
-
-8. Double-click LoongPlay.unity to open the Loong Kung Fu Soccer, which is preset to an automatic battle mode. Press the spacebar to reset the soccer ball only when it gets stuck in a corner.
-
-9. Double-click Go2.unity to open the quadrupedal robot omnidirectional walking routine. Control the walking direction with the WASD and arrow keys, and press the spacebar to reset.
-
-10. To record a video, go to the menu bar Window->General->Recorder->Recorder Window, click Add Recorder->Movie, click the red triangle to start recording, and find the save path under Path.
-
-## II. Training Environment Installation
-
-1. Install Anaconda: [https://www.anaconda.com/download](https://www.anaconda.com/download)
-
-2. Search for Anaconda in the computer search box, and click to open the Anaconda Prompt command line window.
-
-3. Run `conda create -n gewu python=3.10.12 -y`
-
-    (Note: If an older version was previously installed, it can be removed with the command `conda remove -n ml-agents`)
-
-4. Run `conda activate gewu`
-
-5. Run `pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121`
-
-    (Ensure a stable network connection, as this may take a while. If the installation fails, try a different network.)
-
-6. Run `python -m pip install mlagents==1.1.0`
-
-    (Be patient.)
-
-7. Run `mlagents-learn --help` to check if the installation was successful (no errors means success).
-
-## III. Training the Robot
-
-1. Open Playground.unity in Unity, select a robot to train (it is recommended to start with Go2 for testing), and check the "train" box in the inspector on the right.
-
-2. Hide the other robots (uncheck the top box in the inspector window).
-
-3. Return to the Anaconda interface and navigate to the main directory of Unity-RL-Playground (for example, first run `D:` and then `cd D:\Unity-RL-Playground-main\gewu\Project\Assets\Unity-RL-Playground-main` (adjust according to your actual directory)).
-
-4. Run `mlagents-learn config.yaml --run-id=go2trot --force` to start training (Note: the run-id can be named as desired, `--force` starts training from scratch, while `--resume` continues training from a checkpoint).
-
-5. When "[INFO] Listening on ..." appears in the window, return to the Unity interface, click the triangle button at the top to start training.
-
-6. During training, you can observe the training progress in the Anaconda window. Normally, the reward will gradually increase. Generally, train for 2,000,000 steps, and press Ctrl+C to terminate the training.
-
-7. After terminating the training, find the newly trained neural network in the results->go2trot (the name matches the run-id) directory, where you can see a gewu.onnx file, which is the trained neural network.
-
-8. Click to select the robot, and in the inspector window on the right, you can see many policy boxes. Drag the trained neural network into the corresponding box (e.g., Q trot policy).
-
-9. Uncheck the "train" box in the inspector on the right, and run Unity to see the robot's movement effects.
-
-10. Similarly, you can train TinkerTrain.unity and LoongTrain.unity, and the trained neural networks can be used in TinkerPlay.unity and LoongPlay.unity.
-
-## IV. Importing and Training a New Robot
-
-**The following repository collects numerous robot URDF models: [https://github.com/linqi-ye/robot-universe](https://github.com/linqi-ye/robot-universe)**
-
-1. Place the new robot's URDF folder (including meshes) into the Unity-RL-Playground-main\urdf folder.
-
-2. The robot's URDF folder is generally named xx_description, which contains xx.urdf and a meshes folder. The path format in xx.urdf is package://meshes/xxx.STL. It is best if the joints other than the robot's legs are already locked. (Note: If there are unlocked joints other than the legs, you can open the robot's structure tree after importing, select the corresponding ArticulationBody, and change the Articulation Joint Type from Revolute to Fix.)
-
-3. Open the prefabricated empty scene MyRobot.Unity in Unity.
-
-4. Taking the Zhongqing robot as an example, navigate to zq_humanoid in the urdf folder, click to select zq_sa01.urdf, click Assets->Import Robot from Selected URDF in the menu bar, in the pop-up window, select unity for mesh decomposer, and click import URDF.
-
-5. After seeing the imported robot model, select the robot and adjust its height (y-axis) in the inspector on the right to make its feet touch the ground (it can be slightly higher).
-
-6. Select the imported robot, and in the inspector window, delete both the Urdf Robot (script) and Controller (script).
-
-7. Drag the imported robot into the child node of MyRobot.
-
-8. Select MyRobot, and in the inspector window, choose the corresponding RobotType (keep the default Biped for the Zhongqing robot) and Target Motion (in this case, keep the default Walk under Biped), and set the observation and action dimensions in Behaviour Parameters (keep the default in this case, you can refer to other robots).
-
-9. Before training, test by checking the Fixbody checkbox, run Unity to see if the feedforward action is correct. The robot should take up-and-down steps in the bipedal walk gait.
-
-10. If the feedforward does not match, you can search for "change here" in the GewuAgent code, find the corresponding code to modify the parameters suitable for this robot (in this case, add a negative sign to all six numbers on line 285), and ensure the robot takes normal up-and-down steps.
-
-    (Note: idx represents the joints to be fed forward. For bipeds, these are the three pitch joints of the hip, knee, and ankle. Generally, the default values can be used (modify only if the configuration is inconsistent), and the positive/negative signs are related to the joint direction, so adjust according to the situation.)
-
-11. After configuration, you can train using the `mlagents-learn ...` statement (refer to the steps in "III"). In this case, only 400,000 steps (2-5 minutes) are needed to see the effect.
+After opening "Go2Deploy.unity," select "Go2Real" in the left window and check "is_ros2_installed" in the right "inspector."
+
+Connect the robot dog to the computer with a network cable, turn on the robot dog, and connect it using the mobile app. Click "lie down" to make it lie on the ground, then enter "Device - Service Status" in the app and click "mcf" to turn off the main motion control service (wait a moment after clicking once).
+
+"Go2Deploy.unity" is an example for real robot deployment. Before running, ensure the robot dog is lying on the ground and "mcf" is turned off. When running, the robot dog will slightly stand up. Click "stand up" until it stands up completely. Then check "FF_enable" (feedforward enable), and the robot dog will start stepping. Next, check "NN_enable" (neural network enable), and you can control the robot dog's walking and turning using the WASD keys on the keyboard. To finish, first uncheck "FF_enable" and "NN_enable," and click "lie down."
+
+"Go2Train.unity" is used for strategy training.
+
+Autonomous Navigation Example
+In the "Assets/Navigation/Scene" directory, open "Go2Navi.unity" and click any target point on the screen.
+
+This example uses Unity's AI Navigation plugin to autonomously plan a route and calls the pre-trained omnidirectional walking model of Go2 for control.
+
+II. Training Environment Installation
+Install Anaconda: https://www.anaconda.com/download
+Search for "anaconda" in the computer's search box and click to open the "anaconda prompt" command-line window.
+Run conda create -n gewu python=3.10.12 -y
+Run conda activate gewu
+Run pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
+(Ensure a stable network connection. It may take a long time, be patient. If the installation fails, try a different network.)
+
+Run python -m pip install mlagents==1.1.0
+(Be patient.)
+
+Run mlagents-learn --help to check if the installation is successful (no errors are displayed).
+III. Training Robots
+Take the "Robot Rally" example as an illustration:
+
+Open "Playground.unity" in the "Assets/Playground" directory, select a robot to train (e.g., Go2) in the left panel, and then check "train" in the right "inspector."
+Select other robots and hide them all (uncheck the box at the top in the "inspector" window).
+Return to the anaconda interface, enter the main directory of Unity-RL-Playground (e.g., first run D: and then run cd D:\Unity-RL-Playground-main\gewu\Assets\Playground (adjust according to your actual directory)).
+Run mlagents-learn config.yaml --run-id=go2trot --force to start training.
+(Note: The ID can be any name you choose. --force means training from scratch. If you use --resume, it will continue training from the breakpoint.)
+
+When "[INFO] Listening on..." appears in the window, return to the Unity interface and click the triangle button above to start training.
+During training, you can observe the training progress in the anaconda window. Normally, the reward should gradually increase. Generally, training for 2,000,000 steps is sufficient. Press Ctrl+C to terminate the training.
+After terminating the training, find the newly trained neural network at the bottom of the Unity interface. In the "results->go2trot" (the name is consistent with the "run-id") directory, you will see a "gewu.onnx" file, which is the trained neural network. To view the training reward curve, etc., run tensorboard --logdir results --port 6006 in the anaconda window, and then enter http://localhost:6006/ in the browser.
+Click to select the robot, and in the right "inspector" window, you will see many policy boxes. Drag the trained neural network to the corresponding box (e.g., "Q trot policy").
+Uncheck "train" in the right "inspector" and run Unity to see the robot's motion effect.
+Similarly, you can train "TinkerTrain.unity" and "LoongTrain.unity," and the trained neural networks can be used in "TinkerPlay.unity" and "LoongPlay.unity."
+IV. Importing and Training New Robots
+The robot URDF files are located in the "Assets\urdf" directory.
+The robot URDF folder generally contains "xx.urdf" and a "meshes" folder. The path format in "xx.urdf" is "package://meshes/xxx.STL." It is best to have the joints outside the robot's legs already locked. (Note: If there are joints outside the legs that are not locked, you can open the robot's structure tree after importing, select the corresponding "ArticulationBody," and change the "Articulation Joint Type" from "Revolute" to "Fix.")
+Open the pre-made empty scene "MyRobot.Unity" in Unity.
+Take the Zhongqing robot as an example. In the URDF folder, enter "zq_humanoid," single-click to select "zq_sa01.urdf," click "Assets" -> "Import Robot from Selected URDF" in the menu bar, and in the pop-up window, select "unity" for "mesh decomposer" and click "import URDF."
+After seeing the robot model imported, select the robot and adjust its height (y-axis) in the right "inspector" to make its feet touch the ground. You can make it slightly higher.
+Select the imported robot and delete both the "Urdf Robot (script)" and "Controller (script)" in the right "inspector" window.
+Drag the imported robot to the child node of "MyRobot."
+Select "MyRobot," select the corresponding "RobotType" in the right "inspector" window (keep the default "Biped" for the Zhongqing robot) and "Target Motion" (keep the default "Walk" under "Biped" for this example). Set the observation and action dimensions in "Behaviour Parameters" (keep the defaults for this example). You can refer to other robots.
+Pre-training test: Check the "Fixbody" checkbox and run Unity to check if the feedforward action is correct. In the bipedal "walk" gait, the robot should step up and down.
+If the feedforward does not match, search for "change here" in the "GewuAgent" code, find the corresponding code, and modify the parameters suitable for this robot (in this example, add negative signs to all six numbers in line 285). You should see the robot stepping up and down normally.
+(Note: "idx" represents the joints to which feedforward should be applied. For bipeds, it is the three pitch joints of the hip, knee, and ankle. Generally, the values can be kept as defaults (a few inconsistent configurations need to be modified). The positive and negative signs are related to the joint rotation direction and should be modified according to the situation.)
+
+After configuration, you can start training using the mlagents-learn... command (refer to the steps in "III"). For this example, only 400,000 steps (2-5 minutes) of training are needed to see the effect.
+For more robot URDF models, see the following repository: https://github.com/linqi-ye/robot-universe, which collects URDF models of numerous robots.
