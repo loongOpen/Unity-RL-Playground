@@ -197,7 +197,7 @@ public class G1autoAgent : Agent
         if(Time.time>4.2f+t0)for (int i = 6; i <12; i++)hp[i]=Mathf.MoveTowards(hp[i], grasp[i], 1f);
         for (int i = 0; i <12; i++)SetJDeg(hand[i], hp[i], 2000f, 200f);
         if(Time.time>7.5f+t0 && Time.time<10.9f+t0)wr=0.5f;
-        if(Time.time>11.2f+t0 && Time.time<11.6f+t0)vr=0.8f;
+        if(Time.time>11.2f+t0 && Time.time<11.5f+t0)vr=0.8f;
         if(Time.time>14f+t0 && Time.time<21f+t0)cr=Mathf.MoveTowards(cr,0.6f,0.01f);
         if(Time.time>21f+t0)cr=Mathf.MoveTowards(cr,0.1f,0.01f);
         
