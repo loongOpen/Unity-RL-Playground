@@ -59078,6 +59078,7 @@ GameObject:
   - component: {fileID: 885746599}
   - component: {fileID: 885746598}
   - component: {fileID: 885746597}
+  - component: {fileID: 885746601}
   m_Layer: 6
   m_Name: T1
   m_TagString: Untagged
@@ -59140,7 +59141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 885746596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f3c4bb33ff87846a45b768a161bb1b, type: 3}
+  m_Script: {fileID: 11500000, guid: b0fbaeebd655e48c396bb596dadd2520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -59171,6 +59172,22 @@ Transform:
   - {fileID: 1928210038}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885746601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885746596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b6042bc9a5d4aa58d931eae49442e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
 --- !u!1 &886548605
 GameObject:
   m_ObjectHideFlags: 8
@@ -82933,6 +82950,7 @@ GameObject:
   - component: {fileID: 1282458206}
   - component: {fileID: 1282458203}
   - component: {fileID: 1282458202}
+  - component: {fileID: 1282458207}
   m_Layer: 6
   m_Name: G1
   m_TagString: Untagged
@@ -83011,7 +83029,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1282458200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f3c4bb33ff87846a45b768a161bb1b, type: 3}
+  m_Script: {fileID: 11500000, guid: b0fbaeebd655e48c396bb596dadd2520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -83026,6 +83044,22 @@ MonoBehaviour:
   vr: 0
   wr: 0
   wasd: 0
+--- !u!114 &1282458207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282458200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b6042bc9a5d4aa58d931eae49442e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
 --- !u!1 &1282520580
 GameObject:
   m_ObjectHideFlags: 8
@@ -114646,6 +114680,7 @@ GameObject:
   - component: {fileID: 1757770338}
   - component: {fileID: 1757770336}
   - component: {fileID: 1757770334}
+  - component: {fileID: 1757770339}
   m_Layer: 6
   m_Name: OpenLoong
   m_TagString: Untagged
@@ -114724,7 +114759,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757770333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f3c4bb33ff87846a45b768a161bb1b, type: 3}
+  m_Script: {fileID: 11500000, guid: b0fbaeebd655e48c396bb596dadd2520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -114739,6 +114774,22 @@ MonoBehaviour:
   vr: 0
   wr: 0
   wasd: 0
+--- !u!114 &1757770339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757770333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b6042bc9a5d4aa58d931eae49442e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
 --- !u!1 &1758925103
 GameObject:
   m_ObjectHideFlags: 8
@@ -117236,6 +117287,7 @@ GameObject:
   - component: {fileID: 1792398171}
   - component: {fileID: 1792398170}
   - component: {fileID: 1792398169}
+  - component: {fileID: 1792398173}
   m_Layer: 6
   m_Name: zqsa01
   m_TagString: Untagged
@@ -117298,7 +117350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1792398168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f3c4bb33ff87846a45b768a161bb1b, type: 3}
+  m_Script: {fileID: 11500000, guid: b0fbaeebd655e48c396bb596dadd2520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -117329,6 +117381,22 @@ Transform:
   - {fileID: 157694892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792398173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792398168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b6042bc9a5d4aa58d931eae49442e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
 --- !u!4 &1794120631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 229580606569951314, guid: 99be7b880a00d7747a3c3175fbfb30ff,
