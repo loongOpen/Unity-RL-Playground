@@ -1,4 +1,4 @@
-# “格物”具身智能仿真平台 (English | [中文](README.md) | [日本語](README_ja.md))
+# “格物”具身智能仿真平台 ([English](README_en.md) | [中文](README.md))
 
 # <img src="gewu/Image/gwlogo3.jpg" height="150" /> 
 
