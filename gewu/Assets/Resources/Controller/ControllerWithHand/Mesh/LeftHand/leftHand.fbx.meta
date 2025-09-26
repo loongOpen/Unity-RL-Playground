@@ -1,0 +1,1526 @@
+fileFormatVersion: 2
+guid: 39b162b3758bf435f97c925ab0a320a3
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: bbb43fe65b38f4083bc5e644fe958f95, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: X_A_touch
+      takeName: Take 001
+      internalID: -998496362607748373
+      firstFrame: 5
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: fe8f7cd36e24d495c91d49ab5dcedc71, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: X_A_press
+      takeName: Take 001
+      internalID: 3060872287085348379
+      firstFrame: 10
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 1
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: f29a0ab70d309499c9c2d61a919d5020, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: trigger_press
+      takeName: Take 001
+      internalID: 6641085478485924818
+      firstFrame: 20
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 1
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 0
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 1
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: af135a35702834f20bb1e953c31f88ab, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: grjp_press
+      takeName: Take 001
+      internalID: -5059006814000262888
+      firstFrame: 30
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 1
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 1
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 1
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 1
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 0
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 1
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4a1294d789b914d428541b480a16682c, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Y_B_touch
+      takeName: Take 001
+      internalID: 6234510843852800090
+      firstFrame: 35
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: fe8f7cd36e24d495c91d49ab5dcedc71, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Y_B_press
+      takeName: Take 001
+      internalID: -6788666626592393668
+      firstFrame: 40
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4a887bf25b2d04a1bae1669ae6747419, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: axis_touch
+      takeName: Take 001
+      internalID: 1702301948168947093
+      firstFrame: 65
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: fe8f7cd36e24d495c91d49ab5dcedc71, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: axis_vertial_up
+      takeName: Take 001
+      internalID: 9093586079265926502
+      firstFrame: 70
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 1
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: bbb43fe65b38f4083bc5e644fe958f95, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: axis_vertial_down
+      takeName: Take 001
+      internalID: -4045831500588228705
+      firstFrame: 75
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 1
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: bbb43fe65b38f4083bc5e644fe958f95, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: axis_horizontal_left
+      takeName: Take 001
+      internalID: 7731641710072435382
+      firstFrame: 80
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 1
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: bbb43fe65b38f4083bc5e644fe958f95, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: axis_horizontal_right
+      takeName: Take 001
+      internalID: -6577145938085917429
+      firstFrame: 85
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 1
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: bbb43fe65b38f4083bc5e644fe958f95, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: trigger_touch
+      takeName: Take 001
+      internalID: -5912188926831197812
+      firstFrame: 8
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 1
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 1
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 0
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 1a1333616d23d473a9564f02435a3d0b, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: thumbstick_touch
+      takeName: Take 001
+      internalID: -8608414141577764740
+      firstFrame: 90
+      lastFrame: 94
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_left
+        weight: 0
+      - path: o_com_sparrow_left
+        weight: 0
+      - path: o_com_sparrow_left_power
+        weight: 0
+      - path: root
+        weight: 0
+      - path: root/left_wrist
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal
+        weight: 0
+      - path: root/left_wrist/left_index_metacarpal/left_index_proximal/left_index_intermediate/left_index_distal/left_index_tip
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal
+        weight: 0
+      - path: root/left_wrist/left_little_metacarpal/left_little_proximal/left_little_intermediate/left_little_distal/left_little_tip
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal
+        weight: 0
+      - path: root/left_wrist/left_middle_metacarpal/left_middle_proximal/left_middle_intermediate/left_middle_distal/left_middle_tip
+        weight: 0
+      - path: root/left_wrist/left_palm
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal
+        weight: 0
+      - path: root/left_wrist/left_ring_metacarpal/left_ring_proximal/left_ring_intermediate/left_ring_distal/left_ring_tip
+        weight: 0
+      - path: root/left_wrist/left_thumb_metacarpal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal
+        weight: 1
+      - path: root/left_wrist/left_thumb_metacarpal/left_thumb_proximal/left_thumb_distal/left_thumb_tip
+        weight: 1
+      - path: root/SkinRoot
+        weight: 0
+      - path: root/SkinRoot/SkinLGrip
+        weight: 0
+      - path: root/SkinRoot/SkinLJoystick
+        weight: 0
+      - path: root/SkinRoot/SkinLMenu
+        weight: 0
+      - path: root/SkinRoot/SkinLPico
+        weight: 0
+      - path: root/SkinRoot/SkinLTrigger
+        weight: 0
+      - path: root/SkinRoot/SkinLX
+        weight: 0
+      - path: root/SkinRoot/SkinLY
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: fe8f7cd36e24d495c91d49ab5dcedc71, type: 2}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
