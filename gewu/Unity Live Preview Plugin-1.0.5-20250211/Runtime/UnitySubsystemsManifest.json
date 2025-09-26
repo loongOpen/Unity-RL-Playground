@@ -1,0 +1,22 @@
+{
+    "name": "PxrLivePreview",
+    "version": "1.0.0",
+    "libraryName": "PxrLivePreview",
+    "displays": [
+        {
+            "id": "PICO LP Display",
+            "disablesLegacyVr": true,
+            "supportedMirrorBlitReservedModes": [
+                "leftEye",
+                "rightEye",
+                "sideBySide",
+                "occlusionMesh"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "PICO LP Input"
+        }
+    ]
+}
