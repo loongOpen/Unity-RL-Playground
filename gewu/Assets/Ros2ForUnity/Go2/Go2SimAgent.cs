@@ -88,14 +88,14 @@ public class Go2SimAgent : Agent
     {
         Time.fixedDeltaTime = 0.01f;
 
-        SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
+        /*SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
         SerializedProperty layers = tagManager.FindProperty("layers");
         SerializedProperty layer = layers.GetArrayElementAtIndex(15);
         int targetLayer = LayerMask.NameToLayer("robot");
         layer.stringValue = "robot";
         tagManager.ApplyModifiedProperties();
         Physics.IgnoreLayerCollision(15, 15, true);
-        ChangeLayerRecursively(gameObject, 15);
+        ChangeLayerRecursively(gameObject, 15);*/
 
         if (train && !_isClone) 
         {

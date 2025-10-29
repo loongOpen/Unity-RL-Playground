@@ -1,0 +1,1324 @@
+Unity Editor version:    2022.3.62f1c1 (b0109b07edb8)
+Branch:                  2022.3/china_unity/release
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2
+Kernel version:          6.11.0-21-generic
+Architecture:            x86_64
+Available memory:        128495 MB
+Using pre-set license
+Pro License: YES
+
+(Unity:2405400): Gtk-CRITICAL **: 13:15:34.408: gtk_window_set_default_icon: assertion 'GDK_IS_PIXBUF (icon)' failed
+
+(Unity:2405400): GLib-GObject-CRITICAL **: 13:15:34.408: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Desktop is 1920 x 1080 @ 60 Hz
+Initialize udev device monitor.
+
+COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+/home/dell/ylq/2p/Unity-RL-Playground/gewu
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+36981
+Successfully changed project path to: /home/dell/ylq/2p/Unity-RL-Playground/gewu
+/home/dell/ylq/2p/Unity-RL-Playground/gewu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [130250628957120]  Target information:
+
+Player connection [130250628957120]  * "[IP] 10.98.215.115 [Port] 0 [Flags] 2 [Guid] 3413416546 [EditorId] 3413416546 [Version] 1048832 [Id] LinuxEditor(16,10.99.145.67) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [130250628957120]  * "[IP] 10.99.145.67 [Port] 0 [Flags] 2 [Guid] 3413416546 [EditorId] 3413416546 [Version] 1048832 [Id] LinuxEditor(16,10.99.145.67) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [130250628957120] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [130250628957120] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Refreshing native plugins compatible for Editor in 26.55 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.62f1c1 (b0109b07edb8)
+[Subsystems] Discovering subsystems at path /home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/dell/ylq/2p/Unity-RL-Playground/gewu/Assets
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_INTEL_swap_event GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_swap_control GLX_SGI_video_sync 
+Renderer: Mesa Intel(R) Graphics (RPL-S)
+Vendor:   Intel
+Version:  4.6 (Core Profile) Mesa 24.2.8-1ubuntu1~24.04.1
+GLES:     0
+ GL_3DFX_texture_compression_FXT1 GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB
+_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_po
+int_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier G
+L_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2
+_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT
+_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_N
+V_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -1501279792
+Initialize mono
+Mono path[0] = '/home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/Managed'
+Mono path[1] = '/home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
+Mono config path = '/home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /home/dell/Unity/Hub/Editor/2022.3.62f1c1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.005777 seconds.
+- Loaded All Assemblies, in  0.260 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.218 seconds
+Domain Reload Profiling: 478ms
+	BeginReloadAssembly (59ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (58ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (117ms)
+			TypeCache.Refresh (116ms)
+				TypeCache.ScanAssembly (101ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (218ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (178ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.409 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.416 seconds
+Domain Reload Profiling: 824ms
+	BeginReloadAssembly (101ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (250ms)
+		LoadAssemblies (181ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (117ms)
+			TypeCache.Refresh (97ms)
+				TypeCache.ScanAssembly (82ms)
+			ScanForSourceGeneratedMonoScriptInfo (16ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (416ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (301ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (161ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 33.42 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3071 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 98 unused Assets / (11.6 MB). Loaded Objects now: 3470.
+Memory consumption went from 152.8 MB to 141.2 MB.
+Total: 6.620294 ms (FindLiveObjects: 0.245757 ms CreateObjectMapping: 0.103780 ms MarkObjects: 3.648270 ms  DeleteObjects: 2.621043 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.324 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.479 seconds
+Domain Reload Profiling: 803ms
+	BeginReloadAssembly (122ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (178ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (480ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (311ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (166ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 34.38 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2995 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3474.
+Memory consumption went from 135.4 MB to 123.8 MB.
+Total: 5.202400 ms (FindLiveObjects: 0.276856 ms CreateObjectMapping: 0.073278 ms MarkObjects: 2.760894 ms  DeleteObjects: 2.089960 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.288 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.440 seconds
+Domain Reload Profiling: 727ms
+	BeginReloadAssembly (101ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (130ms)
+		LoadAssemblies (148ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (440ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (284ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (150ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 34.07 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3479.
+Memory consumption went from 139.3 MB to 127.7 MB.
+Total: 5.242768 ms (FindLiveObjects: 0.215567 ms CreateObjectMapping: 0.068107 ms MarkObjects: 3.142238 ms  DeleteObjects: 1.815827 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 6970fc9e08df430e49cb6ae0a51efbc0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 07e865f213a3fcf5d62fc8a8f8d9e58b -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1648566.680946 seconds.
+  path: Assets/Manipulation/g1op.onnx
+  artifactKey: Guid(18fc659782a2a121bb438027707b734f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Manipulation/g1op.onnx using Guid(18fc659782a2a121bb438027707b734f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '33b5ac6b7cd0fe544f2eb198dc6ebbef') in 0.016583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Manipulation/tinkerv2.onnx
+  artifactKey: Guid(43014177384f0f201a36369159fa6a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Manipulation/tinkerv2.onnx using Guid(43014177384f0f201a36369159fa6a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ef4a3b95142d8588e8d485bc2e23d891') in 0.003485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.278 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.443 seconds
+Domain Reload Profiling: 720ms
+	BeginReloadAssembly (100ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (121ms)
+		LoadAssemblies (154ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (443ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (282ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (149ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 34.48 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2995 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3484.
+Memory consumption went from 139.1 MB to 127.5 MB.
+Total: 8.353547 ms (FindLiveObjects: 0.213075 ms CreateObjectMapping: 0.060740 ms MarkObjects: 6.158725 ms  DeleteObjects: 1.919337 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 6970fc9e08df430e49cb6ae0a51efbc0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 07e865f213a3fcf5d62fc8a8f8d9e58b -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.257 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.282 seconds
+Domain Reload Profiling: 538ms
+	BeginReloadAssembly (103ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (97ms)
+		LoadAssemblies (123ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (282ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (179ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (96ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 18.21 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2995 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 90 unused Assets / (11.6 MB). Loaded Objects now: 3487.
+Memory consumption went from 139.3 MB to 127.7 MB.
+Total: 5.054087 ms (FindLiveObjects: 0.223375 ms CreateObjectMapping: 0.061557 ms MarkObjects: 3.052382 ms  DeleteObjects: 1.715787 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 6970fc9e08df430e49cb6ae0a51efbc0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.249 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.283 seconds
+Domain Reload Profiling: 531ms
+	BeginReloadAssembly (115ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (83ms)
+		LoadAssemblies (120ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (283ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (186ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (101ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 33.40 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3492.
+Memory consumption went from 139.4 MB to 127.7 MB.
+Total: 5.151345 ms (FindLiveObjects: 0.173114 ms CreateObjectMapping: 0.066368 ms MarkObjects: 3.088030 ms  DeleteObjects: 1.823009 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 5189f0ee0416738b99383d110e161508 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: e61b6c9448f5302ef74752e6fc4f9ce4 -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.307 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.445 seconds
+Domain Reload Profiling: 750ms
+	BeginReloadAssembly (103ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (142ms)
+		LoadAssemblies (162ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (445ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (282ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (147ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 33.17 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3496.
+Memory consumption went from 139.4 MB to 127.7 MB.
+Total: 5.318443 ms (FindLiveObjects: 0.238604 ms CreateObjectMapping: 0.068544 ms MarkObjects: 3.005704 ms  DeleteObjects: 2.003958 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 3800d515f3a591b1bb40e0a828e94578 -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.191 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.284 seconds
+Domain Reload Profiling: 474ms
+	BeginReloadAssembly (74ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (78ms)
+		LoadAssemblies (96ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (8ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (284ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (182ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (99ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 18.45 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3500.
+Memory consumption went from 139.4 MB to 127.7 MB.
+Total: 4.554014 ms (FindLiveObjects: 0.205137 ms CreateObjectMapping: 0.035943 ms MarkObjects: 3.005155 ms  DeleteObjects: 1.306768 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 3800d515f3a591b1bb40e0a828e94578 -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.302 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.454 seconds
+Domain Reload Profiling: 755ms
+	BeginReloadAssembly (102ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (141ms)
+		LoadAssemblies (158ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (455ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (290ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (152ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 33.43 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3504.
+Memory consumption went from 139.4 MB to 127.7 MB.
+Total: 5.086116 ms (FindLiveObjects: 0.221367 ms CreateObjectMapping: 0.061774 ms MarkObjects: 3.118836 ms  DeleteObjects: 1.683013 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/Tinker2Agent.cs: 6970fc9e08df430e49cb6ae0a51efbc0 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: f243da3f7261f9a9e41879f03d850fde -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.213 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.281 seconds
+Domain Reload Profiling: 493ms
+	BeginReloadAssembly (93ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (82ms)
+		LoadAssemblies (103ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (282ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (182ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 18.22 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3508.
+Memory consumption went from 139.4 MB to 127.8 MB.
+Total: 4.535722 ms (FindLiveObjects: 0.138021 ms CreateObjectMapping: 0.040802 ms MarkObjects: 2.924102 ms  DeleteObjects: 1.431820 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/Tinker2Agent.cs: 03a494b27b6685f7c4d58c85607da544 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 55986c1dc57732fc42474056f87c221d -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.224 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.284 seconds
+Domain Reload Profiling: 507ms
+	BeginReloadAssembly (105ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (76ms)
+		LoadAssemblies (113ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (7ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (284ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (182ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 17.72 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3512.
+Memory consumption went from 139.4 MB to 127.8 MB.
+Total: 4.632458 ms (FindLiveObjects: 0.183933 ms CreateObjectMapping: 0.048381 ms MarkObjects: 3.183035 ms  DeleteObjects: 1.215361 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/Tinker2Agent.cs: 03a494b27b6685f7c4d58c85607da544 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 55986c1dc57732fc42474056f87c221d -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.229 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.284 seconds
+Domain Reload Profiling: 513ms
+	BeginReloadAssembly (102ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (86ms)
+		LoadAssemblies (107ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (4ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (284ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (185ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (99ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 18.02 ms, found 967 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3373 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3893.
+Memory consumption went from 147.7 MB to 136.1 MB.
+Total: 4.911680 ms (FindLiveObjects: 0.147352 ms CreateObjectMapping: 0.044161 ms MarkObjects: 3.379885 ms  DeleteObjects: 1.339124 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CalendarCoordHandler.cs: 31fdea043241615470e042019cd7db2a -> 
+  custom:scripting/monoscript/fileName/AxisName.cs: 91cccc1919e9e7699e7f081aeb40163e -> 
+  custom:scripting/monoscript/fileName/LineHandler.GridCoord.cs: 471f1ae16e9d3c73152c20c81f46c63a -> 
+  custom:scripting/monoscript/fileName/GridCoordEditor.cs: be7be51c2cd41334ecaa9a2bfb293d84 -> 
+  custom:scripting/monoscript/fileName/GridCoord3D.cs: 07cee16285c3431cacf5644a23ebc8f8 -> 
+  custom:scripting/monoscript/fileName/SerieEventDataPool.cs: 358a3f06f5278f9a00cdc40e6dab5c50 -> 
+  custom:scripting/monoscript/fileName/Heatmap.cs: 3db8ad6dcd0844ad14236a5e388e7217 -> 
+  custom:scripting/monoscript/fileName/LabelStyle.cs: b077feb0426847570b1dffb2d2e76509 -> 
+  custom:scripting/monoscript/fileName/TinkerTrainAgent.cs: 1d1f580438b6ff6eb271f38c24748490 -> 
+  custom:scripting/monoscript/fileName/AxisMinorSplitLine.cs: 260bab077aabc8638c3818447d86d29d -> 
+  custom:scripting/monoscript/fileName/Example11_AddSinCurve.cs: 070e213b0231d68ec1cddf8e3fa3cd7c -> 
+  custom:scripting/monoscript/fileName/LabelLineDrawer.cs: 67b8ca011d8ec8a97ff7dc76f1ed2d86 -> 
+  custom:scripting/monoscript/fileName/XChartsDaemon.cs: 15bf78692eae5c6feba9b9b98f1c52f1 -> 
+  custom:scripting/monoscript/fileName/Example41_RadarUpdate.cs: 8fa60b64ed6e8a4eeb16a1f06c4d28b0 -> 
+  custom:scripting/monoscript/fileName/ItemStyle.cs: ef68e485229814f741cc4515f4d189b5 -> 
+  custom:scripting/monoscript/fileName/DebugInfoDrawer.cs: b4415dce64966f5971a1c93137fcb7f7 -> 
+  custom:scripting/monoscript/fileName/PolarCoordHandler.cs: 0b8f67f7dd11f351bb5fe1652bcc1263 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ChartConst.cs: fe89f7f73c2390a5ea249d66d2b9a550 -> 
+  custom:scripting/monoscript/fileName/SerieDataContext.cs: aaf4f5007285ce58808cb2d21054c05d -> 
+  custom:scripting/monoscript/fileName/TextPadding.cs: d561e254856ba5b18432f53a279ebddd -> 
+  custom:scripting/monoscript/fileName/DataZoomContext.cs: e19e8a28aa354b46fdc08a5831eca03c -> 
+  custom:scripting/monoscript/fileName/SimplifiedCandlestickChart.cs: bba015f1f2cb2e42c2b165eb2e6b9afd -> 
+  custom:scripting/monoscript/fileName/IconStyle.cs: df66b0a564aa723389cf082e93fc6850 -> 
+  custom:scripting/monoscript/fileName/AxisSplitLine.cs: 298127ad39538821e846f8dee1664826 -> 
+  custom:scripting/monoscript/fileName/BarEditor.cs: 980ee4edaea6e1fd8f02e88c2b4df5fa -> 
+  custom:scripting/monoscript/fileName/BaseScatter.cs: e7c7eb4385d78eb9df1667277411551c -> 
+  custom:scripting/monoscript/fileName/Example03_ChartAnimation.cs: cd4bb5af40d37771ef64a1de76f3b1df -> 
+  custom:scripting/monoscript/fileName/GraphData.cs: ed91bcc840266152e0379d6aa2b0484e -> 
+  custom:scripting/monoscript/fileName/EmphasisStyle.cs: ee658c5127a6086bf93c04305cba4917 -> 
+  custom:scripting/monoscript/fileName/TextStyleDrawer.cs: 4221f2bcfced1b2939f3c1ddbc998741 -> 
+  custom:scripting/monoscript/fileName/Theme.cs: 8dd495cef7eaebec7cb46393b2352159 -> 
+  custom:scripting/monoscript/fileName/VisualMapHelper.cs: 818dc25755f5a0cdb4af6b92f645aa82 -> 
+  custom:scripting/precompiled-assembly-types:XCharts.Editor: 28f7e65b9d727e28fef1d05c7da6f450 -> 
+  custom:scripting/monoscript/fileName/CandlestickHandler.cs: 7cb5e54d952012c2a63e2312d0c2c086 -> 
+  custom:scripting/monoscript/fileName/YAxis3D.cs: f9c93d709da0752cc5be2d9f94891d47 -> 
+  custom:scripting/monoscript/fileName/ParallelHandler.cs: c2d77aa727449a06155bdd3b05f9ff77 -> 
+  custom:scripting/monoscript/fileName/ThemeStyle.cs: 6b200b9d1da1861a3c43e183dbc8a917 -> 
+  custom:scripting/monoscript/fileName/XCResourcesImporter.cs: 2f57ef4b209dded32c9db81753685aef -> 
+  custom:scripting/monoscript/fileName/AxisMinorTick.cs: 10128cbf9d220558e9171fd2bb816e96 -> 
+  custom:scripting/monoscript/fileName/SimplifiedLineChart.cs: 1c8093ee8104ba6a17853642a66d8123 -> 
+  custom:scripting/monoscript/fileName/Example_Test.cs: d1fa8fedba1b92055e279a4dc33c98aa -> 
+  custom:scripting/monoscript/fileName/XAxis.cs: ed7f0ef7c4890b1365631c847a8f5173 -> 
+  custom:scripting/monoscript/fileName/ChartCached.cs: be158ac86c6f5cf9fb00ea235d4c82a8 -> 
+  custom:scripting/monoscript/fileName/ParallelCoordContext.cs: db82f1e00f5e72b117474ff8767cf683 -> 
+  custom:scripting/monoscript/fileName/Example21_BarRace.cs: 0d110cf32ebaba246b2c7b5550876bbc -> 
+  custom:scripting/monoscript/fileName/BackgroundEditor.cs: 9a29152820d325ad18c7ebfc3f4f37bc -> 
+  custom:scripting/monoscript/fileName/Lang.cs: 3ceaacb130fe5a6c9ac970f8cfc6b4dc -> 
+  custom:scripting/monoscript/fileName/HeatmapChart.cs: 2edd7016c40d5abcf6b10ff8918f5894 -> 
+  custom:scripting/monoscript/fileName/LineEditor.cs: e53e7d2b0ab16c8455103e471ccacbf8 -> 
+  custom:scripting/monoscript/fileName/MarqueeStyle.cs: 9c6a7a528103cde88c51e2dfc35ddc56 -> 
+  custom:scripting/monoscript/fileName/Painter.cs: 5f74c9fe87ec000be00d676c7385e684 -> 
+  custom:scripting/monoscript/fileName/XCSettings.cs: cea0705d4754c31bea2eb72f7a36c1f4 -> 
+  custom:scripting/monoscript/fileName/StateStyleDrawer.cs: db9c3896dcc0ca946c8859b3a83d6fab -> 
+  custom:scripting/monoscript/fileName/TitleStyle.cs: a5127269e7d8693a37ca692ae2be9219 -> 
+  custom:scripting/monoscript/fileName/SimplifiedLine.cs: a1b1e0e50154f8d2d7dc17e7c3a71b4b -> 
+  custom:scripting/monoscript/fileName/EffectScatter.cs: 4ca7822c6cdfa737b344574ba97d05e8 -> 
+  custom:scripting/monoscript/fileName/Example50_Scatter.cs: cec1cc70a22ee3cabdd85f61b53b90a1 -> 
+  custom:scripting/monoscript/fileName/TooltipHandler.cs: 2c5c169c6637a5b0aff1746d0b165d31 -> 
+  custom:scripting/monoscript/fileName/MainComponent.cs: 685ca649240f587ea07810dd76c405bd -> 
+  custom:scripting/monoscript/fileName/VisualMapTheme.cs: 0bdfc11e471ae8d673df11e3acc0bef6 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/CommentEditor.cs: 636162642b62546dfca9cbe089c43cf0 -> 
+  custom:scripting/monoscript/fileName/IconStyleDrawer.cs: 3aa9dc7fbcdd1ff90da4772dd110a246 -> 
+  custom:scripting/monoscript/fileName/ParallelCoordEditor.cs: 2e8221a9fd0977174e47923f6e6c702b -> 
+  custom:scripting/monoscript/fileName/DataZoomHelper.cs: ec0d32a0445313c853c0eb62166b6620 -> 
+  custom:scripting/monoscript/fileName/HeatmapHandler.cs: d2b4df5b14649af86080c6fe2ec3fb16 -> 
+  custom:scripting/monoscript/fileName/ArrowStyle.cs: 6e8105c422b58f52e29899b5e16d9c49 -> 
+  custom:scripting/monoscript/fileName/RequireChartComponentAttribute.cs: 322c6517d673075c01259507ce23eaa6 -> 
+  custom:scripting/monoscript/fileName/SerieEventData.cs: 1223425f22c96932e26432d16ef82f48 -> 
+  custom:scripting/monoscript/fileName/ParallelEditor.cs: e676fff51c669e721ea5c3989e3e2f9d -> 
+  custom:scripting/monoscript/fileName/LineArrow.cs: d9d050ad862c80c03459e6225eb8e472 -> 
+  custom:scripting/monoscript/fileName/SingleAxis.cs: 56f1ef729b3e0ec37562624a16920935 -> 
+  custom:scripting/monoscript/fileName/UIComponent.cs: dee0757e5022b59172bd65221c0e941c -> 
+  custom:scripting/monoscript/fileName/BaseChart.Component.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/RadarCoordEditor.cs: ea099a20f041915e8e9014764b86a3b0 -> 
+  custom:scripting/monoscript/fileName/AnimationInfo.cs: fec116f42c8754d8bd91f6aafae881ac -> 
+  custom:scripting/monoscript/fileName/ThemeEditor.cs: f852b0cdd926d88ce6994f1baa2086e1 -> 
+  custom:scripting/monoscript/fileName/UGLExample.cs: 54abf2a0a4359e620e9bbc4cd7a294d2 -> 
+  custom:scripting/monoscript/fileName/CheckHelper.cs: e468c745d7ded091037f6e32dbb0d485 -> 
+  custom:scripting/monoscript/fileName/ZAxis3D.cs: 8e93022beb00b194954902f2d6288f7c -> 
+  custom:scripting/monoscript/fileName/ChartHelper.cs: 6b50c0eb3a0d36ca288ea30038a9f2cb -> 
+  custom:scripting/monoscript/fileName/RuntimeUtil.cs: 6a4b07162f0ee984ded411f4c6a8a0cd -> 
+  custom:scripting/monoscript/fileName/UIComponentThemeDrawer.cs: bbba410d1f6a8d2224f3089f342607f6 -> 
+  custom:scripting/monoscript/fileName/ScatterEditor.cs: ec96f65f5c0dfcfccf75dcb02c162590 -> 
+  custom:scripting/monoscript/fileName/ZAxis3DHander.cs: f5e0a6ef76f86ba1689de6986fa21630 -> 
+  custom:scripting/monoscript/fileName/UGLHelper.cs: 95d9972544ff4c139eb5c499748e544a -> 
+  custom:scripting/monoscript/fileName/SerieLabelPool.cs: 47e8e137c43cfe080f127ddb1db58d26 -> 
+  custom:scripting/monoscript/fileName/SingleAxisHandler.cs: e553bfec1c2eee62924bedc89ec51e3d -> 
+  custom:scripting/monoscript/fileName/SimplifiedLineHandler.cs: 06b3933f0f73744e56243d2f2cba8bf1 -> 
+  custom:scripting/monoscript/fileName/SerieSymbolDrawer.cs: f45d650f66e47f08c3a5461baeedf263 -> 
+  custom:scripting/monoscript/fileName/IgnoreDocAttribute.cs: ab0b95038db090e5cc8b223d62951a04 -> 
+  custom:scripting/monoscript/fileName/ISerieComponent.cs: 364c6a8c9683e820058d5d5af20beb8d -> 
+  custom:scripting/monoscript/fileName/GridCoordHandler.cs: 9cac7a0b9afe6628f98f50f80a7a5365 -> 
+  custom:scripting/monoscript/fileName/SerieSymbl.cs: 4a35405bf49488195805c790126755ef -> 
+  custom:scripting/monoscript/fileName/XChartsEditor.cs: 4f84b7ae70097ee2c6f71d889acada6c -> 
+  custom:scripting/monoscript/fileName/TooltipHelper.cs: 73db1abec02a821b818d52f3410e4d88 -> 
+  custom:scripting/monoscript/fileName/TitleStyleDrawer.cs: 8e3e431434953115c75097b8bd5dd29a -> 
+  custom:scripting/monoscript/fileName/MarkAreaHandler.cs: dacb0a9db4e44c4d5047b69cea05fb6a -> 
+  custom:scripting/monoscript/fileName/PieChart.cs: 5646defba41ab88fcf99e895da748882 -> 
+  custom:scripting/monoscript/fileName/TooltipEditor.cs: fa1ec99f365cf324cf5dd08ad77493b1 -> 
+  custom:scripting/monoscript/fileName/RadarCoord.cs: aa9d657c2741991e3bf451f3e63fd735 -> 
+  custom:scripting/monoscript/fileName/GridCoord.cs: 4e5d4df16ed0e1145c99b7ce23eb7554 -> 
+  custom:scripting/monoscript/fileName/RingChart.cs: cb8422a9a06006ea307a8df3c0738110 -> 
+  custom:scripting/precompiled-assembly-types:XCharts.Runtime: 4ea2677be6e45b17ca8a08d440660814 -> 
+  custom:scripting/monoscript/fileName/VisualMap.cs: 77e0feac257c4543e44e61657476772b -> 
+  custom:scripting/monoscript/fileName/JsonUtil.cs: dbf6f19a4ed5d6aca907b7db35e9b729 -> 
+  custom:scripting/monoscript/fileName/Parallel.cs: 3fe8b7370a1c3728c77733adffddc971 -> 
+  custom:scripting/monoscript/fileName/SimplifiedLineEditor.cs: 0f76faeaf2287d4975503fa5e01df670 -> 
+  custom:scripting/monoscript/fileName/Example13_LineSimple.cs: e6209e61e568f2032639df2e6d2cffc9 -> 
+  custom:scripting/monoscript/fileName/LegendTheme.cs: 192aec2c990c40106f25430d79850367 -> 
+  custom:scripting/monoscript/fileName/TextLimitDrawer.cs: f933cfb0db3c966898ac172e71f6efc4 -> 
+  custom:scripting/monoscript/fileName/TitleHandler.cs: 5812d49611f8f6c8c33be79d2a14ad1c -> 
+  custom:scripting/monoscript/fileName/MLValue.cs: e22810dd970e5bc2c871f21aae6f332d -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:scripting/monoscript/fileName/LineStyle.cs: 3df8e30b919339f3213ead3839684796 -> 
+  custom:scripting/monoscript/fileName/LegendContext.cs: 4d43d065564a100d4429751576e6301b -> 
+  custom:scripting/monoscript/fileName/BaseChartEditor.cs: 75e8aca33271a292a495add63bb8c317 -> 
+  custom:scripting/monoscript/fileName/LineHandler.cs: 471f1ae16e9d3c73152c20c81f46c63a -> 
+  custom:scripting/monoscript/fileName/ComponentThemeDrawer.cs: adea77e7e7065e2d1ae0c88b0fd1568a -> 
+  custom:scripting/monoscript/fileName/Example01_RandomData.cs: 44b23a94494171e4a93fb36e0d23db58 -> 
+  custom:scripting/monoscript/fileName/SymbolStyle.cs: dbb2a8dbc4ed4b6baad77c7aea9a2408 -> 
+  custom:scripting/monoscript/fileName/UGL.cs: 36363ed2f1b95901ba1ba1497bb8fb51 -> 
+  custom:scripting/monoscript/fileName/RadarChart.cs: e73632814770642b00abbe845d93e4ca -> 
+  custom:scripting/monoscript/fileName/GridLayoutContext.cs: 0809fc46be87ede6eff63266d0e2b9ab -> 
+  custom:scripting/monoscript/fileName/AnimationStyle.cs: 504600edb00331ad38706a827286927d -> 
+  custom:scripting/monoscript/fileName/SubTitleTheme.cs: 44d1d8d9156b8f820ab9da5b46753110 -> 
+  custom:scripting/monoscript/fileName/MarkLineEditor.cs: 1229eee4c2e20060bb4deba7ef54b231 -> 
+  custom:scripting/monoscript/fileName/XAxisHander.cs: 40525ca2d8fa3ebef82dc006997ec203 -> 
+  custom:scripting/monoscript/fileName/PolarCoordContext.cs: 5e462989f3a88b3788736d5e2fffeb87 -> 
+  custom:scripting/monoscript/fileName/VisualMapContext.cs: a501f79e6e1ff39b7a4cb77d44b3b043 -> 
+  custom:scripting/monoscript/fileName/Scatter.cs: 24f6d9db106323bd1280756ee123c4ab -> 
+  custom:scripting/monoscript/fileName/Tooltip.cs: 2c755d8dc2893358a978d7ceceea1f9e -> efbd10c978725fde614599dc839eb715
+  custom:scripting/monoscript/fileName/BaseGraph.cs: e36e420f1854b374f0202e77d186186d -> 
+  custom:scripting/monoscript/fileName/XChartsEditor.LineChart.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Example20_BarChart.cs: 6795d38ca310d66cf2d70193573a659f -> 
+  custom:scripting/monoscript/fileName/Example31_PieUpdateName.cs: 73e9ff42c4fae2f16944aedc3f638226 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/LineChart.cs: 7728dbf5a2d857843662e453cffca979 -> 
+  custom:scripting/monoscript/fileName/Location.cs: 87839e5b612e713a7c58c4792a2cc0a7 -> 
+  custom:scripting/monoscript/fileName/SerieComponentAttribute.cs: a394137f03db62733fa8f587e4e04ec4 -> 
+  custom:scripting/monoscript/fileName/ReflectionUtil.cs: 385e375770d8a28725d1fd7a06896d11 -> 
+  custom:scripting/monoscript/fileName/Example12_CustomDrawing.cs: 368ad1d18593719e37de5529d40e182a -> 
+  custom:scripting/monoscript/fileName/YAxis.cs: 3d11dfdfbeca21a92a437001d4f78a7e -> 
+  custom:scripting/monoscript/fileName/ParallelCoord.cs: b2c15c1bbd92fc324535059d507a3309 -> 
+  custom:scripting/monoscript/fileName/SerieContext.cs: 4148ab298b4e77aba5f4bc01bc072702 -> 
+  custom:scripting/monoscript/fileName/StageColor.cs: bbc6e2948e57540ee9b740580dceb4d3 -> 
+  custom:scripting/monoscript/fileName/MainComponentBaseEditor.cs: ba2196ad4861a2f39d8d45f9c4e8652f -> 
+  custom:scripting/monoscript/fileName/GridCoord3DEditor.cs: 35f7c69d494ce7db97912a18f407555e -> 
+  custom:scripting/monoscript/fileName/PropertyUtil.cs: ab04b785a1f9088813782614dd5a541a -> 
+  custom:scripting/monoscript/fileName/SerieHandlerAttribute.cs: f6a067aecbc3b174915b33a1a98067d2 -> 
+  custom:scripting/monoscript/fileName/LineHandler.PolarCoord.cs: 471f1ae16e9d3c73152c20c81f46c63a -> 
+  custom:scripting/monoscript/fileName/DataZoomEditor.cs: 533db81b54052853bcfe60eb8de3e42a -> 
+  custom:scripting/monoscript/fileName/ChartEditorHelper.cs: afda55fe65ca786d2044672f63ec379e -> 
+  custom:scripting/monoscript/fileName/Serie.ExtraComponent.cs: 04d5342988514660c6367b6e78bb1615 -> 
+  custom:scripting/monoscript/fileName/INeedSerieContainer.cs: 8e7e4e7b7a030324c31003897d41e630 -> 
+  custom:scripting/monoscript/fileName/AxisSplitArea.cs: 5122a858910f0f956eaa02bdfbee2e42 -> 
+  custom:scripting/monoscript/fileName/Comment.cs: 39a2447d09659ac5acb745fa7cd038fd -> 
+  custom:scripting/monoscript/fileName/MainComponentListEditor.cs: cff71ee7aa97f6464871f656f96ab1d8 -> 
+  custom:scripting/monoscript/fileName/SerieDataPool.cs: 3f39fc91630e4bbfbd7789aebccd1952 -> 
+  custom:scripting/monoscript/fileName/DataZoomTheme.cs: 5a2cdee1a6a3f486584389236ac7713c -> 
+  custom:scripting/monoscript/fileName/LegendEditor.cs: 25f61dcf44ada931012b8cf69ed1ce55 -> 
+  custom:scripting/monoscript/fileName/RadiusAxisHandler.cs: c5ec51e2e1be0ef0cbd63021bfdd4f91 -> 
+  custom:scripting/monoscript/fileName/UIComponentEditor.cs: 8f7a4bdf72d49f031bec24180ba9cf03 -> 
+  custom:scripting/monoscript/fileName/Example60_Heatmap.cs: f1be6e54d963c09140a7cd7711c01315 -> 
+  custom:scripting/monoscript/fileName/DataZoomHandler.cs: c1a2ebc550232e3d2336b6ae82f8af88 -> 
+  custom:scripting/monoscript/fileName/BaseChart.Custom.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CommentMarkStyle.cs: 773b1897727fb84ea0b4d7570a7f851c -> 
+  custom:scripting/monoscript/fileName/MathUtil.cs: 6fb4abf020715b62382c4ede7af930f5 -> 
+  custom:scripting/monoscript/fileName/BaseChart.Serie.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Radar.cs: 8aceaf291bbd59b67d306a658eeb6a3a -> 
+  custom:scripting/monoscript/fileName/VisualMapEditor.cs: 901ee4b2d17ed4e49b2312177914b31a -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/ParallelChart.cs: 4cf743385553b6951d3be439fc28c9ec -> 
+  custom:scripting/monoscript/fileName/ThemeDrawer.cs: 0bd3d06f9ef9d05ee0336978a8d4a25c -> 
+  custom:scripting/monoscript/fileName/Serie.cs: 04d5342988514660c6367b6e78bb1615 -> 
+  custom:scripting/monoscript/fileName/MarkLineHandler.cs: b91ff39fa9efca8207547b950e56d059 -> 
+  custom:scripting/monoscript/fileName/Example90_Candlestick.cs: 84e8acea01a2f34afc489195a6199c59 -> 
+  custom:scripting/monoscript/fileName/ISerieDataComponent.cs: 6212c2c7d9398263b248b73547b478a4 -> 
+  custom:scripting/monoscript/fileName/Example30_PieChart.cs: 5c5df60fa04b5de11cd23376f51d20b6 -> 
+  custom:scripting/monoscript/fileName/BorderStyle.cs: 26c5699c33859ec42c587f97103c17f1 -> 
+  custom:scripting/monoscript/fileName/FormatterHelper.cs: d51dfe1e12621deae155e02a97c35eb0 -> 
+  custom:scripting/monoscript/fileName/ObjectPool.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/EndLabelStyle.cs: 95e74dca6aac62f60de110d809f47111 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/MainComponentEditor.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/SerieEditorAttribute.cs: b2530e2110ad410c80de5e6107d6784e -> 
+  custom:scripting/monoscript/fileName/SimplifiedBar.cs: 335e9c26f9d4354c4628daeb859a1489 -> 
+  custom:scripting/monoscript/fileName/EditorStyles.cs: 158286437bb8267cf4c4ae1f74e20355 -> 86b9f4d8fe570a8d8295bfc466c975cf
+  custom:scripting/monoscript/fileName/MLValueDrawer.cs: c91f46545c4143d315ecf0e6d3469b2a -> 
+  custom:scripting/monoscript/fileName/SimplifiedBarEditor.cs: 15a668b9d99adc566ceb2e84b8c5e0aa -> 
+  custom:scripting/monoscript/fileName/MarqueeStyleDrawer.cs: 9faff2d96aeab8d79538021a65e0831c -> 
+  custom:scripting/monoscript/fileName/XChartsEditor.PieChart.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/BorderStyleDrawer.cs: 35c5ac2b7e154acb88f6677048747de3 -> 
+  custom:scripting/monoscript/fileName/DateTimeUtil.cs: 7a94b8ef6982cde77066c37dffdf9876 -> 
+  custom:scripting/monoscript/fileName/ImageStyle.cs: ee09d39a5c2231da9609d5437f2a5053 -> 
+  custom:scripting/monoscript/fileName/SerieBaseEditor.cs: 029278ebc6eae87ece74722e2558436d -> 
+  custom:scripting/monoscript/fileName/IUpdateRuntimeData.cs: ef0218a667925c777e551b1fc359f557 -> 
+  custom:scripting/monoscript/fileName/Example10_LineChart.cs: 4074f953848c37831eb8acf8d40f10d3 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/AxisLine.cs: 02e684a0e716bb82c96966aca4e2f6a7 -> 
+  custom:scripting/monoscript/fileName/ChartDrawer.cs: fda473f3478724dcac0138965d6e0265 -> 
+  custom:scripting/monoscript/fileName/BarHandler.cs: 0b98256501cc056162d7c75735846c78 -> 
+  custom:scripting/monoscript/fileName/Padding.cs: eefdcb2072ce38b5efa116f4c8d33a12 -> 
+  custom:scripting/monoscript/fileName/AreaStyleDrawer.cs: 7feef591cde50d31cb70f1553529dc20 -> 
+  custom:scripting/monoscript/fileName/ScatterChart.cs: dff3418090e1a875b9f204bc740e80e3 -> 
+  custom:scripting/monoscript/fileName/SeriesHelper.cs: 5af495481c6392940b53018cc89a1d2d -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/LegendHandler.cs: 6cc3b2a862bfb0c116e15e9dc8d52ecc -> 
+  custom:scripting/monoscript/fileName/ChartText.cs: 621988714e8780287c84270c34b81e35 -> 
+  custom:scripting/monoscript/fileName/ISimplifiedSerie.cs: a254274b4dafac22beece81fab8fdf00 -> 
+  custom:scripting/monoscript/fileName/BaseScatterHandler.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ComponentHandlerAttribute.cs: 75facd4443e04e16f01eaca69cd1f1d5 -> 
+  custom:scripting/monoscript/fileName/MarkAreaEditor.cs: 5938137cd47241e38ce20e19c9fc98d2 -> 
+  custom:scripting/monoscript/fileName/CommentHander.cs: c6a6f670a13a6f50e90a92a8d04eaa0c -> 
+  custom:scripting/monoscript/fileName/EffectScatterHandler.cs: e401cd371cf6c765f6e013b45473c2f2 -> 
+  custom:scripting/monoscript/fileName/Title.cs: e32c212c1f88e50785453fcda4a0be32 -> 
+  custom:scripting/monoscript/fileName/RadiusAxis.cs: 0c2c157cda448622ba6a3fb04cfec42b -> 
+  custom:scripting/monoscript/fileName/XChartsMgr.cs: de0b2f7d365282ba482aee92a871d40c -> 
+  custom:scripting/monoscript/fileName/MarkLineHelper.cs: 2aa1d1d55186b2d52e867bc75fcceb31 -> 
+  custom:scripting/monoscript/fileName/SelectStyle.cs: 36b3ea789677a2f1e83f2a61087307b3 -> 
+  custom:scripting/monoscript/fileName/SerieLabelHelper.cs: c6625c1f160716e9f77222508337d372 -> 
+  custom:scripting/monoscript/fileName/LayoutHelper.cs: 34c346722541335745b540577e5f5698 -> 
+  custom:scripting/monoscript/fileName/AxisLabel.cs: b2ae8911a97b30fcfe4c0e8abf6282db -> 
+  custom:scripting/monoscript/fileName/RadarCoordHandler.cs: 17339283336c5285a3ed48498d8db3ce -> 
+  custom:scripting/monoscript/fileName/Background.cs: 6726579e4cb3731c2b20f01c11b82c86 -> 
+  custom:scripting/monoscript/fileName/Example00_CheatSheet.cs: 61a79ffc68ec6397e1b3f16c09009648 -> 
+  custom:scripting/monoscript/fileName/AreaStyle.cs: 391fc24be816bef5da03d3e3558764f7 -> 
+  custom:scripting/monoscript/fileName/SerieDataLinkDrawer.cs: e017d7593ba93aa1efff8f6c88984e8f -> 
+  custom:scripting/monoscript/fileName/HeatmapEditor.cs: 66c513b58e518613d8542ddfd7a7afdd -> 
+  custom:scripting/monoscript/fileName/Example02_ChartEvent.cs: 395aac5a29a9b7a02a00c0bd731831d3 -> 
+  custom:scripting/monoscript/fileName/BaseChart.Draw.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/UIComponentTheme.cs: 6da7784e9dc131cb50486a280f530a08 -> 
+  custom:scripting/precompiled-assembly-types:XCharts.Examples: 7243ef62bc04b14544c6e2df7dab73db -> 
+  custom:scripting/monoscript/fileName/BlurStyle.cs: 9ae7790ec4e9e158518291f3acd9e7e5 -> 
+  custom:scripting/monoscript/fileName/SerieListEditor.cs: 65215a5af1b6b4a26895135a684b1cdb -> 
+  custom:scripting/monoscript/fileName/SerieDataComponentAttribute.cs: 2be3c6402e222e1f3eefd8de204430a3 -> 
+  custom:scripting/monoscript/fileName/TextLimit.cs: 66a55390c9090081f8343b5712bd1b91 -> 
+  custom:scripting/monoscript/fileName/CommentItem.cs: 478f35f35e4a3f59e2f28bc67131739f -> 
+  custom:scripting/monoscript/fileName/GridCoordContext.cs: 5474b927453ba98edc01391b4c838e32 -> 
+  custom:scripting/monoscript/fileName/CoordOptionsAttribute.cs: 2bf0bda40d5cbec75a7b2c253dc2b7dd -> 
+  custom:scripting/monoscript/fileName/SerieTheme.cs: a53a41985b644cfade1f5687e8b5df02 -> 
+  custom:scripting/monoscript/fileName/RadarHandler.cs: 00ba6dd122b968673a0b7bd515f2322c -> 
+  custom:scripting/monoscript/fileName/SerieParams.cs: dca8ddebe58be83f8cd7dfff785d1bc8 -> 
+  custom:scripting/monoscript/fileName/MarkLine.cs: f3f603141ed8cd9e417fea37c2e9eed6 -> 
+  custom:scripting/monoscript/fileName/SerieConvertAttribute.cs: 8baf0c2fb4f7edd725d750b6ae498346 -> 
+  custom:scripting/monoscript/fileName/TooltipTheme.cs: 5f3fc05c9daa288a833874cf54d9a588 -> 
+  custom:scripting/monoscript/fileName/LevelStyle.cs: a25ebf37d457438fe73fb621020ba00f -> 
+  custom:scripting/monoscript/fileName/ListForAttribute.cs: 609e89f998dcc15c7d3e4824f6a359a3 -> 
+  custom:scripting/monoscript/fileName/YAxisHander.cs: 2fa06a062c00beaf4a7a4b6120989789 -> 
+  custom:scripting/monoscript/fileName/XCThemeMgr.cs: 97b730e294f3781c2eaa69a8bd996986 -> 
+  custom:scripting/monoscript/fileName/BarChart.cs: d764ba1e40e8a4dfa9ee73aea5170b2b -> 
+  custom:scripting/monoscript/fileName/ISerieContainer.cs: 527a9be3dc6c493cc0e78b235db524cc -> 
+  custom:scripting/monoscript/fileName/CommentMarkStyleDrawer.cs: 00085982b32c0ca64e447c6c285cc9b3 -> 
+  custom:scripting/monoscript/fileName/XLog.cs: 64384e36c81bb4fe085ddabb887eea66 -> 
+  custom:scripting/monoscript/fileName/RingHandler.cs: 56d71bd49963f88822404e78ebd426d6 -> 
+  custom:scripting/monoscript/fileName/TooltipContext.cs: 5f95b57f185f72bc838119f5534c9796 -> 
+  custom:scripting/monoscript/fileName/AxisEditor.cs: d68a939a0fe7144566baf4613606f681 -> 
+  custom:scripting/monoscript/fileName/LabelStyleDrawer.cs: 1c1025e17c3f78ba16f241d2e46de90f -> 
+  custom:scripting/monoscript/fileName/ChartObject.cs: c26aa5696b14cdfe15378d5b180fdc7e -> 
+  custom:scripting/monoscript/fileName/ParallelAxis.cs: 12a76e0bcd3cc561d8139e83c4a5799f -> 
+  custom:scripting/monoscript/fileName/SerieHelper.cs: 09c3f2679a74748731b04ba4b0da70dd -> 
+  custom:scripting/monoscript/fileName/GridLayoutHandler.cs: 1a2f26ecfefd475eac96fedc45d1878b -> 
+  custom:scripting/monoscript/fileName/BackgroundHandler.cs: e157b5a160162833e05a1987f50bb4a8 -> 
+  custom:scripting/monoscript/fileName/Tinker2Agent.cs: 03a494b27b6685f7c4d58c85607da544 -> 
+  custom:scripting/monoscript/fileName/RadarEditor.cs: d117ca132b77d26a5561da22c3b52375 -> 
+  custom:scripting/monoscript/fileName/SimplifiedBarChart.cs: 14095d6a3554fe4587e61b9bbaf7367b -> 
+  custom:scripting/monoscript/fileName/SinceAttribute.cs: 6eab92e01515906bbfde719413595002 -> 
+  custom:scripting/monoscript/fileName/DataZoom.cs: ed5160e5479e49101457ba3aaf4148c7 -> 
+  custom:scripting/monoscript/fileName/XGridLayout.cs: 8ad5389d44f672bc30f0a0cb3ee341fe -> 
+  custom:scripting/monoscript/fileName/LegendItem.cs: aaae4fe4e3cfb77f5a2f0d4ce7729959 -> 
+  custom:scripting/monoscript/fileName/Example40_Radar.cs: b60c75a5ac9811d8c314b96969f93f05 -> 
+  custom:scripting/monoscript/fileName/GridLayoutEditor.cs: b658b42f9fd726500ff6793394be05b1 -> 
+  custom:scripting/monoscript/fileName/IPropertyChanged.cs: e56ff4752c15084e17a574f45ad74707 -> 
+  custom:scripting/monoscript/fileName/BaseSerie.cs: e2433c6b3d26d77da4209fff8c913a32 -> 
+  custom:scripting/monoscript/fileName/Candlestick.cs: bff5ab42be3841957ba32213719b2e84 -> 
+  custom:scripting/monoscript/fileName/SerieDataLink.cs: 528edbf9bfe6f911a0bb9f854776ef6c -> 
+  custom:scripting/monoscript/fileName/SingleAxisCoord.cs: 00fddb6587f05abe9020c0cd160009ab -> 
+  custom:scripting/monoscript/fileName/Bar.cs: 5ad871a088b3ac3e59c46bf5cd5a7858 -> 
+  custom:scripting/monoscript/fileName/SimplifiedCandlestick.cs: 5c7c02b86713cf1ebba55cf8c738f0ff -> 
+  custom:scripting/monoscript/fileName/TitleEditor.cs: 3363217ee818700ee18bd17d93791055 -> 
+  custom:scripting/monoscript/fileName/BaseGraph.API.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/DefineSymbolsUtil.cs: 260c2946f7bf22a5e04bbc31ef373d8f -> 
+  custom:scripting/monoscript/fileName/RingEditor.cs: 6c7aee0ddf19c36df04a3659d5838e08 -> 
+  custom:scripting/monoscript/fileName/ParallelAxisHander.cs: 31ac131e1fbe29ce66a446226fac92cc -> 
+  custom:scripting/monoscript/fileName/LineDrawer.cs: b57d36f8d910a9c58dfb14a658860807 -> 
+  custom:scripting/monoscript/fileName/MainComponentContext.cs: 1b7b02bd98e69aecbb177fdd3f02c946 -> 
+  custom:scripting/monoscript/fileName/SymbolStyleDrawer.cs: 3dcb494e9c5a266708e28a9c1912831c -> 
+  custom:scripting/monoscript/fileName/YAxis3DHander.cs: 9a5118a474f8587d41340f9b5f001438 -> 
+  custom:scripting/monoscript/fileName/PolarHelper.cs: 6ad3c7af903ad41e4af543c004bd110c -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/PieEditor.cs: 37d8ef2dcedf70f5921f3723c8217ffb -> 
+  custom:scripting/monoscript/fileName/LegendHelper.cs: f1e451f738f57ce33c98f1734278dc90 -> 
+  custom:scripting/monoscript/fileName/AnimationInfoContext.cs: 58894d90b92eda114764ac6aa10311e9 -> 
+  custom:scripting/monoscript/fileName/GridCoord3DHandler.cs: 9a3a245a4805f498e0b1875c9eac4aa5 -> 
+  custom:scripting/monoscript/fileName/GridCoord3DContext.cs: 16b510ab0061a745f42c5fc6a1603ca0 -> 
+  custom:scripting/monoscript/fileName/ColorUtil.cs: b68b3fe8fa05674c0453f5465ee1b23b -> 
+  custom:scripting/monoscript/fileName/LineArrowDrawer.cs: f9d864f1b03cfc00d5e4f3954eecf159 -> 
+  custom:scripting/monoscript/fileName/StateStyle.cs: 8390e90be88425041b732131cf1be0d4 -> 
+  custom:scripting/monoscript/fileName/ComponentHelper.cs: f749aa6fd0d02bb8a71665d07887f01e -> 
+  custom:scripting/monoscript/fileName/SVGPath.cs: 93f2f3ec9dbb5e6ba4cfe1d8fb9fa36c -> 
+  custom:scripting/monoscript/fileName/InteractData.cs: 63896d4ed0af9aff481d278e5b09f348 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ScatterHandler.cs: d6ccf8821f6f443ccd2f56294ffc43c9 -> 
+  custom:scripting/monoscript/fileName/DataHelper.cs: 9217898c9f810bd7b2de1d98abb9fa90 -> 
+  custom:scripting/monoscript/fileName/LevelStyleDrawer.cs: 297e708df2c31fa5fd25b0f4f874ced4 -> 
+  custom:scripting/monoscript/fileName/PolarCoord.cs: 99b635efab655d343f7cc30ce782d77c -> 
+  custom:scripting/monoscript/fileName/XCSettingsEditor.cs: cf05fad0a654eadb7af1658567580b12 -> 
+  custom:scripting/monoscript/fileName/BaseGraphEditor.cs: 012fb8a4a1485be745b6dd52a349e4ba -> 
+  custom:scripting/monoscript/fileName/ChildComponent.cs: 7c7a1bac784853abdfc7de0464f82530 -> 
+  custom:scripting/monoscript/fileName/EffectScatterEditor.cs: 22f67da17edb0bb9e3262a1f76ba8fd9 -> 
+  custom:scripting/monoscript/fileName/SimplifiedCandlestickHandler.cs: eb3641b1bc119370365597a06d970935 -> 
+  custom:scripting/monoscript/fileName/UIHelper.cs: 1ca2b41b87c7c354f7f2672204b2bf93 -> 
+  custom:scripting/monoscript/fileName/SimplifiedBarHandler.cs: c0752e5b6aaa8d5b4bc2d5f022b24fb8 -> 
+  custom:scripting/monoscript/fileName/BackgroundDrawer.cs: 5a3e694c78671930b175b5301e92726d -> 
+  custom:scripting/monoscript/fileName/CandlestickEditor.cs: 8a8a5ab72aa17d9fa795417130cf3d3f -> 
+  custom:scripting/monoscript/fileName/XAxis3DHander.cs: 7ba89dbc9fa4f51ffb64380bc711b550 -> 
+  custom:scripting/monoscript/fileName/Axis.cs: 1eb0bd384023180c9fd14dd55ed72c16 -> 
+  custom:scripting/monoscript/fileName/TooltipView.cs: 0ab54e93c6bcda741244c333bbbff55c -> 
+  custom:scripting/monoscript/fileName/ChartLabel.cs: 61fe5750d7a38dd43c515fc0c75deba4 -> 
+  custom:scripting/monoscript/fileName/DefaultTooltipAttribute.cs: 0e1da432e1570a95a6ee499476831600 -> 
+  custom:scripting/monoscript/fileName/AxisHelper.cs: 622d894bec628b20a7841d38db979494 -> 
+  custom:scripting/monoscript/fileName/ItemStyleDrawer.cs: 9d32f5edf6e77b454cd8fbfa7969c2cb -> 
+  custom:scripting/monoscript/fileName/CoordSystem.cs: eab1104c7d5b7fbc62e4bf15ce113e78 -> 
+  custom:scripting/monoscript/fileName/PolarChart.cs: 059a66203a6ec90e0b38f16d0a1ac604 -> 
+  custom:scripting/monoscript/fileName/SVGPathSeg.cs: bc314d746ae5cdf82dcd722d3913431f -> 
+  custom:scripting/monoscript/fileName/DebugInfo.cs: 02c02bd0caf44ba1d1001328b6f6e14d -> 
+  custom:scripting/monoscript/fileName/DefaultAnimationAttribute.cs: 9172029da019090c6076df858eb9ef0d -> 
+  custom:scripting/monoscript/fileName/AnimationDrawer.cs: 9bd571b93164692417809a2e55e04a6f -> 
+  custom:scripting/monoscript/fileName/XChartsEditor.PolarChart.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/AxisAnimation.cs: 9cd97e250fe721afeafeb7069f1552db -> 
+  custom:scripting/monoscript/fileName/BaseLine.cs: e62f8f759f181f33e06a04ac5bc8bbed -> 
+  custom:scripting/monoscript/fileName/VisualMapHandler.cs: 8e4681cf19f0f8bd72fdca9e682948ab -> 
+  custom:scripting/monoscript/fileName/CalendarCoord.cs: 544b2d2b28e56e2aeea2d02ba0a96658 -> 
+  custom:scripting/monoscript/fileName/ComponentTheme.cs: 672134e1c7ebdcc97b3f8a076a39568a -> 
+  custom:scripting/monoscript/fileName/AnimationStyleContext.cs: 0c9aeba60814efebd875bb2c0fa742ca -> 
+  custom:scripting/monoscript/fileName/BasePropertyDrawer.cs: 87687c717c2c32ffe836fb39af3ba060 -> 
+  custom:scripting/monoscript/fileName/MarkArea.cs: 530728fe632de1299b81c12f190ea6e4 -> 
+  custom:scripting/monoscript/fileName/AxisContext.cs: 82c38a8513a7be883b87eacb5d60c9ca -> 
+  custom:scripting/monoscript/fileName/LineStyleDrawer.cs: 269f5a6cb205917da2840b047fa47080 -> 
+  custom:scripting/monoscript/fileName/ViewControlDrawer.cs: f68f4a70ddd92dd5a9cee32cfda0ee06 -> 
+  custom:scripting/monoscript/fileName/CommentItemDrawer.cs: 9b8efd5d333fa589a80c7911d7894d2a -> 
+  custom:scripting/monoscript/fileName/LineHelper.cs: a81fdc688965aac740e69f4cd805e7bf -> 
+  custom:scripting/monoscript/fileName/PieHandler.cs: 3f0847f977f8ddbd6ee43db48e266f41 -> 
+  custom:scripting/monoscript/fileName/AxisTheme.cs: 6426cba5817d7a50b28e917af7823fba -> 
+  custom:scripting/monoscript/fileName/Line.cs: fee3caafe3563abd565c956741bb2c4c -> 
+  custom:scripting/monoscript/fileName/Example05_DynamicChart.cs: 6517cd5861047df305d867aaa2a9b752 -> 
+  custom:scripting/monoscript/fileName/HeatmapHandler.PolarCoord.cs: d2b4df5b14649af86080c6fe2ec3fb16 -> 
+  custom:scripting/monoscript/fileName/BaseChart.cs: 86571d8da12e31ec46ff416f43850979 -> 
+  custom:scripting/monoscript/fileName/SettingsDrawer.cs: 3ec650d42cfc156df9b4e00d4391fd08 -> 
+  custom:scripting/monoscript/fileName/SimplifiedCandlestickEditor.cs: bfee7375ea2b8d55696bbdabee3ff938 -> 
+  custom:scripting/monoscript/fileName/TextPaddingDrawer.cs: 392cf6dc42722af967b8e6a7443065db -> 
+  custom:scripting/monoscript/fileName/BarHandler.PolarCoord.cs: 0b98256501cc056162d7c75735846c78 -> 
+  custom:scripting/monoscript/fileName/AngleAxisHandler.cs: 4ded77d92a1a08ee8df32da2b511f330 -> 
+  custom:scripting/monoscript/fileName/ListForSerieAttribute.cs: 360f8c0adb1a538dd7572ba94cdc7455 -> 
+  custom:scripting/monoscript/fileName/PolarCoordEditor.cs: 87b5172bdbb5f953ebeb2a0d6b59d9af -> 
+  custom:scripting/monoscript/fileName/SerieDataExtraFieldAttribute.cs: 90ff88c7ef23c6857bf3d5f695375148 -> 
+  custom:scripting/monoscript/fileName/ListForComponentAttribute.cs: dc882e39c05c94932ff2ac67fd35ea6e -> 
+  custom:scripting/monoscript/fileName/ImageStyleDrawer.cs: 640aa37cb2c06508c040807d14c3fbc3 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ComponentEditorAttribute.cs: 46d11a74a3cb14785702226bcc4bfd42 -> 
+  custom:scripting/monoscript/fileName/LocationDrawer.cs: 9b02c74e8f7d1e1b6da7f408df5bd80d -> 
+  custom:scripting/monoscript/fileName/PraseExternalDataEditor.cs: 7800088403d3eedead5a91ba154c2661 -> 
+  custom:scripting/monoscript/fileName/SerieHandler.cs: f75c0f323010686c70187d85927d168a -> 
+  custom:scripting/monoscript/fileName/CandlestickChart.cs: 85a7a0fe4ce3add0d51590164d307d49 -> 
+  custom:scripting/monoscript/fileName/ListPool.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Settings.cs: dae7c43ae1134aae2df71e7c72501c8a -> 
+  custom:scripting/monoscript/fileName/Axis3DHelper.cs: b5e6620ed3b4c7cd5629140b98a67747 -> 
+  custom:scripting/monoscript/fileName/LabelLine.cs: 064b6aa62a5250693e2bde2eb425913a -> 
+  custom:scripting/monoscript/fileName/Ring.cs: 23c715ca1e26e765bca03fecca4f1c45 -> 
+  custom:scripting/monoscript/fileName/XAxis3D.cs: e1264f7d6166f10f6254f7ee23e78129 -> 
+  custom:scripting/monoscript/fileName/Pie.cs: 086c42bac9f63cfb202fcacb2f53497e -> 
+  custom:scripting/monoscript/fileName/ParallelCoordHandler.cs: 495b1e24682c7c94d6b6dfb3a2c47499 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 55986c1dc57732fc42474056f87c221d -> a8dbffb0923a4ba00f87d06ce22dbfc8
+  custom:scripting/monoscript/fileName/Example80_Polar.cs: 8627bf099094edabffbefb1be9be7e9d -> 
+  custom:scripting/monoscript/fileName/RadarCoordContext.cs: 76d518132ae985e8b93721826758bf92 -> 
+  custom:scripting/monoscript/fileName/XChartsEditor.BarChart.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/SVG.cs: 9eff35d375b5d5fd06286ba5d9ce6547 -> 
+  custom:scripting/monoscript/fileName/AnimationStyleHelper.cs: 6a3edf5fe765d303a2b2879b3b91ac82 -> 
+  custom:scripting/monoscript/fileName/AxisHandler.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/AngleAxis.cs: e356dfeb035f594fd14e76eb72ce3e32 -> 
+  custom:scripting/monoscript/fileName/BaseChart.API.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/AxisTick.cs: b6872560c2e65f99e1504d2362ef2f55 -> 
+  custom:scripting/monoscript/fileName/SerieData.cs: c2420d19b73083a8de3f49b39e98fbd2 -> 
+  custom:scripting/monoscript/fileName/TinkerAgent.cs: 641c07d61d45ecad9130d97b7adbc48a -> 
+  custom:scripting/monoscript/fileName/TextStyle.cs: 77f007202c8986390a712e1bc7297055 -> 
+  custom:scripting/monoscript/fileName/Example04_DataZoom.cs: 888ab341fd7f745da8039291376a1145 -> 
+  custom:scripting/monoscript/fileName/Legend.cs: 83ee67899e64030ad2afa8ef00790810 -> 
+  custom:scripting/monoscript/fileName/SerieEditor.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/TitleTheme.cs: 2cc06a001ba6b5a10dfb486c24852425 -> 
