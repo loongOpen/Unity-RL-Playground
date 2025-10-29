@@ -196,7 +196,7 @@ public class Tinker2Agent : Agent
                 dh=0;///////////////////////////////////////////////////
             else dh=40;*/
 
-            if(tt<300)dh=0;
+            //if(tt<300)dh=0;
             if(tt>510 && tt<600)dh=0;
             if(tt>840)dh=0;
         }
