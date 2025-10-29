@@ -297,6 +297,7 @@ public class Tinker2Agent : Agent
             //if(train)
             EndEpisode();
         }
+        if(train && tt>1000)EndEpisode();
     }
 
 }
