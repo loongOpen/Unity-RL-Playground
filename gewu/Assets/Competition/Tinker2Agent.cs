@@ -196,9 +196,9 @@ public class Tinker2Agent : Agent
                 dh=0;///////////////////////////////////////////////////
             else dh=40;*/
 
-            //if(tt<300)dh=0;
             if(tt>450 && tt<600)dh=0;
             if(tt>840)dh=0;
+            if(keyboard)dh=0;
         }
         
         utotal[Mathf.Abs(idx[0]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
