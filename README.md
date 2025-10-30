@@ -32,9 +32,9 @@
 
 **开放原子大赛：[用格物平台实现机器人1v1踢足球](https://competition.atomgit.com/competitionInfo?id=2722363746f99a7d49c7ca5ee280194a#heading-0-0)，火热报名中**
 
-赛题场景在Assets/Competition目录下，提供了两套例程，TinkerPlay1/TinkerTrain1为基础版，TinkerPlay2/TinkerTrain2为升级版，参赛者需在例程基础上实现机器人自主踢球、摔倒爬起
+赛题场景在Assets/Competition目录下，提供了两套例程，TinkerPlay1、TinkerTrain1为基础版，TinkerPlay2、TinkerTrain2为升级版，参赛者需在例程基础上实现机器人自主踢球、摔倒爬起
 
-双击TinkerPlay1/2打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
+双击TinkerPlay1/2打开进入Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
 
 TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到TinkerPlay1/2所使用的onnx神经网络
 
