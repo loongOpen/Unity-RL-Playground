@@ -30,7 +30,8 @@
 
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和普通大众提供一个高效且友好的强化学习开发环境，适用于各类机器人。[<a href="gewu/Image/gewu-wechat.png">格物平台微信交流群</a>]
 
-- **开放原子大赛：用格物平台实现机器人1v1踢足球[链接](https://competition.atomgit.com/competitionInfo?id=2722363746f99a7d49c7ca5ee280194a#heading-0-0)**
+- **开放原子大赛：[用格物平台实现机器人1v1踢足球](https://competition.atomgit.com/competitionInfo?id=2722363746f99a7d49c7ca5ee280194a#heading-0-0)**
+
 赛题场景在Assets/Competition目录下，提供了两套例程，TinkerPlay1/TinkerTrain1为基础版,TinkerPlay2/TinkerTrain2为升级版
 
 双击TinkerPlay1/2打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
