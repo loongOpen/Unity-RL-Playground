@@ -16,6 +16,8 @@ public class TerrainAgent : Agent
     int tp = 0;
     int tt = 0;
 
+    float stair_height=0.01f;
+    public Transform stair;
     public bool fixbody = false;
     public bool train;
     public bool accelerate;
@@ -101,7 +103,7 @@ public class TerrainAgent : Agent
 
         //if (train && !_isClone) 
         int numrob=8;
-        if(train)numrob=32;
+        if(train)numrob=512;
         if (!_isClone) 
         {
             for (int i = 1; i < numrob; i++)
@@ -121,6 +123,14 @@ public class TerrainAgent : Agent
 
     public override void OnEpisodeBegin()
     {
+        if(train)
+        {
+            Vector3 newScale = stair.localScale;
+            stair_height = Academy.Instance.EnvironmentParameters.GetWithDefault("stair_height", 0.01f);
+            newScale.y = stair_height;
+            stair.localScale = newScale;
+        }
+        
         tp = 0;
         tt = 0;
         for (int i = 0; i< 12; i++) u[i] = 0;

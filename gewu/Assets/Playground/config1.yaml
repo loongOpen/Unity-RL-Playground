@@ -1,0 +1,50 @@
+behaviors:
+  gewu:
+    checkpoint_interval: 400000
+    hyperparameters: {batch_size: 2048, beta: 0.005, beta_schedule: linear, buffer_size: 20480,
+      epsilon: 0.2, epsilon_schedule: linear, lambd: 0.95, learning_rate: 0.0003,
+      learning_rate_schedule: linear, num_epoch: 3}
+    keep_checkpoints: 5
+    max_steps: 5000000
+    network_settings: {deterministic: false, goal_conditioning_type: hyper, hidden_units: 512,
+      normalize: true, num_layers: 3, vis_encode_type: simple}
+    reward_signals:
+      extrinsic:
+        gamma: 0.995
+        network_settings: {deterministic: false, goal_conditioning_type: hyper, hidden_units: 128,
+          normalize: false, num_layers: 2, vis_encode_type: simple}
+        strength: 1.0
+    summary_freq: 20000
+    threaded: false
+    time_horizon: 1000
+    trainer_type: ppo
+
+environment_parameters:
+  stair_height:
+    curriculum:
+      - name: Lesson1 # The '-' is important as this is a list
+        completion_criteria:
+          measure: reward
+          behavior: gewu
+          signal_smoothing: true
+          min_lesson_length: 0
+          threshold: 1000
+        value: 0.01
+      - name: Lesson2 # This is the start of the second lesson
+        completion_criteria:
+          measure: reward
+          behavior: gewu
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 900
+        value: 0.05
+      - name: Lesson3 # This is the start of the second lesson
+        completion_criteria:
+          measure: reward
+          behavior: gewu
+          signal_smoothing: true
+          min_lesson_length: 100
+          threshold: 900
+        value: 0.10
+      - name: Lesson4
+        value: 0.15
