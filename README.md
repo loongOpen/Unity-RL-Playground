@@ -30,6 +30,11 @@
 
 “格物”是由国家地方共建人形机器人创新中心、上海大学、清华大学联合推出的具身智能仿真训练平台。该项目基于Unity ML-Agents工具包构建，旨在为研究人员和普通大众提供一个高效且友好的强化学习开发环境，适用于各类机器人。[<a href="gewu/Image/gewu-wechat.png">格物平台微信交流群</a>]
 
+开放原子大赛：用格物平台实现机器人1v1踢足球[链接](https://competition.atomgit.com/competitionInfo?id=2722363746f99a7d49c7ca5ee280194a#heading-0-0)
+赛题场景在Assets/Competition目录下，提供了两套例程，TinkerPlay1/TinkerTrain1为基础版,TinkerPlay2/TinkerTrain2为升级版
+双击TinkerPlay1/2打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
+TinkerTrain1/2为对应的强化学习训练例程，参赛者需在例程基础上实现机器人自主踢球、摔倒爬起
+
 - **2025.8.14，格物2.0（Gewu Playground 2.0）代码发布**
 
   采用Unity2022（兼容团结引擎），集成主界面UI，行走、导航、操作全覆盖，提供[免安装版](https://pan.baidu.com/s/1HFQvqdZcPr0HI1gCn6BGFg?pwd=adnq)体验
@@ -95,9 +100,7 @@
 
 ## 机器人足球赛例程
 
-在Assets/Playground目录下，双击TinkerPlay.unity打开即为Tinker足球赛，预设为双人对战模式，一人通过键盘上的WASD键控制行走方向、左ctrl键复位机器人，另一人通过键盘上的上下左右键控制行走方向、右ctrl键复位机器人，空格键复位足球
-
-双击LoongPlay.unity打开即为青龙功夫足球，预设为自动对战模式，只当足球卡在角落时可按空格键复位
+在Assets/Playground目录下，双击LoongPlay.unity打开即为青龙功夫足球，预设为自动对战模式，只当足球卡在角落时可按空格键复位
 
 ## 动作重映射与模仿学习例程
 
