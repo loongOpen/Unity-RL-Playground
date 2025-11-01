@@ -75,6 +75,8 @@ TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到Tin
 
 适用于Windows、Linux、MacOS等操作系统，[Mac-Silicon补充说明](macos-setup-Silicon.md)，[Mac-Intelcore补充说明](macos-setup-Intelcore.md)
 
+注：格物平台对电脑配置无特殊要求，普通笔记本电脑均可运行，无独立显卡也可训练，训练速度主要取决于CPU
+
 ## 一、仿真环境安装
 
 1. 搜索安装Unity Hub，注册登录，弹出的Install Unity Editor窗口点击skip跳过，然后点击Agree and get personal edition license免费激活
