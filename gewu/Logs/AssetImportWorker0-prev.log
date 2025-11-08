@@ -15,7 +15,7 @@ D:/4/Unity-RL-Playground/gewu
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-37482
+60220
 Successfully changed project path to: D:/4/Unity-RL-Playground/gewu
 D:/4/Unity-RL-Playground/gewu
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,17 +49,17 @@ D:/4/Unity-RL-Playground/gewu
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [37844]  Target information:
+Player connection [22188]  Target information:
 
-Player connection [37844]  * "[IP] 26.26.26.1 [Port] 0 [Flags] 2 [Guid] 1694698622 [EditorId] 1694698622 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QEA6GBDG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [22188]  * "[IP] 26.26.26.1 [Port] 0 [Flags] 2 [Guid] 3903346074 [EditorId] 3903346074 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QEA6GBDG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [37844]  * "[IP] 192.168.43.197 [Port] 0 [Flags] 2 [Guid] 1694698622 [EditorId] 1694698622 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QEA6GBDG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [22188]  * "[IP] 192.168.43.197 [Port] 0 [Flags] 2 [Guid] 3903346074 [EditorId] 3903346074 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QEA6GBDG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [37844] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [37844] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22188] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [22188] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-Refreshing native plugins compatible for Editor in 134.25 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 109.38 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.61f1c1 (327989805ccf)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/Resources/UnitySubsystems
@@ -75,51 +75,51 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56192
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Program Files/Unity/2022.3.61f1c1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.006901 seconds.
-- Loaded All Assemblies, in  0.400 seconds
+Registered in 0.004007 seconds.
+- Loaded All Assemblies, in  0.356 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 284 ms
+Android Extension - Scanning For ADB Devices 291 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.572 seconds
-Domain Reload Profiling: 972ms
-	BeginReloadAssembly (125ms)
+- Finished resetting the current domain, in  0.618 seconds
+Domain Reload Profiling: 974ms
+	BeginReloadAssembly (94ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (166ms)
-		LoadAssemblies (125ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (161ms)
+		LoadAssemblies (94ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (163ms)
-			TypeCache.Refresh (161ms)
-				TypeCache.ScanAssembly (148ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (572ms)
+		AnalyzeDomain (159ms)
+			TypeCache.Refresh (156ms)
+				TypeCache.ScanAssembly (143ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (619ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (523ms)
+		SetupLoadedEditorAssemblies (570ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (362ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (367ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (107ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -129,53 +129,53 @@ Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.896 seconds
+- Loaded All Assemblies, in  0.780 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.795 seconds
-Domain Reload Profiling: 1690ms
-	BeginReloadAssembly (212ms)
+- Finished resetting the current domain, in  0.827 seconds
+Domain Reload Profiling: 1607ms
+	BeginReloadAssembly (175ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (40ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (45ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (592ms)
-		LoadAssemblies (469ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (505ms)
+		LoadAssemblies (420ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (249ms)
-			TypeCache.Refresh (218ms)
-				TypeCache.ScanAssembly (186ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (795ms)
+		AnalyzeDomain (185ms)
+			TypeCache.Refresh (146ms)
+				TypeCache.ScanAssembly (124ms)
+			ScanForSourceGeneratedMonoScriptInfo (32ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (828ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (619ms)
+		SetupLoadedEditorAssemblies (628ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (39ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (120ms)
-			ProcessInitializeOnLoadAttributes (331ms)
-			ProcessInitializeOnLoadMethodAttributes (137ms)
+			BeforeProcessingInitializeOnLoad (141ms)
+			ProcessInitializeOnLoadAttributes (316ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
 			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 134.49 ms, found 7 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 87.07 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3455 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 98 unused Assets / (11.7 MB). Loaded Objects now: 3855.
-Memory consumption went from 170.9 MB to 159.2 MB.
-Total: 6.523700 ms (FindLiveObjects: 0.351500 ms CreateObjectMapping: 0.095200 ms MarkObjects: 4.570700 ms  DeleteObjects: 1.503700 ms)
+Memory consumption went from 167.1 MB to 155.4 MB.
+Total: 6.047200 ms (FindLiveObjects: 0.229100 ms CreateObjectMapping: 0.123900 ms MarkObjects: 3.320200 ms  DeleteObjects: 2.372400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -193,28 +193,344 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1325809.686668 seconds.
-  path: Assets/Manipulation/g1op.onnx
-  artifactKey: Guid(42dd47b4e9bf448478372f744c347ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Manipulation/g1op.onnx using Guid(42dd47b4e9bf448478372f744c347ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '49c4b42e527bae318571c592fdc8c29e') in 0.018609 seconds
+  Time since last request: 1325996.590069 seconds.
+  path: Assets/Playground
+  artifactKey: Guid(9830928cb318b5b6cb102e5471715358) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground using Guid(9830928cb318b5b6cb102e5471715358) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '38adea40df3d51467299d446adcad763') in 0.003970 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.208735 seconds.
+  path: Assets/Playground/nnmodel
+  artifactKey: Guid(0c0f2482806cb494d80313efd170ea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel using Guid(0c0f2482806cb494d80313efd170ea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f6422d3ed3a060f542c766779469e148') in 0.000654 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.131795 seconds.
+  path: Assets/Playground/nnmodel/g1walk.onnx
+  artifactKey: Guid(56d65b6674c018741a7ed722f564caf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/g1walk.onnx using Guid(56d65b6674c018741a7ed722f564caf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6fb209e3e80cdd12c5d5ed40626a597b') in 0.012336 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 1.936547 seconds.
-  path: Assets/Manipulation/G1OP.unity
-  artifactKey: Guid(8133c023d195999439361f52847fcfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Manipulation/G1OP.unity using Guid(8133c023d195999439361f52847fcfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '7bfa28502a5241c883cd55137df72c8f') in 0.000672 seconds
+  Time since last request: 0.125355 seconds.
+  path: Assets/Playground/nnmodel/go2.onnx
+  artifactKey: Guid(4796beaa543048685a4a2046ceb878a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2.onnx using Guid(4796beaa543048685a4a2046ceb878a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'de1cd21f008e749f8d181ac2e8beffd1') in 0.003818 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 3.420312 seconds.
-  path: Assets/Manipulation/G1OP1.unity
-  artifactKey: Guid(8133c023d195999439361f52847fcfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Manipulation/G1OP1.unity using Guid(8133c023d195999439361f52847fcfc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'e96986deb522479dda5f42bc383a04de') in 0.000915 seconds
+  Time since last request: 0.000118 seconds.
+  path: Assets/Playground/nnmodel/go2bound.onnx
+  artifactKey: Guid(5b67ceedf04d8d7468ebb5eaab171975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2bound.onnx using Guid(5b67ceedf04d8d7468ebb5eaab171975) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1dd5a6087f633ec030ec14fe63fd9dd3') in 0.005054 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Playground/nnmodel/go2pronk.onnx
+  artifactKey: Guid(74630ca29d9a31e4ca6b6577d3ac2bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2pronk.onnx using Guid(74630ca29d9a31e4ca6b6577d3ac2bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1d33d44d199d55ca4007cd04ad19a82f') in 0.003478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Playground/nnmodel/go2w_drive.onnx
+  artifactKey: Guid(a98ec0ebb563fe19489b1584c42a8455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2w_drive.onnx using Guid(a98ec0ebb563fe19489b1584c42a8455) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c7a2597815e8a64fcd545a439abd7a91') in 0.003652 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Playground/nnmodel/go2w_jump.onnx
+  artifactKey: Guid(53199f8ca3ac3dfc0871dc77921f228a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2w_jump.onnx using Guid(53199f8ca3ac3dfc0871dc77921f228a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '03e5bc1e9c83dfc7265951d115767802') in 0.003348 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Playground/nnmodel/go2w_walk.onnx
+  artifactKey: Guid(dc88ee8a9f1bab4488d8a2d71b203a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2w_walk.onnx using Guid(dc88ee8a9f1bab4488d8a2d71b203a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd458fe94e08fbdda53a16573d0833a8e') in 0.003049 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Playground/nnmodel/loong.onnx
+  artifactKey: Guid(22fa177b4b36df4f59b8da5933788534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/loong.onnx using Guid(22fa177b4b36df4f59b8da5933788534) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f3cc583a2a85c7af0d2f19bfe205fd30') in 0.003061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Playground/nnmodel/go2trot.onnx
+  artifactKey: Guid(1f1ded6c9db1364449332648101e08ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/go2trot.onnx using Guid(1f1ded6c9db1364449332648101e08ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6fecdaef0f0d7e6e6526692405e1fc95') in 0.003285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005121 seconds.
+  path: Assets/Playground/nnmodel/openloongwalk.onnx
+  artifactKey: Guid(e8e88c42dc79bb24fb9d70fe1313fecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/openloongwalk.onnx using Guid(e8e88c42dc79bb24fb9d70fe1313fecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ab23c64028de9f879efb70aaef0490dd') in 0.003695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Playground/nnmodel/terrain-lg2k.onnx
+  artifactKey: Guid(e0943aedb188507c8b5e0d98c998ea7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/terrain-lg2k.onnx using Guid(e0943aedb188507c8b5e0d98c998ea7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ca32a74ab6b5d844b9d49f87f25ea7d9') in 0.004688 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Playground/nnmodel/terrain-t12k.onnx
+  artifactKey: Guid(e51418315665f28fdb19cd6f3d40d955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/terrain-t12k.onnx using Guid(e51418315665f28fdb19cd6f3d40d955) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'cb5c4c93538bce0cacdb1aab785dfec8') in 0.003428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Playground/nnmodel/TerrainG1.onnx
+  artifactKey: Guid(c95693ed74fcc204eb41b047b1169a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/TerrainG1.onnx using Guid(c95693ed74fcc204eb41b047b1169a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '56258f22f5b81af45543005a391fb9ae') in 0.003505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Playground/nnmodel/TerrainLoong.onnx
+  artifactKey: Guid(8343caff607f32542804e196d347e502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/TerrainLoong.onnx using Guid(8343caff607f32542804e196d347e502) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e71c09fdee9c7e49a8885f273dc9da54') in 0.003491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Playground/nnmodel/TerrainT1.onnx
+  artifactKey: Guid(dba30ebe7aad8964d92d645775c73895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/TerrainT1.onnx using Guid(dba30ebe7aad8964d92d645775c73895) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '79d796e4971ea1c311717b79e7f802ea') in 0.003718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Playground/nnmodel/TerrainZQ.onnx
+  artifactKey: Guid(89f86f65bc99c4b45a8d122cdba14261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/TerrainZQ.onnx using Guid(89f86f65bc99c4b45a8d122cdba14261) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '211d46b5933e479a316dc4dc69158438') in 0.003815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Playground/nnmodel/tron1drive.onnx
+  artifactKey: Guid(7b4948687276f68448f7b088eeccb633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/tron1drive.onnx using Guid(7b4948687276f68448f7b088eeccb633) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2634d69dcc396188942d675c5093f65e') in 0.004129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Playground/nnmodel/tron1walk.onnx
+  artifactKey: Guid(128891069160aad4280866d36de20a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/tron1walk.onnx using Guid(128891069160aad4280866d36de20a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '5b5241400048a88d48fe6afb71177610') in 0.003152 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Playground/nnmodel/x02jump.onnx
+  artifactKey: Guid(83b4e6760521323419d435cb40cb1f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/x02jump.onnx using Guid(83b4e6760521323419d435cb40cb1f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '182a80aa9f93688ec64d690b348fd9ba') in 0.003853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Playground/nnmodel/tinkerwalk.onnx
+  artifactKey: Guid(2ed4145c1e0f8ce458e13d6599095f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/tinkerwalk.onnx using Guid(2ed4145c1e0f8ce458e13d6599095f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'bd8e5fc48dc3f1fae642014c187953b3') in 0.003754 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Playground/nnmodel/tron1jump.onnx
+  artifactKey: Guid(96f47b50539b1274285e291aa8e29a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/tron1jump.onnx using Guid(96f47b50539b1274285e291aa8e29a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '367d413a7be1337cb608db81acc73d2a') in 0.003578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Playground/nnmodel/openloongjump.onnx
+  artifactKey: Guid(c14e4d26cf8ec2e468cd18e7581bf5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/openloongjump.onnx using Guid(c14e4d26cf8ec2e468cd18e7581bf5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b319f66e4ad436e65fc2acb2093176f2') in 0.003598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Playground/nnmodel/terrain-g12k.onnx
+  artifactKey: Guid(9a761122d90943074b6213ec12c3dabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/terrain-g12k.onnx using Guid(9a761122d90943074b6213ec12c3dabe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a59e1a506c761f5d400022edd2e72252') in 0.004229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Playground/nnmodel/openloongrun.onnx
+  artifactKey: Guid(12a62512aff39e741ab779a525add02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/openloongrun.onnx using Guid(12a62512aff39e741ab779a525add02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '0aba9eea247579fc453a581d97e6b0f0') in 0.003800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Playground/nnmodel/terrain-zq2k.onnx
+  artifactKey: Guid(2d228224272ec4699847901dd7617c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/terrain-zq2k.onnx using Guid(2d228224272ec4699847901dd7617c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f3d71cca8730395bd59a6b06846585e6') in 0.004185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.099618 seconds.
+  path: Assets/Playground/nnmodel/x02run.onnx
+  artifactKey: Guid(0db817a483d03e74fb3f2487bdcb9429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/x02run.onnx using Guid(0db817a483d03e74fb3f2487bdcb9429) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '114b62e4ab652c1b70b15e459aef5475') in 0.003582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Playground/nnmodel/x02walk.onnx
+  artifactKey: Guid(2127e9228a6331e4aabce8d5017f6990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/x02walk.onnx using Guid(2127e9228a6331e4aabce8d5017f6990) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '311e5c8ae1ea3d0a326725a5a6423882') in 0.003658 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.757241 seconds.
+  path: Assets/Playground/nnmodel/g1op.onnx
+  artifactKey: Guid(18fc659782a2a121bb438027707b734f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Playground/nnmodel/g1op.onnx using Guid(18fc659782a2a121bb438027707b734f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '33b5ac6b7cd0fe544f2eb198dc6ebbef') in 0.005556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.426 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.798 seconds
+Domain Reload Profiling: 1224ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (190ms)
+		LoadAssemblies (263ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (799ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (506ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (243ms)
+			ProcessInitializeOnLoadMethodAttributes (121ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 126.27 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (11.6 MB). Loaded Objects now: 3860.
+Memory consumption went from 151.5 MB to 139.8 MB.
+Total: 7.411900 ms (FindLiveObjects: 0.298900 ms CreateObjectMapping: 0.116900 ms MarkObjects: 4.465400 ms  DeleteObjects: 2.528800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -99,6 +99,7 @@ namespace Gewu.Editor
                 EditorGUILayout.Space();
 
                 // 列表项
+                int revoluteIndex = 0; // 用于未打钩关节的序号计数
                 for (int i = 0; i < controller.articulationBodies.Count; i++)
                 {
                     var info = controller.articulationBodies[i];
@@ -110,6 +111,17 @@ namespace Gewu.Editor
                     }
 
                     EditorGUILayout.BeginHorizontal("box");
+                    
+                    // 如果是未打钩的关节（Revolute），显示序号
+                    if (!info.isFixed)
+                    {
+                        revoluteIndex++;
+                        EditorGUILayout.LabelField($"{revoluteIndex}.", GUILayout.Width(30));
+                    }
+                    else
+                    {
+                        EditorGUILayout.LabelField("", GUILayout.Width(30)); // 占位，保持对齐
+                    }
                     
                     // Fixed/Revolute checkbox
                     bool newValue = EditorGUILayout.Toggle(info.isFixed, GUILayout.Width(20));
@@ -130,24 +142,6 @@ namespace Gewu.Editor
 
                     // Object name
                     EditorGUILayout.LabelField(info.name, GUILayout.Width(150));
-
-                    // Feedforward checkbox (放在文字后面)
-                    bool newFeedforward = EditorGUILayout.Toggle(info.feedforward, GUILayout.Width(20));
-                    if (newFeedforward != info.feedforward)
-                    {
-                        info.feedforward = newFeedforward;
-                        EditorUtility.SetDirty(controller);
-                    }
-                    EditorGUILayout.LabelField("FF", GUILayout.Width(30));
-
-                    // Revert checkbox (放在文字后面)
-                    bool newRevert = EditorGUILayout.Toggle(info.revert, GUILayout.Width(20));
-                    if (newRevert != info.revert)
-                    {
-                        info.revert = newRevert;
-                        EditorUtility.SetDirty(controller);
-                    }
-                    EditorGUILayout.LabelField("Revert", GUILayout.Width(50));
 
                     // Object reference
                     EditorGUILayout.ObjectField(info.articulationBody, typeof(ArticulationBody), true);

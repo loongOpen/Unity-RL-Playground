@@ -23,6 +23,7 @@ public class GewunewAgent : Agent
     float[] ut = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float[] utt = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float[] utotal = new float[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    public int[] FF_idx = new int[6]{-3, -4, -5, -9, -10, -11};
     int T1 = 50;
     int T2 = 30;
     int tp0 = 0;
@@ -119,15 +120,6 @@ public class GewunewAgent : Agent
     {
         Time.fixedDeltaTime = 0.01f;
 
-        /*SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset"));
-        SerializedProperty layers = tagManager.FindProperty("layers");
-        SerializedProperty layer = layers.GetArrayElementAtIndex(15);
-        int targetLayer = LayerMask.NameToLayer("robot");
-        layer.stringValue = "robot";
-        tagManager.ApplyModifiedProperties();
-        Physics.IgnoreLayerCollision(15, 15, true);
-        ChangeLayerRecursively(gameObject, 15);*/
-
         if (train && !_isClone) 
         {
             for (int i = 1; i < 14; i++)
@@ -204,236 +196,42 @@ public class GewunewAgent : Agent
             if (fixbody) utotal[i] = 0;
         }
 
-        string name = this.name;
-        int[] idx = new int[6] { 2, 3, 4, 7, 8, 9 };
-        //***********************************************************************************************************************************
-        {
-            // 从 JointSetup 获取 FF 复选框选中的关节索引
-            JointSetup controller = GetComponent<JointSetup>();
-            if (controller != null && controller.articulationBodies != null)
-            {
-                List<int> idxList = new List<int>();
-                foreach (var info in controller.articulationBodies)
-                {
-                    // 只处理 FF 复选框选中的关节
-                    if (info.feedforward && info.articulationBody != null && !info.isFixed)
-                    {
-                        // 找到该关节在 acts 数组中的索引
-                        int actIndex = -1;
-                        for (int i = 0; i < ActionNum; i++)
-                        {
-                            if (acts[i] == info.articulationBody)
-                            {
-                                actIndex = -i;
-                                break;
-                            }
-                        }
-                        // 如果找到了，添加到 idxList（如果 revert 选中则乘以 -1）
-                        if (actIndex <= 0)
-                        {
-                            int finalIndex = info.revert ? -actIndex : actIndex;
-                            idxList.Add(finalIndex);
-                        }
-                    }
-                }
-                // 如果找到了 FF 选中的关节，更新 idx 数组（确保是6个元素）
-                if (idxList.Count > 0)
-                {
-                    idx = new int[6];
-                    int defaultIdx = 0;
-                    int[] defaultValues = new int[6] { -2, -3, -4, -7, -8, -9 };
-                    for (int i = 0; i < 6; i++)
-                    {
-                        if (i < idxList.Count)
-                        {
-                            idx[i] = idxList[i];
-                        }
-                        else
-                        {
-                            // 如果 FF 选中的关节少于6个，用默认值填充
-                            idx[i] = defaultValues[defaultIdx % defaultValues.Length];
-                            defaultIdx++;
-                        }
-                    }
-                }
-                else
-                {
-                    idx = new int[6] { -2, -3, -4, -7, -8, -9 };//biped with 5 joints in each leg, change here if the feedforward is incorrect 
-                }
-            }
-            else
-            {
-                idx = new int[6] { -2, -3, -4, -7, -8, -9 };//biped with 5 joints in each leg, change here if the feedforward is incorrect 
-            }
-        }
-        //***********************************************************************************************************************************
-        if (Robot == StyleR.biped && ActionNum == 10)
-        {
-            if (BipedTargetMotion == StyleB.walk)
-            {
-                //biped walk with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
-                T1 = 30;//gait period
-                dh = 30;//foot stepping height
-                d0 = 0;//knee bend angle
-                float[] ktemp = new float[12] { 10, 10, 30, 50, 30, 10, 10, 30, 50, 30, 0, 0 };//feedback ratio, represents the action space
-                //***************************************************************************************************************************
-                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[Mathf.Abs(idx[0])] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
-                utotal[Mathf.Abs(idx[1])] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
-                utotal[Mathf.Abs(idx[2])] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
-                utotal[Mathf.Abs(idx[3])] += (dh * uf2 + d0) * Mathf.Sign(idx[3]);
-                utotal[Mathf.Abs(idx[4])] -= 2 * (dh * uf2 + d0) * Mathf.Sign(idx[4]);
-                utotal[Mathf.Abs(idx[5])] += (dh * uf2 + d0) * Mathf.Sign(idx[5]);
-                if (!train) SetModel("gewu", BWalkPolicy);
-            }
-            if (BipedTargetMotion == StyleB.run)
-            {
-                //biped run with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
-                T1 = 20;//gait period
-                dh = 20;//foot stepping height
-                d0 = 15;//knee bend angle
-                float[] ktemp = new float[12] { 10, 10, 40, 60, 40, 10, 10, 40, 60, 40, 0, 0 };//feedback ratio, represents the action space
-                //***************************************************************************************************************************
-                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[2] += (dh * uf1 + d0);
-                utotal[3] -= 2 * (dh * uf1 + d0);
-                utotal[4] += (dh * uf1 + d0);
-                utotal[7] += (dh * uf2 + d0);
-                utotal[8] -= 2 * (dh * uf2 + d0);
-                utotal[9] += (dh * uf2 + d0);
-                if (!train) SetModel("gewu", BRunPolicy);
-                if (tt > 900 && kh == 0)
-                {
-                    kh = 2;
-                    ko = 4;
-                    print(222222222222222);
-                }
-            }
-            if (BipedTargetMotion == StyleB.jump)
-            {
-                //biped jump with 5 joints in each leg, modify the following parameters to optimize the gait if needed***********************
-                T1 = 30;//gait period
-                dh = 40;//foot stepping height
-                d0 = 5;//knee bend angle
-                float[] ktemp = new float[12] { 5, 5, 40, 60, 40, 5, 5, 40, 60, 40, 0, 0 };//feedback ratio, represents the action space
-                //***************************************************************************************************************************
-                for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[2] += dh * uff + d0;
-                utotal[3] -= (dh * uff + d0) * 2;
-                utotal[4] += dh * uff + d0;
-                utotal[7] = utotal[2];
-                utotal[8] = utotal[3];
-                utotal[9] = utotal[4];
-                //utotal[7] += dh * uff + d0;
-                //utotal[8] -= (dh * uff + d0) * 2;
-                //utotal[9] += dh * uff + d0;
-                if (!train) SetModel("gewu", BJumpPolicy);
-                if (tt > 900 && kh == 0)
-                {
-                    kh = 2;
-                    print(222222222222222);
-                }
-            }
-        }
-
-        idx = new int[6] { 3, 4, 5, 9, 10, 11 };
-        //***********************************************************************************************************************************
-        {
-            // 从 JointSetup 获取 FF 复选框选中的关节索引
-            JointSetup controller = GetComponent<JointSetup>();
-            if (controller != null && controller.articulationBodies != null)
-            {
-                List<int> idxList = new List<int>();
-                foreach (var info in controller.articulationBodies)
-                {
-                    // 只处理 FF 复选框选中的关节
-                    if (info.feedforward && info.articulationBody != null && !info.isFixed)
-                    {
-                        // 找到该关节在 acts 数组中的索引
-                        int actIndex = -1;
-                        for (int i = 0; i < ActionNum; i++)
-                        {
-                            if (acts[i] == info.articulationBody)
-                            {
-                                actIndex = -(i+1);
-                                break;
-                            }
-                        }
-                        // 如果找到了，添加到 idxList（如果 revert 选中则乘以 -1）
-                        if (actIndex <= 0)
-                        {
-                            int finalIndex = info.revert ? -actIndex : actIndex;
-                            idxList.Add(finalIndex);
-                        }
-                    }
-                }
-                // 如果找到了 FF 选中的关节，更新 idx 数组（确保是6个元素）
-                if (idxList.Count > 0)
-                {
-                    idx = new int[6];
-                    int defaultIdx = 0;
-                    int[] defaultValues = new int[6] { -3, -4, -5, -9, -10, -11 };
-                    for (int i = 0; i < 6; i++)
-                    {
-                        if (i < idxList.Count)
-                        {
-                            idx[i] = idxList[i];
-                            print(idx[i]);
-                        }
-                        else
-                        {
-                            // 如果 FF 选中的关节少于6个，用默认值填充
-                            idx[i] = defaultValues[defaultIdx % defaultValues.Length];
-                            defaultIdx++;
-                        }
-                    }
-                }
-                else
-                {
-                    idx = new int[6] { -3, -4, -5, -9, -10, -11 };//biped with 6 joints in each leg, change here if the feedforward is incorrect 
-                }
-            }
-            else
-            {
-                idx = new int[6] { -3, -4, -5, -9, -10, -11 };//biped with 6 joints in each leg, change here if the feedforward is incorrect 
-            }
-        }
         //***********************************************************************************************************************************
         
-        if (Robot == StyleR.biped && ActionNum == 12)
+        if (Robot == StyleR.biped)
         {
             if (BipedTargetMotion == StyleB.walk)
             {
-                //biped walk with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                //biped walk, modify the following parameters to optimize the gait if needed***********************
                 T1 = 30;//gait period
                 dh = 30;//foot stepping height
                 d0 = 0;//knee bend angle
-                float[] ktemp = new float[12]{ 10, 10, 30, 50, 30, 10,   10, 10, 30, 50, 30, 10 };//feedback ratio, represents the action space
+                float[] ktemp = new float[12]{ 40, 40, 40, 40, 40, 40,   40, 40, 40, 40, 40, 40 };//feedback ratio, represents the action space
                 //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[Mathf.Abs(idx[0]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[0]);
-                utotal[Mathf.Abs(idx[1]) - 1] -= 2 * (dh * uf1 + d0) * Mathf.Sign(idx[1]);
-                utotal[Mathf.Abs(idx[2]) - 1] += (dh * uf1 + d0) * Mathf.Sign(idx[2]);
-                utotal[Mathf.Abs(idx[3]) - 1] += (dh * uf2 + d0) * Mathf.Sign(idx[3]);
-                utotal[Mathf.Abs(idx[4]) - 1] -= 2 * (dh * uf2 + d0) * Mathf.Sign(idx[4]);
-                utotal[Mathf.Abs(idx[5]) - 1] += (dh * uf2 + d0) * Mathf.Sign(idx[5]);
+                utotal[Mathf.Abs(FF_idx[0]) - 1] += (dh * uf1 + d0) * Mathf.Sign(FF_idx[0]);
+                utotal[Mathf.Abs(FF_idx[1]) - 1] -= 2 * (dh * uf1 + d0) * Mathf.Sign(FF_idx[1]);
+                utotal[Mathf.Abs(FF_idx[2]) - 1] += (dh * uf1 + d0) * Mathf.Sign(FF_idx[2]);
+                utotal[Mathf.Abs(FF_idx[3]) - 1] += (dh * uf2 + d0) * Mathf.Sign(FF_idx[3]);
+                utotal[Mathf.Abs(FF_idx[4]) - 1] -= 2 * (dh * uf2 + d0) * Mathf.Sign(FF_idx[4]);
+                utotal[Mathf.Abs(FF_idx[5]) - 1] += (dh * uf2 + d0) * Mathf.Sign(FF_idx[5]);
                 if (!train) SetModel("gewu", BWalkPolicy);
             }
             if (BipedTargetMotion == StyleB.run)
             {
-                //biped run with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                //biped run, modify the following parameters to optimize the gait if needed***********************
                 T1 = 25;//gait period
                 dh = 40;//foot stepping height
                 d0 = 20;//knee bend angle
-                float[] ktemp = new float[12] { 10, 10, 60, 30, 60, 10,    10, 10, 60, 30, 60, 10 };//feedback ratio, represents the action space
+                float[] ktemp = new float[12] { 60, 60, 60, 60, 60, 60,   60, 60, 60, 60, 60, 60 };//feedback ratio, represents the action space
                 //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[2] += (dh * uf1 + d0);
-                utotal[3] -= 2 * (dh * uf1 + d0);
-                utotal[4] += (dh * uf1 + d0);
-                utotal[8] += (dh * uf2 + d0);
-                utotal[9] -= 2 * (dh * uf2 + d0);
-                utotal[10] += (dh * uf2 + d0);
+                utotal[Mathf.Abs(FF_idx[0]) - 1] += (dh * uf1 + d0)* Mathf.Sign(FF_idx[0]);
+                utotal[Mathf.Abs(FF_idx[1]) - 1] -= 2 * (dh * uf1 + d0)* Mathf.Sign(FF_idx[1]);
+                utotal[Mathf.Abs(FF_idx[2]) - 1] += (dh * uf1 + d0)* Mathf.Sign(FF_idx[2]);
+                utotal[Mathf.Abs(FF_idx[3]) - 1] += (dh * uf2 + d0)* Mathf.Sign(FF_idx[3]);
+                utotal[Mathf.Abs(FF_idx[4]) - 1] -= 2 * (dh * uf2 + d0)* Mathf.Sign(FF_idx[4]);
+                utotal[Mathf.Abs(FF_idx[5]) - 1] += (dh * uf2 + d0)* Mathf.Sign(FF_idx[5]);
                 if (!train) SetModel("gewu", BRunPolicy);
                 if (tt > 900 && kh == 0)
                 {
@@ -444,22 +242,22 @@ public class GewunewAgent : Agent
             }
             if (BipedTargetMotion == StyleB.jump)
             {
-                //biped jump with 6 joints in each leg, modify the following parameters to optimize the gait if needed***********************
+                //biped jump, modify the following parameters to optimize the gait if needed***********************
                 T1 = 30;//gait period
                 dh = 50;//foot stepping height
                 d0 = 5;//knee bend angle
-                float[] ktemp = new float[12] { 10, 10, 40, 50, 40, 10,   10, 10, 40, 50, 40, 10 };//feedback ratio, represents the action space
+                float[] ktemp = new float[12] { 40, 40, 40, 40, 40, 40,   40, 40, 40, 40, 40, 40  };//feedback ratio, represents the action space
                 //***************************************************************************************************************************
                 for (int i = 0; i < 12; i++) kb[i] = ktemp[i];
-                utotal[2] += dh * uff + d0;
-                utotal[3] -= (dh * uff + d0) * 2;
-                utotal[4] += dh * uff + d0;
+                utotal[Mathf.Abs(FF_idx[0]) - 1] += (dh * uff + d0)* Mathf.Sign(FF_idx[0]);
+                utotal[Mathf.Abs(FF_idx[1]) - 1] -= (dh * uff + d0) * 2* Mathf.Sign(FF_idx[1]);
+                utotal[Mathf.Abs(FF_idx[2]) - 1] += (dh * uff + d0)* Mathf.Sign(FF_idx[2]);
                 //utotal[8] = utotal[0];
                 //utotal[9] = utotal[3];
                 //utotal[10] = utotal[4];
-                utotal[8] += dh * uff + d0;
-                utotal[9] -= (dh * uff + d0) * 2;
-                utotal[10] += dh * uff + d0;
+                utotal[Mathf.Abs(FF_idx[3]) - 1] += (dh * uff + d0)* Mathf.Sign(FF_idx[3]);
+                utotal[Mathf.Abs(FF_idx[4]) - 1] -= (dh * uff + d0) * 2* Mathf.Sign(FF_idx[4]);
+                utotal[Mathf.Abs(FF_idx[5]) - 1] += (dh * uff + d0)* Mathf.Sign(FF_idx[5]);
                 if (!train) SetModel("gewu", BJumpPolicy);
                 if (tt > 900 && kh == 0)
                 {
@@ -694,7 +492,7 @@ public class GewunewAgent : Agent
         AddReward(reward);
         if (Mathf.Abs(EulerTrans(body.eulerAngles[0])) > 20f || Mathf.Abs(EulerTrans(body.eulerAngles[2])) > 20f || tt>=1000)
         {
-            if(train)EndEpisode();
+            EndEpisode();
         }
     }
 
