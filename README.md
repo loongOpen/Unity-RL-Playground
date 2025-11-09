@@ -44,9 +44,10 @@
 
 TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到TinkerPlay1/2所使用的onnx神经网络
 
-**教程**
-- [Gewu按钮使用教程](https://www.bilibili.com/video/BV1dWkSBMEyv/)
+**使用教程（持续更新）**
+- [1. Gewu按钮使用教程](https://www.bilibili.com/video/BV1dWkSBMEyv/)
 
+**平台更新日志**
 - **2025.8.14，格物2.0（Gewu Playground 2.0）代码发布**
 
   采用Unity2022（兼容团结引擎），集成主界面UI，行走、导航、操作全覆盖，提供[免安装版](https://pan.baidu.com/s/1HFQvqdZcPr0HI1gCn6BGFg?pwd=adnq)体验
