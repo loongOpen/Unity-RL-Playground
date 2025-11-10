@@ -46,6 +46,7 @@ TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到Tin
 
 **使用教程（持续更新）**
 - [1. Gewu按钮使用教程](https://www.bilibili.com/video/BV1dWkSBMEyv/)
+- [2. 使用课程学习训练机器人摔倒起身和爬楼梯（开放原子大赛培训）](https://www.bilibili.com/video/BV1pmkfBCE6D/)
 
 **平台更新日志**
 - **2025.8.14，格物2.0（Gewu Playground 2.0）代码发布**
