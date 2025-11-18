@@ -22,14 +22,13 @@
 
 ---
 ## 3. 操作流程详解
-操作前检查：打开 Unity 项目，确认 Console 无报错（特别是 USD 导入或 MuJoCo 组件初始化异常）。依次执行以下步骤：
-
-1️⃣ 运行前需修改 loong_sim_sdk_release/config/plan_rl.ini 中net配置部分，修改如下 <br>
+操作前检查：打开 Unity 项目，确认 Console 无报错（特别是 USD 导入或 MuJoCo 组件初始化异常）。<br>
+运行前修改: loong_sim_sdk_release/config/plan_rl.ini 中net配置部分，修改如下 <br>
 `netNames= run,run,`<br>
 `netKeys = 41,42` <br>
 `netOnnxs= policy_3052.onnx,policy_3052.onnx,` <br>
 
-启动后台控制脚本（在 `loong_sim_sdk_release/tools/` 目录下运行）<br>
+1️⃣ 启动后台控制脚本（在 `loong_sim_sdk_release/tools/` 目录下运行）<br>
 **./run_driver.sh**          # 启动驱动，打印关节信息（等待格物端数据接通）<br>
 **./run_interface.sh**       # 启动命令通信服务 <br>
 **./run_locomotion.sh**      # 加载腿部运动控制器 <br>
