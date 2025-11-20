@@ -8,7 +8,9 @@
 
 
 <div align="center">
-
+  
+<img src="gewu/Image/robots.png">
+  
 | <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [具身智能小镇](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
 | ---  | --- |
 | <img src="gewu/Image/Gewu2.0.gif" width="400px"> | <img src="gewu/Image/hetu.gif" width="400px"> |
@@ -243,4 +245,4 @@ Go2Train.unity用于策略的训练
 11. 配置完毕，即可通过`mlagents-learn …… `语句进行训练（参考“三”中步骤），本例只需训练40万step（2～5分钟）即可看到效果
 
 **更多机器人URDF模型，见以下仓库：https://github.com/linqi-ye/robot-universe, 集齐了众多机器人URDF模型**
-<img src="gewu/Image/robots.png">
+
