@@ -16,13 +16,7 @@
 
 </div>
 
-<div align="center">
-  
-| <div align="center"> [机器人总动员](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> 自主导航 </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
-| ---  | --- | --- | --- |
-| <img src="gewu/Assets/Menu/image/1.gif" width="180px"> | <img src="gewu/Image/terrain.gif" width="180px"> | <img src="gewu/Assets/Menu/7/7.gif" width="180px"> | <img src="gewu/Image/G1perform.gif" width="180px"> |
 
-</div>
 
 
 
@@ -91,6 +85,14 @@ TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到Tin
 6. 录制视频在菜单栏Window->General->Recorder->Recorder Window，点击Add Recorder->Movie，点击红色三角形即可录制，在下方Path可找到保存路径
 
 也可以不通过主界面打开每个例程：
+
+<div align="center">
+  
+| <div align="center"> [机器人总动员](https://www.bilibili.com/video/BV167RbYxEuG/) </div> | <div align="center">  [全地形行走](https://www.bilibili.com/video/BV1ZDjGz9EJH/) </div> |  <div align="center"> 自主导航 </div> |  <div align="center"> [机器人动画](https://www.bilibili.com/video/BV1maEPzQEtD/?vd_source=25bf190003ff1ebd36e7649d3641e141) </div> |
+| ---  | --- | --- | --- |
+| <img src="gewu/Assets/Menu/image/1.gif" width="180px"> | <img src="gewu/Image/terrain.gif" width="180px"> | <img src="gewu/Assets/Menu/7/7.gif" width="180px"> | <img src="gewu/Image/G1perform.gif" width="180px"> |
+
+</div>
 
 <div align="center">
   
