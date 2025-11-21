@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+
+<robot name="skew_box">
+    <!-- control -->
+    <link name="base_link">
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0"
+                     iyx="0" iyy="0" iyz="0"
+                     izx="0" izy="0" izz="0"/>
+        </inertial>
+    </link>
+
+    <link name="box1">
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.2 0.09"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.2 0.09"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_box1" type="fixed">
+        <origin rpy="0 0 0" xyz="0.075 0 0.045"/>
+        <parent link="base_link"/>
+        <child link="box1"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="box2">
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.2 0.09"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.2 0.09"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_box2" type="fixed">
+        <origin rpy="0 0 0" xyz="-0.075 0 0.045"/>
+        <parent link="base_link"/>
+        <child link="box2"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="box3">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.15 0.01 0.09"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.15 0.01 0.09"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_box3" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0.1 0.045"/>
+        <parent link="base_link"/>
+        <child link="box3"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="box4">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.15 0.01 0.09"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.15 0.01 0.09"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_box4" type="fixed">
+        <origin rpy="0 0 0" xyz="0 -0.1 0.045"/>
+        <parent link="base_link"/>
+        <child link="box4"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="door">
+        <inertial>
+            <mass value="0.1"/>
+<!--            <origin xyz="0.05 0.05 0.05" rpy="0 0 0" />-->
+            <inertia ixx="0.5" ixy="0.5" ixz="0.5" iyy="0.5" iyz="0.5" izz="0.5"/>
+        </inertial>
+
+        <visual>
+            <origin xyz="-0.076 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.16 0.2 0.01"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin xyz="-0.076 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.16 0.2 0.01"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_door" type="revolute">
+        <origin xyz="0.075 0 0.1" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="door"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="0" lower="0" upper="2" velocity="0"/>
+    </joint>
+
+    <link name="h1">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="door_h1" type="fixed">
+        <origin xyz="-0.13 0.05 0.025" rpy="0 0 0"/>
+        <parent link="door"/>
+        <child link="h1"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="h2">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="door_h2" type="fixed">
+        <origin xyz="-0.13 -0.05 0.025" rpy="0 0 0"/>
+        <parent link="door"/>
+        <child link="h2"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="h3">
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.1"/>
+            </geometry>
+            <contact_coefficients mu="1" />
+        </collision>
+    </link>
+    <joint name="h3_h2" type="fixed">
+        <origin xyz="0 0.05 0.025" rpy="1.57079632679 0 0"/>
+        <parent link="h2"/>
+        <child link="h3"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="button">
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.05" length="0.03"/>
+            </geometry>
+            <material name="Red">
+                <color rgba="1.0 0 0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.02" length="0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="button_base" type="prismatic">
+        <origin xyz="0 0 0.07" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="button"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-0.05" upper="0"/>
+    </joint>
+
+
+</robot>

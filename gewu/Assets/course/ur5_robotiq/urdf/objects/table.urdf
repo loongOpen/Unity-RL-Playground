@@ -1,0 +1,40 @@
+<robot name="table">
+  <link name="table">
+
+    <!-- rosrun gazebo_ros spawn_model -file $(rospack find ur5_single_arm_tufts)/urdf/objects/table.urdf -urdf -x 0.5 -y -0 -z 0.75 -model table -->
+    
+    <inertial>
+      <origin xyz="0.23 0 0.755" rpy="0 0 0" />
+      <mass value="1"/>
+      <inertia
+        ixx="0.07" ixy="0.0" ixz="0.0"
+        iyy="0.40" iyz="0.0"
+        izz="0.33"/>
+    </inertial>
+
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 0.05"/>
+      </geometry>
+      <material name="Green">
+        <color rgba="0.039 0.306 0.302 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.5 0.5 0.05"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <gazebo reference="table">
+    <material>Gazebo/Wood</material>
+  </gazebo> 
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+
+</robot>

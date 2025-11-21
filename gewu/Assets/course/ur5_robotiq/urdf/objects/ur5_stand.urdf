@@ -1,0 +1,30 @@
+<robot name="ur5_stand">
+  <link name="ur5_stand">
+
+<inertial>
+    <mass value="1.0" />
+    <origin xyz="0 0 0" />
+      <inertia  ixx="0.0003375" ixy="0.0"  ixz="0.0"  iyy="0.0003375"  iyz="0.0"  izz="0.0003375" />
+</inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh filename="package://objects/mesh/UR_BANCHETTO1.dae" />
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh filename="package://objects/mesh/UR_BANCHETTO1.dae" />
+        </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1.0"/>
+      </material>
+      </visual>
+    </link>
+
+  <gazebo reference="surgical_tool">
+    <material> Gazebo/WoodPallet</material>
+     <mu1>1000</mu1>
+     <mu2>1000</mu2>
+  </gazebo>
+
+</robot>
