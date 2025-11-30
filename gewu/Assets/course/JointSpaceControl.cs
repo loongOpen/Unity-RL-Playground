@@ -34,7 +34,7 @@ public class JointSpaceControl : MonoBehaviour
     public float damping = 10f;
     
     [Header("Trajectory Settings")]
-    public float trajectoryDuration = 1.0f; // 三次多项式轨迹持续时间
+    public float trajectoryDuration = 2.0f; // 三次多项式轨迹持续时间
     
     [Header("Joint Angles")]
     [Tooltip("关节角度数组列表，每行保存所有关节角（度）")]
