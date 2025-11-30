@@ -34,7 +34,7 @@ public class JointSpaceControl : MonoBehaviour
     public float damping = 10f;
     
     [Header("Trajectory Settings")]
-    public float trajectoryDuration = 3.0f; // 三次多项式轨迹持续时间
+    public float trajectoryDuration = 1.0f; // 三次多项式轨迹持续时间
     
     [Header("Joint Angles")]
     [Tooltip("关节角度数组列表，每行保存所有关节角（度）")]
@@ -54,6 +54,7 @@ public class JointSpaceControl : MonoBehaviour
             FindRevoluteJoints();
             InitializeSliders();
         }
+        trajectoryDuration = 1.0f; // 三次多项式轨迹持续时间
     }
     
     void InitializeSliders()
@@ -312,8 +313,8 @@ public class JointSpaceControl : MonoBehaviour
         }
         
         // 轨迹完成，确保精确到达目标角度
-        ApplyRowAnglesImmediate(targetRowIndex, false);
-        isExecutingTrajectory = false;
+        //ApplyRowAnglesImmediate(targetRowIndex, false);
+        //isExecutingTrajectory = false;
         
         Debug.Log($"JointSpaceControl: 三次多项式轨迹执行完成，到达第 {targetRowIndex + 1} 行角度");
     }

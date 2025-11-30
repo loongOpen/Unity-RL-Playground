@@ -11,6 +11,10 @@ using XCharts.Runtime;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.MLAgentsExamples;
+#if UNITY_EDITOR
+using UnityEditor.Recorder;
+using UnityEditor.Recorder.Input;
+#endif
 
 namespace Gewu.Editor
 {
@@ -619,6 +623,122 @@ namespace Gewu.Editor
 
             // 选中地面对象
             Selection.activeGameObject = ground;
+        }
+
+        [MenuItem("Gewu/Recorder", false, 15)]
+        public static void OpenRecorder()
+        {
+            EditorApplication.ExecuteMenuItem("Window/General/Recorder/Recorder Window");
+            
+            EditorApplication.delayCall += () =>
+            {
+                EditorApplication.delayCall += () =>
+                {
+                    AddMovieRecorder();
+                };
+            };
+        }
+        
+        private static void AddMovieRecorder()
+        {
+#if UNITY_EDITOR
+            try
+            {
+                var recorderWindow = EditorWindow.GetWindow<RecorderWindow>();
+                if (recorderWindow == null) return;
+                
+                RecorderController recorderController = null;
+                
+                // 尝试使用静态方法获取
+                var getControllerMethod = typeof(RecorderController).GetMethod("GetController", 
+                    System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+                if (getControllerMethod != null)
+                {
+                    recorderController = getControllerMethod.Invoke(null, null) as RecorderController;
+                }
+                
+                // 通过RecorderWindow字段获取
+                if (recorderController == null)
+                {
+                    var allFields = typeof(RecorderWindow).GetFields(
+                        System.Reflection.BindingFlags.NonPublic | 
+                        System.Reflection.BindingFlags.Instance | 
+                        System.Reflection.BindingFlags.Public);
+                    
+                    foreach (var field in allFields)
+                    {
+                        var value = field.GetValue(recorderWindow);
+                        if (value is RecorderController)
+                        {
+                            recorderController = value as RecorderController;
+                            break;
+                        }
+                    }
+                }
+                
+                // 通过RecorderWindow属性获取
+                if (recorderController == null)
+                {
+                    var allProperties = typeof(RecorderWindow).GetProperties(
+                        System.Reflection.BindingFlags.NonPublic | 
+                        System.Reflection.BindingFlags.Instance | 
+                        System.Reflection.BindingFlags.Public);
+                    
+                    foreach (var property in allProperties)
+                    {
+                        try
+                        {
+                            var value = property.GetValue(recorderWindow);
+                            if (value is RecorderController)
+                            {
+                                recorderController = value as RecorderController;
+                                break;
+                            }
+                        }
+                        catch { }
+                    }
+                }
+                
+                // 从现有资源创建
+                if (recorderController == null)
+                {
+                    var guids = AssetDatabase.FindAssets("t:RecorderControllerSettings");
+                    if (guids.Length > 0)
+                    {
+                        var settingsPath = AssetDatabase.GUIDToAssetPath(guids[0]);
+                        var existingSettings = AssetDatabase.LoadAssetAtPath<RecorderControllerSettings>(settingsPath);
+                        if (existingSettings != null)
+                        {
+                            recorderController = new RecorderController(existingSettings);
+                        }
+                    }
+                }
+                
+                // 创建新的设置
+                if (recorderController == null)
+                {
+                    var newSettings = ScriptableObject.CreateInstance<RecorderControllerSettings>();
+                    recorderController = new RecorderController(newSettings);
+                }
+                
+                if (recorderController == null || recorderController.Settings == null) return;
+                
+                // 检查是否已存在Movie Recorder
+                var settings = recorderController.Settings;
+                foreach (var recorder in settings.RecorderSettings)
+                {
+                    if (recorder is MovieRecorderSettings) return;
+                }
+                
+                // 添加Movie Recorder（使用默认设置）
+                var movieRecorder = ScriptableObject.CreateInstance<MovieRecorderSettings>();
+                movieRecorder.name = "Movie Recorder";
+                movieRecorder.Enabled = true;
+                settings.AddRecorderSettings(movieRecorder);
+                recorderWindow.Repaint();
+            }
+            catch { }
+#endif
         }
 
         [MenuItem("Gewu/Plot", false, 20)]
