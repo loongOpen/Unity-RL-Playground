@@ -436,7 +436,13 @@ public class RobotIK : MonoBehaviour
             return;
         }
         
-        // 如果 tar 未激活，先激活它
+        // 只有在 Enable IK 被选中时，才允许移动 tar
+        if (enableIKToggle == null || !enableIKToggle.isOn)
+        {
+            return; // 如果 Enable IK 未选中，不激活也不移动 tar
+        }
+        
+        // 如果 tar 未激活，先激活它（只有在 Enable IK 选中时才会执行到这里）
         if (!tar.gameObject.activeSelf)
         {
             tar.gameObject.SetActive(true);

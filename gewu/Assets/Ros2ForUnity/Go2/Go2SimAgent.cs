@@ -15,7 +15,6 @@ public class Go2SimAgent : Agent
     int tt = 0;
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     float uf1 = 0;
     float uf2 = 0;
     float[] u = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -79,7 +78,6 @@ public class Go2SimAgent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
     }
 
 
@@ -274,8 +272,6 @@ public class Go2SimAgent : Agent
     }
     void FixedUpdate()
     {
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
         Vector3 randomForce=new Vector3(Random.Range(-1f, 1f),0,Random.Range(-1f, 1f));
         //if(Random.Range(0, 100)==1)arts[0].AddForce(10*randomForce, ForceMode.Impulse);
 

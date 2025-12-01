@@ -17,7 +17,6 @@ public class G1autoAgent : Agent
     public IKGauto g1ik;
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     public float vr = 0;
     public float wr = 0;
     public float cr = 0;
@@ -72,7 +71,6 @@ public class G1autoAgent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
     }
 
 
@@ -228,9 +226,6 @@ public class G1autoAgent : Agent
 
     void FixedUpdate()
     {
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
-
         tp++;
         tq++;
         tt++;

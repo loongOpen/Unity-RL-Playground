@@ -21,7 +21,6 @@ public class LoongAgent : Agent
 
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     float uff = 0;
     float uf1 = 0;
     float uf2 = 0;
@@ -80,8 +79,6 @@ public class LoongAgent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
-       
     }
 
 
@@ -307,10 +304,6 @@ public class LoongAgent : Agent
             wait=false;
             tw=0;
         }
-
-        
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
  
         tp++;
         if (tp > 0 && tp <= T1)

@@ -19,7 +19,6 @@ public class Tinker2Agent : Agent
     public bool keyboard = false;
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     float uf1 = 0;
     float uf2 = 0;
     float[] u = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -65,8 +64,6 @@ public class Tinker2Agent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
-       
     }
 
     private bool _isClone = false; 
@@ -228,10 +225,6 @@ public class Tinker2Agent : Agent
 
     void FixedUpdate()
     {
-        
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
- 
         tp++;
         if (tp > 0 && tp <= T1)
         {

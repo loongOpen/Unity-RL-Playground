@@ -15,7 +15,6 @@ public class GewuAgent : Agent
     int tt = 0;
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     float uff = 0;
     float uf1 = 0;
     float uf2 = 0;
@@ -113,7 +112,6 @@ public class GewuAgent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
     }
 
     private bool _isClone = false; 
@@ -558,9 +556,6 @@ public class GewuAgent : Agent
 
     void FixedUpdate()
     {
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
-
         tp++;
         tq++;
         tt++;

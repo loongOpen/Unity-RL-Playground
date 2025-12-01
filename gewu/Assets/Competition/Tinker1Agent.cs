@@ -22,7 +22,6 @@ public class Tinker1Agent : Agent
     public Rigidbody ball;
     public bool fixbody = false;
     public bool train;
-    public bool accelerate;
     public int ObservationNum;
     public int ActionNum;
 
@@ -60,7 +59,6 @@ public class Tinker1Agent : Agent
         rot0 = body.rotation;
         arts[0].GetJointPositions(P0);
         arts[0].GetJointVelocities(W0);
-        accelerate = train;
     }
 
 
@@ -244,9 +242,6 @@ public class Tinker1Agent : Agent
             vr = currentVr;
             wr = currentWr;
         }
-        
-        if (accelerate) Time.timeScale = 20;
-        if (!accelerate) Time.timeScale = 1;
         tp++;
         int T1 = 25;
         if (tp > 0 && tp <= T1)
