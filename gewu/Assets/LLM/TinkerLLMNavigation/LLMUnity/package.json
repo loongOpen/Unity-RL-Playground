@@ -1,0 +1,69 @@
+{
+  "name": "ai.undream.llm",
+  "version": "2.5.2",
+  "displayName": "LLM for Unity",
+  "description": "LLM for Unity allows to run and distribute Large Language Models (LLMs) in the Unity engine.",
+  "unity": "2022.3",
+  "unityRelease": "16f1",
+  "documentationUrl": "https://undream.ai/LLMUnity",
+  "testables": [
+    "undream.llmunity.Runtime.Tests"
+  ],
+  "keywords": [
+    "llm",
+    "large language model",
+    "Llama",
+    "GPT",
+    "ChatGPT",
+    "artificial intelligence",
+    "AI",
+    "NPC",
+    "conversation",
+    "dialogue",
+    "chat",
+    "chatbot",
+    "generative"
+   ],
+   "samples": [
+    {
+      "displayName": "SimpleInteraction",
+      "description": "Simple interaction with an AI character",
+      "path": "Samples~/SimpleInteraction"
+    },
+    {
+      "displayName": "MultipleCharacters",
+      "description": "Simple interaction using multiple AI characters",
+      "path": "Samples~/MultipleCharacters"
+    },
+    {
+      "displayName": "FunctionCalling",
+      "description": "Function calling sample with structured output from the LLM",
+      "path": "Samples~/FunctionCalling"
+    },
+    {
+      "displayName": "RAG",
+      "description": "Semantic search using a Retrieval Augmented Generation (RAG) system. Includes example using a RAG to feed information to a LLM",
+      "path": "Samples~/RAG"
+    },
+    {
+      "displayName": "MobileDemo",
+      "description": "Example mobile app for Android / iOS with an initial screen displaying the model download progress",
+      "path": "Samples~/MobileDemo"
+    },
+    {
+      "displayName": "ChatBot",
+      "description": "Interaction between a player and a AI with a UI similar to a messaging app",
+      "path": "Samples~/ChatBot"
+    },
+    {
+      "displayName": "KnowledgeBaseGame",
+      "description": "Simple detective game using a knowledge base to provide information to the LLM.",
+      "path": "Samples~/KnowledgeBaseGame"
+    }
+   ],
+   "author": {
+    "name": "Undream AI",
+    "email": "hello@undream.ai",
+    "url": "https://undream.ai"
+  }
+}
