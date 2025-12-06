@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<robot name="pointfoot_description" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:arg name="use_gazebo" default="false"/>
+    <xacro:arg name="use_support" default="false"/>
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/const.xacro"/>
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/materials.xacro"/>
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/leg.xacro"/>
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/gazebo.xacro"/>
+    <xacro:include filename="$(find robot_description)/pointfoot/WF_TRON1A/xacro/ros2_control_interface.xacro"/>
+
+    <!-- Rollover Protection mode will add an additional stick on the top, use "true" or "false" to switch it. -->
+    <xacro:property name="rolloverProtection" value="false"/>
+
+    <!-- Debug mode will hung up the robot, use "true" or "false" to switch it. -->
+    <xacro:if value="$(arg use_support)">
+        <link name="world"/>
+        <joint name="base_static_Joint" type="fixed">
+            <origin rpy="0 0 0" xyz="0 0 0.3"/>
+            <parent link="world"/>
+            <child link="base_Link"/>
+        </joint>
+    </xacro:if> 
+
+    <link name="base_Link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="$(find robot_description)/pointfoot/WF_TRON1A/meshes/base_Link.STL" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.033 0 -0.07"/>
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <origin rpy="0 0 0" xyz="${base_com_x} ${base_com_y} ${base_com_z}"/>
+            <mass value="${base_mass}"/>
+            <inertia
+                ixx="${base_ixx}" ixy="${base_ixy}" ixz="${base_ixz}"
+                iyy="${base_iyy}" iyz="${base_iyz}"
+                izz="${base_izz}"/>  
+        </inertial>
+
+    </link>
+
+    <joint name="imu_Joint" type="fixed">
+        <parent link="base_Link"/>
+        <child link="imu_Link"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+
+    <link name="imu_Link">
+        <inertial>
+            <mass value="0.001"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.015 0.015 0.004"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size=".001 .001 .001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <xacro:leg name="L" mirror="1" mirror_STL="True">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </xacro:leg>
+
+    <xacro:leg name="R" mirror="-1" mirror_STL="False">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </xacro:leg>
+
+   <xacro:if value="$(arg use_gazebo)">
+        <ros2_control name="pointfoot_gazebo_ros2_control_settings" type="system">
+            <hardware>
+                <plugin>pointfoot_gazebo/PointFootHWSim</plugin>
+            </hardware>
+            <xacro:leg_ros2_control_interface leg_name="L"/>
+            <xacro:leg_ros2_control_interface leg_name="R"/>
+            <sensor name="imu_sensor">
+                <frame_id name="imu_Link"/>
+                <state_interface name="orientation.x"/>
+                <state_interface name="orientation.y"/>
+                <state_interface name="orientation.z"/>
+                <state_interface name="orientation.w"/>
+                <state_interface name="angular_velocity.x"/>
+                <state_interface name="angular_velocity.y"/>
+                <state_interface name="angular_velocity.z"/>
+                <state_interface name="linear_acceleration.x"/>
+                <state_interface name="linear_acceleration.y"/>
+                <state_interface name="linear_acceleration.z"/>
+            </sensor>
+        </ros2_control>
+        
+        <gazebo>
+            <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+                <robot_sim_type>pointfoot_gazebo/PointFootHWSim</robot_sim_type>
+                <parameters>$(find pointfoot_gazebo)/config/pointfoot_gazebo.yaml</parameters>
+            </plugin>
+        </gazebo> 
+    </xacro:if>
+
+    <!-- ****************************************** D435 Camera ******************************************************** -->
+    <!-- <joint name="d435_joint" type="fixed">
+        <origin rpy="0 1.063778179 0" xyz="0.13223 0.0222 -0.26826"/>
+        <parent link="base_Link"/>
+        <child link="d435_Link"/>
+    </joint>
+    <link name="d435_Link">
+        <visual>
+            <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0.0149 -0.0175 0"/>
+            <geometry>
+                <mesh filename="$(find robot_description)/pointfoot/meshes_camera/d435.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 -0.0175 0"/>
+            <geometry>
+                <box size="0.02505 0.09 0.025"/>
+            </geometry>
+        </collision>
+    </link> -->
+    <!-- ****************************************** D435 Camera END ******************************************************** -->
+
+</robot>

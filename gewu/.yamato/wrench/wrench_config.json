@@ -1,0 +1,27 @@
+{
+  "project_path": "Tools/CI",
+  "schema_version": 0.5,
+  "packages": {
+    "com.unity.ml-agents": {
+      "directory": "com.unity.ml-agents/",
+      "prePackCommands": [],
+      "preTestCommands": {},
+      "InternalOnly": false,
+      "NeverPublish": false
+    }
+  },
+  "releasing_packages": [
+    "com.unity.ml-agents"
+  ],
+  "jobs_to_monitor": {
+    "com.unity.ml-agents": [
+      ".yamato/wrench/api-validation-jobs.yml#api_validation_-_ml-agents_-_2023_2_-_windows",
+      ".yamato/wrench/preview-a-p-v.yml#all_preview_apv_jobs",
+      ".yamato/wrench/promotion-jobs.yml#publish_dry_run_ml-agents"
+    ]
+  },
+  "publishing_job": ".yamato/wrench/promotion-jobs.yml#publish_ml-agents",
+  "branch_pattern": "ReleaseSlash",
+  "wrench_version": "0.10.5.0",
+  "pvp_exemption_path": ".yamato/wrench/pvp-exemptions.json"
+}
