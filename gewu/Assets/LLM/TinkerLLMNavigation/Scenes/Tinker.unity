@@ -448,10 +448,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 109482948}
-  - component: {fileID: 109482947}
   - component: {fileID: 109482946}
   - component: {fileID: 109482945}
   - component: {fileID: 109482949}
+  - component: {fileID: 109482950}
   m_Layer: 6
   m_Name: TinkerPro
   m_TagString: Untagged
@@ -505,33 +505,6 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 1
   m_ObservableAttributeHandling: 0
---- !u!114 &109482947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109482944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb5e040811aa8789185e615ce4d1afed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  wasd: 1
-  keyboard: 1
-  fixbody: 0
-  train: 0
-  accelerate: 0
-  ObservationNum: 0
-  ActionNum: 0
-  vr: 0
-  wr: 0
-  cr: 0
-  disturb: 0
 --- !u!4 &109482948
 Transform:
   m_ObjectHideFlags: 0
@@ -560,9 +533,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ed94305063e404584067c2708df84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 109482947}
+  agent: {fileID: 109482950}
   navAgent: {fileID: 3919608749392232226}
   robotBody: {fileID: 1080975090}
+--- !u!114 &109482950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109482944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b466be690e6666184ef0958d7380a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  wasd: 1
+  keyboard: 1
+  fixbody: 0
+  train: 0
+  ObservationNum: 0
+  ActionNum: 0
+  vr: 0
+  wr: 0
+  cr: 0
+  disturb: 0
 --- !u!1 &136199553
 GameObject:
   m_ObjectHideFlags: 8
@@ -3201,12 +3200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306edf06fbf703b459f132c6c9664d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1080975090}
-  distance: 0
-  scrollSpeed: 10
-  RotateSpeed: 2
-  minVerticalAngle: -80
-  maxVerticalAngle: 80
 --- !u!1 &781616824
 GameObject:
   m_ObjectHideFlags: 0
