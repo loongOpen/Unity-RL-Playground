@@ -43,13 +43,18 @@ namespace Gewu.Editor
 
             EditorGUILayout.Space();
             
-            // Statistics - Get revolute joints for both statistics and joint angles section
+            // Statistics - Get revolute and prismatic joints for both statistics and joint angles section
             var revoluteJoints = controller.GetRevoluteJoints();
+            var prismaticJoints = controller.GetPrismaticJoints();
+            var movableJoints = controller.GetMovableJoints();
             int revoluteCount = revoluteJoints.Count;
+            int prismaticCount = prismaticJoints.Count;
+            int movableCount = movableJoints.Count;
             
             EditorGUILayout.BeginHorizontal("box");
             EditorGUILayout.LabelField($"Total: {controller.articulationBodies.Count}", EditorStyles.boldLabel);
             EditorGUILayout.LabelField($"Revolute: {revoluteCount}", EditorStyles.miniLabel);
+            EditorGUILayout.LabelField($"Prismatic: {prismaticCount}", EditorStyles.miniLabel);
             EditorGUILayout.EndHorizontal();
             
             EditorGUILayout.Space();
@@ -162,7 +167,7 @@ namespace Gewu.Editor
             EditorGUILayout.LabelField("Joint Initial Angles", EditorStyles.boldLabel);
             
             EditorGUILayout.BeginHorizontal("box");
-            EditorGUILayout.LabelField($"Revolute Joints: {revoluteCount}", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField($"Movable Joints: {movableCount} (Revolute: {revoluteCount}, Prismatic: {prismaticCount})", EditorStyles.boldLabel);
             if (GUILayout.Button("Refresh Angles", GUILayout.Width(120)))
             {
                 controller.InitializeJointAnglesList();
@@ -170,23 +175,39 @@ namespace Gewu.Editor
             }
             EditorGUILayout.EndHorizontal();
             
-            if (revoluteCount > 0)
+            if (movableCount > 0)
             {
-                if (controller.initialJointAngles == null || controller.initialJointAngles.Count != revoluteCount)
+                if (controller.initialJointAngles == null || controller.initialJointAngles.Count != movableCount)
                 {
-                    EditorGUILayout.HelpBox($"Joint angles list count ({controller.initialJointAngles?.Count ?? 0}) doesn't match revolute joints count ({revoluteCount}). Click 'Refresh Angles' to update.", MessageType.Warning);
+                    EditorGUILayout.HelpBox($"Joint angles list count ({controller.initialJointAngles?.Count ?? 0}) doesn't match movable joints count ({movableCount}). Click 'Refresh Angles' to update.", MessageType.Warning);
                 }
                 else
                 {
                     EditorGUILayout.BeginVertical("box");
-                    EditorGUILayout.LabelField("Initial Joint Angles (degrees):", EditorStyles.miniLabel);
+                    EditorGUILayout.LabelField("Initial Joint Angles/Positions:", EditorStyles.miniLabel);
                     
-                    for (int i = 0; i < Mathf.Min(revoluteCount, controller.initialJointAngles.Count); i++)
+                    for (int i = 0; i < Mathf.Min(movableCount, controller.initialJointAngles.Count); i++)
                     {
                         EditorGUILayout.BeginHorizontal();
-                        string jointName = revoluteJoints[i] != null ? revoluteJoints[i].gameObject.name : "Unknown";
-                        EditorGUILayout.LabelField($"{i + 1}. {jointName}:", GUILayout.Width(200));
+                        string jointName = movableJoints[i] != null ? movableJoints[i].gameObject.name : "Unknown";
+                        string jointType = "";
+                        string unit = "";
+                        if (movableJoints[i] != null)
+                        {
+                            if (movableJoints[i].jointType == ArticulationJointType.RevoluteJoint)
+                            {
+                                jointType = " (Revolute)";
+                                unit = " deg";
+                            }
+                            else if (movableJoints[i].jointType == ArticulationJointType.PrismaticJoint)
+                            {
+                                jointType = " (Prismatic)";
+                                unit = " m";
+                            }
+                        }
+                        EditorGUILayout.LabelField($"{i + 1}. {jointName}{jointType}:", GUILayout.Width(250));
                         controller.initialJointAngles[i] = EditorGUILayout.FloatField(controller.initialJointAngles[i]);
+                        EditorGUILayout.LabelField(unit, GUILayout.Width(30));
                         EditorGUILayout.EndHorizontal();
                     }
                     
@@ -195,7 +216,7 @@ namespace Gewu.Editor
             }
             else
             {
-                EditorGUILayout.HelpBox("No revolute joints found. Joint angles will be initialized when joints are available.", MessageType.Info);
+                EditorGUILayout.HelpBox("No revolute or prismatic joints found. Joint angles will be initialized when joints are available.", MessageType.Info);
             }
         }
 

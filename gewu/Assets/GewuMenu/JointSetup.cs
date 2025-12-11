@@ -26,7 +26,7 @@ namespace Gewu
         public List<ArticulationBodyInfo> articulationBodies = new List<ArticulationBodyInfo>();
         
         [Header("Joint Initial Angles")]
-        [Tooltip("初始关节角列表（度）。按找到的RevoluteJoint顺序对应。如果列表为空或数量不匹配，将使用当前关节角度作为初始值。")]
+        [Tooltip("初始关节角列表（度）。按找到的RevoluteJoint和PrismaticJoint顺序对应。RevoluteJoint使用角度（度），PrismaticJoint使用位置（米）。如果列表为空或数量不匹配，将使用当前关节角度/位置作为初始值。")]
         public List<float> initialJointAngles = new List<float>();
         
         [Header("Joint Settings")]
@@ -34,8 +34,10 @@ namespace Gewu
         public float stiffness = 2000f;
         public float damping = 200f;
         
-        // 找到的旋转关节列表
+        // 找到的旋转关节和移动关节列表
         private List<ArticulationBody> revoluteJoints = new List<ArticulationBody>();
+        private List<ArticulationBody> prismaticJoints = new List<ArticulationBody>();
+        private List<ArticulationBody> movableJoints = new List<ArticulationBody>();
 
         private void OnEnable()
         {
@@ -217,11 +219,13 @@ namespace Gewu
         }
         
         /// <summary>
-        /// 获取所有RevoluteJoint
+        /// 获取所有RevoluteJoint和PrismaticJoint
         /// </summary>
         void FindRevoluteJoints()
         {
             revoluteJoints.Clear();
+            prismaticJoints.Clear();
+            movableJoints.Clear();
             if (articulationBodies == null) return;
             
             foreach (var info in articulationBodies)
@@ -231,6 +235,12 @@ namespace Gewu
                     if (info.articulationBody.jointType == ArticulationJointType.RevoluteJoint)
                     {
                         revoluteJoints.Add(info.articulationBody);
+                        movableJoints.Add(info.articulationBody);
+                    }
+                    else if (info.articulationBody.jointType == ArticulationJointType.PrismaticJoint)
+                    {
+                        prismaticJoints.Add(info.articulationBody);
+                        movableJoints.Add(info.articulationBody);
                     }
                 }
             }
@@ -243,30 +253,38 @@ namespace Gewu
         {
             FindRevoluteJoints();
             
-            if (revoluteJoints.Count == 0)
+            if (movableJoints.Count == 0)
             {
                 initialJointAngles.Clear();
                 return;
             }
             
             // 如果列表为空或数量不匹配，自动初始化
-            if (initialJointAngles == null || initialJointAngles.Count != revoluteJoints.Count)
+            if (initialJointAngles == null || initialJointAngles.Count != movableJoints.Count)
             {
                 initialJointAngles = new List<float>();
-                for (int i = 0; i < revoluteJoints.Count; i++)
+                for (int i = 0; i < movableJoints.Count; i++)
                 {
-                    if (revoluteJoints[i] != null)
+                    if (movableJoints[i] != null)
                     {
-                        // 获取当前关节角度作为初始值
-                        float currentAngle = 0f;
-                        if (revoluteJoints[i].jointPosition.dofCount > 0)
+                        float currentValue = 0f;
+                        if (movableJoints[i].jointPosition.dofCount > 0)
                         {
-                            currentAngle = revoluteJoints[i].jointPosition[0] * Mathf.Rad2Deg;
+                            if (movableJoints[i].jointType == ArticulationJointType.RevoluteJoint)
+                            {
+                                // RevoluteJoint: 转换为度
+                                currentValue = movableJoints[i].jointPosition[0] * Mathf.Rad2Deg;
+                            }
+                            else if (movableJoints[i].jointType == ArticulationJointType.PrismaticJoint)
+                            {
+                                // PrismaticJoint: 直接使用米
+                                currentValue = movableJoints[i].jointPosition[0];
+                            }
                         }
-                        initialJointAngles.Add(currentAngle);
+                        initialJointAngles.Add(currentValue);
                     }
                 }
-                Debug.Log($"JointSetup: 已自动初始化 {initialJointAngles.Count} 个关节的初始角度");
+                Debug.Log($"JointSetup: 已自动初始化 {initialJointAngles.Count} 个关节的初始角度/位置 (Revolute: {revoluteJoints.Count}, Prismatic: {prismaticJoints.Count})");
             }
         }
         
@@ -277,14 +295,14 @@ namespace Gewu
         {
             FindRevoluteJoints();
             
-            if (revoluteJoints.Count == 0)
+            if (movableJoints.Count == 0)
             {
-                Debug.LogWarning("JointSetup: 未找到任何旋转关节，无法初始化关节角度");
+                Debug.LogWarning("JointSetup: 未找到任何旋转关节或移动关节，无法初始化关节角度/位置");
                 return;
             }
             
             // 如果初始角度列表为空或数量不匹配，自动初始化
-            if (initialJointAngles == null || initialJointAngles.Count != revoluteJoints.Count)
+            if (initialJointAngles == null || initialJointAngles.Count != movableJoints.Count)
             {
                 InitializeJointAnglesList();
             }
@@ -300,17 +318,25 @@ namespace Gewu
         {
             if (initialJointAngles == null || initialJointAngles.Count == 0)
             {
-                Debug.LogWarning("JointSetup: 初始关节角度列表为空，无法设置初始角度");
+                Debug.LogWarning("JointSetup: 初始关节角度列表为空，无法设置初始角度/位置");
                 return;
             }
             
-            for (int i = 0; i < Mathf.Min(initialJointAngles.Count, revoluteJoints.Count); i++)
+            for (int i = 0; i < Mathf.Min(initialJointAngles.Count, movableJoints.Count); i++)
             {
-                if (revoluteJoints[i] != null)
+                if (movableJoints[i] != null)
                 {
-                    float initialAngle = initialJointAngles[i];
-                    SetJointTargetDeg(revoluteJoints[i], initialAngle);
-                    Debug.Log($"JointSetup: 设置关节 {revoluteJoints[i].gameObject.name} 初始角度为 {initialAngle} 度");
+                    float initialValue = initialJointAngles[i];
+                    if (movableJoints[i].jointType == ArticulationJointType.RevoluteJoint)
+                    {
+                        SetJointTargetDeg(movableJoints[i], initialValue);
+                        Debug.Log($"JointSetup: 设置关节 {movableJoints[i].gameObject.name} 初始角度为 {initialValue} 度");
+                    }
+                    else if (movableJoints[i].jointType == ArticulationJointType.PrismaticJoint)
+                    {
+                        SetJointTargetMeter(movableJoints[i], initialValue);
+                        Debug.Log($"JointSetup: 设置关节 {movableJoints[i].gameObject.name} 初始位置为 {initialValue} 米");
+                    }
                 }
             }
         }
@@ -328,12 +354,42 @@ namespace Gewu
         }
         
         /// <summary>
+        /// 设置关节目标位置（米）
+        /// </summary>
+        void SetJointTargetMeter(ArticulationBody joint, float positionMeter)
+        {
+            var drive = joint.xDrive;
+            drive.stiffness = stiffness;
+            drive.damping = damping;
+            drive.target = positionMeter;
+            joint.xDrive = drive;
+        }
+        
+        /// <summary>
         /// 获取RevoluteJoint列表（用于Editor）
         /// </summary>
         public List<ArticulationBody> GetRevoluteJoints()
         {
             FindRevoluteJoints();
             return new List<ArticulationBody>(revoluteJoints);
+        }
+        
+        /// <summary>
+        /// 获取PrismaticJoint列表（用于Editor）
+        /// </summary>
+        public List<ArticulationBody> GetPrismaticJoints()
+        {
+            FindRevoluteJoints();
+            return new List<ArticulationBody>(prismaticJoints);
+        }
+        
+        /// <summary>
+        /// 获取所有可移动关节列表（用于Editor）
+        /// </summary>
+        public List<ArticulationBody> GetMovableJoints()
+        {
+            FindRevoluteJoints();
+            return new List<ArticulationBody>(movableJoints);
         }
     }
 }
