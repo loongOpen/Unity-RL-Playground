@@ -133,7 +133,20 @@ namespace Assimp
             {
                 Debug.Log(string.Format("Assimp does not support platform: {0}", Application.platform.ToString()));
                 s_assimpAvailable = false;
+                s_triedLoading = true;
                 return;
+            }
+
+            // Check if library paths exist (especially important for Linux Editor)
+            if (Application.platform == RuntimePlatform.LinuxEditor)
+            {
+                if (native64LibPath != null && !Directory.Exists(native64LibPath))
+                {
+                    Debug.LogWarning($"Assimp: Native library path does not exist: {native64LibPath}. Assimp features will be unavailable.");
+                    s_assimpAvailable = false;
+                    s_triedLoading = true;
+                    return;
+                }
             }
 
             //Set resolver properties, null will clear the property
@@ -144,7 +157,26 @@ namespace Assimp
             libInstance.ThrowOnLoadFailure = false;
 
             //Try and load the native library, if failed we won't get an exception
-            bool success = libInstance.LoadLibrary();
+            bool success = false;
+            try
+            {
+                success = libInstance.LoadLibrary();
+            }
+            catch (System.DllNotFoundException ex)
+            {
+                // Silently handle DllNotFoundException (e.g., libdl.so not found on Linux)
+                // This can happen if system libraries are not available or if the native library
+                // dependencies cannot be resolved
+                Debug.LogWarning($"Assimp: Failed to load native library (DllNotFoundException: {ex.Message}). Assimp features will be unavailable. This is normal if system libraries (e.g., libdl.so) are not accessible.");
+                success = false;
+            }
+            catch (System.Exception ex)
+            {
+                // Log other exceptions but don't crash
+                Debug.LogWarning($"Assimp: Error loading native library: {ex.GetType().Name}: {ex.Message}. Assimp features will be unavailable.");
+                success = false;
+            }
+            
             s_assimpAvailable = success;
             s_triedLoading = true;
 

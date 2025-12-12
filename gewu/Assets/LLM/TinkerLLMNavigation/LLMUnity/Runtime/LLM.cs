@@ -365,7 +365,7 @@ namespace LLMUnity
             if (String.IsNullOrEmpty(path)) return "";
             else if (!File.Exists(path))
             {
-                LLMUnitySetup.LogError($"File {path} not found!");
+                LLMUnitySetup.LogWarning($"File {path} not found!");
                 return "";
             }
             return File.ReadAllText(path);
@@ -419,7 +419,7 @@ namespace LLMUnity
             string modelPath = GetLLMManagerAssetRuntime(model);
             if (!File.Exists(modelPath))
             {
-                LLMUnitySetup.LogError($"File {modelPath} not found!");
+                LLMUnitySetup.LogWarning($"File {modelPath} not found!");
                 return null;
             }
 
@@ -430,7 +430,7 @@ namespace LLMUnity
                 string loraPath = GetLLMManagerAssetRuntime(lora);
                 if (!File.Exists(loraPath))
                 {
-                    LLMUnitySetup.LogError($"File {loraPath} not found!");
+                    LLMUnitySetup.LogWarning($"File {loraPath} not found!");
                     return null;
                 }
                 loraArgument += $" --lora \"{loraPath}\"";

@@ -217,13 +217,13 @@ public class LoongAgent : Agent
     {
         if(!train)
         {
-            if (Input.GetKey(KeyCode.Space) || Mathf.Abs(ball.position.z)>6)ball.position=posball0;
+            /*if (Input.GetKey(KeyCode.Space) || Mathf.Abs(ball.position.z)>6)ball.position=posball0;
             if (Mathf.Abs(ball.position.x)>15.8)
             {
                 ball.position=posball0;
                 print(666);
-                EndEpisode();
-            }
+                //EndEpisode();
+            }*/
         
             if(wasd)ball = rival;
             Vector3 toBall = ball.position - body.position;

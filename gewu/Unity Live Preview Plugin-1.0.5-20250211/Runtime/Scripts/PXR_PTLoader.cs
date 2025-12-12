@@ -83,11 +83,35 @@ namespace Unity.XR.PICO.LivePreview
 
         public override bool Initialize()
         {
+            // Check if we're on a platform that supports PICO Live Preview
+            bool isSupportedPlatform = false;
+#if UNITY_EDITOR
+            // In Editor, only Windows is supported
+            #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+            isSupportedPlatform = true;
+            #endif
+#else
+            // At runtime, check if we're on Android (PICO devices run Android)
+            isSupportedPlatform = Application.platform == RuntimePlatform.Android;
+#endif
+
+            // If not on a supported platform, silently fail
+            if (!isSupportedPlatform)
+            {
+                return false;
+            }
+
 #if UNITY_INPUT_SYSTEM
             InputLayoutLoader.RegisterInputLayouts();
 #endif
 
+#if UNITY_EDITOR && (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+            // Only call DLL on Windows platform
             PXR_PTApi.UPxr_PTSetSRPState(GraphicsSettings.currentRenderPipeline != null);
+#elif !UNITY_EDITOR
+            // Runtime platforms
+            PXR_PTApi.UPxr_PTSetSRPState(GraphicsSettings.currentRenderPipeline != null);
+#endif
 
             CreateSubsystem<XRDisplaySubsystemDescriptor, XRDisplaySubsystem>(displaySubsystemDescriptors, "PICO LP Display");
             CreateSubsystem<XRInputSubsystemDescriptor, XRInputSubsystem>(inputSubsystemDescriptors, "PICO LP Input");
@@ -121,7 +145,13 @@ namespace Unity.XR.PICO.LivePreview
 
         public override bool Start()
         {
+#if UNITY_EDITOR && (UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN)
+            // Only call DLL on Windows platform
             PXR_PTApi.UPxr_PTSetSRPState(GraphicsSettings.currentRenderPipeline != null);
+#elif !UNITY_EDITOR
+            // Runtime platforms
+            PXR_PTApi.UPxr_PTSetSRPState(GraphicsSettings.currentRenderPipeline != null);
+#endif
             StartSubsystem<XRDisplaySubsystem>();
             StartSubsystem<XRInputSubsystem>();
 #if XR_HANDS

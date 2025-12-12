@@ -20,6 +20,7 @@ public class TerrainAgent : Agent
     public Transform stair;
     public bool fixbody = false;
     public bool train;
+    public int numrob=8;
     float uf1 = 0;
     float uf2 = 0;
     float[] u = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -99,7 +100,7 @@ public class TerrainAgent : Agent
         
 
         //if (train && !_isClone) 
-        int numrob=8;
+        
         if(train)numrob=32;
         if (!_isClone) 
         {

@@ -447,7 +447,18 @@ namespace Unity.XR.PICO.LivePreview
         public static void UPxr_PTSetSRPState(bool value)
         {
 #if UNITY_EDITOR
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+            try
+            {
             Pxr_SetSRPState(value);
+            }
+            catch (System.DllNotFoundException)
+            {
+                // DLL not available on this platform, silently ignore
+            }
+#else
+            // Not Windows platform, skip DLL call
+#endif
 #endif
         }
 

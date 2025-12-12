@@ -10,7 +10,7 @@ using Unity.Sentis;
 using UnityEngine.UI;
 
 
-public class Go2Train1Agent : Agent
+public class Go2TrainAgent : Agent
 {
     int tp = 0;
     int tt = 0;
@@ -92,7 +92,7 @@ public class Go2Train1Agent : Agent
             {
                 GameObject clone = Instantiate(gameObject); 
                 clone.name = $"{name}_Clone_{i}"; 
-                clone.GetComponent<Go2Train1Agent>()._isClone = true; 
+                clone.GetComponent<Go2TrainAgent>()._isClone = true; 
             }
         }
     }

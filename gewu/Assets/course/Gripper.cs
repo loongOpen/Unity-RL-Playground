@@ -309,8 +309,8 @@ public class Gripper : MonoBehaviour
         if (leftFinger != null)
         {
             var drive = leftFinger.xDrive;
-            drive.stiffness = 2000f;
-            drive.damping = 200f;
+            drive.stiffness = 1000f;
+            drive.damping = 100f;
             drive.target = leftPosition;
             leftFinger.xDrive = drive;
         }

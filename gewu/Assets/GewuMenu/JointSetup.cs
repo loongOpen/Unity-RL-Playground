@@ -274,7 +274,7 @@ namespace Gewu
                             {
                                 // RevoluteJoint: 转换为度
                                 currentValue = movableJoints[i].jointPosition[0] * Mathf.Rad2Deg;
-                            }
+                        }
                             else if (movableJoints[i].jointType == ArticulationJointType.PrismaticJoint)
                             {
                                 // PrismaticJoint: 直接使用米

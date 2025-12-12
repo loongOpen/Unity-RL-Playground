@@ -1,0 +1,2132 @@
+Unity Editor version:    2022.3.62f3 (96770f904ca7)
+Branch:                  2022.3/respin/2022.3.62f2-4af31df585-v2
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #36~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Oct 15 15:45:17 UTC 2
+Kernel version:          6.14.0-36-generic
+Architecture:            x86_64
+Available memory:        31827 MB
+Using pre-set license
+Pro License: YES
+
+(Unity:1171530): Gtk-CRITICAL **: 04:32:20.731: gtk_window_set_default_icon: assertion 'GDK_IS_PIXBUF (icon)' failed
+
+(Unity:1171530): GLib-GObject-CRITICAL **: 04:32:20.731: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Desktop is 1920 x 1200 @ 60 Hz
+Initialize udev device monitor.
+
+COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+/home/linqi/Music/Unity-RL-Playground/gewu
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+44535
+Successfully changed project path to: /home/linqi/Music/Unity-RL-Playground/gewu
+/home/linqi/Music/Unity-RL-Playground/gewu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [134330980078592]  Target information:
+
+Player connection [134330980078592]  * "[IP] 192.168.43.161 [Port] 0 [Flags] 2 [Guid] 176926496 [EditorId] 176926496 [Version] 1048832 [Id] LinuxEditor(16,192.168.43.161) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [134330980078592] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [134330980078592] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Refreshing native plugins compatible for Editor in 32.39 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.62f3 (96770f904ca7)
+[Subsystems] Discovering subsystems at path /home/linqi/Unity/Hub/Editor/2022.3.62f3/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/linqi/Music/Unity-RL-Playground/gewu/Assets
+GLX Extensions: GLX_ARB_context_flush_control GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_INTEL_swap_event GLX_MESA_copy_sub_buffer GLX_MESA_gl_interop GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_swap_control GLX_SGI_video_sync 
+Renderer: Mesa Intel(R) Graphics (RPL-S)
+Vendor:   Intel
+Version:  4.6 (Core Profile) Mesa 25.0.7-0ubuntu0.24.04.2
+GLES:     0
+ GL_3DFX_texture_compression_FXT1 GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB
+_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_po
+int_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier G
+L_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2
+_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_image_storage_compression GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT
+_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_N
+V_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 320845248
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Initialize mono
+Mono path[0] = '/home/linqi/Unity/Hub/Editor/2022.3.62f3/Editor/Data/Managed'
+Mono path[1] = '/home/linqi/Unity/Hub/Editor/2022.3.62f3/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
+Mono config path = '/home/linqi/Unity/Hub/Editor/2022.3.62f3/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56530
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/linqi/Unity/Hub/Editor/2022.3.62f3/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.003365 seconds.
+- Loaded All Assemblies, in  0.186 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.161 seconds
+Domain Reload Profiling: 347ms
+	BeginReloadAssembly (46ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (82ms)
+		LoadAssemblies (46ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (81ms)
+			TypeCache.Refresh (80ms)
+				TypeCache.ScanAssembly (73ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (161ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (131ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.408 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.415 seconds
+Domain Reload Profiling: 822ms
+	BeginReloadAssembly (72ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (297ms)
+		LoadAssemblies (140ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (191ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (147ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (415ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (311ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (111ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 20.40 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6122 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (12.3 MB). Loaded Objects now: 6531.
+Memory consumption went from 262.4 MB to 250.1 MB.
+Total: 6.103207 ms (FindLiveObjects: 0.247086 ms CreateObjectMapping: 0.155029 ms MarkObjects: 3.469378 ms  DeleteObjects: 2.231013 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 669295.895518 seconds.
+  path: Assets/Competition/Game.unity
+  artifactKey: Guid(784ec54494ce9e7ccad72c9741e00daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Competition/Game.unity using Guid(784ec54494ce9e7ccad72c9741e00daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '51b3c39e25257a352632f0e1738081eb') in 0.002588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 51.588754 seconds.
+  path: Assets/Competition/TinkerPlay2.unity
+  artifactKey: Guid(8fd38ca437d848c5b8fa1aeb997318ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Competition/TinkerPlay2.unity using Guid(8fd38ca437d848c5b8fa1aeb997318ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'cc848f28ec1e6c4bee36dd4f23ad34bb') in 0.000280 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 32.405439 seconds.
+  path: Assets/Competition/tinker2 1.onnx
+  artifactKey: Guid(efb4154d4d3df59c7b6b6665aa2b7a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Competition/tinker2 1.onnx using Guid(efb4154d4d3df59c7b6b6665aa2b7a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'd8c975c8b9a915c84c5a7cdad35cfaa6') in 0.008544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.230 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.432 seconds
+Domain Reload Profiling: 661ms
+	BeginReloadAssembly (82ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (107ms)
+		LoadAssemblies (125ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (433ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (265ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (116ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 19.96 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6537.
+Memory consumption went from 222.6 MB to 210.2 MB.
+Total: 4.947057 ms (FindLiveObjects: 0.526851 ms CreateObjectMapping: 0.106814 ms MarkObjects: 2.865506 ms  DeleteObjects: 1.446930 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 111.878437 seconds.
+  path: Assets/Competition/walk2000w.onnx
+  artifactKey: Guid(0f78f081eaadb3d8280e268e412c5bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Competition/walk2000w.onnx using Guid(0f78f081eaadb3d8280e268e412c5bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '6b9328b1c86ca3ec2c3978e60ca7a390') in 0.008552 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 27.598673 seconds.
+  path: Assets/LLM/TinkerLLMNavigation/Scenes/Tinker.unity
+  artifactKey: Guid(c9d32624c130d7646b3a18701380353d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LLM/TinkerLLMNavigation/Scenes/Tinker.unity using Guid(c9d32624c130d7646b3a18701380353d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '6c2ce71a27adb4d0b4cc80a51aa40be4') in 0.000269 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.201 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.441 seconds
+Domain Reload Profiling: 641ms
+	BeginReloadAssembly (68ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (93ms)
+		LoadAssemblies (106ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (441ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (274ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (49ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 23.73 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6542.
+Memory consumption went from 222.6 MB to 210.2 MB.
+Total: 6.700658 ms (FindLiveObjects: 0.279682 ms CreateObjectMapping: 0.109076 ms MarkObjects: 3.871329 ms  DeleteObjects: 2.438953 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 112.204473 seconds.
+  path: Assets/LLM/TinkerLLMNavigation/Scenes/SpeechToText.unity
+  artifactKey: Guid(cf839f30c25d20f46a9be17647738d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LLM/TinkerLLMNavigation/Scenes/SpeechToText.unity using Guid(cf839f30c25d20f46a9be17647738d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'f2b92969f0c4bd6fe9fd1444eadf8226') in 0.001110 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 36.121597 seconds.
+  path: Assets/Competition/Game.unity
+  artifactKey: Guid(784ec54494ce9e7ccad72c9741e00daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Competition/Game.unity using Guid(784ec54494ce9e7ccad72c9741e00daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '2e0406846280113ceb7d8bf2eb11574f') in 0.000800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.214 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.437 seconds
+Domain Reload Profiling: 650ms
+	BeginReloadAssembly (81ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (93ms)
+		LoadAssemblies (106ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (437ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (265ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (115ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 22.91 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6547.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 4.534448 ms (FindLiveObjects: 0.235462 ms CreateObjectMapping: 0.096568 ms MarkObjects: 2.983202 ms  DeleteObjects: 1.218079 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.212 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.435 seconds
+Domain Reload Profiling: 645ms
+	BeginReloadAssembly (82ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (90ms)
+		LoadAssemblies (106ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (435ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (268ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (117ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 21.72 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6552.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 5.726039 ms (FindLiveObjects: 0.467811 ms CreateObjectMapping: 0.102330 ms MarkObjects: 3.016204 ms  DeleteObjects: 2.138898 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.385 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.444 seconds
+Domain Reload Profiling: 827ms
+	BeginReloadAssembly (251ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (93ms)
+		LoadAssemblies (285ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (444ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (275ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (121ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 24.67 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6557.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 5.172330 ms (FindLiveObjects: 0.487205 ms CreateObjectMapping: 0.227633 ms MarkObjects: 3.119921 ms  DeleteObjects: 1.336396 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.229 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.424 seconds
+Domain Reload Profiling: 652ms
+	BeginReloadAssembly (74ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (115ms)
+		LoadAssemblies (104ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (38ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (424ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (265ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (111ms)
+			ProcessInitializeOnLoadMethodAttributes (95ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 20.20 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6562.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 4.667218 ms (FindLiveObjects: 0.235283 ms CreateObjectMapping: 0.094499 ms MarkObjects: 3.086905 ms  DeleteObjects: 1.249791 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.213 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.445 seconds
+Domain Reload Profiling: 657ms
+	BeginReloadAssembly (79ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (94ms)
+		LoadAssemblies (106ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (445ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (267ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (118ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 20.68 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6567.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 4.921749 ms (FindLiveObjects: 0.295719 ms CreateObjectMapping: 0.123614 ms MarkObjects: 3.101082 ms  DeleteObjects: 1.399563 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.216 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.432 seconds
+Domain Reload Profiling: 647ms
+	BeginReloadAssembly (80ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (95ms)
+		LoadAssemblies (109ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (432ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (267ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (118ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 20.44 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6572.
+Memory consumption went from 222.3 MB to 210.0 MB.
+Total: 5.204311 ms (FindLiveObjects: 0.393835 ms CreateObjectMapping: 0.101393 ms MarkObjects: 3.065677 ms  DeleteObjects: 1.642342 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.617 seconds
+Native extension for LinuxStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.944 seconds
+Domain Reload Profiling: 1559ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (5ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (408ms)
+		LoadAssemblies (384ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (90ms)
+				TypeCache.ScanAssembly (78ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (945ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (364ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 33.73 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6131 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6751.
+Memory consumption went from 239.2 MB to 226.9 MB.
+Total: 5.760617 ms (FindLiveObjects: 0.281561 ms CreateObjectMapping: 0.135133 ms MarkObjects: 3.966485 ms  DeleteObjects: 1.376158 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/MagicaSphereCollider.cs: 8b0c65c0f9969f2f081c930935ab22b6 -> 
+  custom:scripting/monoscript/fileName/IntAABB.cs: 77ab9d4a0318f4a79d3b389c3c4e9d9a -> 
+  custom:scripting/monoscript/fileName/ExProcessingList.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshManager.cs: 7bcc8c073768e3c16e9869717530737c -> 
+  custom:scripting/monoscript/fileName/MenuItemScript.cs: 1fde790145e3132289da3602503493df -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/SharePreBuildDataDrawer.cs: 1c21feb0afd4c1c10c2d227c9b894ef2 -> 
+  custom:scripting/monoscript/fileName/MagicaSettings.cs: dc4c43ae67e9857f950e95c51a99b740 -> 
+  custom:scripting/monoscript/fileName/TeamWindData.cs: 2bde5203167884ad1037b08fccb310fa -> 
+  custom:scripting/monoscript/fileName/VertexAttribute.cs: 60c33624d78039b8862840e283fedc74 -> 
+  custom:scripting/monoscript/fileName/ClothAssetPostprocessor.cs: b62fc32fe36c29e9ee40ae85c01ea1a4 -> 
+  custom:scripting/monoscript/fileName/UniquePreBuildData.cs: c9cceb43f445b13254e984efa514a974 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshWork.cs: 2a7a1948930b51ceaa5752250772a7e0 -> 
+  custom:scripting/monoscript/fileName/DrawIconInHierarchy.cs: f650e5001a214e5de2037f9a4af79342 -> 
+  custom:scripting/monoscript/fileName/DataUtility.cs: 4672f3fa6abd86e83d0b2305a679112a -> 
+  custom:scripting/monoscript/fileName/TriangleBendingConstraint.cs: 366dc3bec29edf7bfbda10b5f7ddc4ab -> 
+  custom:scripting/monoscript/fileName/ClothBehaviour.cs: 7f2fba1aa09773ae89638735c144fd0e -> 
+  custom:scripting/monoscript/fileName/FixedList128BytesExtensions.cs: 1f51cc83ae544e876c0113713e65630e -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderEditor.cs: dc448efa9059615557164356ce976837 -> 
+  custom:scripting/monoscript/fileName/MinimumData.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ResultDefine.cs: e957db3ecab6193d61553ab40822313b -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/MultiDataBuilder.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/MagicaManagerAPI.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:scripting/monoscript/fileName/ClothProcessData.cs: 7365cb13ce0844a8bfb5c58e9077a625 -> 
+  custom:scripting/monoscript/fileName/NativeArrayExtensions.cs: da36b6bd8777d47d28aacbdda7c613f0 -> 480ae80e25a67512135651e8db7b75bc
+  custom:scripting/monoscript/fileName/WindManager.cs: ec1976344e7c4cda9de48be79b962ac5 -> 
+  custom:scripting/monoscript/fileName/ExBitFlag8.cs: cc6e7215ec5105c91e3eb495f939209c -> 
+  custom:scripting/monoscript/fileName/VirtualMeshBoneWeight.cs: 53f00c9c752d771c1603afb0b8e6f2e3 -> 
+  custom:scripting/monoscript/fileName/ClothPresetUtility.cs: 71aaeabb33d30623dc1082085b12bcf3 -> 
+  custom:scripting/monoscript/fileName/MagicaCloth.cs: 31fc27e875b5ad095efdb2fb24745b47 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshReduction.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/DataChunk.cs: 3b897fa7b0da2bc7f93673ca53254aa5 -> 
+  custom:scripting/monoscript/fileName/AABB.cs: 3cad86354589dd9108e9fef4c832a531 -> 
+  custom:scripting/monoscript/fileName/UnityTimeSpan.cs: 1061facba5f1f643659cf58cc8ca83f7 -> 
+  custom:scripting/monoscript/fileName/TransformData.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/WindSettings.cs: b1503ba37498f340df72318c79543761 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneEditor.cs: ff9218c02b054c120ca08165a276fb1c -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleCollider.cs: ec78af7aa465ea4b912c524a1a0d5cca -> 
+  custom:scripting/monoscript/fileName/PreBuildDataCreation.cs: fc9ccbb693088dfbc757f7a75c84aa55 -> 
+  custom:scripting/monoscript/fileName/NormalAlignmentSettings.cs: a1b3e2adcbadca2d7bd879c85246d9c7 -> 
+  custom:scripting/monoscript/fileName/ClothInspectorUtility.cs: 15adcf13a470622c1ca98e53f456ebc8 -> 
+  custom:scripting/monoscript/fileName/CullingSettings.cs: a646c82c1bacfcef0690cc37a45503c4 -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneCollider.cs: 6d9571b3eaaa749a9fc6fc57d6b27093 -> 
+  custom:scripting/monoscript/fileName/MathExtensions.cs: a40db7dff9257e4576a536d71d10c9a5 -> 
+  custom:scripting/monoscript/fileName/ClothProcessGeneration.cs: 27ee3d1636d45c209a6c7d8fa0d795b6 -> 
+  custom:scripting/monoscript/fileName/ClothDebugSettings.cs: 24e92330c2d935719e96d080aaff272c -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:scripting/monoscript/fileName/TransformManager.cs: 671fcf03135c464074fadad416dcccfa -> 
+  custom:scripting/monoscript/fileName/PreBuildManager.cs: fa1fd7e35b7206f7cdd286ddcc604bc7 -> 
+  custom:scripting/monoscript/fileName/RenderData.cs: fe909c85de811a4165a76c278f535184 -> 
+  custom:scripting/monoscript/fileName/GizmoSerializeData.cs: b2477ec12056a7a9d963fcf060397b19 -> 
+  custom:scripting/monoscript/fileName/ICount.cs: 3ac8c3f612c729638382415378e78318 -> 
+  custom:scripting/monoscript/fileName/MotionConstraint.cs: 45a78d6e073e51499b83ad9bd0b4ca36 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeData.cs: 848d2679060aed2e01bb579fcaa15043 -> 
+  custom:scripting/monoscript/fileName/ClothManager.cs: 78cf94320bd04de875940f2a50705d53 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshOptimization.cs: f1c5ce36913112df5bbba1ed8494652c -> 
+  custom:scripting/monoscript/fileName/SystemDefine.cs: be8f9d52bb9e98dc14ffb1df23681a3d -> 
+  custom:scripting/monoscript/fileName/PreBuildScriptableObject.cs: 87ec8f3fc7e376abc4aa5c1d9f28104e -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2.Editor: c020bea4e1d053539ba87da82bd4106e -> 
+  custom:scripting/monoscript/fileName/RenderSetupDataSerialization.cs: 1aada3719ec348993195a5bbebf8ccbd -> 
+  custom:scripting/monoscript/fileName/SharePreBuildData.cs: 33b37c80d11b95fb4a37003e190c9292 -> 
+  custom:scripting/monoscript/fileName/SimulationManagerSplit.cs: 149672cd09e90fc9960c6dc2e3f35fb3 -> 
+  custom:scripting/monoscript/fileName/PreBuildSerializeData.cs: cb5d0b3a07b4035b68a8e0d9f97f6fe9 -> 
+  custom:scripting/monoscript/fileName/TransformRecord.cs: 83d8e5c01066f712375c3b9a5770d364 -> 
+  custom:scripting/monoscript/fileName/RenderSetupSerializeData.cs: 480599f6e5fcbf1f658408f3a256047e -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderEditor.cs: 4a6746c7e5292d6c96309e5aaa9dfaa3 -> 
+  custom:scripting/monoscript/fileName/SelfCollisionConstraint.cs: 1999ed4ea5eace6366fd99d66b174240 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshSerialization.cs: d8d1c3784b43f28c8486a65ec95118cc -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneGizmoDrawer.cs: 6aa071e71f8bb2f3760d43fdf50731a4 -> 
+  custom:scripting/monoscript/fileName/ClothEditorManager.cs: 93fa450979aa60eb335ce907a90223dd -> 
+  custom:scripting/monoscript/fileName/Exception.cs: ad8761de2beb4d34402ff60d2204d52f -> 
+  custom:scripting/monoscript/fileName/InertiaConstraint.cs: 8b5b5aa48b6a4f8bd36a2c292409fd14 -> 
+  custom:scripting/monoscript/fileName/ColliderComponent.cs: e2ccc18c43cfab3cf888adb91ce8a6ac -> 
+  custom:scripting/monoscript/fileName/MagicaClothAPI.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ShapeDistanceReduction.cs: 08ff6df78038c57f75410035d2fc1bd6 -> 
+  custom:scripting/monoscript/fileName/NativeMultiHashMapExtensions.cs: f450b25214d2811a80f23815296a25d4 -> 
+  custom:scripting/monoscript/fileName/JobUtility.cs: 4f209b40c576d24e8106da8aacb0f3a8 -> 
+  custom:scripting/monoscript/fileName/ExSimpleNativeArray.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/TeamManager.cs: 198eb45a94cf3f271950e3652f7083ec -> 
+  custom:scripting/monoscript/fileName/TimeManager.cs: f8e1d1358c074da4d3dc879778c69da2 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VirtualMesh.cs: 27698d6a4ae81536ab905be6579a9174 -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2: 0f8923f9c3721eb0d5c28b14b6ff8685 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshMapping.cs: 21242f34caaab03958980d3d94627d89 -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderGizmoDrawer.cs: 0c7ecb3bce805734acfccb8ff43207f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/SpringConstraint.cs: cab3c716581dc8f37828859074934103 -> 
+  custom:scripting/monoscript/fileName/GridMap.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/StaticStringBuilder.cs: 10246fda492bf34200af9f3f5488dffe -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData2.cs: 71f97b11e8d1725909afaf06747a9193 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZone.cs: 82e18fbe58e45870208289a55931bae0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/ClothInitSerializeData.cs: b120e6609bc94dc32dc1e63e95b07aca -> 
+  custom:scripting/monoscript/fileName/ReductionWorkData.cs: 96a96f9c7f7a5caf1139f96c1ca35c14 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshInputOutput.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/CurveSerializeDataDrawer.cs: af35a4621ee133b850f091ab77e0d601 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshTransform.cs: 942208c6f1b42f3169a2bee2074fae42 -> 
+  custom:scripting/monoscript/fileName/MathUtility.cs: 8f13a9411e7e7019d3cc6044cc0bf9fe -> 7101ed9f86b2bfdaf67ab4303cc98ede
+  custom:scripting/monoscript/fileName/ExBitFlag16.cs: cb50d8ab63ccd9a96e69f490c04093d4 -> 
+  custom:scripting/monoscript/fileName/AboutMenu.cs: db41d041748faa5d45bd52a98bf84fa5 -> 
+  custom:scripting/monoscript/fileName/TimeSpan.cs: 57770b47f5544261132220b254f9993a -> 
+  custom:scripting/monoscript/fileName/SimpleDistanceReduction.cs: 78fee0a822ae057b6d6adfc21f6795c0 -> 
+  custom:scripting/monoscript/fileName/InterlockUtility.cs: 2c40f2e9789add15ca74497606690a4b -> 
+  custom:scripting/monoscript/fileName/AngleConstraint.cs: 3bb5e942878b8b890811649b59368b1c -> 
+  custom:scripting/monoscript/fileName/TransformDataSerialization.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/IValid.cs: 57084b2b4372511e2ea032a0ead14398 -> 
+  custom:scripting/monoscript/fileName/ExTransformAccessArray.cs: d0990a418054b4c4f267332e5ec66894 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeDataDrawer.cs: 16cd25901e302a4e9872d2ccb2ce1df2 -> 
+  custom:scripting/monoscript/fileName/ClothProcess.cs: bc21303536198357fd1cfeabd0fb2609 -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderGizmoDrawer.cs: 8e9d554b0ab14902b8769eea1921acdf -> 
+  custom:scripting/monoscript/fileName/IDataValidate.cs: 412e67a033e3206b801eaab129c7d25b -> 
+  custom:scripting/monoscript/fileName/FixedList64BytesExtensions.cs: 13db6e5aaf2f216d90adc78a6329140f -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList1.cs: cf7e7a1720349c1af71e44dffc240bf5 -> 
+  custom:scripting/monoscript/fileName/RenderSetupData.cs: e0d32fab968ec9de90f675ce149cada0 -> 
+  custom:scripting/monoscript/fileName/FixedList512BytesExtensions.cs: 4dc8f76e75f32521d830c034f48d8387 -> 
+  custom:scripting/monoscript/fileName/FixedList4096BytesExtensions.cs: 05351cda9beac716c03fe49d50608231 -> 
+  custom:scripting/monoscript/fileName/SimulationManager.cs: c9d8c3b265f5f4072b7836b60334061c -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderEditor.cs: 3cb438f6dde54ebf045856d50a94a1f0 -> 
+  custom:scripting/monoscript/fileName/MagicaSettingsEditor.cs: 967b2e4a7d469f701d86fda09ba4a2d8 -> 
+  custom:scripting/monoscript/fileName/ExNativeArray.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CustomSkinningSettings.cs: da057a58aada945120dea8754a6b8afb -> 
+  custom:scripting/monoscript/fileName/TetherConstraint.cs: cb2bfc49615507c1b812963b8918ad8c -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderGizmoDrawer.cs: 7a6c54d86bfe0c977add7e86eab84e6d -> 
+  custom:scripting/monoscript/fileName/IManager.cs: 0a6bbfe576120f6fc7200dc60ea78d6e -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/MagicaManager.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MagicaClothGizmoDrawer.cs: 46734d9334cbb88301b263c481473882 -> 
+  custom:scripting/monoscript/fileName/RenderManager.cs: 0e431d1eb768c27b55d7ea43353864a0 -> 
+  custom:scripting/monoscript/fileName/WindParams.cs: c5ac6a7b69a0915b48280e22c1b5e700 -> 
+  custom:scripting/monoscript/fileName/ReductionSettings.cs: a8556e131a5aec5d5951928e0dbb8ed7 -> 
+  custom:scripting/monoscript/fileName/DistanceConstraint.cs: 1171b2f7d5263fd0ba019fbf0fe49061 -> 
+  custom:scripting/monoscript/fileName/ClothPainter.cs: 222196fec1650231f7a0f1cb844992ac -> 
+  custom:scripting/monoscript/fileName/VirtualMeshRaycastHit.cs: 1cfdf329dc2f54b0a4c60b4a10992d45 -> 
+  custom:scripting/monoscript/fileName/ColliderManager.cs: 8c1306383c758cd7ff12caafd9a94017 -> 
+  custom:scripting/monoscript/fileName/ClothEditorUtility.cs: 0a4a3efc3f84d6bc70c114ae2ba1ecbd -> 
+  custom:scripting/monoscript/fileName/ITransform.cs: ea29ab9b558bb6a3a0fd428e729ee660 -> 
+  custom:scripting/monoscript/fileName/NativeReferenceExtensions.cs: 5d6597d7556862ff70f7a173125ae330 -> 
+  custom:scripting/monoscript/fileName/Develop.cs: d3296c2f7f82d45fde14eb2a50a806a9 -> 
+  custom:scripting/monoscript/fileName/MagicaClothEditor.cs: cb536e781647f2e982c9ae3e2da6467b -> 
+  custom:scripting/monoscript/fileName/CurveSerializeData.cs: 773d83f73b643739a6c71fdea3b2f867 -> 
+  custom:scripting/monoscript/fileName/NativeParallelHashMapExtensions.cs: a59e205a3858071d9123850841e9967f -> 462869b482cb0a426c099c8676c75416
+  custom:scripting/monoscript/fileName/VirtualMeshContainer.cs: ea9f342fcc6e37d2f8d0d2584acd660a -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList4.cs: e1a3a13a27962aeb50ceccad2791889d -> 
+  custom:scripting/monoscript/fileName/MagicaEditorBase.cs: fe62013c7e5190961384c287bf25648d -> 
+  custom:scripting/monoscript/fileName/ResultCode.cs: 5e11ac4274a04c44ac2bb629c21487bd -> 
+  custom:scripting/monoscript/fileName/ClothParameters.cs: 4f5aa61b57001d19fac03aa0ccfe6236 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MeshUtility.cs: 37104eb97c52a28964d855ec12d2288b -> 
+  custom:scripting/monoscript/fileName/SimulationManagerNormal.cs: 05505c6adb659604e78419e9a5190f9b -> 
+  custom:scripting/monoscript/fileName/VirtualMeshProxy.cs: af242f96276bca56fd517ade53941050 -> 
+  custom:scripting/monoscript/fileName/StepReductionBase.cs: d4c211b6af8eaf0620a84a1744bcf51c -> 
+  custom:scripting/monoscript/fileName/SameDistanceReduction.cs: db72d77af22a6533e6a52cfbe40da342 -> 
+  custom:scripting/monoscript/fileName/ColliderCollisionConstraint.cs: f31d95cfd8e5c9b2ad33069eb85feb95 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData.cs: ac311fde64b9828755c95893ba2c9957 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeDataFunction.cs: 7b6d5ff8504adaa817f3a956c12941e7 -> 
+  custom:scripting/monoscript/fileName/SelectionData.cs: 00bd27903e949f5cbf8634cd98c8df52 -> 
+  custom:scripting/monoscript/fileName/FixedList32BytesExtensions.cs: 81e49ef8121742a0605f3de0ca565434 -> 
+  custom:scripting/monoscript/fileName/TransformRecordSerializeData.cs: a3caf0376abc0aa5eb27e85965df0f76 -> 
+  custom:scripting/monoscript/fileName/GizmoUtility.cs: e22a7d6e07ed9350fa7fe5ac9789e8cb -> 3cf94f2ee011511320f879526818cda8
+  custom:scripting/monoscript/fileName/MagicaClothAnimationProperty.cs: 90647cc400823b41df847a6cbfc29026 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1685.470543 seconds.
+  path: Assets/MagicaCloth2
+  artifactKey: Guid(f31820b1e966ca049a982e2a30795d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2 using Guid(f31820b1e966ca049a982e2a30795d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '5248c8d127ed8a7a33dead6c2d961457') in 0.001287 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.096746 seconds.
+  path: Assets/MagicaCloth2/g1_29dof_rev_1_0.fbx
+  artifactKey: Guid(e0192335b915f0d9a9cd9dd391e493a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/g1_29dof_rev_1_0.fbx using Guid(e0192335b915f0d9a9cd9dd391e493a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '1fc83150f08b102c2f441a3de77f116a') in 0.569130 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 792
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/MagicaCloth2/MagicaCloth2.asmdef
+  artifactKey: Guid(406190ab8ee569c46bc05a890e5127a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/MagicaCloth2.asmdef using Guid(406190ab8ee569c46bc05a890e5127a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'adb5ec10b1bd9898d7baeb58eb01e61a') in 0.000266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/MagicaCloth2/gw.png
+  artifactKey: Guid(f5bad4f6e6e5f9bdab185a9c117831ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/gw.png using Guid(f5bad4f6e6e5f9bdab185a9c117831ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '0f0e3efe6e64693f75046559bb47e25b') in 0.032339 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.668565 seconds.
+  path: Assets/MagicaCloth2/G1Chan.unity
+  artifactKey: Guid(8b036647a757eeb1f9d1cf557ae8d6ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/G1Chan.unity using Guid(8b036647a757eeb1f9d1cf557ae8d6ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ca610b021d2ad12b033bbfc2466a39da') in 0.000358 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.412 seconds
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.740 seconds
+Domain Reload Profiling: 1150ms
+	BeginReloadAssembly (129ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (231ms)
+		LoadAssemblies (245ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (49ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (740ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (288ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (124ms)
+			ProcessInitializeOnLoadMethodAttributes (100ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 33.66 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 235 unused Assets / (12.4 MB). Loaded Objects now: 6662.
+Memory consumption went from 238.5 MB to 226.1 MB.
+Total: 6.075210 ms (FindLiveObjects: 0.283873 ms CreateObjectMapping: 0.190214 ms MarkObjects: 3.294453 ms  DeleteObjects: 2.304668 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/MagicaSphereCollider.cs: 8b0c65c0f9969f2f081c930935ab22b6 -> 
+  custom:scripting/monoscript/fileName/IntAABB.cs: 77ab9d4a0318f4a79d3b389c3c4e9d9a -> 
+  custom:scripting/monoscript/fileName/ExProcessingList.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshManager.cs: 7bcc8c073768e3c16e9869717530737c -> 
+  custom:scripting/monoscript/fileName/MenuItemScript.cs: 1fde790145e3132289da3602503493df -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/SharePreBuildDataDrawer.cs: 1c21feb0afd4c1c10c2d227c9b894ef2 -> 
+  custom:scripting/monoscript/fileName/MagicaSettings.cs: dc4c43ae67e9857f950e95c51a99b740 -> 
+  custom:scripting/monoscript/fileName/TeamWindData.cs: 2bde5203167884ad1037b08fccb310fa -> 
+  custom:scripting/monoscript/fileName/VertexAttribute.cs: 60c33624d78039b8862840e283fedc74 -> 
+  custom:scripting/monoscript/fileName/ClothAssetPostprocessor.cs: b62fc32fe36c29e9ee40ae85c01ea1a4 -> 
+  custom:scripting/monoscript/fileName/UniquePreBuildData.cs: c9cceb43f445b13254e984efa514a974 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshWork.cs: 2a7a1948930b51ceaa5752250772a7e0 -> 
+  custom:scripting/monoscript/fileName/DrawIconInHierarchy.cs: f650e5001a214e5de2037f9a4af79342 -> 
+  custom:scripting/monoscript/fileName/DataUtility.cs: 4672f3fa6abd86e83d0b2305a679112a -> 
+  custom:scripting/monoscript/fileName/TriangleBendingConstraint.cs: 366dc3bec29edf7bfbda10b5f7ddc4ab -> 
+  custom:scripting/monoscript/fileName/ClothBehaviour.cs: 7f2fba1aa09773ae89638735c144fd0e -> 
+  custom:scripting/monoscript/fileName/FixedList128BytesExtensions.cs: 1f51cc83ae544e876c0113713e65630e -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderEditor.cs: dc448efa9059615557164356ce976837 -> 
+  custom:scripting/monoscript/fileName/MinimumData.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ResultDefine.cs: e957db3ecab6193d61553ab40822313b -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/MultiDataBuilder.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/MagicaManagerAPI.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:scripting/monoscript/fileName/ClothProcessData.cs: 7365cb13ce0844a8bfb5c58e9077a625 -> 
+  custom:scripting/monoscript/fileName/NativeArrayExtensions.cs: da36b6bd8777d47d28aacbdda7c613f0 -> 480ae80e25a67512135651e8db7b75bc
+  custom:scripting/monoscript/fileName/WindManager.cs: ec1976344e7c4cda9de48be79b962ac5 -> 
+  custom:scripting/monoscript/fileName/ExBitFlag8.cs: cc6e7215ec5105c91e3eb495f939209c -> 
+  custom:scripting/monoscript/fileName/VirtualMeshBoneWeight.cs: 53f00c9c752d771c1603afb0b8e6f2e3 -> 
+  custom:scripting/monoscript/fileName/ClothPresetUtility.cs: 71aaeabb33d30623dc1082085b12bcf3 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshReduction.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/DataChunk.cs: 3b897fa7b0da2bc7f93673ca53254aa5 -> 
+  custom:scripting/monoscript/fileName/AABB.cs: 3cad86354589dd9108e9fef4c832a531 -> 
+  custom:scripting/monoscript/fileName/UnityTimeSpan.cs: 1061facba5f1f643659cf58cc8ca83f7 -> 
+  custom:scripting/monoscript/fileName/TransformData.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/WindSettings.cs: b1503ba37498f340df72318c79543761 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneEditor.cs: ff9218c02b054c120ca08165a276fb1c -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleCollider.cs: ec78af7aa465ea4b912c524a1a0d5cca -> 
+  custom:scripting/monoscript/fileName/PreBuildDataCreation.cs: fc9ccbb693088dfbc757f7a75c84aa55 -> 
+  custom:scripting/monoscript/fileName/NormalAlignmentSettings.cs: a1b3e2adcbadca2d7bd879c85246d9c7 -> 
+  custom:scripting/monoscript/fileName/ClothInspectorUtility.cs: 15adcf13a470622c1ca98e53f456ebc8 -> 
+  custom:scripting/monoscript/fileName/CullingSettings.cs: a646c82c1bacfcef0690cc37a45503c4 -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneCollider.cs: 6d9571b3eaaa749a9fc6fc57d6b27093 -> 
+  custom:scripting/monoscript/fileName/MathExtensions.cs: a40db7dff9257e4576a536d71d10c9a5 -> 
+  custom:scripting/monoscript/fileName/ClothProcessGeneration.cs: 27ee3d1636d45c209a6c7d8fa0d795b6 -> 
+  custom:scripting/monoscript/fileName/ClothDebugSettings.cs: 24e92330c2d935719e96d080aaff272c -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:scripting/monoscript/fileName/TransformManager.cs: 671fcf03135c464074fadad416dcccfa -> 
+  custom:scripting/monoscript/fileName/PreBuildManager.cs: fa1fd7e35b7206f7cdd286ddcc604bc7 -> 
+  custom:scripting/monoscript/fileName/RenderData.cs: fe909c85de811a4165a76c278f535184 -> 
+  custom:scripting/monoscript/fileName/GizmoSerializeData.cs: b2477ec12056a7a9d963fcf060397b19 -> 
+  custom:scripting/monoscript/fileName/ICount.cs: 3ac8c3f612c729638382415378e78318 -> 
+  custom:scripting/monoscript/fileName/MotionConstraint.cs: 45a78d6e073e51499b83ad9bd0b4ca36 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeData.cs: 848d2679060aed2e01bb579fcaa15043 -> 
+  custom:scripting/monoscript/fileName/ClothManager.cs: 78cf94320bd04de875940f2a50705d53 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshOptimization.cs: f1c5ce36913112df5bbba1ed8494652c -> 
+  custom:scripting/monoscript/fileName/SystemDefine.cs: be8f9d52bb9e98dc14ffb1df23681a3d -> 
+  custom:scripting/monoscript/fileName/PreBuildScriptableObject.cs: 87ec8f3fc7e376abc4aa5c1d9f28104e -> 
+  custom:scripting/monoscript/fileName/RenderSetupDataSerialization.cs: 1aada3719ec348993195a5bbebf8ccbd -> 
+  custom:scripting/monoscript/fileName/SharePreBuildData.cs: 33b37c80d11b95fb4a37003e190c9292 -> 
+  custom:scripting/monoscript/fileName/SimulationManagerSplit.cs: 149672cd09e90fc9960c6dc2e3f35fb3 -> 
+  custom:scripting/monoscript/fileName/PreBuildSerializeData.cs: cb5d0b3a07b4035b68a8e0d9f97f6fe9 -> 
+  custom:scripting/monoscript/fileName/TransformRecord.cs: 83d8e5c01066f712375c3b9a5770d364 -> 
+  custom:scripting/monoscript/fileName/RenderSetupSerializeData.cs: 480599f6e5fcbf1f658408f3a256047e -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderEditor.cs: 4a6746c7e5292d6c96309e5aaa9dfaa3 -> 
+  custom:scripting/monoscript/fileName/SelfCollisionConstraint.cs: 1999ed4ea5eace6366fd99d66b174240 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshSerialization.cs: d8d1c3784b43f28c8486a65ec95118cc -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneGizmoDrawer.cs: 6aa071e71f8bb2f3760d43fdf50731a4 -> 
+  custom:scripting/monoscript/fileName/ClothEditorManager.cs: 93fa450979aa60eb335ce907a90223dd -> 
+  custom:scripting/monoscript/fileName/Exception.cs: ad8761de2beb4d34402ff60d2204d52f -> 
+  custom:scripting/monoscript/fileName/InertiaConstraint.cs: 8b5b5aa48b6a4f8bd36a2c292409fd14 -> 
+  custom:scripting/monoscript/fileName/ColliderComponent.cs: e2ccc18c43cfab3cf888adb91ce8a6ac -> 
+  custom:scripting/monoscript/fileName/MagicaClothAPI.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ShapeDistanceReduction.cs: 08ff6df78038c57f75410035d2fc1bd6 -> 
+  custom:scripting/monoscript/fileName/NativeMultiHashMapExtensions.cs: f450b25214d2811a80f23815296a25d4 -> 
+  custom:scripting/monoscript/fileName/JobUtility.cs: 4f209b40c576d24e8106da8aacb0f3a8 -> 
+  custom:scripting/monoscript/fileName/ExSimpleNativeArray.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/TeamManager.cs: 198eb45a94cf3f271950e3652f7083ec -> 
+  custom:scripting/monoscript/fileName/TimeManager.cs: f8e1d1358c074da4d3dc879778c69da2 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VirtualMesh.cs: 27698d6a4ae81536ab905be6579a9174 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshMapping.cs: 21242f34caaab03958980d3d94627d89 -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderGizmoDrawer.cs: 0c7ecb3bce805734acfccb8ff43207f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/SpringConstraint.cs: cab3c716581dc8f37828859074934103 -> 
+  custom:scripting/monoscript/fileName/GridMap.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/StaticStringBuilder.cs: 10246fda492bf34200af9f3f5488dffe -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData2.cs: 71f97b11e8d1725909afaf06747a9193 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZone.cs: 82e18fbe58e45870208289a55931bae0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/ClothInitSerializeData.cs: b120e6609bc94dc32dc1e63e95b07aca -> 
+  custom:scripting/monoscript/fileName/ReductionWorkData.cs: 96a96f9c7f7a5caf1139f96c1ca35c14 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshInputOutput.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/CurveSerializeDataDrawer.cs: af35a4621ee133b850f091ab77e0d601 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshTransform.cs: 942208c6f1b42f3169a2bee2074fae42 -> 
+  custom:scripting/monoscript/fileName/MathUtility.cs: 8f13a9411e7e7019d3cc6044cc0bf9fe -> 7101ed9f86b2bfdaf67ab4303cc98ede
+  custom:scripting/monoscript/fileName/ExBitFlag16.cs: cb50d8ab63ccd9a96e69f490c04093d4 -> 
+  custom:scripting/monoscript/fileName/AboutMenu.cs: db41d041748faa5d45bd52a98bf84fa5 -> 
+  custom:scripting/monoscript/fileName/TimeSpan.cs: 57770b47f5544261132220b254f9993a -> 
+  custom:scripting/monoscript/fileName/SimpleDistanceReduction.cs: 78fee0a822ae057b6d6adfc21f6795c0 -> 
+  custom:scripting/monoscript/fileName/InterlockUtility.cs: 2c40f2e9789add15ca74497606690a4b -> 
+  custom:scripting/monoscript/fileName/AngleConstraint.cs: 3bb5e942878b8b890811649b59368b1c -> 
+  custom:scripting/monoscript/fileName/TransformDataSerialization.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/IValid.cs: 57084b2b4372511e2ea032a0ead14398 -> 
+  custom:scripting/monoscript/fileName/ExTransformAccessArray.cs: d0990a418054b4c4f267332e5ec66894 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeDataDrawer.cs: 16cd25901e302a4e9872d2ccb2ce1df2 -> 
+  custom:scripting/monoscript/fileName/ClothProcess.cs: bc21303536198357fd1cfeabd0fb2609 -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderGizmoDrawer.cs: 8e9d554b0ab14902b8769eea1921acdf -> 
+  custom:scripting/monoscript/fileName/IDataValidate.cs: 412e67a033e3206b801eaab129c7d25b -> 
+  custom:scripting/monoscript/fileName/FixedList64BytesExtensions.cs: 13db6e5aaf2f216d90adc78a6329140f -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList1.cs: cf7e7a1720349c1af71e44dffc240bf5 -> 
+  custom:scripting/monoscript/fileName/RenderSetupData.cs: e0d32fab968ec9de90f675ce149cada0 -> 
+  custom:scripting/monoscript/fileName/FixedList512BytesExtensions.cs: 4dc8f76e75f32521d830c034f48d8387 -> 
+  custom:scripting/monoscript/fileName/FixedList4096BytesExtensions.cs: 05351cda9beac716c03fe49d50608231 -> 
+  custom:scripting/monoscript/fileName/SimulationManager.cs: c9d8c3b265f5f4072b7836b60334061c -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderEditor.cs: 3cb438f6dde54ebf045856d50a94a1f0 -> 
+  custom:scripting/monoscript/fileName/MagicaSettingsEditor.cs: 967b2e4a7d469f701d86fda09ba4a2d8 -> 
+  custom:scripting/monoscript/fileName/ExNativeArray.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CustomSkinningSettings.cs: da057a58aada945120dea8754a6b8afb -> 
+  custom:scripting/monoscript/fileName/TetherConstraint.cs: cb2bfc49615507c1b812963b8918ad8c -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderGizmoDrawer.cs: 7a6c54d86bfe0c977add7e86eab84e6d -> 
+  custom:scripting/monoscript/fileName/IManager.cs: 0a6bbfe576120f6fc7200dc60ea78d6e -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/MagicaManager.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MagicaClothGizmoDrawer.cs: 46734d9334cbb88301b263c481473882 -> 
+  custom:scripting/monoscript/fileName/RenderManager.cs: 0e431d1eb768c27b55d7ea43353864a0 -> 
+  custom:scripting/monoscript/fileName/WindParams.cs: c5ac6a7b69a0915b48280e22c1b5e700 -> 
+  custom:scripting/monoscript/fileName/ReductionSettings.cs: a8556e131a5aec5d5951928e0dbb8ed7 -> 
+  custom:scripting/monoscript/fileName/DistanceConstraint.cs: 1171b2f7d5263fd0ba019fbf0fe49061 -> 
+  custom:scripting/monoscript/fileName/ClothPainter.cs: 222196fec1650231f7a0f1cb844992ac -> 
+  custom:scripting/monoscript/fileName/VirtualMeshRaycastHit.cs: 1cfdf329dc2f54b0a4c60b4a10992d45 -> 
+  custom:scripting/monoscript/fileName/ColliderManager.cs: 8c1306383c758cd7ff12caafd9a94017 -> 
+  custom:scripting/monoscript/fileName/ClothEditorUtility.cs: 0a4a3efc3f84d6bc70c114ae2ba1ecbd -> 
+  custom:scripting/monoscript/fileName/ITransform.cs: ea29ab9b558bb6a3a0fd428e729ee660 -> 
+  custom:scripting/monoscript/fileName/NativeReferenceExtensions.cs: 5d6597d7556862ff70f7a173125ae330 -> 
+  custom:scripting/monoscript/fileName/Develop.cs: d3296c2f7f82d45fde14eb2a50a806a9 -> 
+  custom:scripting/monoscript/fileName/MagicaClothEditor.cs: cb536e781647f2e982c9ae3e2da6467b -> 
+  custom:scripting/monoscript/fileName/CurveSerializeData.cs: 773d83f73b643739a6c71fdea3b2f867 -> 
+  custom:scripting/monoscript/fileName/NativeParallelHashMapExtensions.cs: a59e205a3858071d9123850841e9967f -> 462869b482cb0a426c099c8676c75416
+  custom:scripting/monoscript/fileName/VirtualMeshContainer.cs: ea9f342fcc6e37d2f8d0d2584acd660a -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList4.cs: e1a3a13a27962aeb50ceccad2791889d -> 
+  custom:scripting/monoscript/fileName/MagicaEditorBase.cs: fe62013c7e5190961384c287bf25648d -> 
+  custom:scripting/monoscript/fileName/ResultCode.cs: 5e11ac4274a04c44ac2bb629c21487bd -> 
+  custom:scripting/monoscript/fileName/ClothParameters.cs: 4f5aa61b57001d19fac03aa0ccfe6236 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MeshUtility.cs: 37104eb97c52a28964d855ec12d2288b -> 
+  custom:scripting/monoscript/fileName/SimulationManagerNormal.cs: 05505c6adb659604e78419e9a5190f9b -> 
+  custom:scripting/monoscript/fileName/VirtualMeshProxy.cs: af242f96276bca56fd517ade53941050 -> 
+  custom:scripting/monoscript/fileName/StepReductionBase.cs: d4c211b6af8eaf0620a84a1744bcf51c -> 
+  custom:scripting/monoscript/fileName/SameDistanceReduction.cs: db72d77af22a6533e6a52cfbe40da342 -> 
+  custom:scripting/monoscript/fileName/ColliderCollisionConstraint.cs: f31d95cfd8e5c9b2ad33069eb85feb95 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData.cs: ac311fde64b9828755c95893ba2c9957 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeDataFunction.cs: 7b6d5ff8504adaa817f3a956c12941e7 -> 
+  custom:scripting/monoscript/fileName/SelectionData.cs: 00bd27903e949f5cbf8634cd98c8df52 -> 
+  custom:scripting/monoscript/fileName/FixedList32BytesExtensions.cs: 81e49ef8121742a0605f3de0ca565434 -> 
+  custom:scripting/monoscript/fileName/TransformRecordSerializeData.cs: a3caf0376abc0aa5eb27e85965df0f76 -> 
+  custom:scripting/monoscript/fileName/GizmoUtility.cs: e22a7d6e07ed9350fa7fe5ac9789e8cb -> 3cf94f2ee011511320f879526818cda8
+  custom:scripting/monoscript/fileName/MagicaClothAnimationProperty.cs: 90647cc400823b41df847a6cbfc29026 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 95.979999 seconds.
+  path: Assets/MagicaCloth2/G1Chan.unity
+  artifactKey: Guid(8b036647a757eeb1f9d1cf557ae8d6ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/G1Chan.unity using Guid(8b036647a757eeb1f9d1cf557ae8d6ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '2316312b346313f5fa6931cfae6787be') in 0.001165 seconds
+Number of updated asset objects reloaded before import = 34
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.634197 seconds.
+  path: Assets/MagicaCloth2/Example (Can be deleted)/Common/Scripts/MagicaCloth2Example.asmdef
+  artifactKey: Guid(5bc0ea054e216f5498d1a84885db7ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Example (Can be deleted)/Common/Scripts/MagicaCloth2Example.asmdef using Guid(5bc0ea054e216f5498d1a84885db7ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'e83f224a13b11a502631594576d115c4') in 0.000285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.537408 seconds.
+  path: Assets/MagicaCloth2/Example (Can be deleted)
+  artifactKey: Guid(b13ad20384f6dd8459a0ee155e8181f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Example (Can be deleted) using Guid(b13ad20384f6dd8459a0ee155e8181f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '50cb33cbfbac173e22266e02559a0c80') in 0.000310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.278 seconds
+Native extension for LinuxStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.677 seconds
+Domain Reload Profiling: 954ms
+	BeginReloadAssembly (100ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (5ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (137ms)
+		LoadAssemblies (131ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (42ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (5ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (677ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (280ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (111ms)
+			ProcessInitializeOnLoadMethodAttributes (110ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 20.44 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6118 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 95 unused Assets / (12.3 MB). Loaded Objects now: 6794.
+Memory consumption went from 241.3 MB to 229.0 MB.
+Total: 4.881682 ms (FindLiveObjects: 0.227063 ms CreateObjectMapping: 0.090215 ms MarkObjects: 3.307736 ms  DeleteObjects: 1.255600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/MagicaSphereCollider.cs: 8b0c65c0f9969f2f081c930935ab22b6 -> 
+  custom:scripting/monoscript/fileName/IntAABB.cs: 77ab9d4a0318f4a79d3b389c3c4e9d9a -> 
+  custom:scripting/monoscript/fileName/ExProcessingList.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshManager.cs: 7bcc8c073768e3c16e9869717530737c -> 
+  custom:scripting/monoscript/fileName/MenuItemScript.cs: 1fde790145e3132289da3602503493df -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/SharePreBuildDataDrawer.cs: 1c21feb0afd4c1c10c2d227c9b894ef2 -> 
+  custom:scripting/monoscript/fileName/MagicaSettings.cs: dc4c43ae67e9857f950e95c51a99b740 -> 
+  custom:scripting/monoscript/fileName/TeamWindData.cs: 2bde5203167884ad1037b08fccb310fa -> 
+  custom:scripting/monoscript/fileName/VertexAttribute.cs: 60c33624d78039b8862840e283fedc74 -> 
+  custom:scripting/monoscript/fileName/ClothAssetPostprocessor.cs: b62fc32fe36c29e9ee40ae85c01ea1a4 -> 
+  custom:scripting/monoscript/fileName/UniquePreBuildData.cs: c9cceb43f445b13254e984efa514a974 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshWork.cs: 2a7a1948930b51ceaa5752250772a7e0 -> 
+  custom:scripting/monoscript/fileName/DrawIconInHierarchy.cs: f650e5001a214e5de2037f9a4af79342 -> 
+  custom:scripting/monoscript/fileName/DataUtility.cs: 4672f3fa6abd86e83d0b2305a679112a -> 
+  custom:scripting/monoscript/fileName/TriangleBendingConstraint.cs: 366dc3bec29edf7bfbda10b5f7ddc4ab -> 
+  custom:scripting/monoscript/fileName/ClothBehaviour.cs: 7f2fba1aa09773ae89638735c144fd0e -> 
+  custom:scripting/monoscript/fileName/FixedList128BytesExtensions.cs: 1f51cc83ae544e876c0113713e65630e -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderEditor.cs: dc448efa9059615557164356ce976837 -> 
+  custom:scripting/monoscript/fileName/MinimumData.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ResultDefine.cs: e957db3ecab6193d61553ab40822313b -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/MultiDataBuilder.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/MagicaManagerAPI.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:scripting/monoscript/fileName/ClothProcessData.cs: 7365cb13ce0844a8bfb5c58e9077a625 -> 
+  custom:scripting/monoscript/fileName/NativeArrayExtensions.cs: da36b6bd8777d47d28aacbdda7c613f0 -> 480ae80e25a67512135651e8db7b75bc
+  custom:scripting/monoscript/fileName/WindManager.cs: ec1976344e7c4cda9de48be79b962ac5 -> 
+  custom:scripting/monoscript/fileName/ExBitFlag8.cs: cc6e7215ec5105c91e3eb495f939209c -> 
+  custom:scripting/monoscript/fileName/VirtualMeshBoneWeight.cs: 53f00c9c752d771c1603afb0b8e6f2e3 -> 
+  custom:scripting/monoscript/fileName/ClothPresetUtility.cs: 71aaeabb33d30623dc1082085b12bcf3 -> 
+  custom:scripting/monoscript/fileName/MagicaCloth.cs: 31fc27e875b5ad095efdb2fb24745b47 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshReduction.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/DataChunk.cs: 3b897fa7b0da2bc7f93673ca53254aa5 -> 
+  custom:scripting/monoscript/fileName/AABB.cs: 3cad86354589dd9108e9fef4c832a531 -> 
+  custom:scripting/monoscript/fileName/UnityTimeSpan.cs: 1061facba5f1f643659cf58cc8ca83f7 -> 
+  custom:scripting/monoscript/fileName/TransformData.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/WindSettings.cs: b1503ba37498f340df72318c79543761 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneEditor.cs: ff9218c02b054c120ca08165a276fb1c -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleCollider.cs: ec78af7aa465ea4b912c524a1a0d5cca -> 
+  custom:scripting/monoscript/fileName/PreBuildDataCreation.cs: fc9ccbb693088dfbc757f7a75c84aa55 -> 
+  custom:scripting/monoscript/fileName/NormalAlignmentSettings.cs: a1b3e2adcbadca2d7bd879c85246d9c7 -> 
+  custom:scripting/monoscript/fileName/ClothInspectorUtility.cs: 15adcf13a470622c1ca98e53f456ebc8 -> 
+  custom:scripting/monoscript/fileName/CullingSettings.cs: a646c82c1bacfcef0690cc37a45503c4 -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneCollider.cs: 6d9571b3eaaa749a9fc6fc57d6b27093 -> 
+  custom:scripting/monoscript/fileName/MathExtensions.cs: a40db7dff9257e4576a536d71d10c9a5 -> 
+  custom:scripting/monoscript/fileName/ClothProcessGeneration.cs: 27ee3d1636d45c209a6c7d8fa0d795b6 -> 
+  custom:scripting/monoscript/fileName/ClothDebugSettings.cs: 24e92330c2d935719e96d080aaff272c -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:scripting/monoscript/fileName/TransformManager.cs: 671fcf03135c464074fadad416dcccfa -> 
+  custom:scripting/monoscript/fileName/PreBuildManager.cs: fa1fd7e35b7206f7cdd286ddcc604bc7 -> 
+  custom:scripting/monoscript/fileName/RenderData.cs: fe909c85de811a4165a76c278f535184 -> 
+  custom:scripting/monoscript/fileName/GizmoSerializeData.cs: b2477ec12056a7a9d963fcf060397b19 -> 
+  custom:scripting/monoscript/fileName/ICount.cs: 3ac8c3f612c729638382415378e78318 -> 
+  custom:scripting/monoscript/fileName/MotionConstraint.cs: 45a78d6e073e51499b83ad9bd0b4ca36 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeData.cs: 848d2679060aed2e01bb579fcaa15043 -> 
+  custom:scripting/monoscript/fileName/ClothManager.cs: 78cf94320bd04de875940f2a50705d53 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshOptimization.cs: f1c5ce36913112df5bbba1ed8494652c -> 
+  custom:scripting/monoscript/fileName/SystemDefine.cs: be8f9d52bb9e98dc14ffb1df23681a3d -> 
+  custom:scripting/monoscript/fileName/PreBuildScriptableObject.cs: 87ec8f3fc7e376abc4aa5c1d9f28104e -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2.Editor: c020bea4e1d053539ba87da82bd4106e -> 
+  custom:scripting/monoscript/fileName/RenderSetupDataSerialization.cs: 1aada3719ec348993195a5bbebf8ccbd -> 
+  custom:scripting/monoscript/fileName/SharePreBuildData.cs: 33b37c80d11b95fb4a37003e190c9292 -> 
+  custom:scripting/monoscript/fileName/SimulationManagerSplit.cs: 149672cd09e90fc9960c6dc2e3f35fb3 -> 
+  custom:scripting/monoscript/fileName/PreBuildSerializeData.cs: cb5d0b3a07b4035b68a8e0d9f97f6fe9 -> 
+  custom:scripting/monoscript/fileName/TransformRecord.cs: 83d8e5c01066f712375c3b9a5770d364 -> 
+  custom:scripting/monoscript/fileName/RenderSetupSerializeData.cs: 480599f6e5fcbf1f658408f3a256047e -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderEditor.cs: 4a6746c7e5292d6c96309e5aaa9dfaa3 -> 
+  custom:scripting/monoscript/fileName/SelfCollisionConstraint.cs: 1999ed4ea5eace6366fd99d66b174240 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshSerialization.cs: d8d1c3784b43f28c8486a65ec95118cc -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneGizmoDrawer.cs: 6aa071e71f8bb2f3760d43fdf50731a4 -> 
+  custom:scripting/monoscript/fileName/ClothEditorManager.cs: 93fa450979aa60eb335ce907a90223dd -> 
+  custom:scripting/monoscript/fileName/Exception.cs: ad8761de2beb4d34402ff60d2204d52f -> 
+  custom:scripting/monoscript/fileName/InertiaConstraint.cs: 8b5b5aa48b6a4f8bd36a2c292409fd14 -> 
+  custom:scripting/monoscript/fileName/ColliderComponent.cs: e2ccc18c43cfab3cf888adb91ce8a6ac -> 
+  custom:scripting/monoscript/fileName/MagicaClothAPI.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ShapeDistanceReduction.cs: 08ff6df78038c57f75410035d2fc1bd6 -> 
+  custom:scripting/monoscript/fileName/NativeMultiHashMapExtensions.cs: f450b25214d2811a80f23815296a25d4 -> 
+  custom:scripting/monoscript/fileName/JobUtility.cs: 4f209b40c576d24e8106da8aacb0f3a8 -> 
+  custom:scripting/monoscript/fileName/ExSimpleNativeArray.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/TeamManager.cs: 198eb45a94cf3f271950e3652f7083ec -> 
+  custom:scripting/monoscript/fileName/TimeManager.cs: f8e1d1358c074da4d3dc879778c69da2 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VirtualMesh.cs: 27698d6a4ae81536ab905be6579a9174 -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2: 0f8923f9c3721eb0d5c28b14b6ff8685 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshMapping.cs: 21242f34caaab03958980d3d94627d89 -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderGizmoDrawer.cs: 0c7ecb3bce805734acfccb8ff43207f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/SpringConstraint.cs: cab3c716581dc8f37828859074934103 -> 
+  custom:scripting/monoscript/fileName/GridMap.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/StaticStringBuilder.cs: 10246fda492bf34200af9f3f5488dffe -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData2.cs: 71f97b11e8d1725909afaf06747a9193 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZone.cs: 82e18fbe58e45870208289a55931bae0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/ClothInitSerializeData.cs: b120e6609bc94dc32dc1e63e95b07aca -> 
+  custom:scripting/monoscript/fileName/ReductionWorkData.cs: 96a96f9c7f7a5caf1139f96c1ca35c14 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshInputOutput.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/CurveSerializeDataDrawer.cs: af35a4621ee133b850f091ab77e0d601 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshTransform.cs: 942208c6f1b42f3169a2bee2074fae42 -> 
+  custom:scripting/monoscript/fileName/MathUtility.cs: 8f13a9411e7e7019d3cc6044cc0bf9fe -> 7101ed9f86b2bfdaf67ab4303cc98ede
+  custom:scripting/monoscript/fileName/ExBitFlag16.cs: cb50d8ab63ccd9a96e69f490c04093d4 -> 
+  custom:scripting/monoscript/fileName/AboutMenu.cs: db41d041748faa5d45bd52a98bf84fa5 -> 
+  custom:scripting/monoscript/fileName/TimeSpan.cs: 57770b47f5544261132220b254f9993a -> 
+  custom:scripting/monoscript/fileName/SimpleDistanceReduction.cs: 78fee0a822ae057b6d6adfc21f6795c0 -> 
+  custom:scripting/monoscript/fileName/InterlockUtility.cs: 2c40f2e9789add15ca74497606690a4b -> 
+  custom:scripting/monoscript/fileName/AngleConstraint.cs: 3bb5e942878b8b890811649b59368b1c -> 
+  custom:scripting/monoscript/fileName/TransformDataSerialization.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/IValid.cs: 57084b2b4372511e2ea032a0ead14398 -> 
+  custom:scripting/monoscript/fileName/ExTransformAccessArray.cs: d0990a418054b4c4f267332e5ec66894 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeDataDrawer.cs: 16cd25901e302a4e9872d2ccb2ce1df2 -> 
+  custom:scripting/monoscript/fileName/ClothProcess.cs: bc21303536198357fd1cfeabd0fb2609 -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderGizmoDrawer.cs: 8e9d554b0ab14902b8769eea1921acdf -> 
+  custom:scripting/monoscript/fileName/IDataValidate.cs: 412e67a033e3206b801eaab129c7d25b -> 
+  custom:scripting/monoscript/fileName/FixedList64BytesExtensions.cs: 13db6e5aaf2f216d90adc78a6329140f -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList1.cs: cf7e7a1720349c1af71e44dffc240bf5 -> 
+  custom:scripting/monoscript/fileName/RenderSetupData.cs: e0d32fab968ec9de90f675ce149cada0 -> 
+  custom:scripting/monoscript/fileName/FixedList512BytesExtensions.cs: 4dc8f76e75f32521d830c034f48d8387 -> 
+  custom:scripting/monoscript/fileName/FixedList4096BytesExtensions.cs: 05351cda9beac716c03fe49d50608231 -> 
+  custom:scripting/monoscript/fileName/SimulationManager.cs: c9d8c3b265f5f4072b7836b60334061c -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderEditor.cs: 3cb438f6dde54ebf045856d50a94a1f0 -> 
+  custom:scripting/monoscript/fileName/MagicaSettingsEditor.cs: 967b2e4a7d469f701d86fda09ba4a2d8 -> 
+  custom:scripting/monoscript/fileName/ExNativeArray.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CustomSkinningSettings.cs: da057a58aada945120dea8754a6b8afb -> 
+  custom:scripting/monoscript/fileName/TetherConstraint.cs: cb2bfc49615507c1b812963b8918ad8c -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderGizmoDrawer.cs: 7a6c54d86bfe0c977add7e86eab84e6d -> 
+  custom:scripting/monoscript/fileName/IManager.cs: 0a6bbfe576120f6fc7200dc60ea78d6e -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/MagicaManager.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MagicaClothGizmoDrawer.cs: 46734d9334cbb88301b263c481473882 -> 
+  custom:scripting/monoscript/fileName/RenderManager.cs: 0e431d1eb768c27b55d7ea43353864a0 -> 
+  custom:scripting/monoscript/fileName/WindParams.cs: c5ac6a7b69a0915b48280e22c1b5e700 -> 
+  custom:scripting/monoscript/fileName/ReductionSettings.cs: a8556e131a5aec5d5951928e0dbb8ed7 -> 
+  custom:scripting/monoscript/fileName/DistanceConstraint.cs: 1171b2f7d5263fd0ba019fbf0fe49061 -> 
+  custom:scripting/monoscript/fileName/ClothPainter.cs: 222196fec1650231f7a0f1cb844992ac -> 
+  custom:scripting/monoscript/fileName/VirtualMeshRaycastHit.cs: 1cfdf329dc2f54b0a4c60b4a10992d45 -> 
+  custom:scripting/monoscript/fileName/ColliderManager.cs: 8c1306383c758cd7ff12caafd9a94017 -> 
+  custom:scripting/monoscript/fileName/ClothEditorUtility.cs: 0a4a3efc3f84d6bc70c114ae2ba1ecbd -> 
+  custom:scripting/monoscript/fileName/ITransform.cs: ea29ab9b558bb6a3a0fd428e729ee660 -> 
+  custom:scripting/monoscript/fileName/NativeReferenceExtensions.cs: 5d6597d7556862ff70f7a173125ae330 -> 
+  custom:scripting/monoscript/fileName/Develop.cs: d3296c2f7f82d45fde14eb2a50a806a9 -> 
+  custom:scripting/monoscript/fileName/MagicaClothEditor.cs: cb536e781647f2e982c9ae3e2da6467b -> 
+  custom:scripting/monoscript/fileName/CurveSerializeData.cs: 773d83f73b643739a6c71fdea3b2f867 -> 
+  custom:scripting/monoscript/fileName/NativeParallelHashMapExtensions.cs: a59e205a3858071d9123850841e9967f -> 462869b482cb0a426c099c8676c75416
+  custom:scripting/monoscript/fileName/VirtualMeshContainer.cs: ea9f342fcc6e37d2f8d0d2584acd660a -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList4.cs: e1a3a13a27962aeb50ceccad2791889d -> 
+  custom:scripting/monoscript/fileName/MagicaEditorBase.cs: fe62013c7e5190961384c287bf25648d -> 
+  custom:scripting/monoscript/fileName/ResultCode.cs: 5e11ac4274a04c44ac2bb629c21487bd -> 
+  custom:scripting/monoscript/fileName/ClothParameters.cs: 4f5aa61b57001d19fac03aa0ccfe6236 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MeshUtility.cs: 37104eb97c52a28964d855ec12d2288b -> 
+  custom:scripting/monoscript/fileName/SimulationManagerNormal.cs: 05505c6adb659604e78419e9a5190f9b -> 
+  custom:scripting/monoscript/fileName/VirtualMeshProxy.cs: af242f96276bca56fd517ade53941050 -> 
+  custom:scripting/monoscript/fileName/StepReductionBase.cs: d4c211b6af8eaf0620a84a1744bcf51c -> 
+  custom:scripting/monoscript/fileName/SameDistanceReduction.cs: db72d77af22a6533e6a52cfbe40da342 -> 
+  custom:scripting/monoscript/fileName/ColliderCollisionConstraint.cs: f31d95cfd8e5c9b2ad33069eb85feb95 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData.cs: ac311fde64b9828755c95893ba2c9957 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeDataFunction.cs: 7b6d5ff8504adaa817f3a956c12941e7 -> 
+  custom:scripting/monoscript/fileName/SelectionData.cs: 00bd27903e949f5cbf8634cd98c8df52 -> 
+  custom:scripting/monoscript/fileName/FixedList32BytesExtensions.cs: 81e49ef8121742a0605f3de0ca565434 -> 
+  custom:scripting/monoscript/fileName/TransformRecordSerializeData.cs: a3caf0376abc0aa5eb27e85965df0f76 -> 
+  custom:scripting/monoscript/fileName/GizmoUtility.cs: e22a7d6e07ed9350fa7fe5ac9789e8cb -> 3cf94f2ee011511320f879526818cda8
+  custom:scripting/monoscript/fileName/MagicaClothAnimationProperty.cs: 90647cc400823b41df847a6cbfc29026 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 52.705099 seconds.
+  path: Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials/MC2_Floor.mat
+  artifactKey: Guid(1a8d0a0ce31bbbd49ad39beb17ee9326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials/MC2_Floor.mat using Guid(1a8d0a0ce31bbbd49ad39beb17ee9326) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'fab8b0863b00af16954dc1d3b75a0d41') in 0.357892 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials/MC2_Test_Front.mat
+  artifactKey: Guid(e668c51d0e0125e4dbae8a37cb0d45e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials/MC2_Test_Front.mat using Guid(e668c51d0e0125e4dbae8a37cb0d45e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '5d13435464b154381c7e6ac92ec35460') in 0.008198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.354577 seconds.
+  path: Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials
+  artifactKey: Guid(319509eb5d501a04f8a0d2e3a8f5b0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Example (Can be deleted)/Common/Materials using Guid(319509eb5d501a04f8a0d2e3a8f5b0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '5366645a2f7898f50dcaa92014005faf') in 0.000324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 24.878665 seconds.
+  path: Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Utc_sum_humanoid.fbx
+  artifactKey: Guid(5c78fba67bb448b42b8dc9ef978170e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Utc_sum_humanoid.fbx using Guid(5c78fba67bb448b42b8dc9ef978170e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ad5fc582ec5920920169288262c15e1c') in 0.056261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 274
+========================================================================
+Received Import Request.
+  Time since last request: 0.033258 seconds.
+  path: Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Utc_sum_humanoid Variant.prefab
+  artifactKey: Guid(2e7240c8003a64b478effd2a812f4d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Utc_sum_humanoid Variant.prefab using Guid(2e7240c8003a64b478effd2a812f4d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'a03ce5ebf888d1e7d608cfaaeca6a197') in 0.328724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 545
+========================================================================
+Received Import Request.
+  Time since last request: 15.566124 seconds.
+  path: Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/def_mat.mat
+  artifactKey: Guid(163929bef874a5a47b9eeaa1af0d9409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/def_mat.mat using Guid(163929bef874a5a47b9eeaa1af0d9409) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'b40a52e7cb93a7d80e5e742e245bc0a0') in 0.009390 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.070960 seconds.
+  path: Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/SB_def_mat.mat
+  artifactKey: Guid(59f12daf366f95d4984b921d3b5fb893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/SB_def_mat.mat using Guid(59f12daf366f95d4984b921d3b5fb893) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '1f4e99959417bdd1be8fccc1d1ddfe2b') in 0.009571 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/skin_mat.mat
+  artifactKey: Guid(b2196d7da1a53294aae46258e3d23d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/UnityChan/SD_Kohaku_chanz/Materials/skin_mat.mat using Guid(b2196d7da1a53294aae46258e3d23d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: 'ace9c05e935ebb93139162a28657d300') in 0.015737 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.291 seconds
+Native extension for LinuxStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.721 seconds
+Domain Reload Profiling: 1009ms
+	BeginReloadAssembly (106ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (4ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (142ms)
+		LoadAssemblies (175ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (721ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (298ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (116ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/StencilDeferred' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 27.88 ms, found 977 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6118 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 96 unused Assets / (12.3 MB). Loaded Objects now: 6799.
+Memory consumption went from 241.4 MB to 229.1 MB.
+Total: 5.228537 ms (FindLiveObjects: 0.361131 ms CreateObjectMapping: 0.173042 ms MarkObjects: 3.131903 ms  DeleteObjects: 1.561781 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/MagicaSphereCollider.cs: 8b0c65c0f9969f2f081c930935ab22b6 -> 
+  custom:scripting/monoscript/fileName/IntAABB.cs: 77ab9d4a0318f4a79d3b389c3c4e9d9a -> 
+  custom:scripting/monoscript/fileName/ExProcessingList.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshManager.cs: 7bcc8c073768e3c16e9869717530737c -> 
+  custom:scripting/monoscript/fileName/MenuItemScript.cs: 1fde790145e3132289da3602503493df -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/SharePreBuildDataDrawer.cs: 1c21feb0afd4c1c10c2d227c9b894ef2 -> 
+  custom:scripting/monoscript/fileName/MagicaSettings.cs: dc4c43ae67e9857f950e95c51a99b740 -> 
+  custom:scripting/monoscript/fileName/TeamWindData.cs: 2bde5203167884ad1037b08fccb310fa -> 
+  custom:scripting/monoscript/fileName/VertexAttribute.cs: 60c33624d78039b8862840e283fedc74 -> 
+  custom:scripting/monoscript/fileName/ClothAssetPostprocessor.cs: b62fc32fe36c29e9ee40ae85c01ea1a4 -> 
+  custom:scripting/monoscript/fileName/UniquePreBuildData.cs: c9cceb43f445b13254e984efa514a974 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshWork.cs: 2a7a1948930b51ceaa5752250772a7e0 -> 
+  custom:scripting/monoscript/fileName/DrawIconInHierarchy.cs: f650e5001a214e5de2037f9a4af79342 -> 
+  custom:scripting/monoscript/fileName/DataUtility.cs: 4672f3fa6abd86e83d0b2305a679112a -> 
+  custom:scripting/monoscript/fileName/TriangleBendingConstraint.cs: 366dc3bec29edf7bfbda10b5f7ddc4ab -> 
+  custom:scripting/monoscript/fileName/ClothBehaviour.cs: 7f2fba1aa09773ae89638735c144fd0e -> 
+  custom:scripting/monoscript/fileName/FixedList128BytesExtensions.cs: 1f51cc83ae544e876c0113713e65630e -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderEditor.cs: dc448efa9059615557164356ce976837 -> 
+  custom:scripting/monoscript/fileName/MinimumData.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ResultDefine.cs: e957db3ecab6193d61553ab40822313b -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/MultiDataBuilder.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/MagicaManagerAPI.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:scripting/monoscript/fileName/ClothProcessData.cs: 7365cb13ce0844a8bfb5c58e9077a625 -> 
+  custom:scripting/monoscript/fileName/NativeArrayExtensions.cs: da36b6bd8777d47d28aacbdda7c613f0 -> 480ae80e25a67512135651e8db7b75bc
+  custom:scripting/monoscript/fileName/WindManager.cs: ec1976344e7c4cda9de48be79b962ac5 -> 
+  custom:scripting/monoscript/fileName/ExBitFlag8.cs: cc6e7215ec5105c91e3eb495f939209c -> 
+  custom:scripting/monoscript/fileName/VirtualMeshBoneWeight.cs: 53f00c9c752d771c1603afb0b8e6f2e3 -> 
+  custom:scripting/monoscript/fileName/ClothPresetUtility.cs: 71aaeabb33d30623dc1082085b12bcf3 -> 
+  custom:scripting/monoscript/fileName/MagicaCloth.cs: 31fc27e875b5ad095efdb2fb24745b47 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshReduction.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/DataChunk.cs: 3b897fa7b0da2bc7f93673ca53254aa5 -> 
+  custom:scripting/monoscript/fileName/AABB.cs: 3cad86354589dd9108e9fef4c832a531 -> 
+  custom:scripting/monoscript/fileName/UnityTimeSpan.cs: 1061facba5f1f643659cf58cc8ca83f7 -> 
+  custom:scripting/monoscript/fileName/TransformData.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/WindSettings.cs: b1503ba37498f340df72318c79543761 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneEditor.cs: ff9218c02b054c120ca08165a276fb1c -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleCollider.cs: ec78af7aa465ea4b912c524a1a0d5cca -> 
+  custom:scripting/monoscript/fileName/PreBuildDataCreation.cs: fc9ccbb693088dfbc757f7a75c84aa55 -> 
+  custom:scripting/monoscript/fileName/NormalAlignmentSettings.cs: a1b3e2adcbadca2d7bd879c85246d9c7 -> 
+  custom:scripting/monoscript/fileName/ClothInspectorUtility.cs: 15adcf13a470622c1ca98e53f456ebc8 -> 
+  custom:scripting/monoscript/fileName/CullingSettings.cs: a646c82c1bacfcef0690cc37a45503c4 -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneCollider.cs: 6d9571b3eaaa749a9fc6fc57d6b27093 -> 
+  custom:scripting/monoscript/fileName/MathExtensions.cs: a40db7dff9257e4576a536d71d10c9a5 -> 
+  custom:scripting/monoscript/fileName/ClothProcessGeneration.cs: 27ee3d1636d45c209a6c7d8fa0d795b6 -> 
+  custom:scripting/monoscript/fileName/ClothDebugSettings.cs: 24e92330c2d935719e96d080aaff272c -> 
+  custom:CustomObjectIndexerAttribute: f3847dcb39c2a616e8d79845aaae36f1 -> 
+  custom:scripting/monoscript/fileName/TransformManager.cs: 671fcf03135c464074fadad416dcccfa -> 
+  custom:scripting/monoscript/fileName/PreBuildManager.cs: fa1fd7e35b7206f7cdd286ddcc604bc7 -> 
+  custom:scripting/monoscript/fileName/RenderData.cs: fe909c85de811a4165a76c278f535184 -> 
+  custom:scripting/monoscript/fileName/GizmoSerializeData.cs: b2477ec12056a7a9d963fcf060397b19 -> 
+  custom:scripting/monoscript/fileName/ICount.cs: 3ac8c3f612c729638382415378e78318 -> 
+  custom:scripting/monoscript/fileName/MotionConstraint.cs: 45a78d6e073e51499b83ad9bd0b4ca36 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeData.cs: 848d2679060aed2e01bb579fcaa15043 -> 
+  custom:scripting/monoscript/fileName/ClothManager.cs: 78cf94320bd04de875940f2a50705d53 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshOptimization.cs: f1c5ce36913112df5bbba1ed8494652c -> 
+  custom:scripting/monoscript/fileName/SystemDefine.cs: be8f9d52bb9e98dc14ffb1df23681a3d -> 
+  custom:scripting/monoscript/fileName/PreBuildScriptableObject.cs: 87ec8f3fc7e376abc4aa5c1d9f28104e -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2.Editor: c020bea4e1d053539ba87da82bd4106e -> 
+  custom:scripting/monoscript/fileName/RenderSetupDataSerialization.cs: 1aada3719ec348993195a5bbebf8ccbd -> 
+  custom:scripting/monoscript/fileName/SharePreBuildData.cs: 33b37c80d11b95fb4a37003e190c9292 -> 
+  custom:scripting/monoscript/fileName/SimulationManagerSplit.cs: 149672cd09e90fc9960c6dc2e3f35fb3 -> 
+  custom:scripting/monoscript/fileName/PreBuildSerializeData.cs: cb5d0b3a07b4035b68a8e0d9f97f6fe9 -> 
+  custom:scripting/monoscript/fileName/TransformRecord.cs: 83d8e5c01066f712375c3b9a5770d364 -> 
+  custom:scripting/monoscript/fileName/RenderSetupSerializeData.cs: 480599f6e5fcbf1f658408f3a256047e -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderEditor.cs: 4a6746c7e5292d6c96309e5aaa9dfaa3 -> 
+  custom:scripting/monoscript/fileName/SelfCollisionConstraint.cs: 1999ed4ea5eace6366fd99d66b174240 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshSerialization.cs: d8d1c3784b43f28c8486a65ec95118cc -> 
+  custom:scripting/monoscript/fileName/MagicaWindZoneGizmoDrawer.cs: 6aa071e71f8bb2f3760d43fdf50731a4 -> 
+  custom:scripting/monoscript/fileName/ClothEditorManager.cs: 93fa450979aa60eb335ce907a90223dd -> 
+  custom:scripting/monoscript/fileName/Exception.cs: ad8761de2beb4d34402ff60d2204d52f -> 
+  custom:scripting/monoscript/fileName/InertiaConstraint.cs: 8b5b5aa48b6a4f8bd36a2c292409fd14 -> 
+  custom:scripting/monoscript/fileName/ColliderComponent.cs: e2ccc18c43cfab3cf888adb91ce8a6ac -> 
+  custom:scripting/monoscript/fileName/MagicaClothAPI.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ShapeDistanceReduction.cs: 08ff6df78038c57f75410035d2fc1bd6 -> 
+  custom:scripting/monoscript/fileName/NativeMultiHashMapExtensions.cs: f450b25214d2811a80f23815296a25d4 -> 
+  custom:scripting/monoscript/fileName/JobUtility.cs: 4f209b40c576d24e8106da8aacb0f3a8 -> 
+  custom:scripting/monoscript/fileName/ExSimpleNativeArray.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/TeamManager.cs: 198eb45a94cf3f271950e3652f7083ec -> 
+  custom:scripting/monoscript/fileName/TimeManager.cs: f8e1d1358c074da4d3dc879778c69da2 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/VirtualMesh.cs: 27698d6a4ae81536ab905be6579a9174 -> 
+  custom:scripting/precompiled-assembly-types:MagicaClothV2: 0f8923f9c3721eb0d5c28b14b6ff8685 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshMapping.cs: 21242f34caaab03958980d3d94627d89 -> 
+  custom:scripting/monoscript/fileName/MagicaCapsuleColliderGizmoDrawer.cs: 0c7ecb3bce805734acfccb8ff43207f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/SpringConstraint.cs: cab3c716581dc8f37828859074934103 -> 
+  custom:scripting/monoscript/fileName/GridMap.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
+  custom:scripting/monoscript/fileName/StaticStringBuilder.cs: 10246fda492bf34200af9f3f5488dffe -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData2.cs: 71f97b11e8d1725909afaf06747a9193 -> 
+  custom:scripting/monoscript/fileName/MagicaWindZone.cs: 82e18fbe58e45870208289a55931bae0 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/ClothInitSerializeData.cs: b120e6609bc94dc32dc1e63e95b07aca -> 
+  custom:scripting/monoscript/fileName/ReductionWorkData.cs: 96a96f9c7f7a5caf1139f96c1ca35c14 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshInputOutput.cs: 1ace1023dcf9d9ebdb3a2452700bb7eb -> 
+  custom:scripting/monoscript/fileName/CurveSerializeDataDrawer.cs: af35a4621ee133b850f091ab77e0d601 -> 
+  custom:scripting/monoscript/fileName/VirtualMeshTransform.cs: 942208c6f1b42f3169a2bee2074fae42 -> 
+  custom:scripting/monoscript/fileName/MathUtility.cs: 8f13a9411e7e7019d3cc6044cc0bf9fe -> 7101ed9f86b2bfdaf67ab4303cc98ede
+  custom:scripting/monoscript/fileName/ExBitFlag16.cs: cb50d8ab63ccd9a96e69f490c04093d4 -> 
+  custom:scripting/monoscript/fileName/AboutMenu.cs: db41d041748faa5d45bd52a98bf84fa5 -> 
+  custom:scripting/monoscript/fileName/TimeSpan.cs: 57770b47f5544261132220b254f9993a -> 
+  custom:scripting/monoscript/fileName/SimpleDistanceReduction.cs: 78fee0a822ae057b6d6adfc21f6795c0 -> 
+  custom:scripting/monoscript/fileName/InterlockUtility.cs: 2c40f2e9789add15ca74497606690a4b -> 
+  custom:scripting/monoscript/fileName/AngleConstraint.cs: 3bb5e942878b8b890811649b59368b1c -> 
+  custom:scripting/monoscript/fileName/TransformDataSerialization.cs: 75edcafbe1e8a71d09671c35dbea500b -> 
+  custom:scripting/monoscript/fileName/IValid.cs: 57084b2b4372511e2ea032a0ead14398 -> 
+  custom:scripting/monoscript/fileName/ExTransformAccessArray.cs: d0990a418054b4c4f267332e5ec66894 -> 
+  custom:scripting/monoscript/fileName/CheckSliderSerializeDataDrawer.cs: 16cd25901e302a4e9872d2ccb2ce1df2 -> 
+  custom:scripting/monoscript/fileName/ClothProcess.cs: bc21303536198357fd1cfeabd0fb2609 -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderGizmoDrawer.cs: 8e9d554b0ab14902b8769eea1921acdf -> 
+  custom:scripting/monoscript/fileName/IDataValidate.cs: 412e67a033e3206b801eaab129c7d25b -> 
+  custom:scripting/monoscript/fileName/FixedList64BytesExtensions.cs: 13db6e5aaf2f216d90adc78a6329140f -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList1.cs: cf7e7a1720349c1af71e44dffc240bf5 -> 
+  custom:scripting/monoscript/fileName/RenderSetupData.cs: e0d32fab968ec9de90f675ce149cada0 -> 
+  custom:scripting/monoscript/fileName/FixedList512BytesExtensions.cs: 4dc8f76e75f32521d830c034f48d8387 -> 
+  custom:scripting/monoscript/fileName/FixedList4096BytesExtensions.cs: 05351cda9beac716c03fe49d50608231 -> 
+  custom:scripting/monoscript/fileName/SimulationManager.cs: c9d8c3b265f5f4072b7836b60334061c -> 
+  custom:scripting/monoscript/fileName/MagicaSphereColliderEditor.cs: 3cb438f6dde54ebf045856d50a94a1f0 -> 
+  custom:scripting/monoscript/fileName/MagicaSettingsEditor.cs: 967b2e4a7d469f701d86fda09ba4a2d8 -> 
+  custom:scripting/monoscript/fileName/ExNativeArray.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/CustomSkinningSettings.cs: da057a58aada945120dea8754a6b8afb -> 
+  custom:scripting/monoscript/fileName/TetherConstraint.cs: cb2bfc49615507c1b812963b8918ad8c -> 
+  custom:scripting/monoscript/fileName/MagicaPlaneColliderGizmoDrawer.cs: 7a6c54d86bfe0c977add7e86eab84e6d -> 
+  custom:scripting/monoscript/fileName/IManager.cs: 0a6bbfe576120f6fc7200dc60ea78d6e -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/MagicaManager.cs: a3328091f5da145b9d5ca02eb4a22864 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MagicaClothGizmoDrawer.cs: 46734d9334cbb88301b263c481473882 -> 
+  custom:scripting/monoscript/fileName/RenderManager.cs: 0e431d1eb768c27b55d7ea43353864a0 -> 
+  custom:scripting/monoscript/fileName/WindParams.cs: c5ac6a7b69a0915b48280e22c1b5e700 -> 
+  custom:scripting/monoscript/fileName/ReductionSettings.cs: a8556e131a5aec5d5951928e0dbb8ed7 -> 
+  custom:scripting/monoscript/fileName/DistanceConstraint.cs: 1171b2f7d5263fd0ba019fbf0fe49061 -> 
+  custom:scripting/monoscript/fileName/ClothPainter.cs: 222196fec1650231f7a0f1cb844992ac -> 
+  custom:scripting/monoscript/fileName/VirtualMeshRaycastHit.cs: 1cfdf329dc2f54b0a4c60b4a10992d45 -> 
+  custom:scripting/monoscript/fileName/ColliderManager.cs: 8c1306383c758cd7ff12caafd9a94017 -> 
+  custom:scripting/monoscript/fileName/ClothEditorUtility.cs: 0a4a3efc3f84d6bc70c114ae2ba1ecbd -> 
+  custom:scripting/monoscript/fileName/ITransform.cs: ea29ab9b558bb6a3a0fd428e729ee660 -> 
+  custom:scripting/monoscript/fileName/NativeReferenceExtensions.cs: 5d6597d7556862ff70f7a173125ae330 -> 
+  custom:scripting/monoscript/fileName/Develop.cs: d3296c2f7f82d45fde14eb2a50a806a9 -> 
+  custom:scripting/monoscript/fileName/MagicaClothEditor.cs: cb536e781647f2e982c9ae3e2da6467b -> 
+  custom:scripting/monoscript/fileName/CurveSerializeData.cs: 773d83f73b643739a6c71fdea3b2f867 -> 
+  custom:scripting/monoscript/fileName/NativeParallelHashMapExtensions.cs: a59e205a3858071d9123850841e9967f -> 462869b482cb0a426c099c8676c75416
+  custom:scripting/monoscript/fileName/VirtualMeshContainer.cs: ea9f342fcc6e37d2f8d0d2584acd660a -> 
+  custom:scripting/monoscript/fileName/ExCostSortedList4.cs: e1a3a13a27962aeb50ceccad2791889d -> 
+  custom:scripting/monoscript/fileName/MagicaEditorBase.cs: fe62013c7e5190961384c287bf25648d -> 
+  custom:scripting/monoscript/fileName/ResultCode.cs: 5e11ac4274a04c44ac2bb629c21487bd -> 
+  custom:scripting/monoscript/fileName/ClothParameters.cs: 4f5aa61b57001d19fac03aa0ccfe6236 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MeshUtility.cs: 37104eb97c52a28964d855ec12d2288b -> 
+  custom:scripting/monoscript/fileName/SimulationManagerNormal.cs: 05505c6adb659604e78419e9a5190f9b -> 
+  custom:scripting/monoscript/fileName/VirtualMeshProxy.cs: af242f96276bca56fd517ade53941050 -> 
+  custom:scripting/monoscript/fileName/StepReductionBase.cs: d4c211b6af8eaf0620a84a1744bcf51c -> 
+  custom:scripting/monoscript/fileName/SameDistanceReduction.cs: db72d77af22a6533e6a52cfbe40da342 -> 
+  custom:scripting/monoscript/fileName/ColliderCollisionConstraint.cs: f31d95cfd8e5c9b2ad33069eb85feb95 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeData.cs: ac311fde64b9828755c95893ba2c9957 -> 
+  custom:scripting/monoscript/fileName/ClothSerializeDataFunction.cs: 7b6d5ff8504adaa817f3a956c12941e7 -> 
+  custom:scripting/monoscript/fileName/SelectionData.cs: 00bd27903e949f5cbf8634cd98c8df52 -> 
+  custom:scripting/monoscript/fileName/FixedList32BytesExtensions.cs: 81e49ef8121742a0605f3de0ca565434 -> 
+  custom:scripting/monoscript/fileName/TransformRecordSerializeData.cs: a3caf0376abc0aa5eb27e85965df0f76 -> 
+  custom:scripting/monoscript/fileName/GizmoUtility.cs: e22a7d6e07ed9350fa7fe5ac9789e8cb -> 3cf94f2ee011511320f879526818cda8
+  custom:scripting/monoscript/fileName/MagicaClothAnimationProperty.cs: 90647cc400823b41df847a6cbfc29026 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 39.530163 seconds.
+  path: Assets/MagicaCloth2/Materials/MC2_Floor.mat
+  artifactKey: Guid(1a8d0a0ce31bbbd49ad39beb17ee9326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicaCloth2/Materials/MC2_Floor.mat using Guid(1a8d0a0ce31bbbd49ad39beb17ee9326) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+ -> (artifact id: '0a540bfc6ec65be4a8e9cf029e1de889') in 0.037029 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 125, details: Operation aborted.
+AssetImportWorker is now disconnected from the server
+Process exiting
