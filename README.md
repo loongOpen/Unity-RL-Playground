@@ -2,7 +2,7 @@
 
 # <img src="gewu/Image/gwlogo3.jpg" height="150" /> 
 
-# <img src="gewu/Image/gewu2025.jpg" height="150" /> 
+# <img src="gewu/Image/gewu2025.jpg" width="1000px" /> 
 
 <div align="center">
   
