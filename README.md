@@ -2,6 +2,8 @@
 
 # <img src="gewu/Image/gwlogo3.jpg" height="150" /> 
 
+# <img src="gewu/Image/gewu2025.jpg" height="150" /> 
+
 <div align="center">
   
 | <div align="center"> [格物2.0](https://www.bilibili.com/video/BV1iJbSz9Eem/) </div> | <div align="center">  [具身智能小镇](https://www.bilibili.com/video/BV1T7jBzVEZV/) </div> |
