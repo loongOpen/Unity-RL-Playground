@@ -11,7 +11,7 @@ using System.Linq;
 using UnityEditor;
 using System;
 
-public class G1mimicAgent : Agent
+public class G1mimic1Agent : Agent
 {
     public bool train = false;
     public bool replay = false;
@@ -33,7 +33,7 @@ public class G1mimicAgent : Agent
     private List<float[]> refData = new List<float[]>();
     private List<float[]> itpData = new List<float[]>();
     
-    private int currentFrame;  
+    public int currentFrame;  
     
     //private bool isEndEpisode = false;
     float[] currentData = new float[36];
@@ -43,8 +43,6 @@ public class G1mimicAgent : Agent
     
     Transform body;
 
-    List<float> P0 = new List<float>();
-    List<float> W0 = new List<float>();
     List<Transform> bodypart = new List<Transform>();
     Vector3 pos0;
     Quaternion rot0;
@@ -54,18 +52,15 @@ public class G1mimicAgent : Agent
     ArticulationBody[] arts = new ArticulationBody[40];
     ArticulationBody art0;
     int tt = 0;
-    public int frame0 = 100;
-    
-    // PD控制器参数用于位置和旋转跟踪
-    public float positionKp = 1000f;  // 位置比例增益
-    public float positionKd = 50f;    // 位置微分增益
-    public float rotationKp = 1000f;  // 旋转比例增益
-    public float rotationKd = 50f;    // 旋转微分增益
+    public int frame0 = 500;
+    public bool rand = true;
+    int endT = 0;
+    int idx = 0;
 
     private bool _isClone = false; 
     void Start()
     {
-        Time.fixedDeltaTime = 0.02f;
+        Time.fixedDeltaTime = 0.01f;
 
         if (train && !_isClone) 
         {
@@ -74,20 +69,10 @@ public class G1mimicAgent : Agent
                 GameObject clone = Instantiate(gameObject); 
                 clone.transform.position = transform.position + new Vector3(i * 2f, 0, 0);
                 clone.name = $"{name}_Clone_{i}"; 
-                clone.GetComponent<G1mimicAgent>()._isClone = true; 
+                clone.GetComponent<G1mimic1Agent>()._isClone = true; 
             }
         }
-    }
-
-    void ChangeLayerRecursively(GameObject obj, int targetLayer)
-    {
-        obj.layer = targetLayer;
-        foreach (Transform child in obj.transform)ChangeLayerRecursively(child.gameObject, targetLayer);
-    }
-
-    public override void Initialize()
-    {
-
+        
         arts = this.GetComponentsInChildren<ArticulationBody>();
         int ActionNum = 0;
         for (int k = 0; k < arts.Length; k++)
@@ -104,18 +89,18 @@ public class G1mimicAgent : Agent
 
         pos0 = body.position;
         rot0 = body.rotation;
-        art0.GetJointPositions(P0);
-        art0.GetJointVelocities(W0);
                 
         string streamingAssetsPath = Path.Combine(Application.streamingAssetsPath, "g1_dataset");
         List<string> csvFileNames = GetCsvFileNames(streamingAssetsPath);
         refData = LoadDataFromFile(csvFileNames[motion_id]);
         float[] refT = new float[refData.Count];
         for(int i=0;i<refT.Length;i++)refT[i]=i/30f;
-        float[] newT = new float[(int)(refData.Count*50f/30f)-1];
-        for(int i=0;i<newT.Length;i++)newT[i]=i/50f;
+        float[] newT = new float[(int)(refData.Count*100f/30f)-5];
+        for(int i=0;i<newT.Length;i++)newT[i]=i/100f;
         itpData = Interpolate(refT, refData, newT);
+        //print(newT[newT.Length-1]);
         motion_name=csvFileNames[motion_id].Replace("./Assets/Imitation/G1/dataset\\", "").Replace(".csv", "");
+
     }
 
     List<string> GetCsvFileNames(string directoryPath)
@@ -173,54 +158,38 @@ public class G1mimicAgent : Agent
     }
     public override void OnEpisodeBegin()
     {
-        arts[0].TeleportRoot(pos0, rot0);
-        arts[0].velocity = Vector3.zero;
-        arts[0].angularVelocity = Vector3.zero;
-        arts[0].SetJointPositions(P0);
-        arts[0].SetJointVelocities(W0);
+
         for (int i = 0; i < 29; i++) u[i] = 0;
-        for (int i = 0; i < 29; i++) uff[i] = 0;    
+        for (int i = 0; i < 29; i++) uff[i] = 0; 
+
+        if(endT>450)idx=(idx+1)%5;
+        if(rand)frame0 = 1000 + Random.Range(0,5)*100;
+        //frame0 = 500 + idx*250;
+        //frame0 = 500 + Random.Range(0,1001);
         currentFrame = frame0;
-        if(replay)
-        {
-            //motion_id++;
-            string streamingAssetsPath = Path.Combine(Application.streamingAssetsPath, "g1_dataset");
-            List<string> csvFileNames = GetCsvFileNames(streamingAssetsPath);
-            refData = LoadDataFromFile(csvFileNames[motion_id]);
-            float[] refT = new float[refData.Count];
-            for(int i=0;i<refT.Length;i++)refT[i]=i/30f;
-            float[] newT = new float[(int)(refData.Count*50f/30f)-1];
-            for(int i=0;i<newT.Length;i++)newT[i]=i/50f;
-            itpData = Interpolate(refT, refData, newT);
-            motion_name=csvFileNames[motion_id].Replace("./Assets/Imitation/G1/dataset\\", "").Replace(".csv", "");
-            //if(motion_id==csvFileNames.Count)motion_id=0;
-        }
+
         tt=0;
-        currentData = refData[currentFrame];
+        currentData = itpData[currentFrame];
         Array.Copy(currentData, 0, currentPos, 0, 3);
         Array.Copy(currentData, 3, currentRot, 0, 4);
         Array.Copy(currentData, 7, currentDof, 0, 29);
         
-        for (int i = 0; i < 29; i++)
-        {
-            uff[i] = currentDof[i]* 180f / 3.14f;
-            SetJointTargetDeg(jh[i], uff[i]);
-        }
 
-        Vector3 newPosition = new Vector3(-currentPos[1], currentPos[2]+0.04f, currentPos[0]);
+        Vector3 newPosition = new Vector3(-currentPos[1], currentPos[2], currentPos[0]);
         Quaternion newRotation = new Quaternion(
             -currentRot[1], 
             currentRot[2], 
             currentRot[0], 
             -currentRot[3]
         );
-        newPosition.x+=pos0.x;
-        newPosition.z+=pos0.z;
 
         arts[0].TeleportRoot(newPosition, newRotation);
         arts[0].velocity = Vector3.zero;
         arts[0].angularVelocity = Vector3.zero;
-        arts[0].immovable = true; 
+        float[] Dof = new float[35]{0,0,0,0,0,0,   currentDof[12], currentDof[6], currentDof[0], currentDof[13], currentDof[7], currentDof[1], currentDof[14], currentDof[8], currentDof[2], currentDof[15], currentDof[22], currentDof[9], currentDof[3], currentDof[16], currentDof[23], currentDof[10], currentDof[4], currentDof[17], currentDof[24], currentDof[11], currentDof[5], currentDof[18], currentDof[25], currentDof[19], currentDof[26], currentDof[20], currentDof[27], currentDof[21], currentDof[28]};
+        List<float> jointPositions = new List<float>();
+        for (int i = 0; i < 29+6; i++)jointPositions.Add(Dof[i]);
+        arts[0].SetJointPositions(jointPositions);
     }
  
     List<float[]> Interpolate(float[] t, List<float[]> posList, float[] targetT)
@@ -275,26 +244,60 @@ public class G1mimicAgent : Agent
             sensor.AddObservation(jh[i].jointPosition[0]);
             sensor.AddObservation(jh[i].jointVelocity[0]);
         }
+        Vector3 epos=body.position-newPosition;
+        Vector3 newEuler = newRotation.eulerAngles;
+        sensor.AddObservation(epos);
+        sensor.AddObservation(newEuler.x);
+        sensor.AddObservation(newEuler.z);
+        //sensor.AddObservation(currentDof);
     }
     
-    float EulerTrans(float eulerAngle)
+    float EulerTrans(float angle)
     {
-        if (eulerAngle <= 180)
-            return eulerAngle;
-        else
-            return eulerAngle - 360f;
+        angle = angle % 360f;
+        if (angle > 180f)angle -= 360f;
+        else if (angle < -180f)angle += 360f;
+        return angle;
     }
-    
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
+        if (itpData.Count > 0)
+        {
+            currentData = itpData[currentFrame];
+            Array.Copy(currentData, 0, currentPos, 0, 3);
+            Array.Copy(currentData, 3, currentRot, 0, 4);
+            Array.Copy(currentData, 7, currentDof, 0, 29);
+            for (int i = 0; i < 29; i++)uff[i] = currentDof[i]* 180f / 3.14f;
+
+            newPosition = new Vector3(-currentPos[1], currentPos[2], currentPos[0]);
+            newRotation = new Quaternion(
+                -currentRot[1], 
+                currentRot[2], 
+                currentRot[0], 
+                -currentRot[3]
+            );
+            
+            if(replay)
+            {
+                arts[0].TeleportRoot(newPosition, newRotation);
+                arts[0].velocity = Vector3.zero;
+                arts[0].angularVelocity = Vector3.zero;
+                float[] Dof = new float[35]{0,0,0,0,0,0,   currentDof[12], currentDof[6], currentDof[0], currentDof[13], currentDof[7], currentDof[1], currentDof[14], currentDof[8], currentDof[2], currentDof[15], currentDof[22], currentDof[9], currentDof[3], currentDof[16], currentDof[23], currentDof[10], currentDof[4], currentDof[17], currentDof[24], currentDof[11], currentDof[5], currentDof[18], currentDof[25], currentDof[19], currentDof[26], currentDof[20], currentDof[27], currentDof[21], currentDof[28]};
+                List<float> jointPositions = new List<float>();
+                for (int i = 0; i < 29+6; i++)jointPositions.Add(Dof[i]);
+                arts[0].SetJointPositions(jointPositions);
+            }
+
+        }
+        
         var continuousActions = actionBuffers.ContinuousActions;
         var kk = 0.9f;
-        float kb = 50;
-        if(replay)kb = 0;
+        float kb = 40;
         for (int i = 0; i < 29; i++)
         {
             u[i] = u[i] * kk + (1 - kk) * continuousActions[i];
-            //if(i>=15)kb=0;
+            if(i>=15)kb=0;
+            if(replay)kb = 0;
             utotal[i] = kb * u[i] + uff[i];
             SetJointTargetDeg(jh[i], utotal[i]);
         }
@@ -302,71 +305,7 @@ public class G1mimicAgent : Agent
 
     void FixedUpdate()
     {
-	if (itpData.Count > 0)
-	{
-        currentData = itpData[currentFrame];
-        Array.Copy(currentData, 0, currentPos, 0, 3);
-        Array.Copy(currentData, 3, currentRot, 0, 4);
-        Array.Copy(currentData, 7, currentDof, 0, 29);
-		for (int i = 0; i < 29; i++)uff[i] = currentDof[i]* 180f / 3.14f;
-
-		newPosition = new Vector3(-currentPos[1], currentPos[2], currentPos[0]);
-        newRotation = new Quaternion(
-            -currentRot[1], 
-            currentRot[2], 
-            currentRot[0], 
-            -currentRot[3]
-        );
-        newPosition.x+=pos0.x;
-        newPosition.z+=pos0.z;
-        
-        if(replay)
-        {
-            Physics.gravity = Vector3.zero;
-            arts[0].TeleportRoot(newPosition, newRotation);
-        }
-        else
-        {
-            // 非replay模式下使用AddForce和AddTorque实现位置和旋转跟踪
-            if(tt > 3)
-            {
-                arts[0].immovable = false;
-                
-                // 位置跟踪：计算位置误差和速度误差
-                Vector3 positionError = newPosition - body.position;
-                Vector3 velocityError = -art0.velocity; // 当前速度（需要减速到0）
-                
-                // 计算所需的位置跟踪力（PD控制器）
-                Vector3 positionForce = positionKp * positionError + positionKd * velocityError;
-
-                //positionForce = new Vector3(0,300,0);
-                
-                // 应用位置跟踪力
-                arts[0].AddForce(positionForce);
-                
-                // 旋转跟踪：计算旋转误差
-                Quaternion rotationError = newRotation * Quaternion.Inverse(body.rotation);
-                
-                // 将旋转误差转换为角速度（轴角表示）
-                rotationError.ToAngleAxis(out float angle, out Vector3 axis);
-                
-                // 归一化角度到[-180, 180]范围
-                if (angle > 180f) angle -= 360f;
-                
-                // 计算旋转误差向量（弧度）
-                Vector3 rotationErrorVector = (angle * Mathf.Deg2Rad) * axis.normalized;
-                
-                // 计算当前角速度误差
-                Vector3 angularVelocityError = -art0.angularVelocity;
-                
-                // 计算所需的旋转跟踪扭矩（PD控制器）
-                Vector3 rotationTorque = rotationKp * rotationErrorVector + rotationKd * angularVelocityError;
-                
-                // 应用旋转跟踪扭矩
-                art0.AddTorque(0*rotationTorque);
-            }
-        }
-	}
+	
 	
 	/////////////////rewards/////////////////////////////////////////////////////////
         tt++;
@@ -376,16 +315,34 @@ public class G1mimicAgent : Agent
         var live_reward = 1f;
         float rot_reward = 0;
         float pos_reward = 0;
-        if(tt>3)
+        float dof_reward = 0f;
+        if(tt>1)
         {
-            arts[0].immovable = false;
-            rot_reward = - 0.01f * Quaternion.Angle(body.rotation, newRotation);
-            pos_reward = - 1f * (body.position - newPosition).magnitude;
-            if (Quaternion.Angle(body.rotation, newRotation)>40f || (body.position - newPosition).magnitude>0.5f)EndEpisode();
+            // 计算旋转奖励时忽略Y轴欧拉角
+            Vector3 bodyEuler = body.eulerAngles;
+            Vector3 newEuler = newRotation.eulerAngles;
+            // 将Y轴设为0，只比较X和Z轴
+            Quaternion bodyRotNoY = Quaternion.Euler(bodyEuler.x, 0, bodyEuler.z);
+            Quaternion newRotNoY = Quaternion.Euler(newEuler.x, 0, newEuler.z);
+            rot_reward = - 0.01f * Quaternion.Angle(bodyRotNoY, newRotNoY);
+            pos_reward = - 0.5f * (body.position - newPosition).magnitude;
+            for (int i = 0; i < 29; i++) dof_reward += -0.03f * Mathf.Abs(jh[i].jointPosition[0] - currentDof[i]);
+        
+            if ((Quaternion.Angle(bodyRotNoY, newRotNoY)>40f || (body.position - newPosition).magnitude>0.5f) && train)
+            {
+                if(!replay)EndEpisode();
+            }
+            
+            /*if (train && tt>500)
+            {
+                endT=tt;
+                EndEpisode();
+            }*/
+            
         }
-        var dof_reward = 0f;
-        for (int i = 0; i < 29; i++) dof_reward += -0.1f * Mathf.Abs(jh[i].jointPosition[0] - currentDof[i]);
-        var reward = live_reward + (rot_reward + pos_reward)*1f + dof_reward;
+        
+        
+        var reward = live_reward + (rot_reward + pos_reward)*2f + dof_reward;
         AddReward(reward);
         currentFrame = (currentFrame + 1) ;
     }

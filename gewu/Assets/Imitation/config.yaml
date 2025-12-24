@@ -5,7 +5,7 @@ behaviors:
       epsilon: 0.2, epsilon_schedule: linear, lambd: 0.95, learning_rate: 0.0003,
       learning_rate_schedule: linear, num_epoch: 3}
     keep_checkpoints: 5
-    max_steps: 20000000
+    max_steps: 200000000
     network_settings: {deterministic: false, goal_conditioning_type: hyper, hidden_units: 512,
       normalize: true, num_layers: 3, vis_encode_type: simple}
     reward_signals:

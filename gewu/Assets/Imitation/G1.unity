@@ -6587,7 +6587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &440978432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25839,7 +25839,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 67eeed22ebb9f1118846301f9111f45c, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: a093932751674e02f86d478e96cf1232, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: gewu
@@ -25863,12 +25863,16 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
+  MaxStep: 1000
   train: 0
   replay: 0
   motion_id: 1
   motion_name: 
   frame0: 0
+  positionKp: 1000
+  positionKd: 50
+  rotationKp: 1000
+  rotationKd: 50
 --- !u!4 &1479756073
 Transform:
   m_ObjectHideFlags: 0
