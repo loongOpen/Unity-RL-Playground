@@ -148,6 +148,17 @@ Motion_id为动作序号，可修改，运行时可在Motion_name看到动作名
 
 采用键盘控制机器人进行行走和操作
 
+## 逆运动学例程
+
+在Assets/course目录下，提供了G1人形机器人、Go2四足机器人、Panda七自由度机械臂、UR5六自由度机械臂的逆运动学例程
+
+## 遥操作及数据采集例程
+
+在Assets/Flower目录下，提供了插花、开冰箱等VR遥操作例程（名称中带有_vr，适配pico vr设备，windows系统下将pico头显通过usb连接电脑，并在project setting的xr设置中勾选pico，运行后操作方式：按住抓握键移动/旋转手柄控制机械臂运动，点击扳机键控制夹爪开合，点击A键复位机械臂，拨动摇杆控制底盘移动、转弯）
+
+chahua_auto1.unity为自动插花数据采集例程，运行后点击Auto进入自动插花模式，每次抓取时自动随机设置花朵初始位置
+
+
 ## 机器人动画例程
 
 在Assets/Animation目录下，双击打开dance.unity，运行即可看到G1机器人舞蹈、弹琴、演唱的动画效果
@@ -179,6 +190,11 @@ Go2Train.unity用于策略的训练
 在Assets/Navigation/Scene目录下，打开Go2Navi.unity，在屏幕点击任意目标点
 
 该例程使用Unity的AI Navigation插件，自主规划路线，并调用预训练好的Go2全向行走模型进行控制
+
+
+## 大模型例程
+
+在Assets/LLM/TinkerLLMNavigation/Scenes/Tinker.unity，打开后在Hierarchy窗口选中Canvas/LLM/llm，在inspector窗口点击Download model下载预训练大语言模型后即可正常使用，运行后可语音控制机器人到室内不同位置
 
 ## 二、训练环境安装
 
