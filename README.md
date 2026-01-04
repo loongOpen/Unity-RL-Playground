@@ -66,9 +66,11 @@ TinkerTrain1/2为对应的强化学习训练场景，直接训练即可得到Tin
 
 **更多技术细节，或使用本平台进行研究请参考和引用以下论文：**
 
-[1] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
+[1] Ye, Linqi, Boyang Xing, Bin Liang, Lei Jiang, Yan Peng, "Gewu Playground: An Open-Source Robot Simulation Platform for Embodied Intelligence Research." Science China: Technological Sciences, (2025). [PDF](https://linqi-ye.github.io/docs/Gewu-SCTS.pdf)
 
-[2] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
+[2] Ye, Linqi, Rankun Li, Xiaowen Hu, Jiayi Li, Boyang Xing, Yan Peng, and Bin Liang. "Unity RL Playground: A Versatile Reinforcement Learning Framework for Mobile Robots." arXiv preprint arXiv:2503.05146 (2025). [PDF](https://arxiv.org/abs/2503.05146)
+
+[3] Ye, Linqi, Jiayi Li, Yi Cheng, Xianhao Wang, Bin Liang, and Yan Peng. "From knowing to doing: learning diverse motor skills through instruction learning." arXiv preprint arXiv:2309.09167 (2023).[PDF](https://arxiv.org/abs/2309.09167) 
 
 ## 使用说明
 
